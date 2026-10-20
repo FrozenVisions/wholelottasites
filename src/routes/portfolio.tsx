@@ -17,6 +17,7 @@ function Portfolio() {
     <>
       <PageHero eyebrow="Portfolio" title="Recent web design work." lead="Live client websites and example designs — every one built from scratch, with no templates." />
       <Section className="!pt-4">
+        <h2 className="sr-only">Projects</h2>
         <ProjectGrid items={projects} detailed />
       </Section>
     </>

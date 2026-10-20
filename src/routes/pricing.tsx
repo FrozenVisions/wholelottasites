@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, Heading, PricingCards, DomainNote, IncludedList } from "@/components/site/Sections";
+import { Comparison } from "@/components/site/Showcase";
 import { seo } from "@/lib/site-data";
 
 export const Route = createFileRoute("/pricing")({
@@ -23,6 +24,9 @@ function Pricing() {
       <Section muted>
         <Heading eyebrow="The £500 package" title="What’s included." />
         <IncludedList />
+      </Section>
+      <Section>
+        <Comparison />
       </Section>
     </>
   );

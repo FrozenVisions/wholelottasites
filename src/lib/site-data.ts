@@ -1,14 +1,20 @@
 import vinylThumb from "@/assets/portfolio/wholelottavinyl-thumb.webp";
+import vinylSmall from "@/assets/portfolio/wholelottavinyl-thumb-600.webp";
 import vinylFull from "@/assets/portfolio/wholelottavinyl-full.webp";
 import safeThumb from "@/assets/portfolio/safeplate-thumb.webp";
+import safeSmall from "@/assets/portfolio/safeplate-thumb-600.webp";
 import safeFull from "@/assets/portfolio/safeplate-full.webp";
 import dibsThumb from "@/assets/portfolio/dibs-thumb.webp";
+import dibsSmall from "@/assets/portfolio/dibs-thumb-600.webp";
 import dibsFull from "@/assets/portfolio/dibs-full.webp";
 import winnieThumb from "@/assets/portfolio/whimsical-winnie-thumb.webp";
+import winnieSmall from "@/assets/portfolio/whimsical-winnie-thumb-600.webp";
 import winnieFull from "@/assets/portfolio/whimsical-winnie-full.webp";
 import fathomThumb from "@/assets/portfolio/fathom-thumb.webp";
+import fathomSmall from "@/assets/portfolio/fathom-thumb-600.webp";
 import fathomFull from "@/assets/portfolio/fathom-full.webp";
 import ptThumb from "@/assets/portfolio/pt-simons-thumb.webp";
+import ptSmall from "@/assets/portfolio/pt-simons-thumb-600.webp";
 import ptFull from "@/assets/portfolio/pt-simons-full.webp";
 
 export const SITE_URL = "https://wholelottasites.co.uk";
@@ -80,6 +86,7 @@ export type Project = {
   desc: string;
   long: string;
   img: string;
+  imgSmall: string;
   full: string;
   alt: string;
   /** Only set for real, live client sites. Demo designs are shown as image showcases. */
@@ -92,6 +99,7 @@ export const projects: Project[] = [
     desc: "Vinyl record shop",
     long: "An online record shop for browsing and buying vinyl, with a design built around the records themselves.",
     img: vinylThumb,
+    imgSmall: vinylSmall,
     full: vinylFull,
     alt: "WholeLottaVinyl online record shop website homepage, custom designed for a small business in Mansfield",
     url: "https://www.wholelottavinyl.com",
@@ -101,6 +109,7 @@ export const projects: Project[] = [
     desc: "Allergy-safe restaurant finder",
     long: "A tool that helps people with food allergies find restaurants that can cater for them.",
     img: safeThumb,
+    imgSmall: safeSmall,
     full: safeFull,
     alt: "SafePlate allergy-safe restaurant finder website homepage",
     url: "https://safeplate.org.uk",
@@ -110,6 +119,7 @@ export const projects: Project[] = [
     desc: "Buy it now or bid marketplace",
     long: "A marketplace where shoppers can either buy an item outright or place a bid on it.",
     img: dibsThumb,
+    imgSmall: dibsSmall,
     full: dibsFull,
     alt: "dibs marketplace example website design with buy it now and bidding",
   },
@@ -118,6 +128,7 @@ export const projects: Project[] = [
     desc: "Handmade jewellery & witchy gifts",
     long: "A shop front for handmade jewellery and witchy gifts, with a look as distinctive as the products.",
     img: winnieThumb,
+    imgSmall: winnieSmall,
     full: winnieFull,
     alt: "whimsicalWinnie handmade jewellery shop example website design",
   },
@@ -126,6 +137,7 @@ export const projects: Project[] = [
     desc: "Field instruments",
     long: "A product site presenting a range of field instruments in a clean, technical style.",
     img: fathomThumb,
+    imgSmall: fathomSmall,
     full: fathomFull,
     alt: "Fathom field instruments example product website design",
   },
@@ -134,6 +146,7 @@ export const projects: Project[] = [
     desc: "Personal trainer",
     long: "A site for a personal trainer to introduce their services and let new clients get in touch.",
     img: ptThumb,
+    imgSmall: ptSmall,
     full: ptFull,
     alt: "PT Simons personal trainer example small business website design",
   },

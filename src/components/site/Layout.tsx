@@ -9,6 +9,7 @@ export const navLinks = [
   { to: "/portfolio", label: "Portfolio" },
   { to: "/pricing", label: "Pricing" },
   { to: "/how-it-works", label: "How it works" },
+  { to: "/about", label: "About" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -36,7 +37,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-navy/95 text-navy-foreground backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
         <Logo />
-        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-6 lg:flex">
           {navLinks.map((l) => (
             <Link key={l.to} to={l.to} className="text-sm font-medium text-navy-foreground/85 transition-colors hover:text-copper" activeProps={{ className: "text-copper" }}>
               {l.label}
@@ -86,9 +87,14 @@ export function CtaBand() {
           <h2 className="mt-3 text-3xl md:text-4xl">Get your free mock-up homepage.</h2>
           <p className="mt-3 text-muted-foreground">See what your new website could look like before you spend a penny.</p>
         </div>
-        <Button asChild size="lg">
-          <Link to="/contact">Get a free mock-up</Link>
-        </Button>
+        <div className="flex flex-col items-start gap-3 md:items-end">
+          <Button asChild size="lg">
+            <Link to="/contact">Get a free mock-up</Link>
+          </Button>
+          <p className="text-sm text-muted-foreground">
+            Or call <a href={CONTACT.phoneHref} className="font-semibold text-foreground hover:text-primary">{CONTACT.phoneDisplay}</a>
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -102,6 +108,7 @@ export function Footer() {
           <p className="font-display text-2xl font-bold">WholeLottaSites</p>
           <p className="mt-2 text-sm text-navy-foreground/75">{CONTACT.name} – {CONTACT.role}</p>
           <p className="text-sm text-navy-foreground/75">{CONTACT.location}</p>
+          <p className="mt-4 max-w-xs text-sm text-navy-foreground/75">Custom websites for UK small businesses, built from scratch. No templates.</p>
         </div>
         <nav aria-label="Footer">
           <p className="eyebrow text-copper">Pages</p>
@@ -119,9 +126,27 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-navy-foreground/10">
-        <p className="mx-auto max-w-7xl px-5 py-5 text-xs text-navy-foreground/70">© 2026 WholeLottaSites</p>
+        <p className="mx-auto max-w-7xl px-5 py-5 pb-24 text-xs text-navy-foreground/75 lg:pb-5">© 2026 WholeLottaSites · Web design in Mansfield, Nottinghamshire</p>
       </div>
     </footer>
   );
 }
 
+
+/** Sticky call-to-action bar on phones and tablets (hidden on the contact page). */
+export function StickyMobileCta() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  if (pathname.replace(/\/$/, "") === "/contact") return null;
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-navy-foreground/15 bg-navy/95 px-4 py-3 backdrop-blur lg:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
+      <div className="mx-auto flex max-w-xl items-center gap-3">
+        <Button asChild variant="copper" className="flex-1">
+          <Link to="/contact">Get a free mock-up</Link>
+        </Button>
+        <Button asChild variant="navyOutline" className="shrink-0">
+          <a href={CONTACT.phoneHref} aria-label={`Call ${CONTACT.phoneDisplay}`}>Call</a>
+        </Button>
+      </div>
+    </div>
+  );
+}

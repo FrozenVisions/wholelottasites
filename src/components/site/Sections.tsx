@@ -83,11 +83,13 @@ export function StepsBand() {
   return (
     <section className="pitch-top bg-navy pb-20 pt-32 text-navy-foreground">
       <div className="mx-auto max-w-7xl px-5">
-        <Heading onNavy eyebrow="How it works" title="Four simple steps." />
-        <ol className="mt-14 grid gap-10 md:grid-cols-4">
+        <Heading onNavy eyebrow="How it works" title="From free mock-up to live website in four steps." />
+        <div className="mt-6"><Button asChild variant="copper"><Link to="/contact">Start with a free mock-up</Link></Button></div>
+        <ol className="relative mt-14 grid gap-10 md:grid-cols-4">
+          <span aria-hidden className="absolute left-0 right-0 top-[1.4rem] hidden h-px bg-gradient-to-r from-copper via-copper/50 to-transparent md:block" />
           {steps.map(([t, d], i) => (
-            <li key={t} className="border-t border-navy-foreground/15 pt-6">
-              <span className="font-display text-5xl font-bold text-copper">0{i + 1}</span>
+            <li key={t} className="relative border-l border-navy-foreground/15 pl-6 md:border-l-0 md:pl-0">
+              <span className="relative inline-grid size-11 place-items-center rounded-full border-2 border-copper bg-navy font-display text-lg font-bold text-copper">{i + 1}</span>
               <h3 className="mt-3 text-xl font-semibold">{t}</h3>
               <p className="mt-2 text-sm text-navy-foreground/80">{d}</p>
             </li>
@@ -124,7 +126,7 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
               aria-label={`View larger screenshot of ${p.name}`}
               className="relative block min-h-56 flex-1 cursor-zoom-in overflow-hidden bg-muted text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              <img src={p.img} alt={p.alt} loading="lazy" decoding="async" width={1200} height={750} className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+              <img src={p.img} srcSet={`${p.imgSmall} 600w, ${p.img} 1200w`} sizes={i === 0 ? "(min-width: 768px) 66vw, 92vw" : "(min-width: 768px) 33vw, 92vw"} alt={p.alt} loading={i === 0 && detailed ? "eager" : "lazy"} fetchPriority={i === 0 && detailed ? "high" : "auto"} decoding="async" width={1200} height={750} className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
               <span className="absolute bottom-3 left-3 rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold text-navy-foreground opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100">
                 View larger
               </span>

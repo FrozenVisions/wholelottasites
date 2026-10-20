@@ -1,8 +1,7 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
-  createRootRouteWithContext,
+  createRootRoute,
   useRouter,
   HeadContent,
   Scripts,
@@ -11,7 +10,17 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { Header, Footer, CtaBand } from "@/components/site/Layout";
+import { Header, Footer, CtaBand, StickyMobileCta } from "@/components/site/Layout";
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://wholelottasites.co.uk/#website",
+  name: "WholeLottaSites",
+  url: "https://wholelottasites.co.uk/",
+  inLanguage: "en-GB",
+  publisher: { "@id": "https://wholelottasites.co.uk/#business" },
+};
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -25,7 +34,13 @@ const businessJsonLd = {
   email: "chris@wholelottasites.co.uk",
   telephone: "+447517214483",
   priceRange: "£500–£1,200",
-  founder: { "@type": "Person", name: "Chris Faulkes", jobTitle: "Web Designer" },
+  founder: {
+    "@type": "Person",
+    name: "Chris Faulkes",
+    jobTitle: "Web Designer",
+    homeLocation: { "@type": "Place", name: "Mansfield, Nottinghamshire" },
+    sameAs: ["https://www.wholelottavinyl.com", "https://safeplate.org.uk"],
+  },
   address: { "@type": "PostalAddress", addressLocality: "Mansfield", addressRegion: "Nottinghamshire", addressCountry: "GB" },
   areaServed: [{ "@type": "Country", name: "United Kingdom" }, { "@type": "AdministrativeArea", name: "Nottinghamshire" }],
   knowsAbout: ["Web design", "Small business websites", "Custom website development", "SEO"],
@@ -38,13 +53,18 @@ const businessJsonLd = {
   },
 };
 
-function NotFoundComponent() {
+export function NotFoundComponent() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-28">
       <p className="eyebrow">404</p>
       <h1 className="mt-3 text-4xl md:text-6xl">Page not found.</h1>
-      <p className="mt-4 max-w-xl text-muted-foreground">The page you’re looking for doesn’t exist or has been moved.</p>
-      <Link to="/" className="mt-8 inline-flex rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">Back to home</Link>
+      <p className="mt-4 max-w-xl text-muted-foreground">The page you’re looking for doesn’t exist or has been moved. Here are some places to start:</p>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Link to="/" className="inline-flex rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">Back to home</Link>
+        <Link to="/portfolio" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">See my work</Link>
+        <Link to="/pricing" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Pricing</Link>
+        <Link to="/contact" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Free mock-up</Link>
+      </div>
     </section>
   );
 }
@@ -84,7 +104,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -97,17 +117,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap",
-      },
       { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, sizes: "any" },
       { rel: "icon", href: `${import.meta.env.BASE_URL}icon-512.png`, type: "image/png", sizes: "512x512" },
       { rel: "apple-touch-icon", href: `${import.meta.env.BASE_URL}apple-touch-icon.png` },
     ],
-    scripts: [{ type: "application/ld+json", children: JSON.stringify(businessJsonLd) }],
+    scripts: [
+      { children: "document.documentElement.classList.add('js')" },
+      { type: "application/ld+json", children: JSON.stringify(businessJsonLd) },
+      { type: "application/ld+json", children: JSON.stringify(websiteJsonLd) },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -130,16 +148,15 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
-
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
       <Header />
       <main>
         <Outlet />
       </main>
       <CtaBand />
       <Footer />
-    </QueryClientProvider>
+      <StickyMobileCta />
+    </>
   );
 }

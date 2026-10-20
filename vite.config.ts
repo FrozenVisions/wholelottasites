@@ -16,7 +16,7 @@ export default defineConfig({
       prerender: { enabled: true, crawlLinks: true, failOnError: true },
       pages: [
         { path: "/" }, { path: "/services" }, { path: "/portfolio" }, { path: "/pricing" },
-        { path: "/how-it-works" }, { path: "/faq" }, { path: "/contact" },
+        { path: "/how-it-works" }, { path: "/faq" }, { path: "/contact" }, { path: "/about" }, { path: "/not-found" },
       ],
     }),
     viteReact(),

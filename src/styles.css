@@ -1,0 +1,100 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-copper: var(--copper);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.5rem;
+  --navy: oklch(0.26 0.03 245);
+  --navy-foreground: oklch(0.97 0.008 80);
+  --copper: oklch(0.62 0.13 52);
+  --background: oklch(0.975 0.008 80);
+  --foreground: oklch(0.26 0.03 245);
+  --card: oklch(0.995 0.004 80);
+  --card-foreground: oklch(0.26 0.03 245);
+  --popover: oklch(0.995 0.004 80);
+  --popover-foreground: oklch(0.26 0.03 245);
+  --primary: oklch(0.55 0.13 50);
+  --primary-foreground: oklch(0.99 0.004 80);
+  --secondary: var(--navy);
+  --secondary-foreground: var(--navy-foreground);
+  --muted: oklch(0.94 0.012 75);
+  --muted-foreground: oklch(0.45 0.025 245);
+  --accent: oklch(0.93 0.03 60);
+  --accent-foreground: var(--navy);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.004 80);
+  --border: oklch(0.89 0.015 75);
+  --input: oklch(0.86 0.015 75);
+  --ring: var(--copper);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 700; }
+  :focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+}
+
+@utility pitch-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 50% 100%, 0 calc(100% - 4rem));
+}
+@utility pitch-top {
+  clip-path: polygon(0 4rem, 50% 0, 100% 4rem, 100% 100%, 0 100%);
+}
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+/* Navy hero treatment: soft navy gradient + very faint copper grid and diagonal roof-lines. CSS only, no images. */
+@utility hero-navy {
+  background-color: var(--navy);
+  background-image:
+    repeating-linear-gradient(to right, color-mix(in oklab, var(--copper) 4%, transparent) 0 1px, transparent 1px 4rem),
+    repeating-linear-gradient(to bottom, color-mix(in oklab, var(--copper) 4%, transparent) 0 1px, transparent 1px 4rem),
+    repeating-linear-gradient(115deg, color-mix(in oklab, var(--copper) 3%, transparent) 0 1px, transparent 1px 18rem),
+    radial-gradient(115% 85% at 50% 0%, oklch(0.35 0.035 245) 0%, transparent 62%),
+    linear-gradient(180deg, oklch(0.31 0.033 245) 0%, var(--navy) 78%);
+}
+

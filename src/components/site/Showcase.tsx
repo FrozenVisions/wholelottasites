@@ -131,6 +131,17 @@ export function AboutChris({ full }: { full?: boolean }) {
           <svg viewBox="0 0 32 22" className="h-10 w-14 text-copper" fill="none" aria-hidden>
             <path d="M1 19 16 3l15 16" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
+          <img
+            src="/images/chris-faulkes-480.webp"
+            srcSet="/images/chris-faulkes-320.webp 320w, /images/chris-faulkes-480.webp 480w, /images/chris-faulkes-640.webp 640w"
+            sizes="(min-width: 768px) 320px, 80vw"
+            width={640}
+            height={800}
+            loading="lazy"
+            decoding="async"
+            alt="Chris Faulkes, web designer in Mansfield"
+            className="mt-6 aspect-[4/5] w-full max-w-xs rounded-lg object-cover shadow-lg"
+          />
           <p className="mt-6 font-display text-3xl font-bold">Chris Faulkes</p>
           <p className="mt-1 text-navy-foreground/80">Web designer · Mansfield, Nottinghamshire</p>
           <ul className="mt-8 space-y-3 text-sm">

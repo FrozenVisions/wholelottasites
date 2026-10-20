@@ -3,12 +3,12 @@
 export const STRIPE_PAYMENT_LINK = "";
 
 // FormSubmit endpoint for the free mock-up request form (plain HTML POST).
-export const FORM_ENDPOINT = "https://formsubmit.co/chris@wholelottavinyl.co.uk";
+export const FORM_ENDPOINT = "https://formsubmit.co/chris@wholelottasites.co.uk";
 
 export const CONTACT = {
   name: "Chris Faulkes",
   role: "Web Designer",
-  email: "chris@wholelottavinyl.co.uk",
+  email: "chris@wholelottasites.co.uk",
   phoneDisplay: "07517 214483",
   phoneHref: "tel:+447517214483",
   location: "Mansfield, Nottinghamshire",

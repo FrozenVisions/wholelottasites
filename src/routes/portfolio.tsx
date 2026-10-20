@@ -6,8 +6,8 @@ export const Route = createFileRoute("/portfolio")({
   head: () =>
     seo(
       "/portfolio",
-      "Portfolio | WholeLottaSites",
-      "Websites designed and built from scratch by Chris Faulkes: a vinyl record shop, a buy-it-now-or-bid marketplace, an allergy-safe restaurant finder and more.",
+      "Web Design Portfolio | WholeLottaSites, Mansfield",
+      "Small business websites and example designs by Chris Faulkes, a web designer in Mansfield: a record shop, an allergy-safe restaurant finder and more.",
     ),
   component: Portfolio,
 });
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/portfolio")({
 function Portfolio() {
   return (
     <>
-      <PageHero eyebrow="Portfolio" title="Recent work." lead="Every one of these was built from scratch for its owner." />
+      <PageHero eyebrow="Portfolio" title="Recent web design work." lead="Live client websites and example designs — every one built from scratch, with no templates." />
       <Section className="!pt-4">
         <ProjectGrid items={projects} detailed />
       </Section>

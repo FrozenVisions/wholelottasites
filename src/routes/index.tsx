@@ -8,8 +8,8 @@ export const Route = createFileRoute("/")({
   head: () =>
     seo(
       "/",
-      "WholeLottaSites | Custom Websites for UK Small Businesses from £500",
-      "Websites built from scratch for UK small businesses by Chris Faulkes in Mansfield. £500 full website, no templates. Get a free mock-up homepage, no strings attached.",
+      "Affordable Web Design for UK Small Businesses | £500",
+      "Affordable web design for UK small businesses. Custom websites built from scratch, no templates, for £500. Web designer in Mansfield. Free mock-up.",
     ),
   component: Home,
 });
@@ -26,7 +26,7 @@ function Home() {
     <>
       <section className="pitch-bottom hero-navy relative overflow-hidden pb-32 text-navy-foreground">
         <div className="relative mx-auto max-w-7xl px-5 pt-20 md:pt-28">
-          <p className="eyebrow text-copper">Chris Faulkes · Web Designer · Mansfield</p>
+          <p className="eyebrow text-copper">Chris Faulkes · Web Designer · Mansfield, Nottinghamshire</p>
           <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
             Websites built <span className="text-copper">from scratch</span> for UK small businesses.
           </h1>
@@ -68,7 +68,7 @@ function Home() {
       </Section>
 
       <Section>
-        <Heading eyebrow="Portfolio" title="Recent work." />
+        <Heading eyebrow="Portfolio" title="Recent small business websites." />
         <ProjectGrid items={projects.slice(0, 3)} />
         <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           See all projects <ArrowRight className="size-4" aria-hidden />

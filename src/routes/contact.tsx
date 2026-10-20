@@ -6,8 +6,8 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     seo(
       "/contact",
-      "Free Mock-up & Contact | WholeLottaSites",
-      "Request your free mock-up homepage, no strings attached. Or contact Chris Faulkes, web designer in Mansfield, Nottinghamshire, by email or phone.",
+      "Web Designer Mansfield, Nottinghamshire | Free Mock-up",
+      "Contact Chris Faulkes, a web designer in Mansfield, Nottinghamshire, for a free mock-up homepage for your small business. No strings attached.",
     ),
   component: Contact,
 });

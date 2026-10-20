@@ -13,6 +13,31 @@ import { type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { Header, Footer, CtaBand } from "@/components/site/Layout";
 
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://wholelottasites.co.uk/#business",
+  name: "WholeLottaSites",
+  description: "Affordable custom websites for UK small businesses, built from scratch with no templates. A full small-business website for £500.",
+  url: "https://wholelottasites.co.uk/",
+  logo: "https://wholelottasites.co.uk/apple-touch-icon.png",
+  image: "https://wholelottasites.co.uk/og-image.jpg",
+  email: "chris@wholelottasites.co.uk",
+  telephone: "+447517214483",
+  priceRange: "£500–£1,200",
+  founder: { "@type": "Person", name: "Chris Faulkes", jobTitle: "Web Designer" },
+  address: { "@type": "PostalAddress", addressLocality: "Mansfield", addressRegion: "Nottinghamshire", addressCountry: "GB" },
+  areaServed: [{ "@type": "Country", name: "United Kingdom" }, { "@type": "AdministrativeArea", name: "Nottinghamshire" }],
+  knowsAbout: ["Web design", "Small business websites", "Custom website development", "SEO"],
+  makesOffer: {
+    "@type": "Offer",
+    name: "Small business website",
+    price: "500",
+    priceCurrency: "GBP",
+    description: "A full custom website built from scratch, mobile responsive, secure HTTPS and SEO-ready.",
+  },
+};
+
 function NotFoundComponent() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-28">
@@ -64,6 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#14213a" },
+      { name: "robots", content: "index, follow" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "WholeLottaSites" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -76,8 +103,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap",
       },
-      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, sizes: "any" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}icon-512.png`, type: "image/png", sizes: "512x512" },
+      { rel: "apple-touch-icon", href: `${import.meta.env.BASE_URL}apple-touch-icon.png` },
     ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(businessJsonLd) }],
   }),
   shellComponent: RootShell,
   component: RootComponent,

@@ -1,8 +1,15 @@
-import imgVinyl from "@/assets/portfolio/wholelottavinyl.png";
-import imgDibs from "@/assets/portfolio/dibs.png";
-import imgWinnie from "@/assets/portfolio/whimsical-winnie.png";
-import imgFathom from "@/assets/portfolio/fathom.png";
-import imgPt from "@/assets/portfolio/pt-simons.png";
+import vinylThumb from "@/assets/portfolio/wholelottavinyl-thumb.webp";
+import vinylFull from "@/assets/portfolio/wholelottavinyl-full.webp";
+import safeThumb from "@/assets/portfolio/safeplate-thumb.webp";
+import safeFull from "@/assets/portfolio/safeplate-full.webp";
+import dibsThumb from "@/assets/portfolio/dibs-thumb.webp";
+import dibsFull from "@/assets/portfolio/dibs-full.webp";
+import winnieThumb from "@/assets/portfolio/whimsical-winnie-thumb.webp";
+import winnieFull from "@/assets/portfolio/whimsical-winnie-full.webp";
+import fathomThumb from "@/assets/portfolio/fathom-thumb.webp";
+import fathomFull from "@/assets/portfolio/fathom-full.webp";
+import ptThumb from "@/assets/portfolio/pt-simons-thumb.webp";
+import ptFull from "@/assets/portfolio/pt-simons-full.webp";
 
 export const SITE_URL = "https://wholelottasites.co.uk";
 
@@ -14,13 +21,18 @@ export function seo(path: string, title: string, description: string) {
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: `${SITE_URL}${path}` },
+      { property: "og:url", content: `${SITE_URL}${path === "/" ? "/" : path + "/"}` },
       { property: "og:locale", content: "en_GB" },
+      { property: "og:site_name", content: "WholeLottaSites" },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}${path}` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}${path === "/" ? "/" : path + "/"}` }],
   };
 }
 
@@ -63,46 +75,66 @@ export const faqs = [
   ["Is the mock-up really free?", "Yes. No strings attached."],
 ] as const;
 
-export type Project = { name: string; desc: string; long: string; img?: string; url?: string };
+export type Project = {
+  name: string;
+  desc: string;
+  long: string;
+  img: string;
+  full: string;
+  alt: string;
+  /** Only set for real, live client sites. Demo designs are shown as image showcases. */
+  url?: string;
+};
 
 export const projects: Project[] = [
   {
     name: "wholelottavinyl.com",
     desc: "Vinyl record shop",
     long: "An online record shop for browsing and buying vinyl, with a design built around the records themselves.",
-    img: imgVinyl,
+    img: vinylThumb,
+    full: vinylFull,
+    alt: "WholeLottaVinyl online record shop website homepage, custom designed for a small business in Mansfield",
     url: "https://www.wholelottavinyl.com",
-  },
-  {
-    name: "dibs",
-    desc: "Buy it now or bid marketplace",
-    long: "A marketplace where shoppers can either buy an item outright or place a bid on it.",
-    img: imgDibs,
-    url: "https://temporary-nimble-quasar-lj37k4f.vercel.app/",
   },
   {
     name: "SafePlate",
     desc: "Allergy-safe restaurant finder",
     long: "A tool that helps people with food allergies find restaurants that can cater for them.",
+    img: safeThumb,
+    full: safeFull,
+    alt: "SafePlate allergy-safe restaurant finder website homepage",
     url: "https://safeplate.org.uk",
+  },
+  {
+    name: "dibs",
+    desc: "Buy it now or bid marketplace",
+    long: "A marketplace where shoppers can either buy an item outright or place a bid on it.",
+    img: dibsThumb,
+    full: dibsFull,
+    alt: "dibs marketplace example website design with buy it now and bidding",
   },
   {
     name: "whimsicalWinnie",
     desc: "Handmade jewellery & witchy gifts",
     long: "A shop front for handmade jewellery and witchy gifts, with a look as distinctive as the products.",
-    img: imgWinnie,
+    img: winnieThumb,
+    full: winnieFull,
+    alt: "whimsicalWinnie handmade jewellery shop example website design",
   },
   {
     name: "Fathom",
     desc: "Field instruments",
     long: "A product site presenting a range of field instruments in a clean, technical style.",
-    img: imgFathom,
+    img: fathomThumb,
+    full: fathomFull,
+    alt: "Fathom field instruments example product website design",
   },
   {
     name: "PT Simons",
     desc: "Personal trainer",
     long: "A site for a personal trainer to introduce their services and let new clients get in touch.",
-    img: imgPt,
+    img: ptThumb,
+    full: ptFull,
+    alt: "PT Simons personal trainer example small business website design",
   },
 ];
-

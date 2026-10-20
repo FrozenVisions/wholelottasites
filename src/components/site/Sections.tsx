@@ -99,33 +99,88 @@ export function StepsBand() {
 }
 
 export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: boolean }) {
+  const [open, setOpen] = useState<Project | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(null);
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
   return (
-    <div className="mt-12 grid auto-rows-[minmax(16rem,auto)] gap-6 md:grid-cols-3">
-      {items.map((p, i) => (
-        <article key={p.name} className={`group flex flex-col overflow-hidden rounded-lg border bg-card ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}>
-          <div className="relative flex-1 overflow-hidden bg-muted">
-            {p.img ? (
-              <img src={p.img} alt={`${p.name} website screenshot`} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
-            ) : (
-              <div className="absolute inset-0 grid place-items-center bg-navy">
-                <span className="font-display text-4xl font-bold text-navy-foreground">{p.name}</span>
+    <>
+      <div className="mt-12 grid auto-rows-[minmax(16rem,auto)] gap-6 md:grid-cols-3">
+        {items.map((p, i) => (
+          <article key={p.name} className={`group flex flex-col overflow-hidden rounded-lg border bg-card ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}>
+            <button
+              type="button"
+              onClick={() => setOpen(p)}
+              aria-label={`View larger screenshot of ${p.name}`}
+              className="relative block min-h-56 flex-1 cursor-zoom-in overflow-hidden bg-muted text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <img src={p.img} alt={p.alt} loading="lazy" decoding="async" width={1200} height={750} className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+              <span className="absolute bottom-3 left-3 rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold text-navy-foreground opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100">
+                View larger
+              </span>
+            </button>
+            <div className="flex items-end justify-between gap-4 p-5">
+              <div>
+                <h3 className="text-xl font-semibold">{p.name}</h3>
+                <p className="text-sm text-muted-foreground">{detailed ? p.long : p.desc}</p>
               </div>
-            )}
-          </div>
-          <div className="flex items-end justify-between gap-4 p-5">
-            <div>
-              <h3 className="text-xl font-semibold">{p.name}</h3>
-              <p className="text-sm text-muted-foreground">{detailed ? p.long : p.desc}</p>
+              {p.url ? (
+                <a href={p.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${p.name} (opens in new tab)`} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                  Visit site <ArrowUpRight className="size-4" aria-hidden />
+                </a>
+              ) : (
+                <span className="shrink-0 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Example design</span>
+              )}
             </div>
-            {p.url && (
-              <a href={p.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${p.name} (opens in new tab)`} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary hover:underline">
-                Visit site <ArrowUpRight className="size-4" aria-hidden />
-              </a>
-            )}
+          </article>
+        ))}
+      </div>
+
+      {open && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${open.name} screenshot`}
+          className="fixed inset-0 z-[100] flex flex-col bg-navy/95 p-3 md:p-8"
+          onClick={() => setOpen(null)}
+        >
+          <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 pb-3 text-navy-foreground">
+            <p className="text-sm">
+              <span className="font-display text-lg font-semibold">{open.name}</span>
+              <span className="ml-3 text-navy-foreground/75">{open.url ? "Live client site" : "Example design"}</span>
+            </p>
+            <button
+              type="button"
+              autoFocus
+              onClick={() => setOpen(null)}
+              className="rounded-md border border-navy-foreground/40 px-3 py-1.5 text-sm font-semibold hover:bg-navy-foreground/10"
+            >
+              Close <span aria-hidden>✕</span>
+            </button>
           </div>
-        </article>
-      ))}
-    </div>
+          <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto rounded-md bg-card" onClick={(e) => e.stopPropagation()}>
+            <img src={open.full} alt={open.alt} className="block w-full" />
+          </div>
+          {open.url && (
+            <div className="mx-auto pt-3" onClick={(e) => e.stopPropagation()}>
+              <a href={open.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-copper hover:underline">
+                Visit {open.name} <ArrowUpRight className="size-4" aria-hidden />
+              </a>
+            </div>
+          )}
+        </div>
+      )}
+    </>
   );
 }
 

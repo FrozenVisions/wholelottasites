@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Smartphone, Link2Off, ShieldAlert, SearchX, Check, ArrowUpRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { STRIPE_PAYMENT_LINK, FORM_ENDPOINT, CONTACT } from "@/config";
+import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { problems, why, included, steps, faqs, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "" }: { children: ReactNode; muted?: boolean; className?: string }) {
@@ -187,25 +187,15 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
 }
 
 export function PricingCards() {
-  const hasStripe = STRIPE_PAYMENT_LINK.length > 0;
   return (
     <div className="mt-12 grid gap-6 md:grid-cols-2">
       <div className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
         <p className="eyebrow">Small business</p>
         <p className="mt-4 font-display text-6xl font-bold">£500</p>
         <p className="mt-2 text-muted-foreground">A full custom website, built from scratch.</p>
-        {hasStripe ? (
-          <Button asChild size="lg" className="mt-8">
-            <a href={STRIPE_PAYMENT_LINK} target="_blank" rel="noopener noreferrer">Pay deposit / buy</a>
-          </Button>
-        ) : (
-          <>
-            <Button asChild size="lg" className="mt-8">
-              <Link to="/contact">Pay deposit / buy</Link>
-            </Button>
-            <p className="mt-3 text-sm text-muted-foreground">Online payment coming soon — request your free mock-up to get started.</p>
-          </>
-        )}
+        <Button asChild size="lg" className="mt-8">
+          <Link to="/contact">Get started</Link>
+        </Button>
       </div>
       <div className="rounded-lg bg-navy p-8 text-navy-foreground shadow-sm">
         <p className="eyebrow text-copper">Bigger business</p>

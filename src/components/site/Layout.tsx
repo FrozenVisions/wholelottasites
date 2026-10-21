@@ -16,7 +16,7 @@ export const navLinks = [
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-3" aria-label="WholeLottaSites home">
+    <Link to="/" className="flex items-center gap-3">
       <svg viewBox="0 0 32 22" className="h-6 w-8 text-copper" fill="none" aria-hidden>
         <path d="M1 19 16 3l15 16" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>

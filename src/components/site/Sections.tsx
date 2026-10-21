@@ -137,7 +137,7 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
                 <p className="text-sm text-muted-foreground">{detailed ? p.long : p.desc}</p>
               </div>
               {p.url ? (
-                <a href={p.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${p.name} (opens in new tab)`} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                <a href={p.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit site: ${p.name} (opens in new tab)`} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary hover:underline">
                   Visit site <ArrowUpRight className="size-4" aria-hidden />
                 </a>
               ) : (
@@ -289,6 +289,9 @@ export function MockupForm() {
           </label>
           <label className="block text-sm font-medium">Email
             <input required type="email" name="email" autoComplete="email" className={field} />
+          </label>
+          <label className="block text-sm font-medium">Phone <span className="text-muted-foreground">(optional, if you’d rather I call)</span>
+            <input type="tel" name="phone" autoComplete="tel" inputMode="tel" className={field} />
           </label>
           <label className="block text-sm font-medium">Current website <span className="text-muted-foreground">(optional)</span>
             <input type="url" name="current_website" placeholder="https://" className={field} />

@@ -18,6 +18,9 @@ import { Route as NotFoundRouteImport } from './routes/not-found'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as WebDesignMansfieldRouteImport } from './routes/web-design-mansfield'
+import { Route as WebsitesForIndexRouteImport } from './routes/websites-for.index'
+import { Route as WebsitesForSlugRouteImport } from './routes/websites-for.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +67,21 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WebDesignMansfieldRoute = WebDesignMansfieldRouteImport.update({
+  id: '/web-design-mansfield',
+  path: '/web-design-mansfield',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsitesForIndexRoute = WebsitesForIndexRouteImport.update({
+  id: '/websites-for/',
+  path: '/websites-for/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsitesForSlugRoute = WebsitesForSlugRouteImport.update({
+  id: '/websites-for/$slug',
+  path: '/websites-for/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -75,6 +93,9 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/web-design-mansfield': typeof WebDesignMansfieldRoute
+  '/websites-for/$slug': typeof WebsitesForSlugRoute
+  '/websites-for/': typeof WebsitesForIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +107,9 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/web-design-mansfield': typeof WebDesignMansfieldRoute
+  '/websites-for/$slug': typeof WebsitesForSlugRoute
+  '/websites-for': typeof WebsitesForIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +122,9 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/web-design-mansfield': typeof WebDesignMansfieldRoute
+  '/websites-for/$slug': typeof WebsitesForSlugRoute
+  '/websites-for/': typeof WebsitesForIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +138,9 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/web-design-mansfield'
+    | '/websites-for/$slug'
+    | '/websites-for/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +152,9 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/web-design-mansfield'
+    | '/websites-for/$slug'
+    | '/websites-for'
   id:
     | '__root__'
     | '/'
@@ -133,6 +166,9 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/web-design-mansfield'
+    | '/websites-for/$slug'
+    | '/websites-for/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,6 +181,9 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ServicesRoute: typeof ServicesRoute
+  WebDesignMansfieldRoute: typeof WebDesignMansfieldRoute
+  WebsitesForSlugRoute: typeof WebsitesForSlugRoute
+  WebsitesForIndexRoute: typeof WebsitesForIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,6 +251,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/web-design-mansfield': {
+      id: '/web-design-mansfield'
+      path: '/web-design-mansfield'
+      fullPath: '/web-design-mansfield'
+      preLoaderRoute: typeof WebDesignMansfieldRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/websites-for/': {
+      id: '/websites-for/'
+      path: '/websites-for'
+      fullPath: '/websites-for/'
+      preLoaderRoute: typeof WebsitesForIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/websites-for/$slug': {
+      id: '/websites-for/$slug'
+      path: '/websites-for/$slug'
+      fullPath: '/websites-for/$slug'
+      preLoaderRoute: typeof WebsitesForSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -225,6 +285,9 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ServicesRoute: ServicesRoute,
+  WebDesignMansfieldRoute: WebDesignMansfieldRoute,
+  WebsitesForSlugRoute: WebsitesForSlugRoute,
+  WebsitesForIndexRoute: WebsitesForIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

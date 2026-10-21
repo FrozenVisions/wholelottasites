@@ -118,6 +118,8 @@ export function Footer() {
             {navLinks.map((l) => (
               <li key={l.to}><Link to={l.to} className="text-navy-foreground/85 hover:text-copper">{l.label}</Link></li>
             ))}
+            <li><Link to="/websites-for" className="text-navy-foreground/85 hover:text-copper">Websites by trade</Link></li>
+            <li><Link to="/web-design-mansfield" className="text-navy-foreground/85 hover:text-copper">Web design Mansfield</Link></li>
           </ul>
         </nav>
         <div className="text-sm">

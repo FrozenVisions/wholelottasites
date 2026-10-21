@@ -18,8 +18,8 @@ function Logo() {
   return (
     <Link to="/" className="flex items-center gap-3">
       <picture className="shrink-0">
-        <source type="image/webp" srcSet={`${import.meta.env.BASE_URL}images/logo-badge-96.webp 1x, ${import.meta.env.BASE_URL}images/logo-badge-192.webp 2x`} />
-        <img src={`${import.meta.env.BASE_URL}images/logo-badge-96.png`} srcSet={`${import.meta.env.BASE_URL}images/logo-badge-96.png 1x, ${import.meta.env.BASE_URL}images/logo-badge-192.png 2x`} alt="" width={48} height={48} className="size-11 md:size-12" decoding="async" fetchPriority="high" />
+        <source type="image/webp" srcSet={`${import.meta.env.BASE_URL}images/logo-badge-64.webp 1x, ${import.meta.env.BASE_URL}images/logo-badge-128.webp 2x, ${import.meta.env.BASE_URL}images/logo-badge-192.webp 3x`} />
+        <img src={`${import.meta.env.BASE_URL}images/logo-badge-64.png`} srcSet={`${import.meta.env.BASE_URL}images/logo-badge-64.png 1x, ${import.meta.env.BASE_URL}images/logo-badge-128.png 2x, ${import.meta.env.BASE_URL}images/logo-badge-192.png 3x`} alt="" width={64} height={64} className="size-14 rounded-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)] md:size-16" decoding="async" fetchPriority="high" />
       </picture>
       <span className="flex flex-col leading-none">
         <span className="font-display text-xl font-bold">WholeLottaSites</span>

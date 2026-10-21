@@ -33,7 +33,7 @@ export function articleJsonLd(opts: { title: string; description: string; path: 
     dateModified: opts.date,
     inLanguage: "en-GB",
     mainEntityOfPage: absoluteUrl(opts.path),
-    image: `${SITE_URL}/og-logo.jpg`,
+    image: `${SITE_URL}/og-image.jpg`,
     author: { "@type": "Person", "@id": `${SITE_URL}/#chris`, name: "Chris Faulkes", url: `${SITE_URL}/about/` },
     publisher: { "@id": `${SITE_URL}/#business` },
   };

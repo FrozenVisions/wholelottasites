@@ -54,7 +54,7 @@ function BlogPostPage() {
         </div>
         <div className="mt-12 max-w-3xl rounded-lg border bg-card p-6">
           <p className="font-display text-xl font-semibold">Chris Faulkes</p>
-          <p className="mt-2 text-muted-foreground">Web designer in Mansfield, Nottinghamshire. I built and run WholeLottaVinyl, and I built SafePlate.</p>
+          <p className="mt-2 text-muted-foreground">Web designer in Mansfield, Nottinghamshire. I built and run WholeLottaVinyl, SafePlate and Vinyl Buyback.</p>
           <Link to="/about" className="mt-3 inline-flex font-semibold text-primary hover:underline">About Chris</Link>
         </div>
         {others.length > 0 && (

@@ -58,7 +58,7 @@ export function Header() {
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((o) => !o)}
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X aria-hidden /> : <Menu aria-hidden />}
         </button>
       </div>
       {open && (

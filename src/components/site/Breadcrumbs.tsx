@@ -8,7 +8,7 @@ export function Breadcrumbs({ items, onNavy = false }: { items: { name: string; 
           const last = index === items.length - 1;
           return (
             <li key={`${item.name}-${index}`} className="flex items-center gap-2">
-              {index > 0 && <span aria-hidden className={onNavy ? "text-navy-foreground/45" : ""}>/</span>}
+              {index > 0 && <span aria-hidden className={onNavy ? "text-navy-foreground/70" : ""}>/</span>}
               {item.href && !last ? (
                 <TextLink
                   href={item.href}

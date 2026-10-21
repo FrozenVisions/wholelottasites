@@ -10,6 +10,8 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import fraunces700 from "@fontsource/fraunces/files/fraunces-latin-700-normal.woff2?url";
+import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
 import { Header, Footer, CtaBand, StickyMobileCta } from "@/components/site/Layout";
 
 const websiteJsonLd = {
@@ -33,15 +35,16 @@ const businessJsonLd = {
   image: "https://wholelottasites.co.uk/og-logo.jpg",
   email: "chris@wholelottasites.co.uk",
   telephone: "+447517214483",
-  priceRange: "£500–£1,200",
+  priceRange: "£500+",
+  currenciesAccepted: "GBP",
   founder: {
     "@type": "Person",
+    "@id": "https://wholelottasites.co.uk/#chris",
     name: "Chris Faulkes",
     url: "https://wholelottasites.co.uk/about/",
     image: "https://wholelottasites.co.uk/images/chris-faulkes-640.webp",
     jobTitle: "Web Designer",
     homeLocation: { "@type": "Place", name: "Mansfield, Nottinghamshire" },
-    sameAs: ["https://www.wholelottavinyl.com", "https://safeplate.org.uk"],
   },
   address: { "@type": "PostalAddress", addressLocality: "Mansfield", addressRegion: "Nottinghamshire", addressCountry: "GB" },
   areaServed: [
@@ -57,7 +60,7 @@ const businessJsonLd = {
     name: "Small business website",
     price: "500",
     priceCurrency: "GBP",
-    description: "A full custom website built from scratch, mobile responsive, secure HTTPS and SEO-ready.",
+    description: "A full custom website built from scratch for £500. Payment plans are available and total the same £500.",
     url: "https://wholelottasites.co.uk/pricing/",
     areaServed: { "@type": "Country", name: "United Kingdom" },
   },
@@ -73,7 +76,8 @@ export function NotFoundComponent() {
         <Link to="/" className="inline-flex rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">Back to home</Link>
         <Link to="/portfolio" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">See my work</Link>
         <Link to="/pricing" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Pricing</Link>
-        <Link to="/contact" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Free mock-up</Link>
+        <Link to="/contact" hash="mockup-form" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Free mock-up</Link>
+        <Link to="/blog" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Blog</Link>
       </div>
     </section>
   );
@@ -128,6 +132,8 @@ export const Route = createRootRoute({
       { rel: "icon", href: `${import.meta.env.BASE_URL}icon-192.png`, type: "image/png", sizes: "192x192" },
       { rel: "icon", href: `${import.meta.env.BASE_URL}icon-512.png`, type: "image/png", sizes: "512x512" },
       { rel: "apple-touch-icon", href: `${import.meta.env.BASE_URL}apple-touch-icon.png` },
+      { rel: "preload", href: fraunces700, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: inter400, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
     ],
     scripts: [
       { children: "document.documentElement.classList.add('js')" },
@@ -158,8 +164,9 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   return (
     <>
+      <a className="skip-link" href="#content">Skip to content</a>
       <Header />
-      <main>
+      <main id="content" tabIndex={-1}>
         <Outlet />
       </main>
       <CtaBand />

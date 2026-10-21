@@ -1,5 +1,22 @@
 {
   "hub": "/websites-for",
-  "trades": ["plumbers", "electricians", "builders", "decorators", "hairdressers", "cafes", "cleaners", "gardeners"],
+  "trades": [
+    "plumbers",
+    "electricians",
+    "builders",
+    "decorators",
+    "hairdressers",
+    "cafes",
+    "cleaners",
+    "gardeners",
+    "restaurants",
+    "salons",
+    "gyms",
+    "shops",
+    "consultants",
+    "freelancers",
+    "startups",
+    "individuals"
+  ],
   "locations": ["/web-design-mansfield"]
 }

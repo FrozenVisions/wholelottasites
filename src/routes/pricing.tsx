@@ -1,30 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero, Section, Heading, PricingCards, DomainNote, PaymentPlans, IncludedList } from "@/components/site/Sections";
+import { PageHero, Section, PricingCards, DomainNote, PaymentPlans, WhatsIncluded } from "@/components/site/Sections";
 import { Comparison } from "@/components/site/Showcase";
 import { seo } from "@/lib/site-data";
+import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
 export const Route = createFileRoute("/pricing")({
-  head: () =>
-    seo(
+  head: () => ({
+    ...seo(
       "/pricing",
-      "£500 Small Business Website – Prices & Payment Plans",
-      "A full custom small business website for £500, built from scratch. Bigger businesses from around £1,200. Payment plans available. Your own domain costs around £5–£10.",
+      "Small Business Website Cost | £500 or Pay Monthly",
+      "The cost of a small business website: £500, or a pay-monthly plan that totals the same. See what’s included, and what is extra.",
     ),
+    scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]))],
+  }),
   component: Pricing,
 });
 
 function Pricing() {
   return (
     <>
-      <PageHero eyebrow="Pricing" title="Clear, honest website prices." lead="A full small-business website for £500, with payment plans if you’d rather spread the cost. Bigger projects are quoted individually." />
+      <PageHero eyebrow="Pricing" title="Small business website cost." lead="A full small-business website for £500, with payment plans if you’d rather spread the cost. Bigger projects are quoted individually." crumbs={[{ name: "Home", href: "/" }, { name: "Pricing" }]} />
       <Section className="!pt-4">
         <PricingCards />
         <DomainNote />
         <PaymentPlans />
       </Section>
       <Section muted>
-        <Heading eyebrow="The £500 package" title="What’s included." />
-        <IncludedList />
+        <WhatsIncluded />
       </Section>
       <Section>
         <Comparison />

@@ -1,6 +1,7 @@
 // Copy for the trade and location landing pages. Every page is prerendered to static HTML.
 // Rules: no invented clients, testimonials, reviews or stats. Prices must match the pricing page.
 import slugs from "@/data/landing-slugs.json";
+import { moreAudiences } from "@/lib/more-audiences";
 
 export type Faq = readonly [string, string];
 
@@ -24,13 +25,13 @@ export const PRICE_FAQ: Faq = [
   "A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe. You buy your own domain separately, at around £5–£10 a year.",
 ];
 
-export const trades: TradePage[] = [
+const tradePages: TradePage[] = [
   {
     slug: "plumbers",
     name: "Plumbers",
-    title: "Websites for Plumbers & Heating Engineers | £500 | WholeLottaSites",
-    description: "A website for plumbers and heating engineers: tap-to-call buttons, emergency call-out info, the areas you cover and a job enquiry form. Built from scratch for £500.",
-    h1: "Websites for plumbers and heating engineers.",
+    title: "Website for Plumbers | Custom Sites £500 | WholeLottaSites",
+    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £500. For the trade, not a plumber listing.",
+    h1: "A website for plumbers.",
     lead: "When a pipe bursts, people search on their phone and ring the first plumber who looks trustworthy. Your site should make that call one tap away.",
     intro: [
       "Most plumbing work starts with a search like “plumber near me” or “boiler repair” followed by a phone call. A plumbing website has one main job: show you cover their area, show you can be trusted in their home, and make it easy to ring you.",
@@ -39,7 +40,7 @@ export const trades: TradePage[] = [
     features: [
       { title: "Tap-to-call on every page", text: "A sticky call button on phones, so someone standing in a flooded kitchen can ring you without hunting for a number." },
       { title: "Emergency vs planned work", text: "Clear sections for emergency call-outs and for planned jobs like boiler swaps and bathrooms, with your opening hours and out-of-hours policy." },
-      { title: "Areas covered", text: "A plain list of the towns and villages you cover, which helps you show up when people search for a plumber in their area." },
+      { title: "Areas covered", text: "A plain list of the towns and villages you cover, written out so a local search has something accurate to read. It isn’t a promise of where you appear." },
       { title: "Accreditations up front", text: "Space for your Gas Safe registration number and any trade memberships you hold, so customers can check you before they call." },
       { title: "Job enquiry form", text: "Customers can describe the job and attach a photo of the leak or the old boiler, so you can price it before you visit." },
     ],
@@ -58,9 +59,9 @@ export const trades: TradePage[] = [
   {
     slug: "electricians",
     name: "Electricians",
-    title: "Websites for Electricians | Custom Site £500 | WholeLottaSites",
-    description: "A website for electricians: services from rewires to EV chargers, your registration details, certificates explained and a quote form. Built from scratch for £500.",
-    h1: "Websites for electricians.",
+    title: "Electrician Website Design | £500 | WholeLottaSites",
+    description: "Electrician website design for UK sole traders and small firms: services, registration details and a quote form. Built from scratch for £500.",
+    h1: "Electrician website design.",
     lead: "Electrical work is about trust and safety. Your website should prove you’re qualified and explain what you do in plain English.",
     intro: [
       "People hiring an electrician want to know you’re registered and insured, and they often don’t know the jargon. They search for “fuse board upgrade”, “EICR for landlords” or “EV charger installer”, not the technical terms.",
@@ -88,9 +89,9 @@ export const trades: TradePage[] = [
   {
     slug: "builders",
     name: "Builders",
-    title: "Websites for Builders & Construction Firms | £500 | WholeLottaSites",
-    description: "A website for builders: project galleries with before-and-after photos, the work you take on, a detailed quote request form and the areas you cover. From £500.",
-    h1: "Websites for builders.",
+    title: "Website for Builders | Project Galleries £500 | WholeLottaSites",
+    description: "A website for builders: project galleries, the work you take on and a quote form. Custom-built for £500, with payment plans that total the same £500.",
+    h1: "A website for builders.",
     lead: "Extensions, loft conversions and renovations are big decisions. Customers want to see your finished work before they invite you round to quote.",
     intro: [
       "Building work is expensive, so people research before they call. They look at photos of past projects, check what kinds of jobs you take on, and want a sense of how you work: who they’ll deal with, how quotes work and what happens on site.",
@@ -98,7 +99,7 @@ export const trades: TradePage[] = [
     ],
     features: [
       { title: "Project gallery", text: "A gallery split by job type (extensions, kitchens, loft conversions, groundwork) with before-and-after photos you can keep adding to." },
-      { title: "Project write-ups", text: "Short pages for individual jobs describing what was done. These help you rank for searches like “single-storey extension”." },
+      { title: "Project write-ups", text: "Short pages for individual jobs, named the way customers describe the work, such as “single-storey extension”. That makes the page about the job. It doesn’t guarantee a search position." },
       { title: "Detailed quote form", text: "Asks for the type of work, rough size, postcode, timescale and plans or photos, so you only visit for serious enquiries." },
       { title: "How you work", text: "A plain explanation of your process, from first visit and quote to schedule, building control and sign-off, which answers questions before they’re asked." },
       { title: "Areas covered", text: "The towns you actually work in, written out for customers and for local search." },
@@ -118,9 +119,9 @@ export const trades: TradePage[] = [
   {
     slug: "decorators",
     name: "Decorators",
-    title: "Websites for Painters & Decorators | £500 | WholeLottaSites",
-    description: "A website for painters and decorators: a photo gallery of your rooms and exteriors, a quote form with room photos and the areas you cover. Built from scratch for £500.",
-    h1: "Websites for painters and decorators.",
+    title: "Painter and Decorator Website | £500 | WholeLottaSites",
+    description: "A painter and decorator website with a gallery of your own work, a photo quote form and the areas you cover. Built from scratch for £500.",
+    h1: "A painter and decorator website.",
     lead: "Decorating sells on the finish. A good gallery of your own work and an easy quote form do most of the selling for you.",
     intro: [
       "Customers choosing a decorator want to see neat lines, clean finishes and tidy work. Good photos of rooms, staircases, kitchens and exteriors you’ve done are the most persuasive thing you can show them.",
@@ -148,13 +149,14 @@ export const trades: TradePage[] = [
   {
     slug: "hairdressers",
     name: "Hairdressers & salons",
-    title: "Websites for Hairdressers, Salons & Barbers | £500 | WholeLottaSites",
-    description: "A website for hair salons and barbers: online booking links, a clear price list, stylist profiles, opening hours and an Instagram-style gallery. Built for £500.",
-    h1: "Websites for hairdressers, salons and barbers.",
+    title: "Hairdresser Website Design | Salons & Barbers | WholeLottaSites",
+    description: "Hairdresser website design for salons and barbers: booking links, a price list, stylist profiles and opening hours. Custom sites for £500. Beauty treatments have a separate page.",
+    h1: "Hairdresser website design.",
     lead: "Clients want to see your work, check your prices and book a slot, often late at night on their phone. Your site should let them do all three in a minute.",
     intro: [
       "Many salons rely on Instagram or Facebook alone, which makes it hard for new clients to find prices, opening hours or a way to book. A simple, fast salon website brings those together and shows up when people search for a hairdresser or barber nearby.",
       "If you already use an online booking system, I’ll link it or build it into the site so “Book now” is always one tap away. If you don’t, the site can take booking requests through a simple form until you’re ready.",
+      "This page is about hair. Nails, brows, skin and spa treatments are a different set of pages — see [beauty salon websites](/websites-for/salons/).",
     ],
     features: [
       { title: "Book now, everywhere", text: "A booking button on every page that links to the system you already use (such as Fresha, Treatwell, Booksy or Timely), or a booking request form if you don’t have one." },
@@ -178,13 +180,14 @@ export const trades: TradePage[] = [
   {
     slug: "cafes",
     name: "Cafés",
-    title: "Websites for Cafés & Coffee Shops | £500 | WholeLottaSites",
-    description: "A website for cafés and coffee shops: an easy-to-update menu, opening hours, allergen information, table booking or pre-orders and a map. Built from scratch for £500.",
-    h1: "Websites for cafés and coffee shops.",
+    title: "Café Website Design | Menus, Hours & Maps | WholeLottaSites",
+    description: "Café website design with a real-text menu, opening hours, allergen notes and a map. Built from scratch for £500. Full restaurants have a separate page.",
+    h1: "Café website design.",
     lead: "People want three things from a café website: what’s on the menu, when you’re open and where you are. Get those right on a phone and they’ll come through the door.",
     intro: [
       "Café customers usually decide quickly, often while walking past or planning a day out. A clear menu that reads well on a phone, accurate opening hours and directions make the difference between a visit and a scroll past.",
-      "I’ll build the menu as real text, not a blurry photo of the board. That means it reads well on a phone, Google can see it, and it’s easy to update when the specials change.",
+      "I’ll build the menu as real text, not a blurry photo of the board. That means it reads well on a phone, a search engine can read the words, and it’s easy to update when the specials change.",
+      "If you serve full meals and take evening bookings, the [restaurant website](/websites-for/restaurants/) page is the closer fit.",
     ],
     features: [
       { title: "Menu as real text", text: "Breakfast, lunch, cakes and drinks laid out clearly with prices. Search engines can read it, unlike a photo of a menu." },
@@ -208,9 +211,9 @@ export const trades: TradePage[] = [
   {
     slug: "cleaners",
     name: "Cleaners",
-    title: "Websites for Cleaning Businesses | £500 | WholeLottaSites",
-    description: "A website for domestic and commercial cleaners: clear services, regular and one-off cleans, a quote form by property size and the areas you cover. From £500.",
-    h1: "Websites for cleaning businesses.",
+    title: "Cleaning Business Website | £500 | WholeLottaSites",
+    description: "A cleaning business website with clear services, a quote form and the areas you cover. Domestic and commercial cleans, built from scratch for £500.",
+    h1: "A cleaning business website.",
     lead: "People are letting you into their home or workplace. Your site needs to feel trustworthy and make it simple to ask for a quote.",
     intro: [
       "Cleaning customers usually want to know three things: what’s included, whether you cover their area, and roughly what it will cost. A cleaning website that answers those clearly gets more enquiries and fewer time-wasting calls.",
@@ -238,9 +241,9 @@ export const trades: TradePage[] = [
   {
     slug: "gardeners",
     name: "Gardeners",
-    title: "Websites for Gardeners & Landscapers | £500 | WholeLottaSites",
-    description: "A website for gardeners and landscapers: regular maintenance and one-off jobs, a project gallery, seasonal services and a quote form with photos. Built for £500.",
-    h1: "Websites for gardeners and landscapers.",
+    title: "Gardener Website Design | Lawns & Landscaping | WholeLottaSites",
+    description: "Gardener website design for maintenance rounds and landscaping: galleries, seasonal work and a quote form. Built from scratch for £500.",
+    h1: "Gardener website design.",
     lead: "Gardening is visual and seasonal. Your site should show off your work and bring in the right jobs at the right time of year.",
     intro: [
       "Customers looking for a gardener are often after one of two things: regular upkeep (mowing, hedges, borders) or a one-off project such as a patio, fencing or a full redesign. Your website should make both routes obvious.",
@@ -267,10 +270,12 @@ export const trades: TradePage[] = [
   },
 ];
 
+export const trades: TradePage[] = [...tradePages, ...moreAudiences];
+
 export const mansfieldFaqs: Faq[] = [
   ["Can we meet in person?", "Yes. I’m based in Mansfield, so I’m happy to meet in person in Mansfield or elsewhere in Nottinghamshire to talk through your site. If it’s easier, we can do it by phone or video call instead."],
   ["Do you only work with Mansfield businesses?", "No. I build sites for small businesses all over the UK. Local businesses just get the option of meeting face to face."],
-  ["Will my site help me show up in local searches?", "Every site is built SEO-ready, with clear page titles, descriptions and the towns you serve written out. I’ll also explain how to set up your free Google Business Profile, which matters a lot for local searches."],
+  ["Will this guarantee a place in local searches?", "No. I can’t promise a position. What I will do is write clear page titles and descriptions, and the towns you serve, in real text. I’ll also explain how to set up your free Google Business Profile, using the same name, address and phone number as the site. That gives Google accurate information. It is not a ranking guarantee."],
 ];
 
 export const tradeBySlug = (slug: string) => trades.find((t) => t.slug === slug);

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/pricing")({
   head: () =>
     seo(
       "/pricing",
-      "Small Business Website £500 – Pricing | WholeLottaSites",
+      "£500 Small Business Website – Prices & Payment Plans",
       "A full custom small business website for £500, built from scratch. Bigger businesses from around £1,200. Payment plans available. Your own domain costs around £5–£10.",
     ),
   component: Pricing,

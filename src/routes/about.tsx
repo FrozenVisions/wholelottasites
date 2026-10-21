@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
   head: () =>
     seo(
       "/about",
-      "About Chris Faulkes – Web Designer in Mansfield",
+      "About Chris Faulkes – Web Designer in Mansfield, Notts",
       "Chris Faulkes is a Mansfield, Nottinghamshire web designer who built and runs WholeLottaVinyl and built SafePlate. Custom small business websites, £500.",
     ),
   component: About,

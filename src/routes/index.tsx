@@ -10,8 +10,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     ...seo(
       "/",
-      "Affordable Web Design for UK Small Businesses | £500",
-      "Affordable web design for UK small businesses. Custom websites built from scratch, no templates, for £500. Web designer in Mansfield. Free mock-up.",
+      "Affordable Small Business Websites UK – £500 | WholeLottaSites",
+      "Affordable small business websites across the UK for £500, built from scratch with no templates by Chris, a web designer in Mansfield. Get a free mock-up.",
     ),
     links: [
       ...seo("/", "", "").links,

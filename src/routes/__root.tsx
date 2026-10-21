@@ -37,12 +37,20 @@ const businessJsonLd = {
   founder: {
     "@type": "Person",
     name: "Chris Faulkes",
+    url: "https://wholelottasites.co.uk/about/",
+    image: "https://wholelottasites.co.uk/images/chris-faulkes-640.webp",
     jobTitle: "Web Designer",
     homeLocation: { "@type": "Place", name: "Mansfield, Nottinghamshire" },
     sameAs: ["https://www.wholelottavinyl.com", "https://safeplate.org.uk"],
   },
   address: { "@type": "PostalAddress", addressLocality: "Mansfield", addressRegion: "Nottinghamshire", addressCountry: "GB" },
-  areaServed: [{ "@type": "Country", name: "United Kingdom" }, { "@type": "AdministrativeArea", name: "Nottinghamshire" }],
+  areaServed: [
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "AdministrativeArea", name: "Nottinghamshire" },
+    { "@type": "City", name: "Mansfield" },
+  ],
+  serviceType: ["Web design", "Small business website design", "Website redesign"],
+  contactPoint: { "@type": "ContactPoint", contactType: "sales", email: "chris@wholelottasites.co.uk", telephone: "+447517214483", areaServed: "GB", availableLanguage: "en-GB" },
   knowsAbout: ["Web design", "Small business websites", "Custom website development", "SEO"],
   makesOffer: {
     "@type": "Offer",
@@ -50,6 +58,8 @@ const businessJsonLd = {
     price: "500",
     priceCurrency: "GBP",
     description: "A full custom website built from scratch, mobile responsive, secure HTTPS and SEO-ready.",
+    url: "https://wholelottasites.co.uk/pricing/",
+    areaServed: { "@type": "Country", name: "United Kingdom" },
   },
 };
 
@@ -111,9 +121,6 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#14213a" },
       { name: "robots", content: "index, follow" },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "WholeLottaSites" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

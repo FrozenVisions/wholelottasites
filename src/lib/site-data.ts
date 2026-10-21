@@ -75,6 +75,7 @@ export const steps = [
 
 export const faqs = [
   ["Do I need my own domain?", "Yes — domains cost around £5–£10. You buy it so it’s yours to keep, and I’ll help you set it up."],
+  ["Can I pay monthly?", "Yes. A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe."],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
   ["How long does it take?", "Usually built within days of you approving the mock-up."],
   ["Can I make edits later?", "Yes, small changes after launch — just get in touch."],

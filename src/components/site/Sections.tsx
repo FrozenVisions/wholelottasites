@@ -306,3 +306,36 @@ export function MockupForm() {
   );
 }
 
+
+const paymentPlans = [
+  { name: "Plan 1", headline: "£150 up front", detail: "then £50 a month for 7 months" },
+  { name: "Plan 2", headline: "£100 up front", detail: "then £100 a month for 4 months" },
+  { name: "Plan 3", headline: "3 payments", detail: "of £166.67, £166.67 and £166.66" },
+] as const;
+
+export function PaymentPlans() {
+  return (
+    <div id="payment-plans" className="mt-16 scroll-mt-24">
+      <Heading
+        eyebrow="Payment plans"
+        title="Rather spread the cost?"
+        lead="A full website is £500. If you’d rather not pay it all at once, pick one of these plans. Every plan adds up to exactly £500, with nothing extra on top."
+      />
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {paymentPlans.map((p) => (
+          <div key={p.name} className="rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm">
+            <p className="eyebrow">{p.name}</p>
+            <p className="mt-3 font-display text-3xl font-bold">{p.headline}</p>
+            <p className="mt-2 text-muted-foreground">{p.detail}</p>
+            <p className="mt-4 text-sm font-semibold text-primary">Total: £500</p>
+          </div>
+        ))}
+      </div>
+      <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Once it’s paid off, you choose: a £10-a-month hosting and care plan, or a full handover of your site.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your own domain is extra, at around £5–£10 a year.</li>
+      </ul>
+    </div>
+  );
+}

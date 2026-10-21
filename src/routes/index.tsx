@@ -58,7 +58,7 @@ function Home() {
           <Reveal delay={100} className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
             <p className="eyebrow">Small business website</p>
             <p className="mt-3 font-display text-5xl font-bold">£500</p>
-            <p className="mt-2 text-muted-foreground">A full custom website. Bigger businesses from around £1,200.</p>
+            <p className="mt-2 text-muted-foreground">A full custom website. Payment plans available if you’d rather spread the cost. Bigger businesses from around £1,200.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild><Link to="/pricing">See pricing</Link></Button>
               <Button asChild variant="outline"><Link to="/services">What’s included</Link></Button>

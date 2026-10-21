@@ -265,7 +265,7 @@ export function MockupForm() {
           <p className="mt-4 text-muted-foreground">Your mock-up request is on its way to Chris. I’ll be in touch soon.</p>
         </div>
       ) : (
-        <form action={FORM_ENDPOINT} method="POST" className="space-y-5 rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm md:p-8">
+        <form id="mockup-form" action={FORM_ENDPOINT} method="POST" className="scroll-mt-24 space-y-5 rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm md:p-8">
           <input type="hidden" name="_subject" value="New free mock-up request – WholeLottaSites" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />

@@ -1,0 +1,5 @@
+{
+  "hub": "/websites-for",
+  "trades": ["plumbers", "electricians", "builders", "decorators", "hairdressers", "cafes", "cleaners", "gardeners"],
+  "locations": ["/web-design-mansfield"]
+}

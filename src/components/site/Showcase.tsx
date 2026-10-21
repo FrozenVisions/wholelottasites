@@ -97,7 +97,8 @@ const rows = [
 export function Comparison() {
   return (
     <>
-      <Heading eyebrow="What's included" title="WholeLottaSites vs doing it yourself." lead="A DIY site builder can work — but here’s what you get when it’s built for you." />
+      <Heading eyebrow="Side by side" title="WholeLottaSites vs doing it yourself." lead="A DIY site builder can work — but here’s what you get when it’s built for you." />
+      <p className="mt-4 text-sm text-muted-foreground md:hidden">Swipe sideways to see the whole comparison.</p>
       <div className="mt-12 overflow-x-auto rounded-lg border bg-card">
         <table className="w-full min-w-[40rem] text-left text-sm">
           <caption className="sr-only">Comparison of a WholeLottaSites website with a DIY template site builder</caption>
@@ -158,7 +159,7 @@ export function AboutChris({ full }: { full?: boolean }) {
           I’m Chris, a web designer based in Mansfield, Nottinghamshire. I built and run WholeLottaVinyl, an online record shop, and built SafePlate, a tool that helps people with food allergies find somewhere safe to eat.
         </p>
         <p className="mt-4 text-lg text-muted-foreground">
-          Running my own shop means I know what a small business website actually needs to do: look good, load fast on a phone, show up on Google and make it easy for customers to get in touch or buy.
+          Running my own shop means I know what a small business website actually needs to do: look good, load fast on a phone, be written so a search engine can read it, and make it easy for customers to get in touch or buy.
         </p>
         {full ? (
           <p className="mt-4 text-lg text-muted-foreground">

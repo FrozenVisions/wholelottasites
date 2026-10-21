@@ -1,32 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero, Section, Heading, WhyGrid, IncludedList, ProblemsGrid } from "@/components/site/Sections";
+import { Link } from "@tanstack/react-router";
+import { PageHero, Section, Heading, WhyGrid, WhatsIncluded, ProblemsGrid } from "@/components/site/Sections";
+import { SiteLinks } from "@/components/site/SiteLinks";
 import { seo } from "@/lib/site-data";
+import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
 export const Route = createFileRoute("/services")({
-  head: () =>
-    seo(
+  head: () => ({
+    ...seo(
       "/services",
-      "Small Business Web Design, No Templates | WholeLottaSites",
-      "Custom small business websites built from scratch: mobile-friendly, secure HTTPS, SEO-ready, contact forms and Stripe payments. All for £500.",
+      "Small Business Web Design | No Templates | WholeLottaSites",
+      "Small business web design, built from scratch: mobile-friendly, secure HTTPS, page titles, contact forms and Stripe payment links. A full site for £500.",
     ),
+    scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]))],
+  }),
   component: Services,
 });
 
 function Services() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Small business websites, built from scratch around you." lead="Every site is built from scratch to suit each client — no templates." />
+      <PageHero eyebrow="Services" title="Small business web design, from scratch." lead="Every site is built from scratch to suit each client — no templates." crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
       <Section>
         <Heading eyebrow="Built from scratch" title="Why no templates matters." lead="Templates are built for everyone, so they fit no one perfectly. Every WholeLottaSites website starts from a blank page." />
         <WhyGrid />
       </Section>
       <Section muted>
-        <Heading eyebrow="The £500 package" title="What you get for £500." />
-        <IncludedList />
+        <WhatsIncluded />
+        <p className="mt-8 max-w-3xl text-muted-foreground">
+          Not sure which pages you need? Read <Link to="/blog/$slug" params={{ slug: "what-a-small-business-website-needs" }} className="font-semibold text-primary hover:underline">what a small business website needs</Link>, or browse <Link to="/websites-for" className="font-semibold text-primary hover:underline">websites by type of business</Link>.
+        </p>
       </Section>
       <Section>
         <Heading eyebrow="Quick check" title="Is your website costing you customers?" />
         <ProblemsGrid />
+        <div className="mt-16">
+          <Heading eyebrow="Related" title="Rebuilds, phones and first sites." />
+          <SiteLinks current="/services" />
+        </div>
       </Section>
     </>
   );

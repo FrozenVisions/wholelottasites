@@ -67,7 +67,21 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; scroll-padding-bottom: 5.5rem; }
+  @media (min-width: 1024px) { html { scroll-padding-bottom: 1rem; } }
+  .skip-link {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 80;
+    transform: translateY(-200%);
+    border-radius: var(--radius);
+    background: var(--copper);
+    color: var(--navy);
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+  }
+  .skip-link:focus { transform: none; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);

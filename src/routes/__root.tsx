@@ -30,7 +30,7 @@ const businessJsonLd = {
   description: "Affordable custom websites for UK small businesses, built from scratch with no templates. A full small-business website for £500.",
   url: "https://wholelottasites.co.uk/",
   logo: "https://wholelottasites.co.uk/icon-512.png",
-  image: "https://wholelottasites.co.uk/og-image.jpg",
+  image: "https://wholelottasites.co.uk/og-logo.jpg",
   email: "chris@wholelottasites.co.uk",
   telephone: "+447517214483",
   priceRange: "£500–£1,200",

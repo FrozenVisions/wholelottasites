@@ -29,7 +29,7 @@ const businessJsonLd = {
   name: "WholeLottaSites",
   description: "Affordable custom websites for UK small businesses, built from scratch with no templates. A full small-business website for £500.",
   url: "https://wholelottasites.co.uk/",
-  logo: "https://wholelottasites.co.uk/apple-touch-icon.png",
+  logo: "https://wholelottasites.co.uk/icon-512.png",
   image: "https://wholelottasites.co.uk/og-image.jpg",
   email: "chris@wholelottasites.co.uk",
   telephone: "+447517214483",
@@ -118,6 +118,7 @@ export const Route = createRootRoute({
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, sizes: "any" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}icon-192.png`, type: "image/png", sizes: "192x192" },
       { rel: "icon", href: `${import.meta.env.BASE_URL}icon-512.png`, type: "image/png", sizes: "512x512" },
       { rel: "apple-touch-icon", href: `${import.meta.env.BASE_URL}apple-touch-icon.png` },
     ],

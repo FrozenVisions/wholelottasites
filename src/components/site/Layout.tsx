@@ -17,9 +17,10 @@ export const navLinks = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-3">
-      <svg viewBox="0 0 32 22" className="h-6 w-8 text-copper" fill="none" aria-hidden>
-        <path d="M1 19 16 3l15 16" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <picture className="shrink-0">
+        <source type="image/webp" srcSet={`${import.meta.env.BASE_URL}images/logo-badge-96.webp 1x, ${import.meta.env.BASE_URL}images/logo-badge-192.webp 2x`} />
+        <img src={`${import.meta.env.BASE_URL}images/logo-badge-96.png`} srcSet={`${import.meta.env.BASE_URL}images/logo-badge-96.png 1x, ${import.meta.env.BASE_URL}images/logo-badge-192.png 2x`} alt="" width={48} height={48} className="size-11 md:size-12" decoding="async" fetchPriority="high" />
+      </picture>
       <span className="flex flex-col leading-none">
         <span className="font-display text-xl font-bold">WholeLottaSites</span>
         <span className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-navy-foreground/70">Web Design · Mansfield</span>

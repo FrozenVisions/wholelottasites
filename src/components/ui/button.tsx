@@ -16,7 +16,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        copper: "bg-copper text-navy font-semibold shadow-sm hover:bg-copper/85",
+        copper: "bg-copper text-navy font-semibold shadow-sm hover:bg-[oklch(0.68_0.12_55)]",
         navyOutline: "border border-navy-foreground/40 bg-transparent font-semibold text-navy-foreground hover:border-copper hover:text-copper",
       },
       size: {

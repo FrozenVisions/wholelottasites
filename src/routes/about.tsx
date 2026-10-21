@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
     ...seo(
       "/about",
       "Chris Faulkes, Web Designer in Mansfield | WholeLottaSites",
-      "Chris Faulkes is a Mansfield, Nottinghamshire web designer who built and runs WholeLottaVinyl and built SafePlate. Custom small business websites, £500.",
+      "Chris Faulkes is a web designer in Mansfield, Nottinghamshire. He built and runs WholeLottaVinyl, SafePlate and Vinyl Buyback. Custom small business websites, £500.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]))],
   }),

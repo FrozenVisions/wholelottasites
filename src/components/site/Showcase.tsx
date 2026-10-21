@@ -1,25 +1,28 @@
 import { Link } from "@tanstack/react-router";
 import { Hammer, MapPin, LayoutTemplate, Gauge, Smartphone, ShieldCheck, Check, X, ArrowRight } from "lucide-react";
 import vinylHero from "@/assets/portfolio/wholelottavinyl-hero.webp";
+import vinylHero640 from "@/assets/portfolio/wholelottavinyl-hero-640.webp";
 import vinylHero480 from "@/assets/portfolio/wholelottavinyl-hero-480.webp";
-export { vinylHero, vinylHero480 };
+export { vinylHero, vinylHero640, vinylHero480 };
 import safeMobile from "@/assets/portfolio/safeplate-mobile.webp";
+import safeMobileMid from "@/assets/portfolio/safeplate-mobile-280.webp";
+import safeMobileSmall from "@/assets/portfolio/safeplate-mobile-200.webp";
 import { Reveal } from "@/components/site/Reveal";
 import { Heading } from "@/components/site/Sections";
 
 /** Laptop + phone frames showing real, live work (WholeLottaVinyl and SafePlate). */
 export function DeviceMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-xl lg:max-w-none" aria-label="Live websites built by WholeLottaSites" role="img">
+    <div className="relative mx-auto w-full max-w-xl lg:max-w-none" role="img">
       <div className="relative rounded-t-xl border border-navy-foreground/15 bg-[#0e1824] p-2 pb-3 shadow-2xl shadow-black/40">
         <div className="mb-2 flex gap-1.5 px-1" aria-hidden>
           <span className="size-2 rounded-full bg-navy-foreground/25" /><span className="size-2 rounded-full bg-navy-foreground/25" /><span className="size-2 rounded-full bg-navy-foreground/25" />
         </div>
-        <img src={vinylHero} srcSet={`${vinylHero480} 480w, ${vinylHero} 800w`} sizes="(min-width: 1024px) 40vw, 90vw" alt="" width={800} height={481} fetchPriority="high" decoding="async" className="block aspect-[800/481] w-full rounded-sm object-cover object-top" />
+        <img src={vinylHero} srcSet={`${vinylHero480} 480w, ${vinylHero640} 640w, ${vinylHero} 800w`} sizes="(min-width: 1024px) 36rem, calc(100vw - 3.5rem)" alt="" width={800} height={481} fetchPriority="high" decoding="async" className="block aspect-[800/481] w-full rounded-sm object-cover object-top" />
       </div>
       <div className="mx-auto h-3 w-[108%] -translate-x-[3.7%] rounded-b-xl bg-gradient-to-b from-[#2a3a4d] to-[#141f2b]" aria-hidden />
       <div className="float-slow absolute -bottom-6 -right-2 w-[30%] min-w-24 rounded-[1.4rem] border border-navy-foreground/20 bg-[#0e1824] p-1.5 shadow-2xl shadow-black/50 sm:-right-6">
-        <img src={safeMobile} alt="" width={390} height={844} decoding="async" className="block aspect-[390/844] w-full rounded-[1.1rem] object-cover object-top" />
+        <img src={safeMobile} srcSet={`${safeMobileSmall} 200w, ${safeMobileMid} 280w, ${safeMobile} 390w`} sizes="(min-width: 1024px) 180px, 100px" alt="" width={390} height={844} decoding="async" fetchPriority="low" className="block aspect-[390/844] w-full rounded-[1.1rem] object-cover object-top" />
       </div>
       <p className="sr-only">Laptop showing the WholeLottaVinyl record shop website and a phone showing the SafePlate website, both designed and built by Chris Faulkes.</p>
     </div>
@@ -135,7 +138,7 @@ export function AboutChris({ full }: { full?: boolean }) {
           <img
             src="/images/chris-faulkes-480.webp"
             srcSet="/images/chris-faulkes-320.webp 320w, /images/chris-faulkes-480.webp 480w, /images/chris-faulkes-640.webp 640w"
-            sizes="(min-width: 768px) 320px, 80vw"
+            sizes="(min-width: 768px) 320px, min(80vw, 320px)"
             width={640}
             height={800}
             loading="lazy"
@@ -146,8 +149,9 @@ export function AboutChris({ full }: { full?: boolean }) {
           <p className="mt-6 font-display text-3xl font-bold">Chris Faulkes</p>
           <p className="mt-1 text-navy-foreground/80">Web designer · Mansfield, Nottinghamshire</p>
           <ul className="mt-8 space-y-3 text-sm">
-            <li className="flex gap-2"><Check className="size-4 shrink-0 text-copper" aria-hidden /> Built and runs WholeLottaVinyl, an online record shop</li>
-            <li className="flex gap-2"><Check className="size-4 shrink-0 text-copper" aria-hidden /> Built SafePlate, an allergy-safe restaurant finder</li>
+            <li className="flex gap-2"><Check className="size-4 shrink-0 text-copper" aria-hidden /> Built and runs WholeLottaVinyl, his vinyl record shop</li>
+            <li className="flex gap-2"><Check className="size-4 shrink-0 text-copper" aria-hidden /> Built and runs SafePlate, a free UK site for finding allergy-safe restaurants</li>
+            <li className="flex gap-2"><Check className="size-4 shrink-0 text-copper" aria-hidden /> Built and runs Vinyl Buyback, where people sell him their vinyl</li>
             <li className="flex gap-2"><Check className="size-4 shrink-0 text-copper" aria-hidden /> Every site designed and coded from a blank page</li>
           </ul>
         </div>
@@ -156,7 +160,7 @@ export function AboutChris({ full }: { full?: boolean }) {
         <p className="eyebrow">About me</p>
         <h2 className="mt-3 text-3xl md:text-5xl">A web designer who runs a small business too.</h2>
         <p className="mt-5 text-lg text-muted-foreground">
-          I’m Chris, a web designer based in Mansfield, Nottinghamshire. I built and run WholeLottaVinyl, an online record shop, and built SafePlate, a tool that helps people with food allergies find somewhere safe to eat.
+          I’m Chris, a web designer based in Mansfield, Nottinghamshire. I built and run WholeLottaVinyl, my vinyl record shop, SafePlate, a free UK site for finding allergy-safe restaurants, and Vinyl Buyback, where people sell me their vinyl.
         </p>
         <p className="mt-4 text-lg text-muted-foreground">
           Running my own shop means I know what a small business website actually needs to do: look good, load fast on a phone, be written so a search engine can read it, and make it easy for customers to get in touch or buy.

@@ -1,23 +1,37 @@
 import vinylThumb from "@/assets/portfolio/wholelottavinyl-thumb.webp";
+import vinylMid from "@/assets/portfolio/wholelottavinyl-thumb-800.webp";
 import vinylSmall from "@/assets/portfolio/wholelottavinyl-thumb-600.webp";
 import vinylFull from "@/assets/portfolio/wholelottavinyl-full.webp";
 import safeThumb from "@/assets/portfolio/safeplate-thumb.webp";
+import safeMid from "@/assets/portfolio/safeplate-thumb-800.webp";
 import safeSmall from "@/assets/portfolio/safeplate-thumb-600.webp";
 import safeFull from "@/assets/portfolio/safeplate-full.webp";
 import dibsThumb from "@/assets/portfolio/dibs-thumb.webp";
+import dibsMid from "@/assets/portfolio/dibs-thumb-800.webp";
 import dibsSmall from "@/assets/portfolio/dibs-thumb-600.webp";
 import dibsFull from "@/assets/portfolio/dibs-full.webp";
 import winnieThumb from "@/assets/portfolio/whimsical-winnie-thumb.webp";
+import winnieMid from "@/assets/portfolio/whimsical-winnie-thumb-800.webp";
 import winnieSmall from "@/assets/portfolio/whimsical-winnie-thumb-600.webp";
 import winnieFull from "@/assets/portfolio/whimsical-winnie-full.webp";
 import fathomThumb from "@/assets/portfolio/fathom-thumb.webp";
+import fathomMid from "@/assets/portfolio/fathom-thumb-800.webp";
 import fathomSmall from "@/assets/portfolio/fathom-thumb-600.webp";
 import fathomFull from "@/assets/portfolio/fathom-full.webp";
 import ptThumb from "@/assets/portfolio/pt-simons-thumb.webp";
+import ptMid from "@/assets/portfolio/pt-simons-thumb-800.webp";
 import ptSmall from "@/assets/portfolio/pt-simons-thumb-600.webp";
 import ptFull from "@/assets/portfolio/pt-simons-full.webp";
+import buybackThumb from "@/assets/portfolio/vinyl-buyback-thumb.webp";
+import buybackMid from "@/assets/portfolio/vinyl-buyback-thumb-800.webp";
+import buybackSmall from "@/assets/portfolio/vinyl-buyback-thumb-600.webp";
+import buybackFull from "@/assets/portfolio/vinyl-buyback-full.webp";
 
 export const SITE_URL = "https://wholelottasites.co.uk";
+
+/** Designed 1200×630 share card (title and description on the image), not the logo. */
+export const SHARE_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const SHARE_IMAGE_ALT = "WholeLottaSites: websites built from scratch for UK small businesses. No templates. A full small-business website for £500.";
 
 export function seo(path: string, title: string, description: string, options?: { type?: string }) {
   return {
@@ -30,13 +44,17 @@ export function seo(path: string, title: string, description: string, options?: 
       { property: "og:url", content: `${SITE_URL}${path === "/" ? "/" : path + "/"}` },
       { property: "og:locale", content: "en_GB" },
       { property: "og:site_name", content: "WholeLottaSites" },
-      { property: "og:image", content: `${SITE_URL}/og-logo.jpg` },
+      { property: "og:image", content: SHARE_IMAGE },
+      { property: "og:image:secure_url", content: SHARE_IMAGE },
+      { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { name: "twitter:image", content: `${SITE_URL}/og-logo.jpg` },
+      { property: "og:image:alt", content: SHARE_IMAGE_ALT },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
+      { name: "twitter:image", content: SHARE_IMAGE },
+      { name: "twitter:image:alt", content: SHARE_IMAGE_ALT },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}${path === "/" ? "/" : path + "/"}` }],
   };
@@ -128,10 +146,13 @@ export type Project = {
   desc: string;
   long: string;
   img: string;
+  imgMid: string;
   imgSmall: string;
   full: string;
+  fullWidth: number;
+  fullHeight: number;
   alt: string;
-  /** Only set for real, live client sites. Demo designs are shown as image showcases. */
+  /** Only set where a live link is allowed. */
   url?: string;
 };
 
@@ -139,21 +160,27 @@ export const projects: Project[] = [
   {
     name: "wholelottavinyl.com",
     desc: "Vinyl record shop",
-    long: "An online record shop for browsing and buying vinyl, with a design built around the records themselves.",
+    long: "Chris’s vinyl record shop. The site is for browsing and buying records.",
     img: vinylThumb,
+    imgMid: vinylMid,
     imgSmall: vinylSmall,
     full: vinylFull,
-    alt: "WholeLottaVinyl online record shop website homepage, custom designed for a small business in Mansfield",
+    fullWidth: 1280,
+    fullHeight: 1908,
+    alt: "Screenshot of the WholeLottaVinyl shop, with second-hand records for sale",
     url: "https://www.wholelottavinyl.com",
   },
   {
     name: "SafePlate",
     desc: "Allergy-safe restaurant finder",
-    long: "A tool that helps people with food allergies find restaurants that can cater for them.",
+    long: "A free UK site for finding allergy-safe restaurants. Chris built it because he has severe food allergies.",
     img: safeThumb,
+    imgMid: safeMid,
     imgSmall: safeSmall,
     full: safeFull,
-    alt: "SafePlate allergy-safe restaurant finder website homepage",
+    fullWidth: 1280,
+    fullHeight: 800,
+    alt: "Screenshot of the SafePlate website, a free UK site for finding allergy-safe restaurants",
     url: "https://safeplate.org.uk",
   },
   {
@@ -161,8 +188,11 @@ export const projects: Project[] = [
     desc: "Buy it now or bid marketplace",
     long: "A marketplace where shoppers can either buy an item outright or place a bid on it.",
     img: dibsThumb,
+    imgMid: dibsMid,
     imgSmall: dibsSmall,
     full: dibsFull,
+    fullWidth: 1280,
+    fullHeight: 3488,
     alt: "dibs marketplace example website design with buy it now and bidding",
   },
   {
@@ -170,8 +200,11 @@ export const projects: Project[] = [
     desc: "Handmade jewellery & witchy gifts",
     long: "A shop front for handmade jewellery and witchy gifts, with a look as distinctive as the products.",
     img: winnieThumb,
+    imgMid: winnieMid,
     imgSmall: winnieSmall,
     full: winnieFull,
+    fullWidth: 1280,
+    fullHeight: 3501,
     alt: "whimsicalWinnie handmade jewellery shop example website design",
   },
   {
@@ -179,8 +212,11 @@ export const projects: Project[] = [
     desc: "Field instruments",
     long: "A product site presenting a range of field instruments in a clean, technical style.",
     img: fathomThumb,
+    imgMid: fathomMid,
     imgSmall: fathomSmall,
     full: fathomFull,
+    fullWidth: 1280,
+    fullHeight: 3334,
     alt: "Fathom field instruments example product website design",
   },
   {
@@ -188,8 +224,67 @@ export const projects: Project[] = [
     desc: "Personal trainer",
     long: "A site for a personal trainer to introduce their services and let new clients get in touch.",
     img: ptThumb,
+    imgMid: ptMid,
     imgSmall: ptSmall,
     full: ptFull,
+    fullWidth: 1280,
+    fullHeight: 5860,
     alt: "PT Simons personal trainer example small business website design",
+  },
+];
+
+export type CaseStudy = {
+  name: string;
+  summary: string;
+  img: string;
+  imgMid: string;
+  imgSmall: string;
+  full: string;
+  fullWidth: number;
+  fullHeight: number;
+  alt: string;
+  /** Live link. Omitted for Vinyl Buyback. */
+  url?: string;
+  linkLabel?: string;
+};
+
+/** Chris’s own sites. Copy is limited to facts he has stated — no stats, testimonials or results. */
+export const caseStudies: CaseStudy[] = [
+  {
+    name: "SafePlate",
+    summary: "SafePlate is a free UK site for finding allergy-safe restaurants. Chris built it because he has severe food allergies, and he runs it. It is at safeplate.org.uk.",
+    img: safeThumb,
+    imgMid: safeMid,
+    imgSmall: safeSmall,
+    full: safeFull,
+    fullWidth: 1280,
+    fullHeight: 800,
+    alt: "Screenshot of the SafePlate website, a free UK site for finding allergy-safe restaurants",
+    url: "https://safeplate.org.uk",
+    linkLabel: "Visit safeplate.org.uk",
+  },
+  {
+    name: "WholeLottaVinyl",
+    summary: "WholeLottaVinyl is Chris’s vinyl record shop. The site, at wholelottavinyl.com, is for browsing and buying records.",
+    img: vinylThumb,
+    imgMid: vinylMid,
+    imgSmall: vinylSmall,
+    full: vinylFull,
+    fullWidth: 1280,
+    fullHeight: 1908,
+    alt: "Screenshot of the WholeLottaVinyl shop, with second-hand records for sale",
+    url: "https://www.wholelottavinyl.com",
+    linkLabel: "Visit wholelottavinyl.com",
+  },
+  {
+    name: "Vinyl Buyback",
+    summary: "Vinyl Buyback is a site where people sell their vinyl to Chris.",
+    img: buybackThumb,
+    imgMid: buybackMid,
+    imgSmall: buybackSmall,
+    full: buybackFull,
+    fullWidth: 1280,
+    fullHeight: 1976,
+    alt: "Screenshot of Vinyl Buyback, where people sell their vinyl to Chris",
   },
 ];

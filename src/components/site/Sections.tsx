@@ -190,8 +190,8 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
               aria-label={`View larger screenshot of ${p.name}`}
               className="relative block min-h-56 flex-1 cursor-zoom-in overflow-hidden bg-muted text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              <img src={p.img} srcSet={`${p.imgSmall} 600w, ${p.img} 1200w`} sizes={i === 0 ? "(min-width: 768px) 66vw, 92vw" : "(min-width: 768px) 33vw, 92vw"} alt={p.alt} loading={i === 0 && detailed ? "eager" : "lazy"} fetchPriority={i === 0 && detailed ? "high" : "auto"} decoding="async" width={1200} height={750} className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
-              <span className="absolute bottom-3 left-3 rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold text-navy-foreground opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100">
+              <img src={p.img} srcSet={`${p.imgSmall} 600w, ${p.imgMid} 800w, ${p.img} 1200w`} sizes={i === 0 ? "(min-width: 1280px) 820px, (min-width: 768px) 66vw, 92vw" : "(min-width: 1280px) 400px, (min-width: 768px) 33vw, 92vw"} alt={p.alt} loading="lazy" decoding="async" width={1200} height={750} className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+              <span className="absolute bottom-3 left-3 rounded-full bg-navy px-3 py-1 text-xs font-semibold text-navy-foreground opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100">
                 View larger
               </span>
             </button>
@@ -218,13 +218,13 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
           role="dialog"
           aria-modal="true"
           aria-labelledby="project-dialog-title"
-          className="fixed inset-0 z-[100] flex flex-col bg-navy/95 p-3 md:p-8"
+          className="fixed inset-0 z-[100] flex flex-col bg-navy p-3 md:p-8"
           onClick={() => setOpen(null)}
         >
           <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 pb-3 text-navy-foreground">
             <p className="text-sm">
               <span id="project-dialog-title" className="font-display text-lg font-semibold">{open.name}</span>
-              <span className="ml-3 text-navy-foreground/75">{open.url ? "Live client site" : "Example design"}</span>
+              <span className="ml-3 text-navy-foreground">{open.url ? "Live site" : "Example design"}</span>
             </p>
             <button
               type="button"
@@ -236,7 +236,7 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
             </button>
           </div>
           <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto rounded-md bg-card" onClick={(e) => e.stopPropagation()}>
-            <img src={open.full} alt={open.alt} className="block w-full" />
+            <img src={open.full} alt={open.alt} width={open.fullWidth} height={open.fullHeight} decoding="async" className="block h-auto w-full" />
           </div>
           {open.url && (
             <div className="mx-auto pt-3" onClick={(e) => e.stopPropagation()}>
@@ -330,24 +330,24 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={next} />
-            <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
-            <label className="block text-sm font-medium">Your name
-              <input required name="name" autoComplete="name" className={field} />
+            <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" aria-label="Leave this field blank" />
+            <label htmlFor="mockup-name" className="block text-sm font-medium">Your name
+              <input id="mockup-name" required name="name" autoComplete="name" className={field} />
             </label>
-            <label className="block text-sm font-medium">Business name
-              <input required name="business" autoComplete="organization" className={field} />
+            <label htmlFor="mockup-business" className="block text-sm font-medium">Business name
+              <input id="mockup-business" required name="business" autoComplete="organization" className={field} />
             </label>
-            <label className="block text-sm font-medium">Email
-              <input required type="email" name="email" autoComplete="email" className={field} />
+            <label htmlFor="mockup-email" className="block text-sm font-medium">Email
+              <input id="mockup-email" required type="email" name="email" autoComplete="email" className={field} />
             </label>
-            <label className="block text-sm font-medium">Phone <span className="text-muted-foreground">(optional, if you’d rather I call)</span>
-              <input type="tel" name="phone" autoComplete="tel" inputMode="tel" className={field} />
+            <label htmlFor="mockup-phone" className="block text-sm font-medium">Phone <span className="font-normal text-muted-foreground">(optional, if you’d rather I call)</span>
+              <input id="mockup-phone" type="tel" name="phone" autoComplete="tel" inputMode="tel" className={field} />
             </label>
-            <label className="block text-sm font-medium">Current website <span className="text-muted-foreground">(optional)</span>
-              <input type="url" name="current_website" placeholder="https://" className={field} />
+            <label htmlFor="mockup-website" className="block text-sm font-medium">Current website <span className="font-normal text-muted-foreground">(optional)</span>
+              <input id="mockup-website" type="url" name="current_website" autoComplete="url" placeholder="https://" className={field} />
             </label>
-            <label className="block text-sm font-medium">Message
-              <textarea required name="message" rows={4} placeholder="What does your business do? What do you want from your site?" className={field} />
+            <label htmlFor="mockup-message" className="block text-sm font-medium">Message
+              <textarea id="mockup-message" required name="message" rows={4} placeholder="What does your business do? What do you want from your site?" className={field} />
             </label>
             <Button type="submit" size="lg" className="w-full">Get your free mock-up</Button>
           </form>

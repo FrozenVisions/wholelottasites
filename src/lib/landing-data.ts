@@ -30,7 +30,7 @@ const tradePages: TradePage[] = [
     slug: "plumbers",
     name: "Plumbers",
     title: "Website for Plumbers | Custom Sites £500 | WholeLottaSites",
-    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £500. For the trade, not a plumber listing.",
+    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £500, for the trade.",
     h1: "A website for plumbers.",
     lead: "When a pipe bursts, people search on their phone and ring the first plumber who looks trustworthy. Your site should make that call one tap away.",
     intro: [
@@ -150,7 +150,7 @@ const tradePages: TradePage[] = [
     slug: "hairdressers",
     name: "Hairdressers & salons",
     title: "Hairdresser Website Design | Salons & Barbers | WholeLottaSites",
-    description: "Hairdresser website design for salons and barbers: booking links, a price list, stylist profiles and opening hours. Custom sites for £500. Beauty treatments have a separate page.",
+    description: "Hairdresser website design for salons and barbers: booking links, a price list, stylist profiles and opening hours. Custom sites built for £500.",
     h1: "Hairdresser website design.",
     lead: "Clients want to see your work, check your prices and book a slot, often late at night on their phone. Your site should let them do all three in a minute.",
     intro: [

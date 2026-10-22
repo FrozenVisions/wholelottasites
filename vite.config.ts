@@ -21,7 +21,7 @@ export default defineConfig({
       prerender: { enabled: true, crawlLinks: true, failOnError: true },
       pages: [
         { path: "/" }, { path: "/services" }, { path: "/portfolio" }, { path: "/pricing" },
-        { path: "/how-it-works" }, { path: "/faq" }, { path: "/contact" }, { path: "/about" }, { path: "/not-found" },
+        { path: "/how-it-works" }, { path: "/faq" }, { path: "/contact" }, { path: "/leave-a-review" }, { path: "/about" }, { path: "/not-found" },
         { path: "/blog" }, ...blogPosts.map((path) => ({ path })),
         ...extra.pages.map((path) => ({ path })),
         { path: landing.hub }, ...landing.locations.map((path) => ({ path })),

@@ -15,6 +15,7 @@ const core = [
   ["/how-it-works", "0.7"],
   ["/faq", "0.7"],
   ["/contact", "0.8"],
+  ["/leave-a-review", "0.4"],
   ["/about", "0.7"],
   ["/blog", "0.8"],
 ];

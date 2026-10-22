@@ -81,9 +81,14 @@ export function Header() {
   );
 }
 
+function isFormPage(pathname: string) {
+  const path = pathname.replace(/\/$/, "") || "/";
+  return path === "/contact" || path === "/leave-a-review";
+}
+
 export function CtaBand() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  if (pathname.replace(/\/$/, "") === "/contact") return null;
+  if (isFormPage(pathname)) return null;
   return (
     <section className="bg-muted">
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-16 md:flex-row md:items-center">
@@ -124,6 +129,7 @@ export function Footer() {
             ))}
             <li><Link to="/websites-for" className="text-navy-foreground/85 hover:text-copper">Websites by type</Link></li>
             <li><Link to="/web-design-mansfield" className="text-navy-foreground/85 hover:text-copper">Web design Mansfield</Link></li>
+            <li><Link to="/leave-a-review" className="text-navy-foreground/85 hover:text-copper">Leave a review</Link></li>
           </ul>
         </nav>
         <nav aria-label="Advice">
@@ -154,10 +160,10 @@ export function Footer() {
 }
 
 
-/** Sticky call-to-action bar on phones and tablets (hidden on the contact page). */
+/** Sticky call-to-action bar on phones and tablets (hidden on form pages). */
 export function StickyMobileCta() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  if (pathname.replace(/\/$/, "") === "/contact") return null;
+  if (isFormPage(pathname)) return null;
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-navy-foreground/15 bg-navy/95 px-4 py-3 backdrop-blur lg:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
       <div className="mx-auto flex max-w-xl items-center gap-3">

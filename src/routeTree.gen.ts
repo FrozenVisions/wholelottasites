@@ -15,6 +15,7 @@ import { Route as CheapWebsiteForSmallBusinessRouteImport } from './routes/cheap
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as LeaveAReviewRouteImport } from './routes/leave-a-review'
 import { Route as MobileFriendlyWebsiteRouteImport } from './routes/mobile-friendly-website'
 import { Route as NotFoundRouteImport } from './routes/not-found'
 import { Route as PayMonthlyWebsiteRouteImport } from './routes/pay-monthly-website'
@@ -58,6 +59,11 @@ const FaqRoute = FaqRouteImport.update({
 const HowItWorksRoute = HowItWorksRouteImport.update({
   id: '/how-it-works',
   path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeaveAReviewRoute = LeaveAReviewRouteImport.update({
+  id: '/leave-a-review',
+  path: '/leave-a-review',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MobileFriendlyWebsiteRoute = MobileFriendlyWebsiteRouteImport.update({
@@ -133,6 +139,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/leave-a-review': typeof LeaveAReviewRoute
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
   '/not-found': typeof NotFoundRoute
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
@@ -154,6 +161,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/leave-a-review': typeof LeaveAReviewRoute
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
   '/not-found': typeof NotFoundRoute
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
@@ -176,6 +184,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/leave-a-review': typeof LeaveAReviewRoute
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
   '/not-found': typeof NotFoundRoute
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
@@ -199,6 +208,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/how-it-works'
+    | '/leave-a-review'
     | '/mobile-friendly-website'
     | '/not-found'
     | '/pay-monthly-website'
@@ -220,6 +230,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/how-it-works'
+    | '/leave-a-review'
     | '/mobile-friendly-website'
     | '/not-found'
     | '/pay-monthly-website'
@@ -241,6 +252,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/how-it-works'
+    | '/leave-a-review'
     | '/mobile-friendly-website'
     | '/not-found'
     | '/pay-monthly-website'
@@ -263,6 +275,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   HowItWorksRoute: typeof HowItWorksRoute
+  LeaveAReviewRoute: typeof LeaveAReviewRoute
   MobileFriendlyWebsiteRoute: typeof MobileFriendlyWebsiteRoute
   NotFoundRoute: typeof NotFoundRoute
   PayMonthlyWebsiteRoute: typeof PayMonthlyWebsiteRoute
@@ -320,6 +333,13 @@ declare module '@tanstack/react-router' {
       path: '/how-it-works'
       fullPath: '/how-it-works'
       preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leave-a-review': {
+      id: '/leave-a-review'
+      path: '/leave-a-review'
+      fullPath: '/leave-a-review'
+      preLoaderRoute: typeof LeaveAReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mobile-friendly-website': {
@@ -423,6 +443,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   HowItWorksRoute: HowItWorksRoute,
+  LeaveAReviewRoute: LeaveAReviewRoute,
   MobileFriendlyWebsiteRoute: MobileFriendlyWebsiteRoute,
   NotFoundRoute: NotFoundRoute,
   PayMonthlyWebsiteRoute: PayMonthlyWebsiteRoute,

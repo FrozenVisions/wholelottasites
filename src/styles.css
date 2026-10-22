@@ -127,3 +127,70 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Leave-a-review form. Stars are the rating control, not a published score.
+   The thank-you block is shown from the #thanks hash after FormSubmit redirects back,
+   including when JavaScript is off. Scoped so the contact page’s #thanks is left alone. */
+.star-rating {
+  display: flex;
+  width: fit-content;
+}
+.star-rating input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.star-rating label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-size: 1.875rem;
+  line-height: 1;
+  color: var(--muted-foreground);
+}
+/* Fill from star 1 through the chosen or hovered star. DOM order stays 1–5 so keyboard order matches the row. */
+.star-rating:is(
+  :has(#rating-1:checked),
+  :has(label[for="rating-1"]:hover)
+) label[for="rating-1"],
+.star-rating:is(
+  :has(#rating-2:checked),
+  :has(label[for="rating-2"]:hover)
+) :is(label[for="rating-1"], label[for="rating-2"]),
+.star-rating:is(
+  :has(#rating-3:checked),
+  :has(label[for="rating-3"]:hover)
+) :is(label[for="rating-1"], label[for="rating-2"], label[for="rating-3"]),
+.star-rating:is(
+  :has(#rating-4:checked),
+  :has(label[for="rating-4"]:hover)
+) :is(label[for="rating-1"], label[for="rating-2"], label[for="rating-3"], label[for="rating-4"]),
+.star-rating:is(
+  :has(#rating-5:checked),
+  :has(label[for="rating-5"]:hover)
+) label {
+  color: var(--primary);
+}
+.star-rating input:focus-visible {
+  outline: none;
+}
+.star-rating input:focus-visible + label {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+.review-page #thanks:not(:target) {
+  display: none;
+}
+.review-page:has(#thanks:target) #review-form {
+  display: none;
+}

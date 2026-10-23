@@ -1,7 +1,7 @@
 ---
 title: What to put on a plumber’s website
 seoTitle: What to Put on a Plumber’s Website | WholeLottaSites
-description: What to put on a plumber’s website: the jobs you do, the towns you cover, a phone number people can tap, your hours, and registration details a customer can check.
+description: What to put on a plumber’s website: the jobs you do, the towns you cover, a tap-to-call number, your hours and registration details customers can check.
 date: 2026-10-22
 keyword: what to put on a plumber website
 slug: plumber-website-checklist

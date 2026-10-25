@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded } from "@/components/site/Sections";
-import { vinylHero, vinylHero640, vinylHero480, DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
+import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
 import { projects, seo } from "@/lib/site-data";
@@ -22,10 +22,6 @@ export const Route = createFileRoute("/")({
       "Affordable Small Business Websites UK – £500 | WholeLottaSites",
       "Affordable small business websites across the UK for £500, built from scratch with no templates by Chris, a web designer in Mansfield. Get a free mock-up.",
     ),
-    links: [
-      ...seo("/", "", "").links,
-      { rel: "preload", as: "image", href: vinylHero, imageSrcSet: `${vinylHero480} 480w, ${vinylHero640} 640w, ${vinylHero} 800w`, imageSizes: "(min-width: 1024px) 36rem, calc(100vw - 3.5rem)", fetchPriority: "high" },
-    ],
   }),
   component: Home,
 });

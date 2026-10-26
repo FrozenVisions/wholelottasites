@@ -66,7 +66,7 @@ export const moreAudiences: TradePage[] = [
   {
     slug: "gyms",
     name: "Gyms",
-    title: "Gym Website Design | Classes, Timetable & Joining | WholeLottaSites",
+    title: "Gym Website Design | Classes & Timetables | WholeLottaSites",
     description: "Gym website design for independent gyms and studios: timetable, memberships, coaches and how to book a trial. A custom site for £500.",
     h1: "Gym website design.",
     lead: "Someone comparing gyms wants the address, what’s on the timetable, and how to try a class or join. Hide those and they go to the next result.",
@@ -97,7 +97,7 @@ export const moreAudiences: TradePage[] = [
   {
     slug: "shops",
     name: "Shops",
-    title: "Shop Website Design | Hours, Stock & Finding You | WholeLottaSites",
+    title: "Shop Website Design | Opening Hours & Stock | WholeLottaSites",
     description: "Shop website design for independent shops: what you sell, opening hours, how to find you, and card payments if you want them. Built for £500.",
     h1: "Shop website design.",
     lead: "A lot of independent shops don’t need a full online store. They need a page that says what you sell, when you’re open, and where the door is.",
@@ -128,7 +128,7 @@ export const moreAudiences: TradePage[] = [
   {
     slug: "consultants",
     name: "Consultants",
-    title: "Consultant Website | For Independent Consultants | WholeLottaSites",
+    title: "Website for Independent Consultants | WholeLottaSites",
     description: "A consultant website that says who you help, how you work and how to book a conversation. Built from scratch for £500. No invented case-study figures.",
     h1: "A consultant website.",
     lead: "People don’t hire a consultant from a slogan. They want to know who you help, what the work involves, and how to start.",
@@ -159,7 +159,7 @@ export const moreAudiences: TradePage[] = [
   {
     slug: "freelancers",
     name: "Freelancers",
-    title: "Freelancer Website | A Simple Site for Sole Traders | WholeLottaSites",
+    title: "Freelancer Website | Sites for Sole Traders | WholeLottaSites",
     description: "A freelancer website: your services, examples of your own work and a way to get hired. Built from scratch for £500, with pay-monthly plans.",
     h1: "A freelancer website.",
     lead: "A freelancer doesn’t need an agency website. You need a page you can send to someone who’s thinking of hiring you.",

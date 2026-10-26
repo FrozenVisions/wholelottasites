@@ -20,10 +20,12 @@ export interface IntentPage {
   faqs: Faq[];
   showIncluded: boolean;
   showPlans: boolean;
+  cta?: { label: string; hash: "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle" };
+  secondaryCta?: { label: string; hash: "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle" };
 }
 
 const priceParagraph =
-  "The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500. Monthly payments are taken by card through Stripe. Your domain is extra, around £5–£10 a year, and you buy it so you own it. Once the site is paid for, you choose a £10-a-month hosting and care plan, or a full handover.";
+  "The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500. Monthly payments are taken by card through Stripe. Your domain is extra, around £5–£10 a year, and you buy it so you own it. Once the site is paid for, monthly care is optional, typically £29–£50, or you can take a full handover. Fixes and Google Business Profile are separate offers on the [pricing page](/pricing/).";
 
 export const intentPages: IntentPage[] = [
   {
@@ -61,7 +63,7 @@ export const intentPages: IntentPage[] = [
         heading: "What is not included",
         paragraphs: [
           "The domain is yours to buy, at around £5–£10 a year. I help you connect it. I don’t need to own the account.",
-          "After the £500 is paid, hosting and small edits are a choice: £10 a month for a care plan, or a full handover of the site. Neither is added on top of the £500 while you’re still paying for the build.",
+          "After the £500 is paid, monthly care is a choice, typically £29–£50: uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover. Care is not added while you’re still paying for the build, and it isn’t required.",
           "The detail of the three plans is on the [pay monthly website](/pay-monthly-website/) page. The cards below are the same three.",
         ],
       },
@@ -106,8 +108,8 @@ export const intentPages: IntentPage[] = [
         id: "after-payoff",
         heading: "What happens after the last payment",
         paragraphs: [
-          "Once the £500 is paid, you choose. A £10-a-month hosting and care plan covers hosting and small edits. Or you take a full handover of the site and stop the monthly payment.",
-          "The £10 is not one of the build plans, and it doesn’t start instead of them. It is the option after the site is paid for.",
+          "Once the £500 is paid, you choose. Optional monthly care, typically £29–£50, covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover of the site.",
+          "Care is not one of the build plans, and it doesn’t start instead of them. The £50 a month on plan 1 is paying off the £500. It is not the care plan.",
           "You can see the whole sequence — free mock-up, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve seen the mock-up and decided to go ahead.",
         ],
       },
@@ -115,7 +117,7 @@ export const intentPages: IntentPage[] = [
     faqs: [
       ["Do the monthly plans cost more than £500 in total?", "No. £150 plus seven payments of £50 is £500. £100 plus four payments of £100 is £500. £166.67 plus £166.67 plus £166.66 is £500."],
       ["When do I pick a plan?", "After the free mock-up, if you want the site built. You can also pay the £500 in one payment. The mock-up itself is free."],
-      ["Is the £10 care plan required?", "No. After the site is paid for you can take the £10-a-month hosting and care plan or a full handover. It’s a choice, not a condition of the £500."],
+      ["Is monthly care required?", "No. After the site is paid for you can take optional monthly care, typically £29–£50, or a full handover. It’s a choice, not a condition of the £500."],
     ],
   },
   {
@@ -129,22 +131,24 @@ export const intentPages: IntentPage[] = [
     lead: "A website redesign is worth it when the current site is getting in the way: hard to use on a phone, unclear, or so brittle that a simple change isn’t simple.",
     showIncluded: true,
     showPlans: false,
+    cta: { label: "Get a free fix audit", hash: "fix-audit" as const },
+    secondaryCta: { label: "Or a free mock-up for a rebuild", hash: "mockup-form" as const },
     sections: [
       {
         id: "when",
         heading: "When a redesign is the right job",
         paragraphs: [
           "I look at the same problems repeatedly. The page has to be pinched and zoomed on a phone. The phone number isn’t tappable. The browser says the site isn’t secure. The Google title still says “Home”. The contact form doesn’t arrive, or there isn’t one. The business has changed and the site describes an older version of it.",
-          "If that’s the situation, a redesign here means a new site, built from scratch, not a new coat of paint on a page builder. The price for a small business is £500, with the [payment plans](/pay-monthly-website/) if you want them. You’ll see a homepage mock-up before you commit.",
+          "There are two honest routes. A fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £500, with the [payment plans](/pay-monthly-website/) if you want them, and a homepage mock-up before you commit.",
         ],
       },
       {
         id: "update-my-old-website",
         heading: "Update my old website",
         paragraphs: [
-          "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. If I built the site, that kind of edit can sit on the £10-a-month care plan after the site is paid for, or as a one-off if we’ve agreed it.",
-          "If someone else built it, in a page builder I don’t work in, I don’t patch it. Unpicking a theme, a pile of plugins and a layout that breaks when you edit it usually costs more time than building the replacement. I’ll say that at the start rather than bill you for a rescue that isn’t going to hold.",
-          "Send the address of the current site with the [mock-up form](/contact/#mockup-form). I’ll tell you whether a new site is what you need. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
+          "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (typically £29–£50), or as a one-off if we’ve agreed it.",
+          "If someone else built it, start with the [free fix audit](/contact/#fix-audit) rather than a guess at the price. I’ll look at the live site and tell you whether a repair will hold. A theme or a page builder that breaks when you edit it is often better replaced. I’ll say that before any fee.",
+          "Send the address of the current site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
         ],
       },
       {
@@ -157,9 +161,9 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Will you redesign my Wix or WordPress site in place?", "No. I build a new site from scratch. If the old one only needs a tiny text change and I didn’t build it, you’re better asking the person who did."],
-      ["Do I have to change my domain?", "No. If the domain is in your name, we keep it and point it at the new site when you’re ready."],
-      ["How much is a redesign?", "For a small business, the new site is £500 — the same as a first website. Larger projects are quoted from around £1,200."],
+      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. If patching is a false economy, the quote is for a rebuild, which is £500 for a small business."],
+      ["Do I have to change my domain?", "No. The domain stays yours. If it’s in your name, we keep it and point it at the site when you’re ready."],
+      ["How much is a redesign?", "A repair is typically £150–£400 after the audit. A small-business rebuild is £500 — the same as a first website. Larger projects are quoted from around £1,200."],
     ],
   },
   {
@@ -173,6 +177,8 @@ export const intentPages: IntentPage[] = [
     lead: "If you have to pinch, zoom or turn the phone sideways to use your site, it isn’t mobile friendly. For a small business, that’s where most enquiries start.",
     showIncluded: false,
     showPlans: false,
+    cta: { label: "Get a free fix audit", hash: "fix-audit" as const },
+    secondaryCta: { label: "Or a free mock-up for a rebuild", hash: "mockup-form" as const },
     sections: [
       {
         id: "how-to-tell",
@@ -194,21 +200,21 @@ export const intentPages: IntentPage[] = [
         heading: "What I do about it",
         paragraphs: [
           "I don’t drop a mobile plugin into an old page builder and call it finished. Those layouts often look passable and still fail the real test: a thumb, in a hurry, trying to call you.",
-          "The work is a new site, laid out for a phone first and then widened for a desktop. It’s the same £500 small-business website, built from scratch. If your site also needs a proper [redesign](/website-redesign/) — old content, no clear enquiry, a title that says “Home” — we do that together rather than only shrinking the old pages.",
-          "You’ll get a homepage mock-up on a phone-sized layout before you pay. If it still feels awkward in your hand, say so. That’s the point of the mock-up.",
+          "If the site is dead on a phone, that can be a fix or a rebuild. I audit first. A typical fix is £150–£400. If the old layout won’t stay usable on a phone, the honest job is a new site at £500, laid out for a phone first. If it also needs a proper [redesign](/website-redesign/) — old content, no clear enquiry, a title that says “Home” — we do that together.",
+          "For a rebuild, you’ll get a homepage mock-up on a phone-sized layout before you pay. If it still feels awkward in your hand, say so. That’s the point of the mock-up.",
         ],
       },
       {
         id: "not-a-tweak",
         heading: "When a tweak is enough",
         paragraphs: [
-          "If I built the site and one section has started to overflow, that’s a fix, not a new project. It can be part of the £10-a-month care plan once the site is paid for.",
-          "If a different company built it, I won’t half-edit their theme. Tell me the address on the [mock-up form](/contact/#mockup-form) and I’ll say whether you need a new site. Making a website mobile friendly, in this offer, means replacing one that can’t be used on a phone — not a £500 invoice for a stylesheet tweak.",
+          "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, typically £29–£50, once any build is paid for.",
+          "If a different company built it, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need a new site. I won’t invoice £500 for a stylesheet tweak.",
         ],
       },
     ],
     faqs: [
-      ["Can you just make my current site mobile friendly?", "Only if the current site is one I can sensibly rebuild, which is the £500 job. I don’t patch someone else’s page builder."],
+      ["Can you just make my current site mobile friendly?", "I’ll audit it first. If a repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £500."],
       ["Do you design the phone version separately?", "It’s one site. The layout is designed for a phone, then adjusted so a larger screen still reads well. You don’t maintain two websites."],
       ["Will a mobile-friendly site guarantee more calls?", "No. It removes a reason for people to give up when they try to phone you or read the page. It doesn’t promise a number of enquiries."],
     ],

@@ -22,7 +22,7 @@ Open it on a phone and note what fails.
 5. Search your business name. If the result is titled “Home”, rewrite it. Each page needs its own title and a short description.
 6. Read a price, a menu or the address without pinching to zoom. If you cannot, see [make my website mobile friendly](/mobile-friendly-website/).
 
-One failure can be a text change. Several usually mean the old build should be replaced.
+One failure can be a text change. Several usually mean a quoted fix after a free audit, or a replacement if patching won’t hold.
 
 ## Correct what is simply out of date
 
@@ -35,7 +35,7 @@ Do these even if a new site comes later.
 
 Use the same wording on your Google Business Profile. When the name, address and phone disagree, a customer cannot tell which copy to trust.
 
-If I built the site and it is paid for, these edits sit on the £10-a-month hosting and care plan, or as an agreed one-off. If someone else built it, ask them. I don’t patch a page builder, a theme or plugins I didn’t set up, and I will say so before any fee.
+If I look after the site, these edits sit on optional monthly care (typically £29–£50), or as an agreed one-off. If someone else built it, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold before any fee. A typical fix is £150–£400. If patching is a false economy, the honest job is a new site.
 
 ## Make three lists before anyone redesigns it
 
@@ -61,12 +61,12 @@ Replace the site if the phone checks failed, the form does not arrive, or every 
 
 A small-business site is £500, the same figure as on the [pricing](/pricing/) page, whether it is your first or a replacement. A [pay monthly website](/pay-monthly-website/) spreads that £500 in one of three ways: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500. Nothing is added as interest.
 
-Once the £500 is paid, you choose a £10-a-month hosting and care plan, or a full handover. Care covers hosting and small edits, such as a changed number, and it starts after payoff. Bigger projects — many more pages, a web app, or a shop with stock and shipping — are quoted from around £1,200. I will say so before you pay if that is the job.
+Once the £500 is paid, monthly care is optional, typically £29–£50, or you can take a full handover. Care covers uptime and SSL checks and small edits, such as a changed number. It isn’t required, and it starts after payoff. Bigger projects — many more pages, a web app, or a shop with stock and shipping — are quoted from around £1,200. I will say so before you pay if that is the job.
 
 A blog can wait until you will write it. Booking can wait until you have a system. Card payments can wait until you have your own Stripe account for me to connect.
 
 ## What to send
 
-[How it works](/how-it-works/) is the route from a free mock-up to launch. On the [mock-up form](/contact/#mockup-form), send the current address, the business name, which checks failed, and the three lists if you have them. The mock-up is free and does not commit you. A sound site that only needed a second look costs nothing.
+[How it works](/how-it-works/) is the route from a free mock-up to launch. For a site you already have, use the [free fix audit](/contact/#fix-audit). For a new build, use the [mock-up form](/contact/#mockup-form). Send the current address, the business name, which checks failed, and the three lists if you have them. The mock-up and the audit are free and do not commit you. A sound site that only needed a second look costs nothing.
 
 The [portfolio](/portfolio/) shows sites I run and example designs. A preview of yours should carry your name, your services and your towns.

@@ -111,7 +111,7 @@ const tradePages: TradePage[] = [
       "A quote form with the right questions saves you wasted visits.",
     ],
     faqs: [
-      ["Can I add new projects myself?", "If you’d like, yes. Otherwise send me the photos and a few lines about the job, and I’ll add them for you on the £10-a-month care plan."],
+      ["Can I add new projects myself?", "If you’d like, yes. Otherwise send me the photos and a few lines about the job, and I’ll add them for you on the optional monthly care plan (typically £29–£50)."],
       ["Can the quote form take drawings or plans?", "Yes. Customers can attach drawings, plans or photos so you can see the scope before you visit."],
       ["I’m a bigger firm with several teams. Is £500 enough?", "£500 covers a full small-business site. Firms that need lots of pages or extra features are quoted individually, from around £1,200."],
     ],
@@ -174,7 +174,7 @@ const tradePages: TradePage[] = [
     faqs: [
       ["Can it link to my booking system?", "Yes. I’ll link or embed the booking system you already use, so clients can book straight from the site. If you don’t use one, I can add a booking request form."],
       ["Can my Instagram photos be used?", "Yes, if they’re your own work. I’ll add the best ones to a gallery and link to your Instagram so clients can see the latest."],
-      ["How do I change my prices later?", "Send me the new prices and I’ll update them on the £10-a-month care plan, or I can show you how to do it yourself."],
+      ["How do I change my prices later?", "Send me the new prices and I’ll update them on the optional monthly care plan (typically £29–£50), or I can show you how to do it yourself."],
     ],
   },
   {
@@ -203,7 +203,7 @@ const tradePages: TradePage[] = [
       "If you host events or private hire, give them their own page.",
     ],
     faqs: [
-      ["How do I update the menu when it changes?", "Send me the changes and I’ll update them on the £10-a-month care plan, or I can set it up so you can edit the menu yourself."],
+      ["How do I update the menu when it changes?", "Send me the changes and I’ll update them on the optional monthly care plan (typically £29–£50), or I can set it up so you can edit the menu yourself."],
       ["Can people book tables or pre-order online?", "Yes. I can link to the booking or ordering system you use, or add a simple booking request form."],
       ["Can you show allergen information?", "Yes. I can label dishes as vegan, vegetarian or gluten-free and add a clear note on how customers can ask about allergens."],
     ],

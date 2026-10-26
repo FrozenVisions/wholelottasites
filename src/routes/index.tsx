@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded } from "@/components/site/Sections";
+import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded, OfferCards } from "@/components/site/Sections";
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
@@ -9,7 +9,7 @@ import { projects, seo } from "@/lib/site-data";
 
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Built from scratch", text: "A first website, or a replacement for a template." },
-  { to: "/website-redesign" as const, title: "Redesign an old site", text: "When an update isn’t enough." },
+  { to: "/website-redesign" as const, title: "Fix or redesign", text: "A free audit first. A rebuild if patching won’t hold." },
   { to: "/mobile-friendly-website" as const, title: "Make it work on a phone", text: "If customers have to pinch and zoom." },
   { to: "/cheap-website-for-small-business" as const, title: "£500, explained", text: "A cheap website for a small business, and what that excludes." },
   { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Three plans. Every one totals £500." },
@@ -19,8 +19,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     ...seo(
       "/",
-      "Affordable Small Business Websites UK – £500 | WholeLottaSites",
-      "Affordable small business websites across the UK for £500, built from scratch with no templates by Chris, a web designer in Mansfield. Get a free mock-up.",
+      "Websites, Fixes & Google | £500 New Site | WholeLottaSites",
+      "Websites, fixes, Google Business Profile and care for UK small businesses. A new site is £500, with a free mock-up. Chris Faulkes, Mansfield.",
     ),
   }),
   component: Home,
@@ -33,20 +33,22 @@ function Home() {
       <section className="pitch-bottom hero-navy relative overflow-hidden pb-28 text-navy-foreground md:pb-36">
         <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 pt-14 md:pt-20 lg:grid-cols-[1.05fr_1fr] lg:pt-24">
           <div>
-            <p className="eyebrow text-copper">Chris Faulkes · Web Designer · Mansfield, Nottinghamshire</p>
+            <p className="eyebrow text-copper">Chris Faulkes · Mansfield, Nottinghamshire</p>
             <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] md:text-6xl">
-              Websites built <span className="text-copper">from scratch</span> for UK small businesses.
+              Websites, fixes, and your <span className="text-copper">Google listing</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">
-              No templates. Every site is designed and coded around your business and your customers. A full small-business website for £500.
+              A new small-business website, built from scratch, is £500 — with a free mock-up first. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button asChild variant="copper" size="lg"><Link to="/contact" hash="mockup-form">Get your free mock-up</Link></Button>
-              <Button asChild variant="navyOutline" size="lg"><Link to="/portfolio">See my work</Link></Button>
+              <Button asChild variant="navyOutline" size="lg"><Link to="/contact" hash="fix-audit">Free fix audit</Link></Button>
             </div>
             <p className="mt-4 text-sm text-navy-foreground/80">
               Free mock-up homepage. No strings attached.{" "}
-              <Link to="/how-it-works" className="font-semibold text-copper underline-offset-4 hover:underline">See how it works</Link>
+              <Link to="/pricing" hash="offers" className="font-semibold text-copper underline-offset-4 hover:underline">See pricing</Link>
+              {" · "}
+              <Link to="/portfolio" className="font-semibold text-copper underline-offset-4 hover:underline">See my work</Link>
             </p>
           </div>
           <DeviceMockup />
@@ -54,6 +56,20 @@ function Home() {
       </section>
 
       <TrustStrip />
+
+      <Section id="offers">
+        <Heading
+          eyebrow="What I do"
+          title="Four ways to get help."
+          lead="A new website is £500. Fixes, Google Business Profile and monthly care are priced on their own. No ranking promises."
+        />
+        <OfferCards />
+        <p className="mt-8 max-w-3xl text-muted-foreground">
+          Bundles: Fix + care, Site + Google Business Profile, Fix + Google Business Profile, and Full — a site or a fix, Google management, and care.{" "}
+          <Link to="/pricing" hash="bundles" className="font-semibold text-primary hover:underline">See the bundles</Link>.
+        </p>
+      </Section>
+
       <JourneyBand />
 
       <Section>
@@ -69,7 +85,7 @@ function Home() {
             <p className="eyebrow">Small business website</p>
             <p className="mt-3 font-display text-5xl font-bold">£500</p>
             <p className="mt-2 text-muted-foreground">
-              A full custom website. <Link to="/pay-monthly-website" className="font-semibold text-primary hover:underline">Payment plans</Link> are available if you’d rather spread the cost. Bigger businesses from around £1,200.
+              A full custom website. <Link to="/pay-monthly-website" className="font-semibold text-primary hover:underline">Payment plans</Link> are available if you’d rather spread the cost. Fixes, Google Business Profile and care are <Link to="/pricing" className="font-semibold text-primary hover:underline">priced separately</Link>. Bigger businesses from around £1,200.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild><Link to="/pricing">See pricing</Link></Button>

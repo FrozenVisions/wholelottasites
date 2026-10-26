@@ -4,11 +4,11 @@ import { Smartphone, Link2Off, ShieldAlert, SearchX, Check, ArrowUpRight, Chevro
 import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { problems, why, included, steps, stages, paymentPlans, faqs, type Project } from "@/lib/site-data";
+import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, type EnquiryHash, type Project } from "@/lib/site-data";
 
-export function Section({ children, muted, className = "" }: { children: ReactNode; muted?: boolean; className?: string }) {
+export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
-    <section className={muted ? "bg-muted" : ""}>
+    <section id={id} className={muted ? "bg-muted" : ""}>
       <div className={`mx-auto max-w-7xl px-5 py-20 md:py-28 ${className}`}>{children}</div>
     </section>
   );
@@ -90,7 +90,7 @@ export function WhatsIncluded() {
         <h3 className="text-xl font-semibold">Separate from the £500</h3>
         <ul className="mt-4 grid gap-3 text-muted-foreground">
           <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your domain, around £5–£10 a year. You buy it, so you own it.</li>
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Once the site is paid for: a £10-a-month hosting and care plan, or a full handover. Your choice.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly care is optional, typically £29–£50: uptime and SSL checks, small edits, a form check, and a nudge before the domain renews. Or a full handover.</li>
         </ul>
         <p className="mt-4 text-muted-foreground">
           The <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly plans</Link> all total £500. A plain-English note on{" "}
@@ -251,24 +251,73 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
   );
 }
 
-export function PricingCards() {
+export function OfferCards() {
   return (
     <div className="mt-12 grid gap-6 md:grid-cols-2">
-      <div className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
-        <p className="eyebrow">Small business</p>
-        <p className="mt-4 font-display text-6xl font-bold">£500</p>
-        <p className="mt-2 text-muted-foreground">A full custom website, built from scratch.</p>
-        <Button asChild size="lg" className="mt-8">
-          <Link to="/contact" hash="mockup-form">Get started</Link>
-        </Button>
+      {offers.map((offer) => (
+        <article key={offer.id} id={offer.id} className="scroll-mt-28 flex flex-col rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
+          <h3 className="font-display text-2xl font-semibold">{offer.title}</h3>
+          <p className="mt-4 font-display text-5xl font-bold leading-none">{offer.price}</p>
+          <p className="mt-3 text-sm font-semibold text-primary">{offer.priceNote}</p>
+          <p className="mt-4 text-muted-foreground">{offer.summary}</p>
+          <ul className="mt-4 grid gap-2 text-sm text-muted-foreground">
+            {offer.points.map((point) => (
+              <li key={point} className="flex gap-2">
+                <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                {point}
+              </li>
+            ))}
+          </ul>
+          {offer.id === "new-website" && (
+            <p className="mt-4 text-sm text-muted-foreground">
+              Live sites:{" "}
+              {proofSites.map((site, index) => (
+                <span key={site.href}>
+                  {index > 0 && (index === proofSites.length - 1 ? " and " : ", ")}
+                  <a href={site.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline-offset-4 hover:underline">
+                    {site.name}
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </span>
+              ))}
+              .
+            </p>
+          )}
+          <div className="mt-auto pt-8">
+            <Button asChild>
+              <Link to="/contact" hash={offer.hash}>{offer.cta}</Link>
+            </Button>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+export function BundleStrip() {
+  return (
+    <div id="bundles" className="mt-16 scroll-mt-28">
+      <Heading
+        eyebrow="Bundles"
+        title="When you want more than one."
+        lead="A bundle is those pieces, quoted together before you start. The Google part still comes with no ranking promise."
+      />
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {bundles.map((bundle) => (
+          <article key={bundle.name} className="rounded-lg border bg-card p-6 shadow-sm">
+            <h3 className="font-display text-xl font-semibold">{bundle.name}</h3>
+            <p className="mt-2 text-muted-foreground">{bundle.text}</p>
+          </article>
+        ))}
       </div>
-      <div className="rounded-lg bg-navy p-8 text-navy-foreground shadow-sm">
-        <p className="eyebrow text-copper">Bigger business</p>
-        <p className="mt-4 font-display text-4xl font-bold">from around £1,200</p>
-        <p className="mt-2 text-navy-foreground/80">More pages, more features. Tell me what you need and I’ll give you a quote.</p>
-        <Button asChild variant="navyOutline" size="lg" className="mt-8">
-          <Link to="/contact" hash="mockup-form">Get a quote</Link>
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+        <Button asChild size="lg">
+          <Link to="/contact" hash="bundle">Ask about a bundle</Link>
         </Button>
+        <p className="text-sm text-muted-foreground">
+          Or email <a className="font-semibold text-primary hover:underline" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+          {" "}or call <a className="font-semibold text-primary hover:underline" href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a>.
+        </p>
       </div>
     </div>
   );
@@ -277,7 +326,7 @@ export function PricingCards() {
 export function DomainNote() {
   return (
     <p className="mt-8 max-w-3xl text-muted-foreground">
-      Note: you buy your own domain (around £5–£10 a year) — it’s yours to keep. Want to take payments? You set up your own Stripe account and I’ll connect it. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
+      You buy your own domain (around £5–£10 a year) and you keep the account. Want to take payments? You set up your own Stripe account and I’ll connect it. Monthly care, typically £29–£50, is optional. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
     </p>
   );
 }
@@ -298,39 +347,121 @@ export function FaqList() {
   );
 }
 
+type EnquiryMode = "website" | "fix" | "gbp" | "care" | "bundle";
+
+const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebrow: string; title: string; lead: string; subject: string; button: string; placeholder: string }> = {
+  website: {
+    hash: "mockup-form",
+    label: "New website — free mock-up",
+    eyebrow: "No strings attached",
+    title: "Get your free mock-up homepage.",
+    lead: "A couple of minutes. I’ll design a homepage for your business, free. Like it? We build the rest. A new small-business site is £500.",
+    subject: "New free mock-up request – WholeLottaSites",
+    button: "Get your free mock-up",
+    placeholder: "What does your business do? What do you want from your site?",
+  },
+  fix: {
+    hash: "fix-audit",
+    label: "Website fix — free audit",
+    eyebrow: "Free fix audit",
+    title: "Get a free fix audit.",
+    lead: "Send the address. I’ll look at the live site and reply with screenshots and 3–5 issues before any price. A typical fix is £150–£400.",
+    subject: "Free website fix audit – WholeLottaSites",
+    button: "Request a free fix audit",
+    placeholder: "What’s wrong — broken, slow, bad on a phone, a form that doesn’t arrive, or just out of date?",
+  },
+  gbp: {
+    hash: "gbp",
+    label: "Google Business Profile",
+    eyebrow: "Google Business Profile",
+    title: "Ask about your Google listing.",
+    lead: "Setup or a fix is £149. Monthly management is £99–£150 if you want it. You stay the Google owner. I don’t promise a ranking.",
+    subject: "Google Business Profile enquiry – WholeLottaSites",
+    button: "Ask about my listing",
+    placeholder: "Business name, and whether you need the listing set up or tidied.",
+  },
+  care: {
+    hash: "care",
+    label: "Monthly care",
+    eyebrow: "Monthly care",
+    title: "Ask about monthly care.",
+    lead: "Typically £29–£50 a month, and optional. Uptime and SSL, small edits, form checks, and a nudge before the domain renews.",
+    subject: "Monthly website care enquiry – WholeLottaSites",
+    button: "Ask about care",
+    placeholder: "Which site should I look after, and what tends to need changing?",
+  },
+  bundle: {
+    hash: "bundle",
+    label: "A bundle",
+    eyebrow: "Bundles",
+    title: "Ask about a bundle.",
+    lead: "Fix + care, a site or a fix plus Google Business Profile, or the full set. I’ll quote the pieces before you start.",
+    subject: "Bundle enquiry – WholeLottaSites",
+    button: "Ask about a bundle",
+    placeholder: "Which combination, and the website address if you already have one?",
+  },
+};
+
+function modeFromHash(hash: string): EnquiryMode {
+  const match = (Object.keys(enquiryCopy) as EnquiryMode[]).find((mode) => `#${enquiryCopy[mode].hash}` === hash);
+  return match ?? "website";
+}
+
 export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
   const [next, setNext] = useState("");
   const [thanks, setThanks] = useState(false);
+  const [mode, setMode] = useState<EnquiryMode>("website");
   useEffect(() => {
     setNext(`${window.location.origin}/contact#thanks`);
-    const check = () => setThanks(window.location.hash === "#thanks");
+    const check = () => {
+      setThanks(window.location.hash === "#thanks");
+      if (window.location.hash !== "#thanks") setMode(modeFromHash(window.location.hash));
+    };
     check();
     window.addEventListener("hashchange", check);
     return () => window.removeEventListener("hashchange", check);
   }, []);
+  const copy = enquiryCopy[mode];
+  const chooseMode = (nextMode: EnquiryMode) => {
+    setMode(nextMode);
+    const hash = `#${enquiryCopy[nextMode].hash}`;
+    if (window.location.hash !== hash) history.replaceState(null, "", hash);
+  };
 
   const field = "mt-2 w-full rounded-md border border-input bg-card px-4 py-3 placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/40";
   return (
     <div id="thanks" className="grid gap-10 md:grid-cols-2 md:items-start">
       <Heading
         as={heading}
-        eyebrow="No strings attached"
-        title="Get your free mock-up homepage."
-        lead="A couple of minutes. I’ll design a homepage for your business, free. Like it? We build the rest."
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        lead={copy.lead}
       />
-      <div id="mockup-form" className="scroll-mt-28 md:col-start-2 md:row-span-2 md:row-start-1">
+      <div className="scroll-mt-28 md:col-start-2 md:row-span-2 md:row-start-1">
+        <div id="mockup-form" className="scroll-mt-28" />
+        <div id="fix-audit" className="scroll-mt-28" />
+        <div id="gbp" className="scroll-mt-28" />
+        <div id="care" className="scroll-mt-28" />
+        <div id="bundle" className="scroll-mt-28" />
         {thanks ? (
           <div role="status" className="rounded-lg border-t-4 border-primary bg-card p-10 shadow-sm">
             <h2 className="text-3xl">Thanks — got it!</h2>
-            <p className="mt-4 text-muted-foreground">Your mock-up request is on its way to Chris. I’ll be in touch soon.</p>
+            <p className="mt-4 text-muted-foreground">Your message is on its way to Chris. I’ll be in touch soon.</p>
           </div>
         ) : (
           <form action={FORM_ENDPOINT} method="POST" className="space-y-5 rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm md:p-8">
-            <input type="hidden" name="_subject" value="New free mock-up request – WholeLottaSites" />
+            <input type="hidden" name="_subject" value={copy.subject} />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={next} />
             <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" aria-label="Leave this field blank" />
+            <label htmlFor="mockup-enquiry" className="block text-sm font-medium">What do you need?
+              <select id="mockup-enquiry" required name="enquiry" value={mode} onChange={(event) => chooseMode(event.target.value as EnquiryMode)} className={field}>
+                {(Object.keys(enquiryCopy) as EnquiryMode[]).map((key) => (
+                  <option key={key} value={key}>{enquiryCopy[key].label}</option>
+                ))}
+              </select>
+            </label>
             <label htmlFor="mockup-name" className="block text-sm font-medium">Your name
               <input id="mockup-name" required name="name" autoComplete="name" className={field} />
             </label>
@@ -343,13 +474,13 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
             <label htmlFor="mockup-phone" className="block text-sm font-medium">Phone <span className="font-normal text-muted-foreground">(optional, if you’d rather I call)</span>
               <input id="mockup-phone" type="tel" name="phone" autoComplete="tel" inputMode="tel" className={field} />
             </label>
-            <label htmlFor="mockup-website" className="block text-sm font-medium">Current website <span className="font-normal text-muted-foreground">(optional)</span>
-              <input id="mockup-website" type="url" name="current_website" autoComplete="url" placeholder="https://" className={field} />
+            <label htmlFor="mockup-website" className="block text-sm font-medium">Current website {mode === "fix" ? <span className="font-normal text-muted-foreground">(the one to audit)</span> : <span className="font-normal text-muted-foreground">(optional)</span>}
+              <input id="mockup-website" required={mode === "fix"} type="url" name="current_website" autoComplete="url" placeholder="https://" className={field} />
             </label>
             <label htmlFor="mockup-message" className="block text-sm font-medium">Message
-              <textarea id="mockup-message" required name="message" rows={4} placeholder="What does your business do? What do you want from your site?" className={field} />
+              <textarea id="mockup-message" required name="message" rows={4} placeholder={copy.placeholder} className={field} />
             </label>
-            <Button type="submit" size="lg" className="w-full">Get your free mock-up</Button>
+            <Button type="submit" size="lg" className="w-full">{copy.button}</Button>
           </form>
         )}
       </div>
@@ -392,7 +523,7 @@ export function PaymentPlans() {
       </div>
       <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Once it’s paid off, you choose: a £10-a-month hosting and care plan, or a full handover of your site.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These plans pay off the £500 website. They are not monthly care. Care is optional, typically £29–£50, or you can take a full handover.</li>
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your own domain is extra, at around £5–£10 a year.</li>
       </ul>
     </div>

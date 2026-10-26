@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero, Section, PricingCards, DomainNote, PaymentPlans, WhatsIncluded } from "@/components/site/Sections";
+import { PageHero, Section, Heading, OfferCards, BundleStrip, DomainNote, PaymentPlans, WhatsIncluded } from "@/components/site/Sections";
 import { Comparison } from "@/components/site/Showcase";
 import { seo } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
@@ -8,8 +8,8 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     ...seo(
       "/pricing",
-      "Small Business Website Cost | £500 or Pay Monthly",
-      "The cost of a small business website: £500, or a pay-monthly plan that totals the same. See what’s included, and what is extra.",
+      "Pricing | Sites, Fixes, Google & Care | WholeLottaSites",
+      "New website £500. Fixes typically £150–£400 after a free audit. Google Business Profile setup £149. Monthly care £29–£50. No ranking promises.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]))],
   }),
@@ -19,9 +19,11 @@ export const Route = createFileRoute("/pricing")({
 function Pricing() {
   return (
     <>
-      <PageHero eyebrow="Pricing" title="Small business website cost." lead="A full small-business website for £500, with payment plans if you’d rather spread the cost. Bigger projects are quoted individually." crumbs={[{ name: "Home", href: "/" }, { name: "Pricing" }]} />
-      <Section className="!pt-4">
-        <PricingCards />
+      <PageHero eyebrow="Pricing" title="Websites, fixes, Google and care." lead="A new small-business website is £500. Fixes, Google Business Profile and monthly care are priced on their own. Bundles are those pieces, quoted together." crumbs={[{ name: "Home", href: "/" }, { name: "Pricing" }]} />
+      <Section id="offers" className="!pt-4">
+        <Heading eyebrow="Four offers" title="The price before you start." lead="Ranges are typical. A fix is quoted after a free audit. Nothing here is a promise of a Google ranking." />
+        <OfferCards />
+        <BundleStrip />
         <DomainNote />
         <PaymentPlans />
       </Section>

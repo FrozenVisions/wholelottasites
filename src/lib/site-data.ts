@@ -116,11 +116,11 @@ export const stages = [
   {
     title: "Launch",
     summary: "I help you connect your domain and go live.",
-    body: "I help you point your domain at the site and check it on a phone before you share the address. You buy the domain yourself, at around £5–£10 a year, so the account stays in your name. The website is £500, in one go or on a payment plan, and every plan totals £500. Once it’s paid for, you choose a £10-a-month hosting and care plan, or a full handover of the site.",
+    body: "I help you point your domain at the site and check it on a phone before you share the address. You buy the domain yourself, at around £5–£10 a year, so the account stays in your name. The website is £500, in one go or on a payment plan, and every plan totals £500. Once it’s paid for, monthly care is optional, typically £29–£50, or you can take a full handover.",
     points: [
       "Help connecting the domain you own",
       "A check on a phone before you announce it",
-      "Then a £10-a-month care plan, or a full handover",
+      "Then optional monthly care, or a full handover",
     ],
   },
 ] as const;
@@ -131,14 +131,119 @@ export const paymentPlans = [
   { name: "Plan 3", headline: "3 payments", detail: "of £166.67, £166.67 and £166.66" },
 ] as const;
 
+/** Contact-form anchors. The hash sets which enquiry the form opens on. */
+export type EnquiryHash = "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle";
+
+/** Sites that may be named as work. No results, rankings or testimonials are attached. */
+export const proofSites = [
+  { name: "wholelottavinyl.com", href: "https://www.wholelottavinyl.com" },
+  { name: "safeplate.org.uk", href: "https://safeplate.org.uk" },
+  { name: "mcdecoratingni.co.uk", href: "https://mcdecoratingni.co.uk" },
+] as const;
+
+export const offers = [
+  {
+    id: "new-website",
+    title: "New website or store",
+    price: "£500",
+    priceNote: "Payment plans available. Each one totals £500.",
+    summary:
+      "A brochure site or a small shop, built from scratch. You see a free homepage mock-up before you pay. You buy the domain, around £5–£10 a year, so it’s in your name.",
+    points: [
+      "£150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66.",
+      "Bigger businesses are quoted from around £1,200.",
+      "Stripe payment links if you want them. You set up your own Stripe account.",
+    ],
+    cta: "Get a free mock-up",
+    hash: "mockup-form",
+  },
+  {
+    id: "website-fix",
+    title: "Website fix or rescue",
+    price: "£150–£400",
+    priceNote: "A typical fix, after a free audit.",
+    summary:
+      "For a site that’s broken, slow, useless on a phone, has a form that doesn’t arrive, or is an outdated Wix, WordPress or Shopify build. I audit first and send screenshots plus 3–5 issues. If patching is a false economy, I’ll quote a rebuild.",
+    points: [
+      "WordPress, Wix, Squarespace, Shopify, custom HTML, or a rebuild from scratch.",
+      "The audit is free. The price comes after it, not before.",
+      "A small-business rebuild is £500, the same as a new site.",
+    ],
+    cta: "Get a free fix audit",
+    hash: "fix-audit",
+  },
+  {
+    id: "google-business-profile",
+    title: "Google Business Profile",
+    price: "£149",
+    priceNote: "Setup or fix, one-off. Monthly management £99–£150.",
+    summary:
+      "Categories, services, hours, photos, a description, the website link and a basic post. Optional monthly management covers posts, review replies, a photo refresh and a short note on Insights. You stay the Google owner. I am the manager. No ranking promises.",
+    points: [
+      "I won’t ask you to hand over the Google account.",
+      "I don’t promise a position on Google or Maps, and I won’t say you’re “#1”.",
+      "The listing should use the same name, address and phone number as the website.",
+    ],
+    cta: "Ask about your listing",
+    hash: "gbp",
+  },
+  {
+    id: "monthly-care",
+    title: "Monthly website care",
+    price: "£29–£50",
+    priceNote: "A month. Optional.",
+    summary:
+      "Uptime and SSL checks, small copy or photo edits, a check that the form still reaches you, and a nudge before the domain renews. It isn’t required with a new site or a fix.",
+    points: [
+      "Say when you want to stop, and I’ll confirm how we end it.",
+      "You can also take a full handover of a site I built, and skip care.",
+      "Care is separate from the £500 payment plans. Those plans pay off the website.",
+    ],
+    cta: "Ask about care",
+    hash: "care",
+  },
+] as const satisfies readonly {
+  id: string;
+  title: string;
+  price: string;
+  priceNote: string;
+  summary: string;
+  points: readonly string[];
+  cta: string;
+  hash: EnquiryHash;
+}[];
+
+export const bundles = [
+  {
+    name: "Fix + care",
+    text: "A website fix, then monthly care so small edits and form checks continue.",
+  },
+  {
+    name: "Site + Google Business Profile",
+    text: "The £500 website, plus Google Business Profile setup at £149, so the site and the listing match.",
+  },
+  {
+    name: "Fix + Google Business Profile",
+    text: "A website fix, plus Google Business Profile setup or a correction at £149.",
+  },
+  {
+    name: "Full",
+    text: "A new site or a fix, monthly Google Business Profile management (£99–£150), and website care (£29–£50).",
+  },
+] as const;
+
 export const faqs = [
-  ["Do I need my own domain?", "Yes — domains cost around £5–£10. You buy it so it’s yours to keep, and I’ll help you set it up."],
-  ["Can I pay monthly?", "Yes. A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe."],
-  ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. Your domain is separate, at around £5–£10 a year. Once the site is paid for, you choose a £10-a-month hosting and care plan or a full handover."],
+  ["Who owns the domain?", "You do. You buy it, around £5–£10 a year, so the account stays in your name. I’ll help you point it at the site. I don’t need to own it."],
+  ["Can I pay monthly for a new website?", "Yes. A full website is £500, or you can spread that same £500: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card through Stripe. Those payments are paying off the website. They are not the care plan."],
+  ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. Your domain is separate, at around £5–£10 a year. Monthly care is optional after that, typically £29–£50, or you can take a full handover."],
+  ["How do you price a website fix?", "I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. If patching is a false economy, I’ll quote a rebuild instead — £500 for a small business — before you agree to anything."],
+  ["Who owns the Google Business Profile?", "You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix is £149. Optional monthly management is £99–£150."],
+  ["Do you promise a Google ranking?", "No. I don’t promise a position on Google or Maps, and I won’t say you’re “#1”. A clear website and a looked-after Business Profile make you easier to find. They don’t guarantee where you appear."],
+  ["Is monthly care required?", "No. Care is optional, typically £29–£50 a month. You can take a new site or a fix without it. It covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Say when you want to stop and I’ll confirm how we end it."],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
-  ["How long does it take?", "Usually built within days of you approving the mock-up."],
-  ["Can I make edits later?", "Yes, small changes after launch — just get in touch."],
-  ["Is the mock-up really free?", "Yes. No strings attached."],
+  ["How long does a new site take?", "Usually built within days of you approving the mock-up."],
+  ["Can I make edits later?", "Yes. Small copy or photo edits can sit on optional monthly care, typically £29–£50, or as a one-off if we’ve agreed it."],
+  ["Is the mock-up really free?", "Yes. No strings attached. The fix audit is free as well: I look first, then quote."],
 ] as const;
 
 export type Project = {

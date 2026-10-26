@@ -95,7 +95,10 @@ export function CtaBand() {
         <div className="max-w-2xl">
           <p className="eyebrow">No strings attached</p>
           <h2 className="mt-3 text-3xl md:text-4xl">Get your free mock-up homepage.</h2>
-          <p className="mt-3 text-muted-foreground">See what your new website could look like before you spend a penny.</p>
+          <p className="mt-3 text-muted-foreground">
+            See a new website before you spend a penny. Already got a site?{" "}
+            <Link to="/contact" hash="fix-audit" className="font-semibold text-primary hover:underline">Get a free fix audit</Link>.
+          </p>
         </div>
         <div className="flex flex-col items-start gap-3 md:items-end">
           <Button asChild size="lg">
@@ -118,7 +121,7 @@ export function Footer() {
           <p className="font-display text-2xl font-bold">WholeLottaSites</p>
           <p className="mt-2 text-sm text-navy-foreground/85">{CONTACT.name} – {CONTACT.role}</p>
           <p className="text-sm text-navy-foreground/85">{CONTACT.location}</p>
-          <p className="mt-4 max-w-xs text-sm text-navy-foreground/85">Custom websites for UK small businesses, built from scratch. No templates.</p>
+          <p className="mt-4 max-w-xs text-sm text-navy-foreground/85">Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new small site is £500, built from scratch.</p>
         </div>
         <nav aria-label="Footer">
           <p className="eyebrow text-copper">Pages</p>

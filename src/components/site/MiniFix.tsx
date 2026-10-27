@@ -44,16 +44,12 @@ export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) 
             After the fix, if you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site. None of that is inside the £100. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
           </p>
           <p>
-            A mini-fix will not rewrite your whole site for AI assistants. If the agreed fix is a form, mobile layout, SSL, redirects or a missing Google Business Profile website link, that is the job. If your pages still don’t say clearly who you are, what you do and how to get in touch, ask about a rescue (usually around £150–£400) or a full rebuild at £500. Those can include the clearer GEO copy above. Sites I’ve built that you can open today: <VinylProofLink />, <SafePlateProofLink /> and <DecoratingProofLink />.
+            A mini-fix will not rewrite your whole site for AI assistants. If the agreed fix is a form, mobile layout, SSL, redirects or a missing Google Business Profile website link, that is the job. If your pages still don’t say clearly who you are, what you do and how to get in touch, ask about a rescue (usually around £150–£400) or a full rebuild at £500. Those can include the clearer GEO copy above.
           </p>
           <p>
             Sites I’ve built that you can open today include{" "}
-            <a href="https://www.wholelottavinyl.com" className="font-semibold text-primary underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">wholelottavinyl.com<span className="sr-only"> (opens in a new tab)</span></a>
-            {" "}and{" "}
-            <a href="https://safeplate.org.uk" className="font-semibold text-primary underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">safeplate.org.uk<span className="sr-only"> (opens in a new tab)</span></a>
-            {" "}and{" "}
-            <a href="https://mcdecoratingni.co.uk" className="font-semibold text-primary underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">mcdecoratingni.co.uk<span className="sr-only"> (opens in a new tab)</span></a>
-            . WholeLottaVinyl and SafePlate are on the <Link to="/portfolio" className="font-semibold text-primary underline-offset-4 hover:underline">portfolio</Link>.
+            <VinylProofLink />, <SafePlateProofLink /> and <DecoratingProofLink />.
+            {" "}WholeLottaVinyl and SafePlate are on the <Link to="/portfolio" className="font-semibold text-primary underline-offset-4 hover:underline">portfolio</Link>.
           </p>
         </div>
         <MiniFixCard />

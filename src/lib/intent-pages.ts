@@ -55,7 +55,7 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "Trades are a large part of the work, and there are pages for [plumbers](/websites-for/plumbers/), [electricians](/websites-for/electricians/) and the other trades. The same £500 site is also for other small businesses and for people who aren’t a trade at all.",
           "That includes [restaurants](/websites-for/restaurants/), [cafés](/websites-for/cafes/), [hairdressers](/websites-for/hairdressers/), [beauty salons](/websites-for/salons/), [gyms](/websites-for/gyms/), [shops](/websites-for/shops/), [consultants](/websites-for/consultants/), [freelancers](/websites-for/freelancers/), [startups](/websites-for/startups/) and [individuals](/websites-for/individuals/). The pages differ. The price for a small site does not.",
-          "A bigger build — lots of pages, a web app, a full online shop with stock and shipping — is quoted separately, from around £1,200. I’ll tell you if what you’re describing isn’t the £500 site, before you pay anything. The mock-up is free.",
+          "A bigger build — lots of pages, a web app, a full online shop with stock and shipping — is quoted separately, from around £1,200. I’ll tell you if what you’re describing isn’t the £500 site, before you pay anything.",
         ],
       },
       {
@@ -110,13 +110,13 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "Once the £500 is paid, you choose. Optional monthly care, typically £29–£50, covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover of the site.",
           "Care is not one of the build plans, and it doesn’t start instead of them. The £50 a month on plan 1 is paying off the £500. It is not the care plan.",
-          "You can see the whole sequence — free mock-up, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve seen the mock-up and decided to go ahead.",
+          "You can see the sequence — sample sites, deposit, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve decided to go ahead. A design for your business starts after the deposit.",
         ],
       },
     ],
     faqs: [
       ["Do the monthly plans cost more than £500 in total?", "No. £150 plus seven payments of £50 is £500. £100 plus four payments of £100 is £500. £166.67 plus £166.67 plus £166.66 is £500."],
-      ["When do I pick a plan?", "After the free mock-up, if you want the site built. You can also pay the £500 in one payment. The mock-up itself is free."],
+      ["When do I pick a plan?", "When you decide to go ahead. You can pay the £500 in one payment or use a plan. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio."],
       ["Is monthly care required?", "No. After the site is paid for you can take optional monthly care, typically £29–£50, or a full handover. It’s a choice, not a condition of the £500."],
     ],
   },
@@ -132,14 +132,14 @@ export const intentPages: IntentPage[] = [
     showIncluded: true,
     showPlans: false,
     cta: { label: "Get a free fix audit", hash: "fix-audit" as const },
-    secondaryCta: { label: "Or a free mock-up for a rebuild", hash: "mockup-form" as const },
+    secondaryCta: { label: "Ask about a rebuild", hash: "mockup-form" as const },
     sections: [
       {
         id: "when",
         heading: "When a redesign is the right job",
         paragraphs: [
           "I look at the same problems repeatedly. The page has to be pinched and zoomed on a phone. The phone number isn’t tappable. The browser says the site isn’t secure. The Google title still says “Home”. The contact form doesn’t arrive, or there isn’t one. The business has changed and the site describes an older version of it.",
-          "There are two honest routes. A fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £500, with the [payment plans](/pay-monthly-website/) if you want them, and a homepage mock-up before you commit.",
+          "There are three honest routes. One concrete fix on a live East Midlands site can be the [£100 mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £500, with the [payment plans](/pay-monthly-website/) if you want them. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio.",
         ],
       },
       {
@@ -147,7 +147,8 @@ export const intentPages: IntentPage[] = [
         heading: "Update my old website",
         paragraphs: [
           "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (typically £29–£50), or as a one-off if we’ve agreed it.",
-          "If someone else built it, start with the [free fix audit](/contact/#fix-audit) rather than a guess at the price. I’ll look at the live site and tell you whether a repair will hold. A theme or a page builder that breaks when you edit it is often better replaced. I’ll say that before any fee.",
+          "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
+          "If the job is bigger than one fix, start with the [free fix audit](/contact/#fix-audit). I’ll look at the live site and tell you whether a repair will hold. A normal rescue is usually around £150–£400. A rebuild is the £500 small-business site. I’ll say which job it is before you pay.",
           "Send the address of the current site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
         ],
       },
@@ -161,9 +162,9 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. If patching is a false economy, the quote is for a rebuild, which is £500 for a small business."],
+      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, the quote is for a rebuild, which is £500 for a small business."],
       ["Do I have to change my domain?", "No. The domain stays yours. If it’s in your name, we keep it and point it at the site when you’re ready."],
-      ["How much is a redesign?", "A repair is typically £150–£400 after the audit. A small-business rebuild is £500 — the same as a first website. Larger projects are quoted from around £1,200."],
+      ["How much is a redesign?", "One fix on a live East Midlands site is the £100 mini-fix. A larger repair is typically £150–£400 after the audit. A small-business rebuild is £500. Larger projects are quoted from around £1,200."],
     ],
   },
   {
@@ -178,7 +179,7 @@ export const intentPages: IntentPage[] = [
     showIncluded: false,
     showPlans: false,
     cta: { label: "Get a free fix audit", hash: "fix-audit" as const },
-    secondaryCta: { label: "Or a free mock-up for a rebuild", hash: "mockup-form" as const },
+    secondaryCta: { label: "Ask about a rebuild", hash: "mockup-form" as const },
     sections: [
       {
         id: "how-to-tell",
@@ -201,7 +202,7 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "I don’t drop a mobile plugin into an old page builder and call it finished. Those layouts often look passable and still fail the real test: a thumb, in a hurry, trying to call you.",
           "If the site is dead on a phone, that can be a fix or a rebuild. I audit first. A typical fix is £150–£400. If the old layout won’t stay usable on a phone, the honest job is a new site at £500, laid out for a phone first. If it also needs a proper [redesign](/website-redesign/) — old content, no clear enquiry, a title that says “Home” — we do that together.",
-          "For a rebuild, you’ll get a homepage mock-up on a phone-sized layout before you pay. If it still feels awkward in your hand, say so. That’s the point of the mock-up.",
+          "For a rebuild, a design for your business starts after the deposit. Before that, look at sample sites. If the phone layout still feels awkward once you can see your own pages, say so.",
         ],
       },
       {
@@ -209,12 +210,13 @@ export const intentPages: IntentPage[] = [
         heading: "When a tweak is enough",
         paragraphs: [
           "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, typically £29–£50, once any build is paid for.",
-          "If a different company built it, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need a new site. I won’t invoice £500 for a stylesheet tweak.",
+          "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £100 website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
+          "If the whole site has to be replaced so it can be used on a phone, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need the £500 rebuild. I won’t invoice £500 for a stylesheet tweak.",
         ],
       },
     ],
     faqs: [
-      ["Can you just make my current site mobile friendly?", "I’ll audit it first. If a repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £500."],
+      ["Can you just make my current site mobile friendly?", "I’ll audit it first. One concrete layout fix on a live East Midlands site can be the £100 mini-fix. If a wider repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £500."],
       ["Do you design the phone version separately?", "It’s one site. The layout is designed for a phone, then adjusted so a larger screen still reads well. You don’t maintain two websites."],
       ["Will a mobile-friendly site guarantee more calls?", "No. It removes a reason for people to give up when they try to phone you or read the page. It doesn’t promise a number of enquiries."],
     ],
@@ -236,7 +238,7 @@ export const intentPages: IntentPage[] = [
         heading: "What that changes",
         paragraphs: [
           "A template starts from someone else’s layout and turns features on and off. It’s a fair way to get something online if you have the time to do it yourself. It also means unused parts, a look customers have seen before, and a builder you have to learn.",
-          "A website built from scratch starts from what the business needs to say. The pages, the order, and the way someone gets in touch are decided for you, then I build them. You still approve the design — the [free mock-up](/how-it-works/) is that step — but you don’t assemble it.",
+          "A website built from scratch starts from what the business needs to say. The pages, the order, and the way someone gets in touch are decided for you, then I build them. You still approve the design after the deposit — [how it works](/how-it-works/) is that sequence — but you don’t assemble it. Before the deposit, you look at sample sites.",
           "The small-business price is £500. That’s the same offer as the rest of this site, including the [pay monthly](/pay-monthly-website/) plans. “From scratch” is how it’s made, not a luxury tier.",
         ],
       },
@@ -245,8 +247,8 @@ export const intentPages: IntentPage[] = [
         heading: "A first website for my business",
         paragraphs: [
           "A first website for a new business can be this. You don’t need a logo, a brand workshop or a year’s worth of blog posts. You need a name, a plain description of what you do, where you work, and how someone should contact you.",
-          "If you have photos, send them. If you don’t, we don’t fill the gap with stock pictures of a different company. The mock-up can start from the words.",
-          "The audiences differ — a [café](/websites-for/cafes/), a [consultant](/websites-for/consultants/), a [startup](/websites-for/startups/) and a [personal site](/websites-for/individuals/) don’t need the same pages. Say which you are on the form and the mock-up will follow that, not a generic small-business layout.",
+          "If you have photos, send them. If you don’t, we don’t fill the gap with stock pictures of a different company. The design can start from the words, after the deposit.",
+          "The audiences differ — a [café](/websites-for/cafes/), a [consultant](/websites-for/consultants/), a [startup](/websites-for/startups/) and a [personal site](/websites-for/individuals/) don’t need the same pages. Say which you are on the form and the site will follow that, not a generic small-business layout.",
           "There’s a short guide to [what a small business website needs](/blog/what-a-small-business-website-needs/) if you want the checklist before you enquire.",
         ],
       },
@@ -254,7 +256,7 @@ export const intentPages: IntentPage[] = [
         id: "what-to-send",
         heading: "What to send",
         paragraphs: [
-          "The form asks for your name, the business name, an email and a note about what you do. A phone number and a current website are optional. You don’t need any of the extras below to ask for a mock-up.",
+          "The form asks for your name, the business name, an email and a note about what you do. A phone number and a current website are optional. You don’t need any of the extras below to ask about a site.",
         ],
         list: [
           "A logo, if you already use one",
@@ -266,7 +268,7 @@ export const intentPages: IntentPage[] = [
     ],
     faqs: [
       ["Is a bespoke site more expensive than £500?", "Not here. The £500 small-business website is built from scratch. Bigger projects, with many more pages or a web app, are quoted from around £1,200."],
-      ["I’ve never had a website. Can I still get a mock-up?", "Yes. That’s the normal way to start. The mock-up is free, and you can stop after seeing it."],
+      ["I’ve never had a website. Can I still start?", "Yes. Tell me what you do. Before a deposit you look at sample sites. A design for your business starts after the deposit."],
       ["Do I need to write everything first?", "No. A few honest sentences are enough to design the homepage. I won’t invent services or claims to fill the page."],
     ],
   },

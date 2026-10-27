@@ -5,11 +5,13 @@ import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded, OfferCards }
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
+import { MiniFixOffer } from "@/components/site/MiniFix";
 import { projects, seo } from "@/lib/site-data";
 
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Built from scratch", text: "A first website, or a replacement for a template." },
   { to: "/website-redesign" as const, title: "Fix or redesign", text: "A free audit first. A rebuild if patching won’t hold." },
+  { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it work on a phone", text: "If customers have to pinch and zoom." },
   { to: "/cheap-website-for-small-business" as const, title: "£500, explained", text: "A cheap website for a small business, and what that excludes." },
   { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Three plans. Every one totals £500." },
@@ -19,8 +21,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     ...seo(
       "/",
-      "Websites, Fixes & Google | £500 New Site | WholeLottaSites",
-      "Websites, fixes, Google Business Profile and care for UK small businesses. A new site is £500, with a free mock-up. Chris Faulkes, Mansfield.",
+      "Websites, Fixes & Google | £500 or £100 Fix",
+      "New sites £500. East Midlands £100 mini-fix for one live-site fix. Google Business Profile and optional care. Chris Faulkes, Mansfield. No ranking promises.",
     ),
   }),
   component: Home,
@@ -38,17 +40,21 @@ function Home() {
               Websites, fixes, and your <span className="text-copper">Google listing</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">
-              A new small-business website, built from scratch, is £500 — with a free mock-up first. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
+              A new small-business website, built from scratch, is £500. Look at sample sites first. A design for your business starts after the deposit. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Button asChild variant="copper" size="lg"><Link to="/contact" hash="mockup-form">Get your free mock-up</Link></Button>
+              <Button asChild variant="copper" size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
               <Button asChild variant="navyOutline" size="lg"><Link to="/contact" hash="fix-audit">Free fix audit</Link></Button>
             </div>
             <p className="mt-4 text-sm text-navy-foreground/80">
-              Free mock-up homepage. No strings attached.{" "}
+              Samples are on the portfolio.{" "}
               <Link to="/pricing" hash="offers" className="font-semibold text-copper underline-offset-4 hover:underline">See pricing</Link>
               {" · "}
               <Link to="/portfolio" className="font-semibold text-copper underline-offset-4 hover:underline">See my work</Link>
+            </p>
+            <p className="mt-3 max-w-2xl text-sm text-navy-foreground/80">
+              Site already live in the East Midlands, and only one thing is broken?{" "}
+              <Link to="/website-mini-fix" className="font-semibold text-copper underline-offset-4 hover:underline">£100 mini-fix — one fix, not a rebuild</Link>.
             </p>
           </div>
           <DeviceMockup />
@@ -96,17 +102,21 @@ function Home() {
       </Section>
 
       <Section muted>
-        <WhatsIncluded />
+        <MiniFixOffer />
       </Section>
 
       <Section>
+        <WhatsIncluded />
+      </Section>
+
+      <Section muted>
         <Reveal><BeforeAfter /></Reveal>
         <Link to="/services" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           How I fix these <ArrowRight className="size-4" aria-hidden />
         </Link>
       </Section>
 
-      <Section muted>
+      <Section>
         <Reveal><Heading eyebrow="Portfolio" title="Recent small business websites." /></Reveal>
         <ProjectGrid items={projects.slice(0, 3)} />
         <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
@@ -114,12 +124,12 @@ function Home() {
         </Link>
       </Section>
 
-      <Section>
+      <Section muted>
         <Reveal><Comparison /></Reveal>
       </Section>
 
-      <Section muted>
-        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The £500 price for a small site is." />
+      <Section>
+        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The £500 price for a small site is. A live East Midlands site that only needs one fix is the £100 mini-fix." />
         <Link to="/websites-for" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           Browse websites by type of business <ArrowRight className="size-4" aria-hidden />
         </Link>
@@ -142,7 +152,7 @@ function Home() {
       </Section>
 
       {latest && (
-        <Section>
+        <Section muted>
           <Heading eyebrow="From the blog" title="Plain-English advice." lead="One useful article to start. More are planned; nothing here is padded with fake results." />
           <Link to="/blog/$slug" params={{ slug: latest.slug }} className="mt-8 block max-w-2xl rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm hover:shadow-md">
             <p className="text-sm text-muted-foreground"><time dateTime={latest.date}>{formatPostDate(latest.date)}</time></p>
@@ -155,7 +165,7 @@ function Home() {
         </Section>
       )}
 
-      <Section muted>
+      <Section>
         <AboutChris />
       </Section>
     </>

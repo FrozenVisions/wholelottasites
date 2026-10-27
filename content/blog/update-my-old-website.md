@@ -35,7 +35,7 @@ Do these even if a new site comes later.
 
 Use the same wording on your Google Business Profile. When the name, address and phone disagree, a customer cannot tell which copy to trust.
 
-If I look after the site, these edits sit on optional monthly care (typically £29–£50), or as an agreed one-off. If someone else built it, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold before any fee. A typical fix is £150–£400. If patching is a false economy, the honest job is a new site.
+If I look after the site, these edits sit on optional monthly care (typically £29–£50), or as an agreed one-off. If the site is already live and you only need one concrete fix — a broken form, a mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/), for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a redesign. If the job is bigger than one fix, send the address for a [free fix audit](/contact/#fix-audit). A typical rescue is £150–£400. If patching is a false economy, the honest job is a new site at £500.
 
 ## Make three lists before anyone redesigns it
 
@@ -67,6 +67,6 @@ A blog can wait until you will write it. Booking can wait until you have a syste
 
 ## What to send
 
-[How it works](/how-it-works/) is the route from a free mock-up to launch. For a site you already have, use the [free fix audit](/contact/#fix-audit). For a new build, use the [mock-up form](/contact/#mockup-form). Send the current address, the business name, which checks failed, and the three lists if you have them. The mock-up and the audit are free and do not commit you. A sound site that only needed a second look costs nothing.
+[How it works](/how-it-works/) is the route from sample sites to a deposit, then the build. For a site you already have, use the [free fix audit](/contact/#fix-audit). For a new build, use the [contact form](/contact/#mockup-form). Send the current address, the business name, which checks failed, and the three lists if you have them. The audit is free. A design for a new site starts after the deposit. A sound site that only needed a second look costs nothing.
 
-The [portfolio](/portfolio/) shows sites I run and example designs. A preview of yours should carry your name, your services and your towns.
+The [portfolio](/portfolio/) shows sites I run and example designs.

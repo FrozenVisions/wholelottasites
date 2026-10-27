@@ -56,7 +56,7 @@ export function CheckList({ items }: { items: string[] }) {
 export function LandingCta({ label }: { label: string }) {
   return (
     <div className="mt-10 flex flex-wrap gap-3">
-      <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Get your free mock-up{label ? ` for your ${label}` : ""}</Link></Button>
+      <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site{label ? ` for your ${label}` : ""}</Link></Button>
       <Button asChild size="lg" variant="outline"><Link to="/contact">Contact Chris</Link></Button>
     </div>
   );
@@ -68,6 +68,7 @@ export function PriceBlock() {
       <PaymentPlans />
       <DomainNote />
       <p className="mt-4 text-muted-foreground">See the <Link to="/pricing" className="font-semibold text-primary underline-offset-4 hover:underline">full pricing page</Link> for what’s included.</p>
+      <p className="mt-4 text-muted-foreground">Already got a live site in the East Midlands and only one thing is broken? The <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">£100 website mini-fix</Link> is a short audit and one fix. It is not this £500 rebuild.</p>
     </>
   );
 }

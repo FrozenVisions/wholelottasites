@@ -105,9 +105,9 @@ export function JourneyBand() {
   return (
     <section className="pitch-top bg-navy pb-20 pt-32 text-navy-foreground" aria-labelledby="journey-heading">
       <div className="mx-auto max-w-7xl px-5">
-        <Heading onNavy eyebrow="How it works" title={<span id="journey-heading">Mock-up, build, launch.</span>} lead="You see a homepage before you pay anything." />
+        <Heading onNavy eyebrow="How it works" title={<span id="journey-heading">Sample, build, launch.</span>} lead="Before a deposit, you look at sample sites. A design for your business starts after that." />
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button asChild variant="copper"><Link to="/contact" hash="mockup-form">Start with a free mock-up</Link></Button>
+          <Button asChild variant="copper"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
           <Button asChild variant="navyOutline"><Link to="/how-it-works">The full process</Link></Button>
         </div>
         <ol className="relative mt-14 grid gap-10 md:grid-cols-3">
@@ -129,8 +129,8 @@ export function StepsBand() {
   return (
     <section className="pitch-top bg-navy pb-20 pt-32 text-navy-foreground">
       <div className="mx-auto max-w-7xl px-5">
-        <Heading onNavy eyebrow="How it works" title="From free mock-up to live website in four steps." />
-        <div className="mt-6"><Button asChild variant="copper"><Link to="/contact">Start with a free mock-up</Link></Button></div>
+        <Heading onNavy eyebrow="How it works" title="From sample sites to a live website." />
+        <div className="mt-6"><Button asChild variant="copper"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button></div>
         <ol className="relative mt-14 grid gap-10 md:grid-cols-4">
           <span aria-hidden className="absolute left-0 right-0 top-[1.4rem] hidden h-px bg-gradient-to-r from-copper via-copper/50 to-transparent md:block" />
           {steps.map(([t, d], i) => (
@@ -347,18 +347,18 @@ export function FaqList() {
   );
 }
 
-type EnquiryMode = "website" | "fix" | "gbp" | "care" | "bundle";
+type EnquiryMode = "website" | "fix" | "gbp" | "care" | "bundle" | "mini";
 
 const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebrow: string; title: string; lead: string; subject: string; button: string; placeholder: string }> = {
   website: {
     hash: "mockup-form",
-    label: "New website — free mock-up",
-    eyebrow: "No strings attached",
-    title: "Get your free mock-up homepage.",
-    lead: "A couple of minutes. I’ll design a homepage for your business, free. Like it? We build the rest. A new small-business site is £500.",
-    subject: "New free mock-up request – WholeLottaSites",
-    button: "Get your free mock-up",
-    placeholder: "What does your business do? What do you want from your site?",
+    label: "New website",
+    eyebrow: "New website",
+    title: "Ask about a new website.",
+    lead: "Tell me what the business does. Before a deposit, the sample is a site I’ve already built — not a design made for you. A design for your business starts after the deposit. A new small-business site is £500.",
+    subject: "New website enquiry – WholeLottaSites",
+    button: "Ask about a new site",
+    placeholder: "What does your business do, and what should the site help people do?",
   },
   fix: {
     hash: "fix-audit",
@@ -399,6 +399,16 @@ const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebr
     subject: "Bundle enquiry – WholeLottaSites",
     button: "Ask about a bundle",
     placeholder: "Which combination, and the website address if you already have one?",
+  },
+  mini: {
+    hash: "mini-fix",
+    label: "£100 East Midlands mini-fix",
+    eyebrow: "East Midlands",
+    title: "Ask about the £100 mini-fix.",
+    lead: "For a live site in the East Midlands. £100 is a short audit and one concrete fix. Not a redesign, and not a ranking promise. Send the address.",
+    subject: "£100 website mini-fix enquiry – WholeLottaSites",
+    button: "Send the site address",
+    placeholder: "What’s the one thing that’s broken, and where is the site?",
   },
 };
 
@@ -443,6 +453,7 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
         <div id="gbp" className="scroll-mt-28" />
         <div id="care" className="scroll-mt-28" />
         <div id="bundle" className="scroll-mt-28" />
+        <div id="mini-fix" className="scroll-mt-28" />
         {thanks ? (
           <div role="status" className="rounded-lg border-t-4 border-primary bg-card p-10 shadow-sm">
             <h2 className="text-3xl">Thanks — got it!</h2>
@@ -474,8 +485,8 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
             <label htmlFor="mockup-phone" className="block text-sm font-medium">Phone <span className="font-normal text-muted-foreground">(optional, if you’d rather I call)</span>
               <input id="mockup-phone" type="tel" name="phone" autoComplete="tel" inputMode="tel" className={field} />
             </label>
-            <label htmlFor="mockup-website" className="block text-sm font-medium">Current website {mode === "fix" ? <span className="font-normal text-muted-foreground">(the one to audit)</span> : <span className="font-normal text-muted-foreground">(optional)</span>}
-              <input id="mockup-website" required={mode === "fix"} type="url" name="current_website" autoComplete="url" placeholder="https://" className={field} />
+            <label htmlFor="mockup-website" className="block text-sm font-medium">Current website {mode === "fix" || mode === "mini" ? <span className="font-normal text-muted-foreground">(the live site)</span> : <span className="font-normal text-muted-foreground">(optional)</span>}
+              <input id="mockup-website" required={mode === "fix" || mode === "mini"} type="url" name="current_website" autoComplete="url" placeholder="https://" className={field} />
             </label>
             <label htmlFor="mockup-message" className="block text-sm font-medium">Message
               <textarea id="mockup-message" required name="message" rows={4} placeholder={copy.placeholder} className={field} />

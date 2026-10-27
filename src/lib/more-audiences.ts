@@ -59,14 +59,14 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["Can prices sit on the site?", "Yes. Send the list and I’ll lay it out. Later changes can go on the optional monthly care plan (typically £29–£50)."],
-      ["I do hair and beauty. Which page is mine?", "We can cover both on one site. The hair and the beauty treatments should be separate sections so each client finds their own list. Tell me that on the mock-up form."],
+      ["I do hair and beauty. Which page is mine?", "We can cover both on one site. The hair and the beauty treatments should be separate sections so each client finds their own list. Tell me that on the contact form."],
       ["Do I need a booking system first?", "No. If you have one, I’ll link it. If you don’t, the site can take booking requests by form."],
     ],
   },
   {
     slug: "gyms",
     name: "Gyms",
-    title: "Gym Website Design | Classes, Timetable & Joining | WholeLottaSites",
+    title: "Gym Website Design | Classes & Timetables | WholeLottaSites",
     description: "Gym website design for independent gyms and studios: timetable, memberships, coaches and how to book a trial. A custom site for £500.",
     h1: "Gym website design.",
     lead: "Someone comparing gyms wants the address, what’s on the timetable, and how to try a class or join. Hide those and they go to the next result.",
@@ -90,14 +90,14 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["Can the site take membership payments?", "Card payments can go through your own Stripe account if that’s how you charge. Direct debits and access-control systems stay with the provider you already use. I’ll link across. I don’t replace them."],
-      ["I’m a personal trainer, not a gym. Is this still right?", "You’ll want a shorter site: what you offer, where you train, and how to get in touch. Say that on the mock-up form and I’ll design for a one-person business, not a gym floor."],
+      ["I’m a personal trainer, not a gym. Is this still right?", "You’ll want a shorter site: what you offer, where you train, and how to get in touch. Say that on the contact form and the site will be for a one-person business, not a gym floor."],
       ["Can I update the timetable?", "Yes. On the optional monthly care plan (typically £29–£50) I can change it for you, or I can show you a simple way to send the week’s classes."],
     ],
   },
   {
     slug: "shops",
     name: "Shops",
-    title: "Shop Website Design | Hours, Stock & Finding You | WholeLottaSites",
+    title: "Shop Website Design | Opening Hours & Stock | WholeLottaSites",
     description: "Shop website design for independent shops: what you sell, opening hours, how to find you, and card payments if you want them. Built for £500.",
     h1: "Shop website design.",
     lead: "A lot of independent shops don’t need a full online store. They need a page that says what you sell, when you’re open, and where the door is.",
@@ -128,7 +128,7 @@ export const moreAudiences: TradePage[] = [
   {
     slug: "consultants",
     name: "Consultants",
-    title: "Consultant Website | For Independent Consultants | WholeLottaSites",
+    title: "Website for Independent Consultants | WholeLottaSites",
     description: "A consultant website that says who you help, how you work and how to book a conversation. Built from scratch for £500. No invented case-study figures.",
     h1: "A consultant website.",
     lead: "People don’t hire a consultant from a slogan. They want to know who you help, what the work involves, and how to start.",
@@ -152,14 +152,14 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["Can you write case studies?", "I can lay out a case study you provide. I won’t invent a client, a result or a quote. If you can’t share numbers, we leave them out."],
-      ["I don’t want my phone number public.", "That’s fine. A form and an email are enough. Say which you prefer on the mock-up request."],
+      ["I don’t want my phone number public.", "That’s fine. A form and an email are enough. Say which you prefer when you get in touch."],
       ["Is £500 enough for a consultancy site?", "Yes for a small, clear site. If you need a large resource library, a client login or several languages, I’ll quote that separately, from around £1,200."],
     ],
   },
   {
     slug: "freelancers",
     name: "Freelancers",
-    title: "Freelancer Website | A Simple Site for Sole Traders | WholeLottaSites",
+    title: "Freelancer Website | Sites for Sole Traders | WholeLottaSites",
     description: "A freelancer website: your services, examples of your own work and a way to get hired. Built from scratch for £500, with pay-monthly plans.",
     h1: "A freelancer website.",
     lead: "A freelancer doesn’t need an agency website. You need a page you can send to someone who’s thinking of hiring you.",
@@ -179,7 +179,7 @@ export const moreAudiences: TradePage[] = [
     tips: [
       "Show the work you want to be hired for, not every job you’ve ever done.",
       "Put the site address in your email signature and on invoices.",
-      "Don’t wait for a logo. Your name is enough to start the mock-up.",
+      "Don’t wait for a logo. Your name is enough to start the conversation.",
     ],
     faqs: [
       ["I only have two projects I can show. Is that enough?", "Yes. Two real examples beat a grid of placeholders. We can add more later."],
@@ -197,7 +197,7 @@ export const moreAudiences: TradePage[] = [
     intro: [
       "This page is for founders who need a website. I’m not an investor, and the page I build is yours — it won’t be a fake product demo with made-up users.",
       "A £500 site is a marketing site: the explanation, a way to request access or ask a question, and the practical pages (about, contact, a simple privacy note if you collect enquiries). It is not a logged-in product, a marketplace or a billing platform. Those are larger builds. I quote them from around £1,200, and I’ll say so before any work starts if that’s what you actually need.",
-      "You don’t need a finished brand to see a mock-up. A straight description of the product is enough. If the description is muddy, the mock-up will show that, which is useful.",
+      "You don’t need a finished brand to start. A straight description of the product is enough. A design for the business starts after the deposit. Before that, look at sample sites.",
     ],
     features: [
       { title: "One clear explanation", text: "What the product does, in the first screen, without a slogan that could belong to anyone." },

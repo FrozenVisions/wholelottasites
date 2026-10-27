@@ -50,7 +50,7 @@ export function IntentView({ slug }: { slug: string }) {
           </div>
         ))}
         <div className="mt-10 flex flex-wrap gap-3">
-          <Button asChild size="lg"><Link to="/contact" hash={page.cta?.hash ?? "mockup-form"}>{page.cta?.label ?? "Get your free mock-up"}</Link></Button>
+          <Button asChild size="lg"><Link to="/contact" hash={page.cta?.hash ?? "mockup-form"}>{page.cta?.label ?? "Ask about a new site"}</Link></Button>
           {page.secondaryCta && (
             <Button asChild size="lg" variant="outline"><Link to="/contact" hash={page.secondaryCta.hash}>{page.secondaryCta.label}</Link></Button>
           )}

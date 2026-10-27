@@ -71,4 +71,4 @@ A few things can wait.
 - Card payments, until you have your own Stripe account. I can connect the links then.
 - Extra pages that repeat the homepage.
 
-The mock-up is free. Asking for one doesn’t commit you to the rest. If you want to see a homepage for your own business, use the [mock-up form](/contact/#mockup-form).
+Look at sample sites on the [portfolio](/portfolio/) before you decide. A design for your own business starts after the deposit. Use the [contact form](/contact/#mockup-form) to ask. If you already have a site, a [fix audit](/contact/#fix-audit) — screenshots and the issues — is free.

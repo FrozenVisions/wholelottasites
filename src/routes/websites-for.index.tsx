@@ -7,7 +7,7 @@ import { PRICE_FAQ, type Faq, tradeBySlug } from "@/lib/landing-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
 const hubFaqs: Faq[] = [
-  ["My type of business isn’t listed. Can you still help?", "Yes. These pages are examples of how the site changes. Every site is built from scratch around the business, whatever you do. Ask for a free mock-up and tell me about the work."],
+  ["My type of business isn’t listed. Can you still help?", "Yes. These pages are examples of how the site changes. Every site is built from scratch around the business, whatever you do. Tell me about the work. A design for your business starts after the deposit."],
   ["Are these pages for customers looking for a plumber or a restaurant?", "No. They’re for people who want a website for that kind of business. Your customers’ searches — “plumber near me”, “restaurant near me” and the rest — are explained on each page, including how a clear site and a Google Business Profile help. This site doesn’t pretend to be the tradesperson or the restaurant."],
   PRICE_FAQ,
 ];
@@ -23,6 +23,7 @@ const groups = [
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Website built from scratch", text: "No theme. Also the route for a first website." },
   { to: "/website-redesign" as const, title: "Website redesign", text: "When the old site is in the way, including a straight update." },
+  { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it mobile friendly", text: "If people have to pinch and zoom to phone you." },
   { to: "/cheap-website-for-small-business" as const, title: "Cheap website, £500", text: "What the fixed price includes, and what it doesn’t." },
   { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Three plans. Each one totals £500." },

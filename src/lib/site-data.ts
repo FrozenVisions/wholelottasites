@@ -85,28 +85,28 @@ export const included = [
 ] as const;
 
 export const steps = [
-  ["Free mock-up", "I design a homepage mock-up for your business. Free, no strings attached."],
-  ["You approve", "Tell me what you love and what to change until it feels right."],
-  ["Built in days", "I build the full site from scratch, usually within days of approval."],
+  ["Samples", "Look at live sites and example designs. That’s what you see before a deposit."],
+  ["Deposit", "A design for your business starts once the deposit is in. We agree the pages."],
+  ["Built in days", "I build the full site from scratch, usually within days of that."],
   ["Go live", "I help you connect your domain and launch."],
 ] as const;
 
 /** Short homepage version, and the longer copy used on the how-it-works page and in HowTo structured data. */
 export const stages = [
   {
-    title: "Mock-up",
-    summary: "I design a homepage for your business. Free, and you’re not committing to anything.",
-    body: "Tell me what the business does and where it works. I’ll design a homepage mock-up so you can see the direction before you decide. You say what to change. There’s nothing to pay to get that far, and you can stop there.",
+    title: "Sample",
+    summary: "Before a deposit, you look at sample sites. Not a design made for your business.",
+    body: "The portfolio is the sample: live sites and example designs. A personalised design starts after the deposit, not before. Tell me what the business does when you get in touch, and I’ll say whether the £500 site is the right job.",
     points: [
-      "A homepage designed around your business, not a template",
-      "You ask for changes until it feels right",
-      "Nothing to pay, and no contract, to see it",
+      "Sample sites you can open today",
+      "No custom homepage before the deposit",
+      "A fix audit is separate, and that one is free",
     ],
   },
   {
     title: "Build",
-    summary: "If you like it, I build the full site from scratch, usually within days of you approving it.",
-    body: "When you approve the mock-up, I build the full site from scratch, usually within days. For a small business that is typically a home page, your services, an about page and contact — the pages we agreed. It’s laid out for phones, served over HTTPS, with a title and description on every page and a form that reaches you. If you want to take card payments, you set up your own Stripe account and I connect the payment links.",
+    summary: "After the deposit, I design and build the full site from scratch, usually within days.",
+    body: "Once the deposit is in, I design and build the full site from scratch, usually within days. For a small business that is typically a home page, your services, an about page and contact — the pages we agreed. It’s laid out for phones, served over HTTPS, with a title and description on every page and a form that reaches you. If you want to take card payments, you set up your own Stripe account and I connect the payment links.",
     points: [
       "The pages we agreed, built from scratch",
       "Mobile layout, HTTPS, page titles and a contact form",
@@ -132,7 +132,7 @@ export const paymentPlans = [
 ] as const;
 
 /** Contact-form anchors. The hash sets which enquiry the form opens on. */
-export type EnquiryHash = "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle";
+export type EnquiryHash = "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle" | "mini-fix";
 
 /** Sites that may be named as work. No results, rankings or testimonials are attached. */
 export const proofSites = [
@@ -148,13 +148,13 @@ export const offers = [
     price: "£500",
     priceNote: "Payment plans available. Each one totals £500.",
     summary:
-      "A brochure site or a small shop, built from scratch. You see a free homepage mock-up before you pay. You buy the domain, around £5–£10 a year, so it’s in your name.",
+      "A brochure site or a small shop, built from scratch. Before a deposit, you look at sample sites. A design for your business starts after that. You buy the domain, around £5–£10 a year, so it’s in your name.",
     points: [
       "£150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66.",
       "Bigger businesses are quoted from around £1,200.",
       "Stripe payment links if you want them. You set up your own Stripe account.",
     ],
-    cta: "Get a free mock-up",
+    cta: "Ask about a new site",
     hash: "mockup-form",
   },
   {
@@ -233,17 +233,18 @@ export const bundles = [
 ] as const;
 
 export const faqs = [
+  ["What is the £100 website mini-fix?", "For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £100 is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at £500. It is not a promise of a Google position."],
   ["Who owns the domain?", "You do. You buy it, around £5–£10 a year, so the account stays in your name. I’ll help you point it at the site. I don’t need to own it."],
   ["Can I pay monthly for a new website?", "Yes. A full website is £500, or you can spread that same £500: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card through Stripe. Those payments are paying off the website. They are not the care plan."],
   ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. Your domain is separate, at around £5–£10 a year. Monthly care is optional after that, typically £29–£50, or you can take a full handover."],
-  ["How do you price a website fix?", "I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. If patching is a false economy, I’ll quote a rebuild instead — £500 for a small business — before you agree to anything."],
+  ["How do you price a website fix?", "I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, I’ll quote a rebuild instead — £500 for a small business — before you agree to anything."],
   ["Who owns the Google Business Profile?", "You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix is £149. Optional monthly management is £99–£150."],
   ["Do you promise a Google ranking?", "No. I don’t promise a position on Google or Maps, and I won’t say you’re “#1”. A clear website and a looked-after Business Profile make you easier to find. They don’t guarantee where you appear."],
   ["Is monthly care required?", "No. Care is optional, typically £29–£50 a month. You can take a new site or a fix without it. It covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Say when you want to stop and I’ll confirm how we end it."],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
-  ["How long does a new site take?", "Usually built within days of you approving the mock-up."],
+  ["How long does a new site take?", "Usually built within days of the deposit and an agreed direction."],
   ["Can I make edits later?", "Yes. Small copy or photo edits can sit on optional monthly care, typically £29–£50, or as a one-off if we’ve agreed it."],
-  ["Is the mock-up really free?", "Yes. No strings attached. The fix audit is free as well: I look first, then quote."],
+  ["Do I get a free design before I pay?", "No. Before a deposit you can look at sample sites — live sites and example designs. A design for your business starts after the deposit. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price."],
 ] as const;
 
 export type Project = {

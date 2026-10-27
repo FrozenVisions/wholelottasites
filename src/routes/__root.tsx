@@ -29,7 +29,7 @@ const businessJsonLd = {
   "@type": "ProfessionalService",
   "@id": "https://wholelottasites.co.uk/#business",
   name: "WholeLottaSites",
-  description: "Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new small-business website, built from scratch, is £500.",
+  description: "Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new site is £500. An East Midlands mini-fix is £100: one concrete fix on a live site.",
   url: "https://wholelottasites.co.uk/",
   logo: "https://wholelottasites.co.uk/icon-512.png",
   image: "https://wholelottasites.co.uk/og-image.jpg",
@@ -50,18 +50,37 @@ const businessJsonLd = {
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "AdministrativeArea", name: "Nottinghamshire" },
+    { "@type": "AdministrativeArea", name: "Derbyshire" },
+    { "@type": "AdministrativeArea", name: "Leicestershire" },
+    { "@type": "AdministrativeArea", name: "Lincolnshire" },
+    { "@type": "AdministrativeArea", name: "Northamptonshire" },
     { "@type": "City", name: "Mansfield" },
   ],
-  serviceType: ["Web design", "Small business websites", "Website fixes", "Google Business Profile setup", "Website maintenance"],
+  serviceType: ["Web design", "Small business websites", "Website fixes", "Website mini-fix", "Google Business Profile setup", "Website maintenance"],
   contactPoint: { "@type": "ContactPoint", contactType: "sales", email: "chris@wholelottasites.co.uk", telephone: "+447517214483", areaServed: "GB", availableLanguage: "en-GB" },
   knowsAbout: ["Web design", "Small business websites", "Website fixes", "Google Business Profile", "Website maintenance"],
   makesOffer: [
     {
       "@type": "Offer",
+      name: "East Midlands £100 website mini-fix",
+      price: "100",
+      priceCurrency: "GBP",
+      description: "A short audit and one concrete fix on a website that’s already live. Not a redesign and not a full rebuild. No ranking promise.",
+      url: "https://wholelottasites.co.uk/website-mini-fix/",
+      areaServed: [
+        { "@type": "AdministrativeArea", name: "Nottinghamshire" },
+        { "@type": "AdministrativeArea", name: "Derbyshire" },
+        { "@type": "AdministrativeArea", name: "Leicestershire" },
+        { "@type": "AdministrativeArea", name: "Lincolnshire" },
+        { "@type": "AdministrativeArea", name: "Northamptonshire" },
+      ],
+    },
+    {
+      "@type": "Offer",
       name: "New small business website",
       price: "500",
       priceCurrency: "GBP",
-      description: "A full custom website or small shop built from scratch for £500. Payment plans total the same £500. The client buys the domain.",
+      description: "A full custom website or small shop built from scratch for £500. Payment plans total the same £500. The client buys the domain. A personalised design starts after the deposit.",
       url: "https://wholelottasites.co.uk/pricing/#new-website",
     },
     {
@@ -101,7 +120,7 @@ export function NotFoundComponent() {
         <Link to="/" className="inline-flex rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">Back to home</Link>
         <Link to="/portfolio" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">See my work</Link>
         <Link to="/pricing" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Pricing</Link>
-        <Link to="/contact" hash="mockup-form" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Free mock-up</Link>
+        <Link to="/contact" hash="mockup-form" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">New website</Link>
         <Link to="/blog" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Blog</Link>
       </div>
     </section>

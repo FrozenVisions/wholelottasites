@@ -2,7 +2,7 @@
 // While empty, the "Pay deposit / buy" button scrolls to the mock-up form instead.
 export const STRIPE_PAYMENT_LINK = "";
 
-// FormSubmit endpoint for the free mock-up request form (plain HTML POST).
+// FormSubmit endpoint for the enquiry form (plain HTML POST).
 export const FORM_ENDPOINT = "https://formsubmit.co/chris@wholelottasites.co.uk";
 
 export const CONTACT = {

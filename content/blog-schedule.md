@@ -22,7 +22,7 @@ Opening paragraph.
 
 Paragraphs, lists and [links](/pricing/). Use ## and ### headings, bullet lists, numbered lists, **bold**, *italic* and links. Internal links can omit the trailing slash. UK English.
 
-Do not invent statistics, reviews, ratings, client names or testimonials. If you mention a price, use only these figures: £500; £150 up front then £50 a month for 7 months; £100 up front then £100 a month for 4 months; three payments of £166.67, £166.67 and £166.66; domain around £5–£10 a year; £10-a-month care plan after payoff; bigger projects from around £1,200.
+Do not invent statistics, reviews, ratings, client names or testimonials. Do not promise a Google ranking or say “#1”. If you mention a price, use only these figures: new website £500; £150 up front then £50 a month for 7 months; £100 up front then £100 a month for 4 months; three payments of £166.67, £166.67 and £166.66; domain around £5–£10 a year, bought by the client; website fix typically £150–£400 after a free audit; Google Business Profile setup or fix £149; optional Google management £99–£150 a month; optional website care £29–£50 a month; bigger projects from around £1,200. Proof sites you may name, with no results attached: wholelottavinyl.com, safeplate.org.uk, mcdecoratingni.co.uk.
 ```
 
 Write a useful article that answers the keyword. If a service page already targets a similar search, link to it and take a how-to angle. Do not paste the service page. Do not write a page that pretends to be a plumber, a restaurant, a gym or anyone else. These posts are by Chris Faulkes, a web designer.

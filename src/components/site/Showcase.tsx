@@ -94,7 +94,7 @@ const rows = [
   ["Google titles & descriptions", "Set up on every page", "Up to you to remember"],
   ["Contact form & payment links", "Set up and tested for you", "You configure them yourself"],
   ["Going live", "I help you connect your domain", "You work it out"],
-  ["Try before you buy", "Free mock-up homepage first", "—"],
+  ["Before you buy", "Sample sites, then a design after the deposit", "You build it yourself"],
 ] as const;
 
 export function Comparison() {
@@ -167,7 +167,7 @@ export function AboutChris({ full }: { full?: boolean }) {
         </p>
         {full ? (
           <p className="mt-4 text-lg text-muted-foreground">
-            You deal with me directly from the free mock-up to launch day — no agency, no account managers, no templates.
+            You deal with me directly from the first conversation to launch day — no agency, no account managers, no templates.
           </p>
         ) : (
           <Link to="/about" className="mt-6 inline-flex items-center gap-2 font-semibold text-primary hover:underline">

@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { MiniFixOffer } from "@/components/site/MiniFix";
-import { PageHero, Section, Heading, WhyGrid, WhatsIncluded, ProblemsGrid } from "@/components/site/Sections";
+import { PageHero, Section, Heading, WhyGrid, WhatsIncluded, ProblemsGrid, OfferCards } from "@/components/site/Sections";
+import { Button } from "@/components/ui/button";
 import { SiteLinks } from "@/components/site/SiteLinks";
 import { seo } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
@@ -10,8 +11,8 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     ...seo(
       "/services",
-      "Small Business Web Design | No Templates | WholeLottaSites",
-      "Small business web design, built from scratch, for £500. Or an East Midlands £100 mini-fix: a short audit and one concrete fix on a site that’s already live.",
+      "Websites, Fixes, Google & Care | WholeLottaSites",
+      "New websites £500. East Midlands mini-fix £100. Fixes typically £150–£400. Google Business Profile £149. Optional care £29–£50. No ranking promises.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]))],
   }),
@@ -21,13 +22,21 @@ export const Route = createFileRoute("/services")({
 function Services() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Small business web design, from scratch." lead="Every site is built from scratch to suit each client — no templates. If the site is already live and only one thing is broken, there’s a £100 East Midlands mini-fix instead." crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
-      <Section>
-        <Heading eyebrow="Built from scratch" title="Why no templates matters." lead="Templates are built for everyone, so they fit no one perfectly. Every WholeLottaSites website starts from a blank page." />
-        <WhyGrid />
+      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead="A new small-business website is still £500, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £100 East Midlands mini-fix when a live site only needs one change." crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
+      <Section className="!pt-4">
+        <Heading eyebrow="Four offers" title="The job that matches where you are." lead="You buy and own the domain. You stay the owner of your Google listing. Care is optional. I don’t promise a ranking." />
+        <OfferCards />
+        <p className="mt-8 max-w-3xl text-muted-foreground">
+          Prefer them together? Fix + care, Site + Google Business Profile, Fix + Google Business Profile, or Full (a site or a fix, Google management, and care) are on the{" "}
+          <Link to="/pricing" hash="bundles" className="font-semibold text-primary hover:underline">pricing page</Link>.
+        </p>
       </Section>
       <Section muted>
         <MiniFixOffer />
+      </Section>
+      <Section>
+        <Heading eyebrow="Built from scratch" title="Why a new site has no template." lead="Templates are built for everyone, so they fit no one perfectly. Every new WholeLottaSites website starts from a blank page." />
+        <WhyGrid />
       </Section>
       <Section>
         <WhatsIncluded />
@@ -36,8 +45,11 @@ function Services() {
         </p>
       </Section>
       <Section muted>
-        <Heading eyebrow="Quick check" title="Is your website costing you customers?" />
+        <Heading eyebrow="Quick check" title="Is your website costing you customers?" lead="If the answer is yes, start with a free fix audit. I’ll send screenshots and 3–5 issues before a price. One concrete East Midlands fix can be the £100 mini-fix." />
         <ProblemsGrid />
+        <div className="mt-8">
+          <Button asChild size="lg"><Link to="/contact" hash="fix-audit">Get a free fix audit</Link></Button>
+        </div>
         <div className="mt-16">
           <Heading eyebrow="Related" title="Fixes, rebuilds and first sites." />
           <SiteLinks current="/services" />

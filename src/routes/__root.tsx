@@ -29,13 +29,13 @@ const businessJsonLd = {
   "@type": "ProfessionalService",
   "@id": "https://wholelottasites.co.uk/#business",
   name: "WholeLottaSites",
-  description: "Affordable custom websites for UK small businesses, built from scratch with no templates. A full small-business website for £500, or a £100 East Midlands mini-fix: a short audit and one concrete fix on a live site.",
+  description: "Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new site is £500. An East Midlands mini-fix is £100: one concrete fix on a live site.",
   url: "https://wholelottasites.co.uk/",
   logo: "https://wholelottasites.co.uk/icon-512.png",
   image: "https://wholelottasites.co.uk/og-image.jpg",
   email: "chris@wholelottasites.co.uk",
   telephone: "+447517214483",
-  priceRange: "£100+",
+  priceRange: "£29–£1,200",
   currenciesAccepted: "GBP",
   founder: {
     "@type": "Person",
@@ -56,16 +56,16 @@ const businessJsonLd = {
     { "@type": "AdministrativeArea", name: "Northamptonshire" },
     { "@type": "City", name: "Mansfield" },
   ],
-  serviceType: ["Web design", "Small business website design", "Website redesign", "Website mini-fix"],
+  serviceType: ["Web design", "Small business websites", "Website fixes", "Website mini-fix", "Google Business Profile setup", "Website maintenance"],
   contactPoint: { "@type": "ContactPoint", contactType: "sales", email: "chris@wholelottasites.co.uk", telephone: "+447517214483", areaServed: "GB", availableLanguage: "en-GB" },
-  knowsAbout: ["Web design", "Small business websites", "Custom website development", "SEO"],
+  knowsAbout: ["Web design", "Small business websites", "Website fixes", "Google Business Profile", "Website maintenance"],
   makesOffer: [
     {
       "@type": "Offer",
       name: "East Midlands £100 website mini-fix",
       price: "100",
       priceCurrency: "GBP",
-      description: "A short audit and one concrete fix on a website that’s already live. Not a redesign and not a full rebuild.",
+      description: "A short audit and one concrete fix on a website that’s already live. Not a redesign and not a full rebuild. No ranking promise.",
       url: "https://wholelottasites.co.uk/website-mini-fix/",
       areaServed: [
         { "@type": "AdministrativeArea", name: "Nottinghamshire" },
@@ -77,12 +77,35 @@ const businessJsonLd = {
     },
     {
       "@type": "Offer",
-      name: "Small business website",
+      name: "New small business website",
       price: "500",
       priceCurrency: "GBP",
-      description: "A full custom website built from scratch for £500. Payment plans are available and total the same £500.",
-      url: "https://wholelottasites.co.uk/pricing/",
-      areaServed: { "@type": "Country", name: "United Kingdom" },
+      description: "A full custom website or small shop built from scratch for £500. Payment plans total the same £500. The client buys the domain. A personalised design starts after the deposit.",
+      url: "https://wholelottasites.co.uk/pricing/#new-website",
+    },
+    {
+      "@type": "Offer",
+      name: "Website fix",
+      priceCurrency: "GBP",
+      priceSpecification: { "@type": "PriceSpecification", minPrice: "150", maxPrice: "400", priceCurrency: "GBP" },
+      description: "A typical fix after a free audit that lists 3 to 5 issues. A rebuild is quoted separately when patching is a false economy.",
+      url: "https://wholelottasites.co.uk/pricing/#website-fix",
+    },
+    {
+      "@type": "Offer",
+      name: "Google Business Profile setup",
+      price: "149",
+      priceCurrency: "GBP",
+      description: "One-off setup or fix. The client stays the Google owner. No ranking promise. Optional monthly management is £99–£150.",
+      url: "https://wholelottasites.co.uk/pricing/#google-business-profile",
+    },
+    {
+      "@type": "Offer",
+      name: "Monthly website care",
+      priceCurrency: "GBP",
+      priceSpecification: { "@type": "PriceSpecification", minPrice: "29", maxPrice: "50", priceCurrency: "GBP", unitText: "MONTH" },
+      description: "Optional monthly care: uptime and SSL checks, small edits, form checks and domain renewal nudges.",
+      url: "https://wholelottasites.co.uk/pricing/#monthly-care",
     },
   ],
 };
@@ -97,7 +120,7 @@ export function NotFoundComponent() {
         <Link to="/" className="inline-flex rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">Back to home</Link>
         <Link to="/portfolio" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">See my work</Link>
         <Link to="/pricing" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Pricing</Link>
-        <Link to="/contact" hash="mockup-form" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Free mock-up</Link>
+        <Link to="/contact" hash="mockup-form" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">New website</Link>
         <Link to="/blog" className="inline-flex rounded-md border border-input px-6 py-3 font-semibold hover:bg-accent">Blog</Link>
       </div>
     </section>

@@ -56,7 +56,7 @@ export function CheckList({ items }: { items: string[] }) {
 export function LandingCta({ label }: { label: string }) {
   return (
     <div className="mt-10 flex flex-wrap gap-3">
-      <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Get your free mock-up{label ? ` for your ${label}` : ""}</Link></Button>
+      <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site{label ? ` for your ${label}` : ""}</Link></Button>
       <Button asChild size="lg" variant="outline"><Link to="/contact">Contact Chris</Link></Button>
     </div>
   );

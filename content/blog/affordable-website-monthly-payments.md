@@ -21,13 +21,13 @@ On the [pricing](/pricing/) page the small-business website is £500. These are 
 
 Paying £500 at the start is the same website. I don’t add a setup fee or interest. A plan changes the dates, not the price.
 
-While you pay in instalments, the domain and the hosting stay in my name, WholeLottaSites. They are not a separate bill on top of the £500 while those payments are still running. Once the £500 is paid, the domain transfers to you. A renewal after that is around £5–£10 a year. After payoff you can choose a £10-a-month hosting and care plan. It does not start while the instalments are still running. A bigger project is quoted from around £1,200.
+While you pay in instalments, the domain and the hosting stay in my name, WholeLottaSites. They are not a separate bill on top of the £500 while those payments are still running. Once the £500 is paid, the domain transfers to you. A renewal after that is around £5–£10 a year. After payoff you can choose optional monthly care, typically £29–£50. It does not start while the instalments are still running. A bigger project is quoted from around £1,200.
 
 ## Paying monthly or paying up front
 
 The pages do not change with the plan. Either way you get the site on [what the £500 includes](/cheap-website-for-small-business/): built from scratch, readable on a phone, HTTPS, a title on every page, a contact form and help going live. Card payments use your own Stripe account. [Built from scratch](/website-built-from-scratch/) is how it’s made, not a dearer tier.
 
-Paying up front is one payment of £500. A plan spreads those same pounds until the total is reached. You choose after you’ve seen the mock-up. That homepage is free, and asking for it doesn’t commit you to the website. [How it works](/how-it-works/) is mock-up, then build, then launch. Use the [mock-up form](/contact/#mockup-form). The [portfolio](/portfolio/) shows sites I run and example designs.
+Paying up front is one payment of £500. A plan spreads those same pounds until the total is reached. You choose when you decide to go ahead. A design for your business starts after the deposit. Before that, the [portfolio](/portfolio/) is the sample: sites I run and example designs. [How it works](/how-it-works/) is sample, then build, then launch. Use the [contact form](/contact/#mockup-form).
 
 ## Who owns the domain and the site while you pay
 
@@ -45,14 +45,14 @@ If an instalment is missed, the site is paused until that payment is caught up. 
 
 The instalments pay for that same website. While they are running, the domain and hosting stay in my name. Once the £500 is paid, the domain transfers to you, and a renewal is around £5–£10 a year. That renewal is not part of the £500. If you want card payments, that uses your own Stripe account. An existing site can be a [website redesign](/website-redesign/), or a new build when the old pages fail on a phone ([make my website mobile friendly](/mobile-friendly-website/)). What the pages should say is in [what a small business website needs](/blog/what-a-small-business-website-needs/).
 
-Once the £500 is paid, the build plan ends and the domain transfers to you. A £10-a-month hosting and care plan then covers hosting and small edits, such as a changed number or a new town. It is optional. It does not replace the £150, the £100 or the £166.67 payments, and it does not start while those are still running. A full handover is the other choice: you take the site, and the build payment stops. After the domain has transferred, the renewal is yours either way, at around £5–£10 a year.
+Once the £500 is paid, the build plan ends and the domain transfers to you. Optional monthly care, typically £29–£50, then covers uptime and SSL checks and small edits, such as a changed number or a new town. It is optional. It does not replace the £150, the £100 or the £166.67 payments, and it does not start while those are still running. A full handover is the other choice: you take the site, and the build payment stops. After the domain has transferred, the renewal is yours either way, at around £5–£10 a year.
 
 ## Five checks before you say yes
 
 1. Add the payments up. On this site the total is £500, with no interest and no setup fee.
 2. Check whose name the domain and hosting are in while you pay. Here they stay in my name, WholeLottaSites, until the £500 is paid. The domain transfers to you then.
 3. Ask what a missed card payment does. Here the site is paused until that instalment is paid. There is no late fee and no interest, and the total stays £500.
-4. Separate the £500 from what comes after it is paid. The domain transfers to you, a renewal is around £5–£10 a year, and the £10 care plan is optional.
-5. See a page before you pick a plan. The mock-up is free. If an email disagrees with the [pricing](/pricing/) page, trust the pricing page.
+4. Separate the £500 from what comes after it is paid. The domain transfers to you, a renewal is around £5–£10 a year, and monthly care (typically £29–£50) is optional.
+5. Look at sample sites before you pick a plan. A design for your business starts after the deposit. If an email disagrees with the [pricing](/pricing/) page, trust the pricing page.
 
 Affordable, here, means you can spread a £500 website. When the instalments reach £500, it is paid for. The monthly payments finish. They are not a way to skip the price.

@@ -9,8 +9,8 @@ export const Route = createFileRoute("/how-it-works")({
   head: () => ({
     ...seo(
       "/how-it-works",
-      "Free Website Mock-up, Then the Build | WholeLottaSites",
-      "Start with a free website mock-up. If you like it, the site is built from scratch, usually within days, and I help you launch.",
+      "How a Website Is Built | Deposit, Then the Design",
+      "Look at sample sites first. A design for your business starts after the deposit, then the site is built from scratch and I help you launch.",
     ),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "How it works", path: "/how-it-works" }])),
@@ -25,8 +25,8 @@ function HowItWorks() {
     <>
       <PageHero
         eyebrow="How it works"
-        title="Start with a free website mock-up."
-        lead="You see a homepage before you pay anything. If you like it, I build the site and help you launch. If you don’t, that’s the end of it."
+        title="Sample sites, then a deposit."
+        lead="Before a deposit, you look at sites I’ve already built. A design for your business starts after the deposit. Then I build the site and help you launch."
         crumbs={[{ name: "Home", href: "/" }, { name: "How it works" }]}
       />
       <Section>
@@ -41,11 +41,11 @@ function HowItWorks() {
           ))}
         </div>
         <div className="mt-16 max-w-3xl">
-          <Heading eyebrow="To get started" title="What to send with the mock-up request." lead="You don’t need a finished brief. The form asks for your name, the business name, an email and a short note about what you do. A phone number and a current website are optional." />
+          <Heading eyebrow="To get started" title="What to send." lead="You don’t need a finished brief. The form asks for your name, the business name, an email and a short note about what you do. A phone number and a current website are optional. A personalised design starts after the deposit." />
           <p className="mt-6 text-muted-foreground">If you have any of these, they help, but they can wait:</p>
           <CheckList items={["A logo, if you already use one", "Photos of your work, premises or van", "The towns you cover, or your address and hours", "A domain, if you already own one"]} />
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Get your free mock-up</Link></Button>
+            <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
             <Button asChild size="lg" variant="outline"><Link to="/pricing">See the £500 and the plans</Link></Button>
           </div>
         </div>

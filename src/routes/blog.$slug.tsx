@@ -70,7 +70,7 @@ function BlogPostPage() {
           </div>
         )}
         <div className="mt-10">
-          <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Get your free mock-up</Link></Button>
+          <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
         </div>
       </Section>
     </>

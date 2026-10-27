@@ -47,7 +47,7 @@ export function Header() {
             </Link>
           ))}
           <Button asChild variant="copper">
-            <Link to="/contact" hash="mockup-form">Get a free mock-up</Link>
+            <Link to="/contact" hash="mockup-form">Ask about a new site</Link>
           </Button>
         </nav>
         <button
@@ -73,7 +73,7 @@ export function Header() {
             ))}
           </ul>
           <Button asChild variant="copper" size="lg" className="mt-4 w-full">
-            <Link to="/contact" hash="mockup-form" onClick={() => setOpen(false)}>Get a free mock-up</Link>
+            <Link to="/contact" hash="mockup-form" onClick={() => setOpen(false)}>Ask about a new site</Link>
           </Button>
         </nav>
       )}
@@ -93,13 +93,16 @@ export function CtaBand() {
     <section className="bg-muted">
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-16 md:flex-row md:items-center">
         <div className="max-w-2xl">
-          <p className="eyebrow">No strings attached</p>
-          <h2 className="mt-3 text-3xl md:text-4xl">Get your free mock-up homepage.</h2>
-          <p className="mt-3 text-muted-foreground">See what your new website could look like before you spend a penny.</p>
+          <p className="eyebrow">New website</p>
+          <h2 className="mt-3 text-3xl md:text-4xl">Ask about a new website.</h2>
+          <p className="mt-3 text-muted-foreground">
+            Sample sites are on the portfolio. A design for your business starts after the deposit. Already got a site?{" "}
+            <Link to="/contact" hash="fix-audit" className="font-semibold text-primary hover:underline">Get a free fix audit</Link>.
+          </p>
         </div>
         <div className="flex flex-col items-start gap-3 md:items-end">
           <Button asChild size="lg">
-            <Link to="/contact" hash="mockup-form">Get a free mock-up</Link>
+            <Link to="/contact" hash="mockup-form">Ask about a new site</Link>
           </Button>
           <p className="text-sm text-muted-foreground">
             Or call <a href={CONTACT.phoneHref} className="font-semibold text-foreground hover:text-primary">{CONTACT.phoneDisplay}</a>
@@ -118,7 +121,7 @@ export function Footer() {
           <p className="font-display text-2xl font-bold">WholeLottaSites</p>
           <p className="mt-2 text-sm text-navy-foreground/85">{CONTACT.name} – {CONTACT.role}</p>
           <p className="text-sm text-navy-foreground/85">{CONTACT.location}</p>
-          <p className="mt-4 max-w-xs text-sm text-navy-foreground/85">Custom websites for UK small businesses, built from scratch. No templates.</p>
+          <p className="mt-4 max-w-xs text-sm text-navy-foreground/85">Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new small site is £500, built from scratch.</p>
         </div>
         <nav aria-label="Footer">
           <p className="eyebrow text-copper">Pages</p>
@@ -169,7 +172,7 @@ export function StickyMobileCta() {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-navy-foreground/15 bg-navy/95 px-4 py-3 backdrop-blur lg:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
       <div className="mx-auto flex max-w-xl items-center gap-3">
         <Button asChild variant="copper" className="flex-1">
-          <Link to="/contact" hash="mockup-form">Get a free mock-up</Link>
+            <Link to="/contact" hash="mockup-form">Ask about a new site</Link>
         </Button>
         <Button asChild variant="navyOutline" className="shrink-0">
           <a href={CONTACT.phoneHref} aria-label={`Call ${CONTACT.phoneDisplay}`}>Call</a>

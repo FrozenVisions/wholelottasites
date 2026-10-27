@@ -46,7 +46,7 @@ If you are insured, registered or qualified, say so and show a detail a customer
 
 ## Phones, security and the title
 
-Most visitors will be on a phone. Text needs to be readable, buttons easy to tap, and the page shouldn’t force people to pinch and zoom. If you already have a site that fails that test, the honest fix I offer is a new build, described on [make my website mobile friendly](/mobile-friendly-website/). I don’t patch someone else’s page builder.
+Most visitors will be on a phone. Text needs to be readable, buttons easy to tap, and the page shouldn’t force people to pinch and zoom. If you already have a site that fails that test, start with a free fix audit. A typical repair is £150–£400. If patching is a false economy, the honest job is a new build, described on [make my website mobile friendly](/mobile-friendly-website/).
 
 The site should load over HTTPS, so the browser doesn’t warn that the connection isn’t secure.
 
@@ -71,4 +71,4 @@ A few things can wait.
 - Card payments, until you have your own Stripe account. I can connect the links then.
 - Extra pages that repeat the homepage.
 
-The mock-up is free. Asking for one doesn’t commit you to the rest. If you want to see a homepage for your own business, use the [mock-up form](/contact/#mockup-form).
+Look at sample sites on the [portfolio](/portfolio/) before you decide. A design for your own business starts after the deposit. Use the [contact form](/contact/#mockup-form) to ask. If you already have a site, a [fix audit](/contact/#fix-audit) — screenshots and the issues — is free.

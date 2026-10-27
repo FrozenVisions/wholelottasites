@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
     ...seo(
       "/about",
       "Chris Faulkes, Web Designer in Mansfield | WholeLottaSites",
-      "Chris Faulkes, a web designer in Mansfield, Notts, built and runs WholeLottaVinyl, SafePlate and Vinyl Buyback. Custom small business websites for £500.",
+      "Chris Faulkes in Mansfield builds small-business websites for £500, and also offers fixes, Google Business Profile and monthly care.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]))],
   }),
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <>
-      <PageHero eyebrow="About" title="Hi, I’m Chris — a web designer in Mansfield." lead="I design and build websites from scratch for UK small businesses. No templates, no agency — just me, from free mock-up to launch." crumbs={[{ name: "Home", href: "/" }, { name: "About" }]} />
+      <PageHero eyebrow="About" title="Hi, I’m Chris — a web designer in Mansfield." lead="I design and build websites from scratch for UK small businesses. A new small site is £500. I also fix sites that aren’t working, set up Google Business Profile, and offer optional monthly care. No templates, no agency — just me." crumbs={[{ name: "Home", href: "/" }, { name: "About" }]} />
       <Section>
         <AboutChris full />
       </Section>

@@ -40,14 +40,16 @@ export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) 
             If the work is bigger than one fix, I quote it separately. A normal rescue is usually around £150–£400. A rebuild is the £500 small-business website, with the same payment plans as everywhere else on this site. I won’t call a rescue or a rebuild a mini-fix.
           </p>
           <p>
-            After the fix, if you want to carry on, the usual next steps are the £10-a-month hosting and care plan, help with your Google Business Profile, or a full site. None of that is inside the £100. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
+            After the fix, if you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site. None of that is inside the £100. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
           </p>
           <p>
             Sites I’ve built that you can open today include{" "}
             <a href="https://www.wholelottavinyl.com" className="font-semibold text-primary underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">wholelottavinyl.com<span className="sr-only"> (opens in a new tab)</span></a>
             {" "}and{" "}
             <a href="https://safeplate.org.uk" className="font-semibold text-primary underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">safeplate.org.uk<span className="sr-only"> (opens in a new tab)</span></a>
-            . Both are on the <Link to="/portfolio" className="font-semibold text-primary underline-offset-4 hover:underline">portfolio</Link>.
+            {" "}and{" "}
+            <a href="https://mcdecoratingni.co.uk" className="font-semibold text-primary underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">mcdecoratingni.co.uk<span className="sr-only"> (opens in a new tab)</span></a>
+            . WholeLottaVinyl and SafePlate are on the <Link to="/portfolio" className="font-semibold text-primary underline-offset-4 hover:underline">portfolio</Link>.
           </p>
         </div>
         <MiniFixCard />
@@ -63,7 +65,7 @@ export function MiniFixCard() {
       <p className="mt-4 font-display text-6xl font-bold text-foreground">£100</p>
       <p className="mt-2 text-muted-foreground">Short audit and one concrete fix. Not a redesign. Not a full rebuild.</p>
       <Button asChild size="lg" className="mt-8 w-full">
-        <Link to="/contact" hash="mockup-form">Send the site address</Link>
+        <Link to="/contact" hash="mini-fix">Send the site address</Link>
       </Button>
       <div className="mt-6 space-y-2 text-sm">
         <p>

@@ -33,6 +33,6 @@ export const miniFixFaqs = [
   ],
   [
     "What can I add after the fix?",
-    "If you want to carry on, the usual next steps are the £10-a-month hosting and care plan, help with your Google Business Profile, or a full site at £500. None of that is included in the £100.",
+    "If you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site at £500. None of that is included in the £100.",
   ],
 ] as const;

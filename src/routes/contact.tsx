@@ -9,8 +9,8 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     ...seo(
       "/contact",
-      "Request a Website Mock-up | WholeLottaSites",
-      "Request a free homepage mock-up from Chris Faulkes, a web designer in Mansfield. A short form, no strings attached, for UK small businesses.",
+      "New Website or Free Fix Audit | WholeLottaSites",
+      "Ask Chris Faulkes in Mansfield about a new website, a free fix audit, the £100 mini-fix, Google Business Profile, or monthly care.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]))],
   }),

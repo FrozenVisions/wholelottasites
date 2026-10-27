@@ -245,6 +245,11 @@ export const faqs = [
   ["How long does a new site take?", "Usually built within days of the deposit and an agreed direction."],
   ["Can I make edits later?", "Yes. Small copy or photo edits can sit on optional monthly care, typically £29–£50, or as a one-off if we’ve agreed it."],
   ["Do I get a free design before I pay?", "No. Before a deposit you can look at sample sites — live sites and example designs. A design for your business starts after the deposit. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price."],
+  ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
+  ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],
+  ["Is GEO the same as SEO?", "Related, not the same. SEO is mostly about search results. GEO is about being clear enough that AI assistants can describe your business correctly when someone asks. Both need honest titles, real contact details, and pages that say what you do."],
+  ["Do you invent reviews or traffic numbers?", "No. I only name live sites I’ve built: wholelottavinyl.com, safeplate.org.uk and mcdecoratingni.co.uk. No fake testimonials, rankings or visit counts."],
+  ["Is GEO included in the £500 site?", "Yes. Clear entity copy, service pages and contact paths are part of a normal build. A rescue or rebuild can add the same clarity if the old site was vague. The East Midlands £100 mini-fix is one agreed fix only; GEO rewrite of a whole site is quoted separately."],
 ] as const;
 
 export type Project = {

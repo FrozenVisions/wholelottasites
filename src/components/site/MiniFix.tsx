@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { DecoratingProofLink, SafePlateProofLink, VinylProofLink } from "@/components/site/Geo";
 import { Heading } from "@/components/site/Sections";
 import { CONTACT } from "@/config";
 import { miniFixExamples } from "@/lib/mini-fix";
@@ -41,6 +42,9 @@ export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) 
           </p>
           <p>
             After the fix, if you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site. None of that is inside the £100. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
+          </p>
+          <p>
+            A mini-fix will not rewrite your whole site for AI assistants. If the agreed fix is a form, mobile layout, SSL, redirects or a missing Google Business Profile website link, that is the job. If your pages still don’t say clearly who you are, what you do and how to get in touch, ask about a rescue (usually around £150–£400) or a full rebuild at £500. Those can include the clearer GEO copy above. Sites I’ve built that you can open today: <VinylProofLink />, <SafePlateProofLink /> and <DecoratingProofLink />.
           </p>
           <p>
             Sites I’ve built that you can open today include{" "}

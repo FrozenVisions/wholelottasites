@@ -5,6 +5,7 @@ import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded, OfferCards }
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
+import { GeoBlurb } from "@/components/site/Geo";
 import { MiniFixOffer } from "@/components/site/MiniFix";
 import { projects, seo } from "@/lib/site-data";
 
@@ -99,6 +100,9 @@ function Home() {
             </div>
           </Reveal>
         </div>
+        <Reveal className="mt-16">
+          <GeoBlurb />
+        </Reveal>
       </Section>
 
       <Section muted>

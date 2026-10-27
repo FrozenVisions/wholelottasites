@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { GeoBlurb } from "@/components/site/Geo";
 import { MiniFixOffer } from "@/components/site/MiniFix";
 import { PageHero, Section, Heading, WhyGrid, WhatsIncluded, ProblemsGrid, OfferCards } from "@/components/site/Sections";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,9 @@ function Services() {
       <Section>
         <Heading eyebrow="Built from scratch" title="Why a new site has no template." lead="Templates are built for everyone, so they fit no one perfectly. Every new WholeLottaSites website starts from a blank page." />
         <WhyGrid />
+        <div className="mt-16">
+          <GeoBlurb />
+        </div>
       </Section>
       <Section>
         <WhatsIncluded />

@@ -15,7 +15,7 @@ export const Route = createFileRoute("/faq")({
     ...seo(
       "/faq",
       "Small Business Web Design Questions | WholeLottaSites",
-      "Answers on the £500 price, payment plans, domains, Stripe, how long a website takes, and the free mock-up. UK web design.",
+      "Answers on the £500 price, the £100 East Midlands mini-fix, payment plans, domains, Stripe, how long a website takes, and the free mock-up.",
     ),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "FAQ", path: "/faq" }])),

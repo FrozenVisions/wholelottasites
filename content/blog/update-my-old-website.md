@@ -35,7 +35,7 @@ Do these even if a new site comes later.
 
 Use the same wording on your Google Business Profile. When the name, address and phone disagree, a customer cannot tell which copy to trust.
 
-If I built the site and it is paid for, these edits sit on the £10-a-month hosting and care plan, or as an agreed one-off. If someone else built it, ask them. I don’t patch a page builder, a theme or plugins I didn’t set up, and I will say so before any fee.
+If I built the site and it is paid for, these edits sit on the £10-a-month hosting and care plan, or as an agreed one-off. If the site is already live and you only need one concrete fix — a broken form, a mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/), for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a redesign. If the job is bigger than one fix, I’ll quote a rescue, usually around £150–£400, or a rebuild at £500. I still won’t quietly unpick a theme and a pile of plugins and call it a small edit.
 
 ## Make three lists before anyone redesigns it
 

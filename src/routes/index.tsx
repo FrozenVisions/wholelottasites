@@ -5,11 +5,13 @@ import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded } from "@/com
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
+import { MiniFixOffer } from "@/components/site/MiniFix";
 import { projects, seo } from "@/lib/site-data";
 
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Built from scratch", text: "A first website, or a replacement for a template." },
   { to: "/website-redesign" as const, title: "Redesign an old site", text: "When an update isn’t enough." },
+  { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it work on a phone", text: "If customers have to pinch and zoom." },
   { to: "/cheap-website-for-small-business" as const, title: "£500, explained", text: "A cheap website for a small business, and what that excludes." },
   { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Three plans. Every one totals £500." },
@@ -20,7 +22,7 @@ export const Route = createFileRoute("/")({
     ...seo(
       "/",
       "Affordable Small Business Websites UK – £500 | WholeLottaSites",
-      "Affordable small business websites across the UK for £500, built from scratch with no templates by Chris, a web designer in Mansfield. Get a free mock-up.",
+      "Affordable small business websites across the UK for £500, built from scratch by Chris in Mansfield. East Midlands £100 mini-fix: one concrete fix on a live site.",
     ),
   }),
   component: Home,
@@ -47,6 +49,10 @@ function Home() {
             <p className="mt-4 text-sm text-navy-foreground/80">
               Free mock-up homepage. No strings attached.{" "}
               <Link to="/how-it-works" className="font-semibold text-copper underline-offset-4 hover:underline">See how it works</Link>
+            </p>
+            <p className="mt-3 max-w-2xl text-sm text-navy-foreground/80">
+              Site already live in the East Midlands, and only one thing is broken?{" "}
+              <Link to="/website-mini-fix" className="font-semibold text-copper underline-offset-4 hover:underline">£100 mini-fix — one fix, not a rebuild</Link>.
             </p>
           </div>
           <DeviceMockup />
@@ -80,17 +86,21 @@ function Home() {
       </Section>
 
       <Section muted>
-        <WhatsIncluded />
+        <MiniFixOffer />
       </Section>
 
       <Section>
+        <WhatsIncluded />
+      </Section>
+
+      <Section muted>
         <Reveal><BeforeAfter /></Reveal>
         <Link to="/services" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           How I fix these <ArrowRight className="size-4" aria-hidden />
         </Link>
       </Section>
 
-      <Section muted>
+      <Section>
         <Reveal><Heading eyebrow="Portfolio" title="Recent small business websites." /></Reveal>
         <ProjectGrid items={projects.slice(0, 3)} />
         <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
@@ -98,12 +108,12 @@ function Home() {
         </Link>
       </Section>
 
-      <Section>
+      <Section muted>
         <Reveal><Comparison /></Reveal>
       </Section>
 
-      <Section muted>
-        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The £500 price for a small site is." />
+      <Section>
+        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The £500 price for a small site is. A live East Midlands site that only needs one fix is the £100 mini-fix." />
         <Link to="/websites-for" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           Browse websites by type of business <ArrowRight className="size-4" aria-hidden />
         </Link>
@@ -126,7 +136,7 @@ function Home() {
       </Section>
 
       {latest && (
-        <Section>
+        <Section muted>
           <Heading eyebrow="From the blog" title="Plain-English advice." lead="One useful article to start. More are planned; nothing here is padded with fake results." />
           <Link to="/blog/$slug" params={{ slug: latest.slug }} className="mt-8 block max-w-2xl rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm hover:shadow-md">
             <p className="text-sm text-muted-foreground"><time dateTime={latest.date}>{formatPostDate(latest.date)}</time></p>
@@ -139,7 +149,7 @@ function Home() {
         </Section>
       )}
 
-      <Section muted>
+      <Section>
         <AboutChris />
       </Section>
     </>

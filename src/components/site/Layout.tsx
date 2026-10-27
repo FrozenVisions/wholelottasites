@@ -142,6 +142,7 @@ export function Footer() {
             <li><Link to="/cheap-website-for-small-business" className="text-navy-foreground/85 hover:text-copper">Cheap website, £500</Link></li>
             <li><Link to="/pay-monthly-website" className="text-navy-foreground/85 hover:text-copper">Pay monthly website</Link></li>
             <li><Link to="/website-redesign" className="text-navy-foreground/85 hover:text-copper">Website redesign</Link></li>
+            <li><Link to="/website-mini-fix" className="text-navy-foreground/85 hover:text-copper">£100 East Midlands mini-fix</Link></li>
             <li><Link to="/mobile-friendly-website" className="text-navy-foreground/85 hover:text-copper">Mobile-friendly website</Link></li>
             <li><Link to="/website-built-from-scratch" className="text-navy-foreground/85 hover:text-copper">Built from scratch</Link></li>
           </ul>

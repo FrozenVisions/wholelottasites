@@ -143,8 +143,9 @@ export const intentPages: IntentPage[] = [
         heading: "Update my old website",
         paragraphs: [
           "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. If I built the site, that kind of edit can sit on the £10-a-month care plan after the site is paid for, or as a one-off if we’ve agreed it.",
-          "If someone else built it, in a page builder I don’t work in, I don’t patch it. Unpicking a theme, a pile of plugins and a layout that breaks when you edit it usually costs more time than building the replacement. I’ll say that at the start rather than bill you for a rescue that isn’t going to hold.",
-          "Send the address of the current site with the [mock-up form](/contact/#mockup-form). I’ll tell you whether a new site is what you need. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
+          "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
+          "If the job is bigger than one fix, I’ll quote it separately. A normal rescue is usually around £150–£400. A rebuild is the £500 small-business site. Unpicking a theme, a pile of plugins and a layout that breaks when you edit it can still take longer than building the replacement. I’ll say which job it is before you pay, rather than bill you for a rescue that isn’t going to hold.",
+          "Send the address of the current site with the [mock-up form](/contact/#mockup-form). I’ll tell you whether you need the mini-fix, a quoted rescue, or a new site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
         ],
       },
       {
@@ -157,9 +158,9 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Will you redesign my Wix or WordPress site in place?", "No. I build a new site from scratch. If the old one only needs a tiny text change and I didn’t build it, you’re better asking the person who did."],
+      ["Will you redesign my Wix or WordPress site in place?", "A redesign here is a new site, at £500 for a small business. One concrete fix on a live East Midlands site can be the £100 mini-fix. I won’t quietly rebuild a theme and call it a small edit."],
       ["Do I have to change my domain?", "No. If the domain is in your name, we keep it and point it at the new site when you’re ready."],
-      ["How much is a redesign?", "For a small business, the new site is £500 — the same as a first website. Larger projects are quoted from around £1,200."],
+      ["How much is a redesign?", "For a small business, the new site is £500 — the same as a first website. One fix on a live East Midlands site is the £100 mini-fix. A larger rescue, short of a rebuild, is quoted separately and is usually around £150–£400. Larger projects are quoted from around £1,200."],
     ],
   },
   {
@@ -203,12 +204,13 @@ export const intentPages: IntentPage[] = [
         heading: "When a tweak is enough",
         paragraphs: [
           "If I built the site and one section has started to overflow, that’s a fix, not a new project. It can be part of the £10-a-month care plan once the site is paid for.",
-          "If a different company built it, I won’t half-edit their theme. Tell me the address on the [mock-up form](/contact/#mockup-form) and I’ll say whether you need a new site. Making a website mobile friendly, in this offer, means replacing one that can’t be used on a phone — not a £500 invoice for a stylesheet tweak.",
+          "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £100 website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
+          "If the whole site has to be replaced so it can be used on a phone, that is this £500 rebuild. Tell me the address on the [mock-up form](/contact/#mockup-form) and I’ll say which it is. Making a website mobile friendly, on this page, means replacing one that can’t be used on a phone — not a £500 invoice for a stylesheet tweak.",
         ],
       },
     ],
     faqs: [
-      ["Can you just make my current site mobile friendly?", "Only if the current site is one I can sensibly rebuild, which is the £500 job. I don’t patch someone else’s page builder."],
+      ["Can you just make my current site mobile friendly?", "If the whole site needs replacing so it works on a phone, that is the £500 rebuild. One concrete layout fix on a live East Midlands site can be the £100 mini-fix instead. I won’t call a full rebuild a tweak."],
       ["Do you design the phone version separately?", "It’s one site. The layout is designed for a phone, then adjusted so a larger screen still reads well. You don’t maintain two websites."],
       ["Will a mobile-friendly site guarantee more calls?", "No. It removes a reason for people to give up when they try to phone you or read the page. It doesn’t promise a number of enquiries."],
     ],

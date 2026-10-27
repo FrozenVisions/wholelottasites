@@ -253,11 +253,19 @@ export function ProjectGrid({ items, detailed }: { items: Project[]; detailed?: 
 
 export function PricingCards() {
   return (
-    <div className="mt-12 grid gap-6 md:grid-cols-2">
+    <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <div className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
+        <p className="eyebrow">East Midlands mini-fix</p>
+        <p className="mt-4 font-display text-5xl font-bold">£100</p>
+        <p className="mt-2 text-muted-foreground">A short audit and one concrete fix on a site that’s already live. Not a redesign, and not a full rebuild.</p>
+        <Button asChild size="lg" className="mt-8">
+          <Link to="/website-mini-fix">See the mini-fix</Link>
+        </Button>
+      </div>
       <div className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
         <p className="eyebrow">Small business</p>
-        <p className="mt-4 font-display text-6xl font-bold">£500</p>
-        <p className="mt-2 text-muted-foreground">A full custom website, built from scratch.</p>
+        <p className="mt-4 font-display text-5xl font-bold">£500</p>
+        <p className="mt-2 text-muted-foreground">A full custom website, built from scratch. A rebuild of a small site is this same price.</p>
         <Button asChild size="lg" className="mt-8">
           <Link to="/contact" hash="mockup-form">Get started</Link>
         </Button>

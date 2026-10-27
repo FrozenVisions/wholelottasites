@@ -132,6 +132,7 @@ export const paymentPlans = [
 ] as const;
 
 export const faqs = [
+  ["What is the £100 website mini-fix?", "For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £100 is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at £500. It is not a promise of a Google position."],
   ["Do I need my own domain?", "Yes — domains cost around £5–£10. You buy it so it’s yours to keep, and I’ll help you set it up."],
   ["Can I pay monthly?", "Yes. A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe."],
   ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. Your domain is separate, at around £5–£10 a year. Once the site is paid for, you choose a £10-a-month hosting and care plan or a full handover."],

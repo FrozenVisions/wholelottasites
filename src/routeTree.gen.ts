@@ -24,6 +24,7 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as WebDesignMansfieldRouteImport } from './routes/web-design-mansfield'
 import { Route as WebsiteBuiltFromScratchRouteImport } from './routes/website-built-from-scratch'
+import { Route as WebsiteMiniFixRouteImport } from './routes/website-mini-fix'
 import { Route as WebsiteRedesignRouteImport } from './routes/website-redesign'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -106,6 +107,11 @@ const WebsiteBuiltFromScratchRoute = WebsiteBuiltFromScratchRouteImport.update({
   path: '/website-built-from-scratch',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WebsiteMiniFixRoute = WebsiteMiniFixRouteImport.update({
+  id: '/website-mini-fix',
+  path: '/website-mini-fix',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WebsiteRedesignRoute = WebsiteRedesignRouteImport.update({
   id: '/website-redesign',
   path: '/website-redesign',
@@ -148,6 +154,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
+  '/website-mini-fix': typeof WebsiteMiniFixRoute
   '/website-redesign': typeof WebsiteRedesignRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/websites-for/$slug': typeof WebsitesForSlugRoute
@@ -170,6 +177,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
+  '/website-mini-fix': typeof WebsiteMiniFixRoute
   '/website-redesign': typeof WebsiteRedesignRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/websites-for/$slug': typeof WebsitesForSlugRoute
@@ -193,6 +201,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
+  '/website-mini-fix': typeof WebsiteMiniFixRoute
   '/website-redesign': typeof WebsiteRedesignRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/websites-for/$slug': typeof WebsitesForSlugRoute
@@ -217,6 +226,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
+    | '/website-mini-fix'
     | '/website-redesign'
     | '/blog/$slug'
     | '/websites-for/$slug'
@@ -239,6 +249,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
+    | '/website-mini-fix'
     | '/website-redesign'
     | '/blog/$slug'
     | '/websites-for/$slug'
@@ -261,6 +272,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
+    | '/website-mini-fix'
     | '/website-redesign'
     | '/blog/$slug'
     | '/websites-for/$slug'
@@ -284,6 +296,7 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   WebDesignMansfieldRoute: typeof WebDesignMansfieldRoute
   WebsiteBuiltFromScratchRoute: typeof WebsiteBuiltFromScratchRoute
+  WebsiteMiniFixRoute: typeof WebsiteMiniFixRoute
   WebsiteRedesignRoute: typeof WebsiteRedesignRoute
   BlogSlugRoute: typeof BlogSlugRoute
   WebsitesForSlugRoute: typeof WebsitesForSlugRoute
@@ -398,6 +411,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebsiteBuiltFromScratchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/website-mini-fix': {
+      id: '/website-mini-fix'
+      path: '/website-mini-fix'
+      fullPath: '/website-mini-fix'
+      preLoaderRoute: typeof WebsiteMiniFixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/website-redesign': {
       id: '/website-redesign'
       path: '/website-redesign'
@@ -452,6 +472,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   WebDesignMansfieldRoute: WebDesignMansfieldRoute,
   WebsiteBuiltFromScratchRoute: WebsiteBuiltFromScratchRoute,
+  WebsiteMiniFixRoute: WebsiteMiniFixRoute,
   WebsiteRedesignRoute: WebsiteRedesignRoute,
   BlogSlugRoute: BlogSlugRoute,
   WebsitesForSlugRoute: WebsitesForSlugRoute,

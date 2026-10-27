@@ -35,7 +35,7 @@ export const moreAudiences: TradePage[] = [
   {
     slug: "salons",
     name: "Beauty salons",
-    title: "Beauty Salon Website | Nails, Spa & Treatments | WholeLottaSites",
+    title: "Beauty Salon Websites | Nails & Treatments | WholeLottaSites",
     description: "A beauty salon website with treatment lists, prices, booking and patch-test notes. For nail bars, spas and beauty rooms. Built from scratch for £500.",
     h1: "A beauty salon website.",
     lead: "Clients want the treatment, the price and a way to book — often the evening before. Hairdressers and barbers have a separate page, because the work and the photos are different.",

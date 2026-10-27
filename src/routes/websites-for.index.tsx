@@ -31,7 +31,7 @@ const situations = [
 
 export const Route = createFileRoute("/websites-for/")({
   head: () => ({
-    ...seo("/websites-for", "Websites for Small Businesses | By Trade & Type | WholeLottaSites", "Websites for small businesses: trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. Built from scratch for £500."),
+    ...seo("/websites-for", "Websites for Small Businesses by Trade | WholeLottaSites", "Websites for small businesses: trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. Built from scratch for £500."),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Websites", path: "/websites-for" }])),
       jsonLd(faqJsonLd(hubFaqs)),

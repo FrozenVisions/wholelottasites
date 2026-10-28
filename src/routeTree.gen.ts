@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CheapWebsiteForSmallBusinessRouteImport } from './routes/cheap-website-for-small-business'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GoogleBusinessProfileRouteImport } from './routes/google-business-profile'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as LeaveAReviewRouteImport } from './routes/leave-a-review'
 import { Route as MobileFriendlyWebsiteRouteImport } from './routes/mobile-friendly-website'
@@ -55,6 +56,11 @@ const ContactRoute = ContactRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GoogleBusinessProfileRoute = GoogleBusinessProfileRouteImport.update({
+  id: '/google-business-profile',
+  path: '/google-business-profile',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HowItWorksRoute = HowItWorksRouteImport.update({
@@ -144,6 +150,7 @@ export interface FileRoutesByFullPath {
   '/cheap-website-for-small-business': typeof CheapWebsiteForSmallBusinessRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/google-business-profile': typeof GoogleBusinessProfileRoute
   '/how-it-works': typeof HowItWorksRoute
   '/leave-a-review': typeof LeaveAReviewRoute
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
@@ -167,6 +174,7 @@ export interface FileRoutesByTo {
   '/cheap-website-for-small-business': typeof CheapWebsiteForSmallBusinessRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/google-business-profile': typeof GoogleBusinessProfileRoute
   '/how-it-works': typeof HowItWorksRoute
   '/leave-a-review': typeof LeaveAReviewRoute
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
@@ -191,6 +199,7 @@ export interface FileRoutesById {
   '/cheap-website-for-small-business': typeof CheapWebsiteForSmallBusinessRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/google-business-profile': typeof GoogleBusinessProfileRoute
   '/how-it-works': typeof HowItWorksRoute
   '/leave-a-review': typeof LeaveAReviewRoute
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
@@ -216,6 +225,7 @@ export interface FileRouteTypes {
     | '/cheap-website-for-small-business'
     | '/contact'
     | '/faq'
+    | '/google-business-profile'
     | '/how-it-works'
     | '/leave-a-review'
     | '/mobile-friendly-website'
@@ -239,6 +249,7 @@ export interface FileRouteTypes {
     | '/cheap-website-for-small-business'
     | '/contact'
     | '/faq'
+    | '/google-business-profile'
     | '/how-it-works'
     | '/leave-a-review'
     | '/mobile-friendly-website'
@@ -262,6 +273,7 @@ export interface FileRouteTypes {
     | '/cheap-website-for-small-business'
     | '/contact'
     | '/faq'
+    | '/google-business-profile'
     | '/how-it-works'
     | '/leave-a-review'
     | '/mobile-friendly-website'
@@ -286,6 +298,7 @@ export interface RootRouteChildren {
   CheapWebsiteForSmallBusinessRoute: typeof CheapWebsiteForSmallBusinessRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
+  GoogleBusinessProfileRoute: typeof GoogleBusinessProfileRoute
   HowItWorksRoute: typeof HowItWorksRoute
   LeaveAReviewRoute: typeof LeaveAReviewRoute
   MobileFriendlyWebsiteRoute: typeof MobileFriendlyWebsiteRoute
@@ -339,6 +352,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/google-business-profile': {
+      id: '/google-business-profile'
+      path: '/google-business-profile'
+      fullPath: '/google-business-profile'
+      preLoaderRoute: typeof GoogleBusinessProfileRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/how-it-works': {
@@ -462,6 +482,7 @@ const rootRouteChildren: RootRouteChildren = {
   CheapWebsiteForSmallBusinessRoute: CheapWebsiteForSmallBusinessRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
+  GoogleBusinessProfileRoute: GoogleBusinessProfileRoute,
   HowItWorksRoute: HowItWorksRoute,
   LeaveAReviewRoute: LeaveAReviewRoute,
   MobileFriendlyWebsiteRoute: MobileFriendlyWebsiteRoute,

@@ -97,7 +97,7 @@ const businessJsonLd = {
       price: "149",
       priceCurrency: "GBP",
       description: "One-off setup or fix. The client stays the Google owner. No ranking promise. Optional monthly management is £99–£150.",
-      url: "https://wholelottasites.co.uk/pricing/#google-business-profile",
+      url: "https://wholelottasites.co.uk/google-business-profile/",
     },
     {
       "@type": "Offer",

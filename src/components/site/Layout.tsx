@@ -1,9 +1,10 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config";
 import { posts } from "@/lib/blog";
+import { GBP_SETUP_PRICE } from "@/lib/google-business-profile";
 
 export const navLinks = [
   { to: "/services", label: "Services" },
@@ -14,6 +15,17 @@ export const navLinks = [
   { to: "/about", label: "About" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
+] as const;
+
+/** Pages listed under the Services item in the header, and in the footer. */
+export const serviceLinks = [
+  { to: "/website-built-from-scratch" as const, label: "Built from scratch" },
+  { to: "/website-redesign" as const, label: "Website redesign" },
+  { to: "/website-mini-fix" as const, label: "£100 East Midlands mini-fix" },
+  { to: "/google-business-profile" as const, label: `Google Business Profile, ${GBP_SETUP_PRICE}` },
+  { to: "/mobile-friendly-website" as const, label: "Mobile-friendly website" },
+  { to: "/cheap-website-for-small-business" as const, label: "Cheap website, £500" },
+  { to: "/pay-monthly-website" as const, label: "Pay monthly website" },
 ] as const;
 
 function Logo() {
@@ -31,10 +43,58 @@ function Logo() {
   );
 }
 
+function ServicesMenu({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) {
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onBlur={(event) => {
+        const next = event.relatedTarget;
+        if (next instanceof Node && event.currentTarget.contains(next)) return;
+        setOpen(false);
+      }}
+    >
+      <div className="flex items-center">
+        <Link to="/services" className="text-sm font-medium text-navy-foreground/85 transition-colors hover:text-copper" activeProps={{ className: "text-copper" }}>
+          Services
+        </Link>
+        <button
+          type="button"
+          className="inline-flex size-7 items-center justify-center rounded-md text-navy-foreground/70 hover:text-copper"
+          aria-expanded={open}
+          aria-controls="services-menu"
+          aria-label="Services menu"
+          onClick={() => setOpen(!open)}
+        >
+          <ChevronDown className={`size-4 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden />
+        </button>
+      </div>
+      {open && (
+        <div className="absolute left-0 top-full z-50 pt-3">
+          <ul id="services-menu" className="w-72 rounded-md border border-navy-foreground/15 bg-navy p-2 shadow-xl">
+            {serviceLinks.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to} className="block rounded-md px-3 py-2 text-sm font-medium text-navy-foreground/85 hover:bg-navy-foreground/10 hover:text-copper" activeProps={{ className: "text-copper" }}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    setOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 bg-navy/95 text-navy-foreground backdrop-blur">
@@ -42,9 +102,13 @@ export function Header() {
         <Logo />
         <nav aria-label="Main" className="hidden items-center gap-4 xl:gap-5 lg:flex">
           {navLinks.map((l) => (
-            <Link key={l.to} to={l.to} className="text-sm font-medium text-navy-foreground/85 transition-colors hover:text-copper" activeProps={{ className: "text-copper" }}>
-              {l.label}
-            </Link>
+            l.to === "/services" ? (
+              <ServicesMenu key={l.to} open={servicesOpen} setOpen={setServicesOpen} />
+            ) : (
+              <Link key={l.to} to={l.to} className="text-sm font-medium text-navy-foreground/85 transition-colors hover:text-copper" activeProps={{ className: "text-copper" }}>
+                {l.label}
+              </Link>
+            )
           ))}
           <Button asChild variant="copper">
             <Link to="/contact" hash="mockup-form">Ask about a new site</Link>
@@ -69,6 +133,17 @@ export function Header() {
                 <Link to={l.to} onClick={() => setOpen(false)} className="block py-3 font-display text-lg hover:text-copper">
                   {l.label}
                 </Link>
+                {l.to === "/services" && (
+                  <ul className="mb-2 ml-3 border-l border-navy-foreground/15 pl-3" aria-label="Services">
+                    {serviceLinks.map((item) => (
+                      <li key={item.to}>
+                        <Link to={item.to} onClick={() => setOpen(false)} className="block py-2 text-sm hover:text-copper">
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
@@ -146,6 +221,7 @@ export function Footer() {
             <li><Link to="/pay-monthly-website" className="text-navy-foreground/85 hover:text-copper">Pay monthly website</Link></li>
             <li><Link to="/website-redesign" className="text-navy-foreground/85 hover:text-copper">Website redesign</Link></li>
             <li><Link to="/website-mini-fix" className="text-navy-foreground/85 hover:text-copper">£100 East Midlands mini-fix</Link></li>
+            <li><Link to="/google-business-profile" className="text-navy-foreground/85 hover:text-copper">Google Business Profile, {GBP_SETUP_PRICE}</Link></li>
             <li><Link to="/mobile-friendly-website" className="text-navy-foreground/85 hover:text-copper">Mobile-friendly website</Link></li>
             <li><Link to="/website-built-from-scratch" className="text-navy-foreground/85 hover:text-copper">Built from scratch</Link></li>
           </ul>

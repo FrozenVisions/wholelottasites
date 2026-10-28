@@ -25,7 +25,7 @@ export function Heading({ eyebrow, title, lead, onNavy, as = "h2" }: { eyebrow: 
   );
 }
 
-export function PageHero({ eyebrow, title, lead, crumbs }: { eyebrow: string; title: ReactNode; lead?: ReactNode; crumbs?: { name: string; href?: string }[] }) {
+export function PageHero({ eyebrow, title, lead, crumbs, actions }: { eyebrow: string; title: ReactNode; lead?: ReactNode; crumbs?: { name: string; href?: string }[]; actions?: ReactNode }) {
   return (
     <section className="pitch-bottom hero-navy pb-28 text-navy-foreground">
       <div className="mx-auto max-w-7xl px-5 pt-12 md:pt-20">
@@ -33,6 +33,7 @@ export function PageHero({ eyebrow, title, lead, crumbs }: { eyebrow: string; ti
         <p className="eyebrow text-copper">{eyebrow}</p>
         <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] md:text-6xl">{title}</h1>
         {lead && <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">{lead}</p>}
+        {actions && <div className="mt-8">{actions}</div>}
       </div>
     </section>
   );
@@ -284,6 +285,13 @@ export function OfferCards() {
             </p>
           )}
           <div className="mt-auto pt-8">
+            {offer.id === "google-business-profile" && (
+              <p className="mb-4">
+                <Link to="/google-business-profile" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
+                  More about Google Business Profile
+                </Link>
+              </p>
+            )}
             <Button asChild>
               <Link to="/contact" hash={offer.hash}>{offer.cta}</Link>
             </Button>

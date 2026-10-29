@@ -4,7 +4,7 @@ import { Smartphone, Link2Off, ShieldAlert, SearchX, Check, ArrowUpRight, Chevro
 import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, type EnquiryHash, type Project } from "@/lib/site-data";
+import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, newWebsitePricing, type EnquiryHash, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
@@ -258,8 +258,8 @@ export function OfferCards() {
       {offers.map((offer) => (
         <article key={offer.id} id={offer.id} className="scroll-mt-28 flex flex-col rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
           <h3 className="font-display text-2xl font-semibold">{offer.title}</h3>
-          <p className="mt-4 font-display text-5xl font-bold leading-none">{offer.price}</p>
-          <p className="mt-3 text-sm font-semibold text-primary">{offer.priceNote}</p>
+          <p className={offer.id === "new-website" ? "mt-4 font-display text-2xl font-bold leading-snug md:text-3xl" : "mt-4 font-display text-5xl font-bold leading-none"}>{offer.price}</p>
+          <p className={offer.id === "new-website" ? "mt-3 text-lg font-semibold" : "mt-3 text-sm font-semibold text-primary"}>{offer.priceNote}</p>
           <p className="mt-4 text-muted-foreground">{offer.summary}</p>
           <ul className="mt-4 grid gap-2 text-sm text-muted-foreground">
             {offer.points.map((point) => (
@@ -522,13 +522,21 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
   );
 }
 
-export function PaymentPlans() {
+export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFirst?: boolean }) {
   return (
     <div id="payment-plans" className="mt-16 scroll-mt-24">
+      {showPayMonthlyFirst && (
+        <div className="mb-10 max-w-3xl">
+          <p className="font-display text-3xl font-bold leading-snug md:text-4xl">{newWebsitePricing.monthly}</p>
+          <p className="mt-3 text-xl font-semibold">{newWebsitePricing.upfront}</p>
+        </div>
+      )}
       <Heading
-        eyebrow="Payment plans"
-        title="Rather spread the cost?"
-        lead="A full website is £500. If you’d rather not pay it all at once, pick one of these plans. Every plan adds up to exactly £500, with nothing extra on top."
+        eyebrow={showPayMonthlyFirst ? "The £500 price" : "Payment plans"}
+        title={showPayMonthlyFirst ? "Instalment plans for the £500." : "Rather spread the cost?"}
+        lead={showPayMonthlyFirst
+          ? "Every plan adds up to exactly £500, with nothing extra on top."
+          : "A full website is £500. If you’d rather not pay it all at once, pick one of these plans. Every plan adds up to exactly £500, with nothing extra on top."}
       />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {paymentPlans.map((p) => (

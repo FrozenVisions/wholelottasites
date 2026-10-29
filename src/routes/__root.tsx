@@ -80,7 +80,7 @@ const businessJsonLd = {
       name: "New small business website",
       price: "500",
       priceCurrency: "GBP",
-      description: "A full custom website or small shop built from scratch for £500. Payment plans total the same £500. The client buys the domain. A personalised design starts after the deposit.",
+      description: "A full custom website or small shop built from scratch for £500. Payment plans total the same £500. First year of hosting included. The first year of a standard domain is included and registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit.",
       url: "https://wholelottasites.co.uk/pricing/#new-website",
     },
     {

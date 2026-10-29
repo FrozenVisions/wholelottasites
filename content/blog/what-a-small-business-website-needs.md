@@ -56,7 +56,7 @@ If the old site is the problem — not just the phone layout — that’s a [web
 
 ## A domain you own
 
-The site should live on an address you control, such as yourbusiness.co.uk, not only on a Facebook page or a free subdomain. A domain is the address. It is not the website. It costs around £5–£10 a year, and you should buy it so the account is yours.
+The site should live on an address you control, such as yourbusiness.co.uk, not only on a Facebook page or a free subdomain. A domain is the address. It is not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.
 
 A first website doesn’t need a complicated brief. [A website built from scratch](/website-built-from-scratch/) can start from a name and a few true sentences. You don’t need a logo first.
 

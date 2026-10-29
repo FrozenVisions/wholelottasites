@@ -51,9 +51,9 @@ A plumber’s update needs the jobs and the towns, on [websites for plumbers](/w
 
 ## Log in to the domain
 
-The domain, such as yourbusiness.co.uk, is the address, not the website. It costs around £5–£10 a year. Log in where you bought it, or find who can, before you commission a new site. Keep that domain and point it at the new site when the new one is ready. You do not need a second address just because the pages look dated.
+The domain, such as yourbusiness.co.uk, is the address, not the website. If you already own it, log in where you bought it, or find who can, before you commission a new site. Keep that domain and point it at the new site when the new one is ready. You do not need a second address just because the pages look dated. With a new website we cover the first year of a standard domain, registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.
 
-If you only have a free subdomain, or only a Facebook page, buy the domain in your name. I can help connect it. I don’t need the account to be mine.
+If you only have a free subdomain, or only a Facebook page, we can register a standard domain in your name. I can help connect it. I don’t need the account to be mine.
 
 ## When the honest update is a new site
 

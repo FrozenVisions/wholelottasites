@@ -25,7 +25,7 @@ function Services() {
     <>
       <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead="A new small-business website is still £500, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £100 East Midlands mini-fix when a live site only needs one change." crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
       <Section className="!pt-4">
-        <Heading eyebrow="Four offers" title="The job that matches where you are." lead="You buy and own the domain. You stay the owner of your Google listing. Care is optional. I don’t promise a ranking." />
+        <Heading eyebrow="Four offers" title="The job that matches where you are." lead="The domain is registered in your name. We cover the first year of a standard domain. You stay the owner of your Google listing. Care is optional. I don’t promise a ranking." />
         <OfferCards />
         <p className="mt-8 max-w-3xl text-muted-foreground">
           Prefer them together? Fix + care, Site + Google Business Profile, Fix + Google Business Profile, or Full (a site or a fix, Google management, and care) are on the{" "}

@@ -82,6 +82,8 @@ export const included = [
   ["Contact form and links", "A form that reaches you, plus your phone number, email and any links you want shown."],
   ["Stripe payment links connected, if you want them", "If you take payments, you set up your own Stripe account and I’ll connect the payment links."],
   ["Help going live", "I help you point your domain at the new site and check it before you send people there."],
+  ["First year of hosting included", "The first year of hosting is included with a new website."],
+  ["First year of a standard domain included", "We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two. The domain is registered in your name."],
 ] as const;
 
 export const steps = [
@@ -116,7 +118,7 @@ export const stages = [
   {
     title: "Launch",
     summary: "I help you connect your domain and go live.",
-    body: "I help you point your domain at the site and check it on a phone before you share the address. You buy the domain yourself, at around £5–£10 a year, so the account stays in your name. The website is £500, in one go or on a payment plan, and every plan totals £500. Once it’s paid for, monthly care is optional, typically £29–£50, or you can take a full handover.",
+    body: "I help you point your domain at the site and check it on a phone before you share the address. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, at around £5–£10 a year. The first year of hosting is included. The website is £500, in one go or on a payment plan, and every plan totals £500. Once it’s paid for, monthly care is optional, typically £29–£50, or you can take a full handover.",
     points: [
       "Help connecting the domain you own",
       "A check on a phone before you announce it",
@@ -148,11 +150,13 @@ export const offers = [
     price: "£500",
     priceNote: "Payment plans available. Each one totals £500.",
     summary:
-      "A brochure site or a small shop, built from scratch. Before a deposit, you look at sample sites. A design for your business starts after that. You buy the domain, around £5–£10 a year, so it’s in your name.",
+      "A brochure site or a small shop, built from scratch. Before a deposit, you look at sample sites. A design for your business starts after that. The first year of hosting is included, and we cover the first year of a standard domain. It’s registered in your name.",
     points: [
       "£150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66.",
       "Bigger businesses are quoted from around £1,200.",
       "Stripe payment links if you want them. You set up your own Stripe account.",
+      "First year of hosting included.",
+      "First year of a standard domain included. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.",
     ],
     cta: "Ask about a new site",
     hash: "mockup-form",
@@ -234,9 +238,11 @@ export const bundles = [
 
 export const faqs = [
   ["What is the £100 website mini-fix?", "For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £100 is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at £500. It is not a promise of a Google position."],
-  ["Who owns the domain?", "You do. You buy it, around £5–£10 a year, so the account stays in your name. I’ll help you point it at the site. I don’t need to own it."],
+  ["Who owns the domain?", "You do. The domain is registered in your name. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year. I’ll help you point it at the site. I don’t need to own it."],
+  ["Is the domain included?", "Yes, we cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two. The domain is registered in your name."],
   ["Can I pay monthly for a new website?", "Yes. A full website is £500, or you can spread that same £500: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card through Stripe. Those payments are paying off the website. They are not the care plan."],
-  ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. Your domain is separate, at around £5–£10 a year. Monthly care is optional after that, typically £29–£50, or you can take a full handover."],
+  ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, help going live, the first year of hosting, and the first year of a standard domain. Premium domains cost extra, and you pay the domain renewal from year two, around £5–£10 a year. Monthly care is optional after that, typically £29–£50, or you can take a full handover."],
+  ["Is hosting included?", "Yes, the first year of hosting is included with a new website. After that it’s covered by monthly care (from £29/month) or we can quote hosting on its own."],
   ["How do you price a website fix?", "I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, I’ll quote a rebuild instead — £500 for a small business — before you agree to anything."],
   ["Who owns the Google Business Profile?", "You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix is £149. Optional monthly management is £99–£150."],
   ["Do you promise a Google ranking?", "No. I don’t promise a position on Google or Maps, and I won’t say you’re “#1”. A clear website and a looked-after Business Profile make you easier to find. They don’t guarantee where you appear."],

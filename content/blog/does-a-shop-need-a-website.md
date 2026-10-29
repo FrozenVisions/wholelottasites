@@ -13,7 +13,7 @@ A full online shop, with live stock, a basket and shipping rules, is a different
 
 ## An address you control
 
-A Facebook page, an Instagram grid or a marketplace listing can still earn its place. None of those is an address you own. A domain such as yourshop.co.uk is the address, not the website. You buy it, at around £5–£10 a year, so the account stays in your name.
+A Facebook page, an Instagram grid or a marketplace listing can still earn its place. None of those is an address you own. A domain such as yourshop.co.uk is the address, not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, at around £5–£10 a year.
 
 Hours left in a comment get buried. A photo of the window does not say whether you close on Monday, or whether there is a step at the door. Your own page is the link you can put on the bag, the window and your Google listing.
 
@@ -51,7 +51,7 @@ The [pay monthly website](/pay-monthly-website/) plans split that same £500. I 
 - **£100 up front, then £100 a month for 4 months.** £100 plus four payments of £100 is £500.
 - **Three payments of £166.67, £166.67 and £166.66.** The last payment is one penny less than the first two, so the three add up to £500.
 
-What the £500 includes is on [cheap website for a small business](/cheap-website-for-small-business/): built from scratch, readable on a phone, HTTPS, a title on every page, a contact form and help going live. [Built from scratch](/website-built-from-scratch/) is how it is made, not a dearer tier. You buy the domain yourself, at around £5–£10 a year.
+What the £500 includes is on [cheap website for a small business](/cheap-website-for-small-business/): built from scratch, readable on a phone, HTTPS, a title on every page, a contact form, help going live, the first year of hosting, and the first year of a standard domain. [Built from scratch](/website-built-from-scratch/) is how it is made, not a dearer tier. Premium domains cost extra, and you pay the renewal from year two, at around £5–£10 a year.
 
 Once the £500 is paid, monthly care is optional, typically £29–£50, or you can take a full handover. Care does not replace the build payments.
 

@@ -90,7 +90,7 @@ export function WhatsIncluded() {
       <div className="mt-8 max-w-3xl rounded-lg border bg-card p-6">
         <h3 className="text-xl font-semibold">Separate from the £500</h3>
         <ul className="mt-4 grid gap-3 text-muted-foreground">
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your domain, around £5–£10 a year. You buy it, so you own it.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Premium domains cost extra. You pay the renewal of a standard domain from year two, around £5–£10 a year. The domain is registered in your name.</li>
           <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly care is optional, typically £29–£50: uptime and SSL checks, small edits, a form check, and a nudge before the domain renews. Or a full handover.</li>
         </ul>
         <p className="mt-4 text-muted-foreground">
@@ -334,7 +334,7 @@ export function BundleStrip() {
 export function DomainNote() {
   return (
     <p className="mt-8 max-w-3xl text-muted-foreground">
-      You buy your own domain (around £5–£10 a year) and you keep the account. Want to take payments? You set up your own Stripe account and I’ll connect it. Monthly care, typically £29–£50, is optional. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
+      We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two (around £5–£10 a year). Want to take payments? You set up your own Stripe account and I’ll connect it. Monthly care, typically £29–£50, is optional. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
     </p>
   );
 }
@@ -543,7 +543,7 @@ export function PaymentPlans() {
       <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These plans pay off the £500 website. They are not monthly care. Care is optional, typically £29–£50, or you can take a full handover.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your own domain is extra, at around £5–£10 a year.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> The first year of a standard domain is included. Premium domains cost extra. You pay the renewal from year two, at around £5–£10 a year.</li>
       </ul>
     </div>
   );

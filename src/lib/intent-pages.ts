@@ -25,7 +25,7 @@ export interface IntentPage {
 }
 
 const priceParagraph =
-  "The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500. Monthly payments are taken by card through Stripe. Your domain is extra, around £5–£10 a year, and you buy it so you own it. Once the site is paid for, monthly care is optional, typically £29–£50, or you can take a full handover. Fixes and Google Business Profile are separate offers on the [pricing page](/pricing/).";
+  "The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500. Monthly payments are taken by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year. Once the site is paid for, monthly care is optional, typically £29–£50, or you can take a full handover. Fixes and Google Business Profile are separate offers on the [pricing page](/pricing/).";
 
 export const intentPages: IntentPage[] = [
   {
@@ -45,7 +45,7 @@ export const intentPages: IntentPage[] = [
         heading: "What “cheap” means here",
         paragraphs: [
           "£500 is the price of the website, for a small business or an individual. It is the same price as on the [pricing page](/pricing/). It is not a deposit against a larger bill, and it is not a monthly fee that quietly becomes the real cost.",
-          "Cheap, on this site, means a small scope done properly: pages we agree, built from scratch, working on a phone, with HTTPS, a title on every page, a contact form, and help going live. It does not mean a shared theme, stock photos of someone else’s workshop, or reviews I wrote for you.",
+          "Cheap, on this site, means a small scope done properly: pages we agree, built from scratch, working on a phone, with HTTPS, a title on every page, a contact form, help going live, the first year of hosting, and the first year of a standard domain. It does not mean a shared theme, stock photos of someone else’s workshop, or reviews I wrote for you.",
           priceParagraph,
         ],
       },
@@ -62,14 +62,14 @@ export const intentPages: IntentPage[] = [
         id: "not-included",
         heading: "What is not included",
         paragraphs: [
-          "The domain is yours to buy, at around £5–£10 a year. I help you connect it. I don’t need to own the account.",
+          "Premium domains cost extra. You pay the renewal of a standard domain from year two, at around £5–£10 a year. The domain is registered in your name. I help you connect it. I don’t need to own the account.",
           "After the £500 is paid, monthly care is a choice, typically £29–£50: uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover. Care is not added while you’re still paying for the build, and it isn’t required.",
           "The detail of the three plans is on the [pay monthly website](/pay-monthly-website/) page. The cards below are the same three.",
         ],
       },
     ],
     faqs: [
-      ["Is £500 the full price?", "Yes, for the small-business website. Payment plans split that same £500. They don’t add interest on top. Your domain, at around £5–£10 a year, is separate."],
+      ["Is £500 the full price?", "Yes, for the small-business website. Payment plans split that same £500. They don’t add interest on top. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year."],
       ["Why is a template sometimes advertised for less?", "Introductory prices often leave you to do the writing, the layout and the launch yourself, on a theme other businesses are using. This £500 includes me designing and building the site. It isn’t the cheapest number on the internet. It is a finished small site at a fixed price."],
       ["Can any kind of business use this?", "Any small business or individual who needs a modest site. If the project is really a product, a large shop or a multi-location brand, I’ll quote it rather than force it into £500."],
     ],
@@ -100,8 +100,8 @@ export const intentPages: IntentPage[] = [
         heading: "Affordable website monthly payments",
         paragraphs: [
           "Affordable website monthly payments, in this case, means those three schedules. I don’t add a setup fee, and I don’t charge interest on top of the £500.",
-          "The site you get is the same one as if you paid £500 at once: built from scratch, mobile, HTTPS, page titles, a contact form, Stripe payment links if you want them, and help going live. There’s a plain list on the [cheap website](/cheap-website-for-small-business/) page.",
-          "Your domain is not inside the monthly payments. You buy it yourself, around £5–£10 a year, so the address stays in your name.",
+          "The site you get is the same one as if you paid £500 at once: built from scratch, mobile, HTTPS, page titles, a contact form, Stripe payment links if you want them, help going live, the first year of hosting, and the first year of a standard domain. There’s a plain list on the [cheap website](/cheap-website-for-small-business/) page.",
+          "The first year of a standard domain is included in the £500, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.",
         ],
       },
       {

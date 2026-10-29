@@ -22,7 +22,7 @@ export interface TradePage {
 /** Same wording as the pricing page and the main FAQ, so the price is always consistent. */
 export const PRICE_FAQ: Faq = [
   "How much does it cost, and can I pay monthly?",
-  "A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe. You buy your own domain separately, at around £5–£10 a year.",
+  "A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year.",
 ];
 
 const tradePages: TradePage[] = [

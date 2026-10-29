@@ -48,7 +48,7 @@ Use the same name, address, phone and hours on your Google Business Profile. If 
 
 A blog can wait until you will write it. A card deposit can wait until you have your own Stripe account, so I can connect the payment link. Launch with a form or a phone number, and link a booking system when you already use one.
 
-A small-business site is £500, the same figure as on the [pricing](/pricing/) page. A [pay monthly website](/pay-monthly-website/) spreads that £500 in one of three ways: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500. Nothing is added as interest.
+A small-business site is £500, the same figure as on the [pricing](/pricing/) page. A [pay monthly website](/pay-monthly-website/) spreads that £500 in one of three ways: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.
 
 Once the £500 is paid, monthly care is optional, typically £29–£50, or you can take a full handover. Care covers uptime and SSL checks and small edits, such as a changed price, and it starts after payoff. The first year of hosting is included. We cover the first year of a standard domain, registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year. A booking system of your own, or any bigger project, is quoted from around £1,200. I will say so before you pay if that is the job.
 

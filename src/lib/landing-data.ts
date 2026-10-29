@@ -2,6 +2,7 @@
 // Rules: no invented clients, testimonials, reviews or stats. Prices must match the pricing page.
 import slugs from "@/data/landing-slugs.json";
 import { moreAudiences } from "@/lib/more-audiences";
+import { instalmentPlansTotalNote } from "@/lib/site-data";
 
 export type Faq = readonly [string, string];
 
@@ -22,7 +23,7 @@ export interface TradePage {
 /** Same wording as the pricing page and the main FAQ, so the price is always consistent. */
 export const PRICE_FAQ: Faq = [
   "How much does it cost, and can I pay monthly?",
-  "A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500, and monthly payments are taken automatically by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year.",
+  `A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. ${instalmentPlansTotalNote}. Monthly payments are taken automatically by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year.`,
 ];
 
 const tradePages: TradePage[] = [
@@ -90,7 +91,7 @@ const tradePages: TradePage[] = [
     slug: "builders",
     name: "Builders",
     title: "Website for Builders | Project Galleries £500 | WholeLottaSites",
-    description: "A website for builders: project galleries, the work you take on and a quote form. Custom-built for £500, with payment plans that total the same £500.",
+    description: "A website for builders: project galleries, the work you take on and a quote form. Custom-built for £500. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750).",
     h1: "A website for builders.",
     lead: "Extensions, loft conversions and renovations are big decisions. Customers want to see your finished work before they invite you round to quote.",
     intro: [

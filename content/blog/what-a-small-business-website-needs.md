@@ -62,7 +62,7 @@ A first website doesn’t need a complicated brief. [A website built from scratc
 
 ## What it costs, and what can wait
 
-The small-business website I build is £500. That’s a [cheap website for a small business](/cheap-website-for-small-business/) in the sense of a fixed price, not a bargain template. If you’d rather spread it, a [pay monthly website](/pay-monthly-website/) uses one of three plans — £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500.
+The small-business website I build is £500. That’s a [cheap website for a small business](/cheap-website-for-small-business/) in the sense of a fixed price, not a bargain template. If you’d rather spread it, a [pay monthly website](/pay-monthly-website/) uses one of three plans — £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750).
 
 A few things can wait.
 

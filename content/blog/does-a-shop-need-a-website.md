@@ -45,7 +45,7 @@ If you want me to set the profile up, or fix the one you have, that is £149, on
 
 A new small-business website is £500, the same figure as on the [pricing](/pricing/) page. It is the price of the website, not a deposit on a larger bill.
 
-The [pay monthly website](/pay-monthly-website/) plans split that same £500. I don’t add a setup fee or interest. Monthly payments are taken automatically by card through Stripe.
+The [pay monthly website](/pay-monthly-website/) page has the schedules. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest and no setup fee. Pay monthly is a separate £750 price, not finance or credit. Monthly payments are taken automatically by card through Stripe.
 
 - **£150 up front, then £50 a month for 7 months.** £150 plus seven payments of £50 is £500.
 - **£100 up front, then £100 a month for 4 months.** £100 plus four payments of £100 is £500.

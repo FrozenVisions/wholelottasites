@@ -55,7 +55,7 @@ Leave these until you need them: a blog you will not write, booking before you h
 
 A new small-business website is £500. That is the same figure as on the [pricing](/pricing/) page. It is the price of the website, not a deposit against a larger bill, and not a monthly fee that quietly becomes the real cost.
 
-If you’d rather not pay it all at once, pick one of the [pay monthly](/pay-monthly-website/) plans. Every plan adds up to exactly £500, with nothing extra on top. Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card, through Stripe.
+If you’d rather not pay it all at once, pick one of the [pay monthly](/pay-monthly-website/) plans. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit. Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card, through Stripe.
 
 ## How to start
 

@@ -95,7 +95,7 @@ const businessJsonLd = {
       name: "New small business website, pay up front",
       price: "500",
       priceCurrency: "GBP",
-      description: "Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500. First year of hosting included. The first year of a standard domain is included and registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit.",
+      description: "Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). First year of hosting included. The first year of a standard domain is included and registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit.",
       url: "https://wholelottasites.co.uk/pricing/#new-website",
     },
     {

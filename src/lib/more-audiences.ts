@@ -183,7 +183,7 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["I only have two projects I can show. Is that enough?", "Yes. Two real examples beat a grid of placeholders. We can add more later."],
-      ["Can I pay monthly?", "Yes. The site is £500, or £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals £500."],
+      ["Can I pay monthly?", "Yes. £50 a month for 15 months (£750), or £500 up front. The £500 price can also be £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)."],
       ["Will you write the words?", "I’ll shape them into the page and fix anything that isn’t clear. I need the facts from you: what you do, who for, and which projects we can show. I won’t invent clients."],
     ],
   },
@@ -215,7 +215,7 @@ export const moreAudiences: TradePage[] = [
     faqs: [
       ["Can you build our app for £500?", "No. £500 is the marketing website. An application with accounts, payments or a database is a different project, quoted from around £1,200 after we’ve talked about what it has to do."],
       ["We don’t have customers yet. Is a site premature?", "A single clear page is still useful: it gives you an address to send people, and it forces the explanation into plain language. It doesn’t need a blog or a press page."],
-      ["Can we pay monthly?", "Yes. £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each plan totals £500."],
+      ["Can we pay monthly?", "Yes. £50 a month for 15 months (£750), or £500 up front. The £500 price can also be £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)."],
     ],
   },
   {

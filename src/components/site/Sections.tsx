@@ -4,7 +4,7 @@ import { Smartphone, Link2Off, ShieldAlert, SearchX, Check, ArrowUpRight, Chevro
 import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, newWebsitePricing, type EnquiryHash, type Project } from "@/lib/site-data";
+import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, newWebsitePricing, instalmentPlansTotalNote, type EnquiryHash, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
@@ -535,8 +535,8 @@ export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFi
         eyebrow={showPayMonthlyFirst ? "The £500 price" : "Payment plans"}
         title={showPayMonthlyFirst ? "Instalment plans for the £500." : "Rather spread the cost?"}
         lead={showPayMonthlyFirst
-          ? "Every plan adds up to exactly £500, with nothing extra on top."
-          : "A full website is £500. If you’d rather not pay it all at once, pick one of these plans. Every plan adds up to exactly £500, with nothing extra on top."}
+          ? `${instalmentPlansTotalNote}. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.`
+          : `The £500 price can be paid up front. If you’d rather not pay it all at once, pick one of these plans. ${instalmentPlansTotalNote}. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.`}
       />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {paymentPlans.map((p) => (

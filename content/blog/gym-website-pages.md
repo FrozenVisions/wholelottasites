@@ -66,6 +66,6 @@ Before any design, gather the timetable, the prices you will publish, the hours,
 
 ## What it costs
 
-A full website is £500, the same figure as on the [pricing](/pricing/) page. If you’d rather not pay it all at once, pick one of the [pay monthly](/pay-monthly-website/) plans. Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Every plan adds up to exactly £500, with nothing extra on top. Monthly payments are taken automatically by card, through Stripe.
+A full website is £500, the same figure as on the [pricing](/pricing/) page. If you’d rather not pay it all at once, pick one of the [pay monthly](/pay-monthly-website/) plans. Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit. Monthly payments are taken automatically by card, through Stripe.
 
 Send the business name, the town and whether people join, book a class or train one to one through the [contact form](/contact/#mockup-form). Look at sample sites on the [portfolio](/portfolio/) before a deposit. A design for your business starts after the deposit.

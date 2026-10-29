@@ -118,7 +118,7 @@ export const stages = [
   {
     title: "Launch",
     summary: "I help you connect your domain and go live.",
-    body: "I help you point your domain at the site and check it on a phone before you share the address. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, at around £5–£10 a year. The first year of hosting is included. Pay monthly: £50/month for 15 months (£750 total). Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500. Once it’s paid for, monthly care is optional, typically £29–£50, or you can take a full handover.",
+    body: "I help you point your domain at the site and check it on a phone before you share the address. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, at around £5–£10 a year. The first year of hosting is included. Pay monthly: £50/month for 15 months (£750 total). Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Once it’s paid for, monthly care is optional, typically £29–£50, or you can take a full handover.",
     points: [
       "Help connecting the domain you own",
       "A check on a phone before you announce it",
@@ -133,9 +133,20 @@ export const paymentPlans = [
   { name: "Plan 3", headline: "3 payments", detail: "of £166.67, £166.67 and £166.66" },
 ] as const;
 
+/** Separate from the £500 instalment plans. Not finance or credit. */
+export const payMonthlyPlan = {
+  name: "Pay monthly",
+  payments: 15,
+  amount: "£50",
+  total: "£750",
+} as const;
+
+export const instalmentPlansTotalNote =
+  `Every £500 instalment plan totals exactly £500; the pay monthly option is ${payMonthlyPlan.amount} a month for ${payMonthlyPlan.payments} months (${payMonthlyPlan.total})`;
+
 /** Shown first on the new-website package. The £500 price, and its instalment plans, stay second. */
 export const newWebsitePricing = {
-  monthly: "Pay monthly: £50/month for 15 months (£750 total)",
+  monthly: `Pay monthly: ${payMonthlyPlan.amount}/month for ${payMonthlyPlan.payments} months (${payMonthlyPlan.total} total)`,
   upfront: "Or pay £500 up front and save £250",
   growth: "Want help growing it? Blog posts and SEO are an optional monthly extra on top - ask for a quote.",
 } as const;

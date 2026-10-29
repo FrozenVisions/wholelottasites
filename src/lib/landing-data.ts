@@ -149,7 +149,7 @@ const tradePages: TradePage[] = [
   {
     slug: "hairdressers",
     name: "Hairdressers & salons",
-    title: "Hairdresser Website Design | Salons & Barbers | WholeLottaSites",
+    title: "Hairdresser & Barber Website Design | WholeLottaSites",
     description: "Hairdresser website design for salons and barbers: booking links, a price list, stylist profiles and opening hours. Custom sites built for £500.",
     h1: "Hairdresser website design.",
     lead: "Clients want to see your work, check your prices and book a slot, often late at night on their phone. Your site should let them do all three in a minute.",
@@ -241,7 +241,7 @@ const tradePages: TradePage[] = [
   {
     slug: "gardeners",
     name: "Gardeners",
-    title: "Gardener Website Design | Lawns & Landscaping | WholeLottaSites",
+    title: "Gardener & Landscaping Website Design | WholeLottaSites",
     description: "Gardener website design for maintenance rounds and landscaping: galleries, seasonal work and a quote form. Built from scratch for £500.",
     h1: "Gardener website design.",
     lead: "Gardening is visual and seasonal. Your site should show off your work and bring in the right jobs at the right time of year.",

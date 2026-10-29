@@ -1,13 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, Heading, ProjectGrid, JourneyBand, WhatsIncluded, OfferCards } from "@/components/site/Sections";
+import { Section, Heading, JourneyBand, WhatsIncluded, OfferCards } from "@/components/site/Sections";
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
+import { SitesBuiltStrip } from "@/components/site/SitesBuilt";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
 import { GeoBlurb } from "@/components/site/Geo";
 import { MiniFixOffer } from "@/components/site/MiniFix";
-import { projects, seo } from "@/lib/site-data";
+import { seo } from "@/lib/site-data";
 
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Built from scratch", text: "A first website, or a replacement for a template." },
@@ -121,10 +122,16 @@ function Home() {
       </Section>
 
       <Section>
-        <Reveal><Heading eyebrow="Portfolio" title="Recent small business websites." /></Reveal>
-        <ProjectGrid items={projects.slice(0, 3)} />
+        <Reveal>
+          <Heading
+            eyebrow="Portfolio"
+            title="Sites we’ve built."
+            lead="Screenshots of six sites. The portfolio page has a short note on each one."
+          />
+        </Reveal>
+        <SitesBuiltStrip />
         <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
-          See all projects <ArrowRight className="size-4" aria-hidden />
+          See the portfolio <ArrowRight className="size-4" aria-hidden />
         </Link>
       </Section>
 

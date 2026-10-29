@@ -1,37 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, ProjectGrid } from "@/components/site/Sections";
-import { CaseStudies } from "@/components/site/CaseStudies";
-import { caseStudies, projects, seo } from "@/lib/site-data";
+import { SitesBuiltList } from "@/components/site/SitesBuilt";
+import { builtSites, projects, seo, SITE_URL } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
+
+const title = "Sites we’ve built | WholeLottaSites, Mansfield";
+const description = "Screenshots of sites built by Chris Faulkes: MC Decorating, The Sticky Service, SafePlate, Whole Lotta Vinyl, Vinyl Buyback and WLV Outlet.";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
-    ...seo(
-      "/portfolio",
-      "Web Design Portfolio | WholeLottaSites, Mansfield",
-      "Case studies of SafePlate, WholeLottaVinyl and Vinyl Buyback, plus example designs. Chris Faulkes, a web designer in Mansfield, built and runs these sites.",
-    ),
-    scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Portfolio", path: "/portfolio" }]))],
+    ...seo("/portfolio", title, description),
+    scripts: [
+      jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Portfolio", path: "/portfolio" }])),
+      jsonLd({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Sites we’ve built",
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        numberOfItems: builtSites.length,
+        itemListElement: builtSites.map((site, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: site.name,
+          description: site.summary,
+          url: `${SITE_URL}/portfolio/#${site.id}`,
+        })),
+      }),
+    ],
   }),
   component: Portfolio,
 });
 
 function Portfolio() {
-  const examples = projects.filter((project) => !project.url);
   return (
     <>
-      <PageHero eyebrow="Portfolio" title="Recent web design work." lead="Case studies of the sites I built and run, then example designs. Screenshots only. Live links are shown for SafePlate and WholeLottaVinyl." crumbs={[{ name: "Home", href: "/" }, { name: "Portfolio" }]} />
+      <PageHero
+        eyebrow="Portfolio"
+        title="Sites we’ve built."
+        lead="Six sites, shown as screenshots. The picture is what you can judge here. A text link is included where there is a live address. Example designs, which are not live sites, are further down."
+        crumbs={[{ name: "Home", href: "/" }, { name: "Portfolio" }]}
+      />
       <Section className="!pt-4">
-        <p className="max-w-3xl rounded-lg border bg-card px-5 py-4 text-base text-foreground">
-          SafePlate, WholeLottaVinyl and Vinyl Buyback are built and run by Chris.
-        </p>
-        <h2 className="mt-12 text-3xl md:text-4xl">Sites I built and run.</h2>
-        <CaseStudies items={caseStudies} />
+        <SitesBuiltList />
         <h2 className="mt-20 text-3xl md:text-4xl">Example designs.</h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">Screenshots of designs. These are not live sites, so there is no link to visit.</p>
-        <ProjectGrid items={examples} detailed />
+        <ProjectGrid items={projects} detailed />
       </Section>
     </>
   );
 }
-

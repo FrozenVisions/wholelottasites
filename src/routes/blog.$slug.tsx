@@ -3,6 +3,7 @@ import { PageHero, Section } from "@/components/site/Sections";
 import { Markdown } from "@/components/site/Markdown";
 import { Button } from "@/components/ui/button";
 import { postBySlug, posts, formatPostDate } from "@/lib/blog";
+import { faqJsonLd } from "@/components/site/Landing";
 import { articleJsonLd, breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 import { seo } from "@/lib/site-data";
 
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/blog/$slug")({
           { name: post.title, path: `/blog/${post.slug}` },
         ])),
         jsonLd(articleJsonLd({ title: post.title, description: post.description, path: `/blog/${post.slug}`, date: post.date })),
+        ...(post.faqs.length > 0 ? [jsonLd(faqJsonLd(post.faqs))] : []),
       ],
     };
   },

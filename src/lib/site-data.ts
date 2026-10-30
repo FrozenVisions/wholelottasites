@@ -1,11 +1,21 @@
-import vinylThumb from "@/assets/portfolio/wholelottavinyl-thumb.webp";
-import vinylMid from "@/assets/portfolio/wholelottavinyl-thumb-800.webp";
-import vinylSmall from "@/assets/portfolio/wholelottavinyl-thumb-600.webp";
-import vinylFull from "@/assets/portfolio/wholelottavinyl-full.webp";
-import safeThumb from "@/assets/portfolio/safeplate-thumb.webp";
-import safeMid from "@/assets/portfolio/safeplate-thumb-800.webp";
-import safeSmall from "@/assets/portfolio/safeplate-thumb-600.webp";
-import safeFull from "@/assets/portfolio/safeplate-full.webp";
+import mcDecorating from "@/assets/portfolio/mcdecorating-desktop.webp";
+import mcDecoratingMid from "@/assets/portfolio/mcdecorating-desktop-800.webp";
+import mcDecoratingSmall from "@/assets/portfolio/mcdecorating-desktop-600.webp";
+import stickyService from "@/assets/portfolio/sticky-service-desktop.webp";
+import stickyServiceMid from "@/assets/portfolio/sticky-service-desktop-800.webp";
+import stickyServiceSmall from "@/assets/portfolio/sticky-service-desktop-600.webp";
+import safeDesktop from "@/assets/portfolio/safeplate-desktop.webp";
+import safeDesktopMid from "@/assets/portfolio/safeplate-desktop-800.webp";
+import safeDesktopSmall from "@/assets/portfolio/safeplate-desktop-600.webp";
+import vinylDesktop from "@/assets/portfolio/wholelottavinyl-desktop.webp";
+import vinylDesktopMid from "@/assets/portfolio/wholelottavinyl-desktop-800.webp";
+import vinylDesktopSmall from "@/assets/portfolio/wholelottavinyl-desktop-600.webp";
+import buybackDesktop from "@/assets/portfolio/vinylbuyback-desktop.webp";
+import buybackDesktopMid from "@/assets/portfolio/vinylbuyback-desktop-800.webp";
+import buybackDesktopSmall from "@/assets/portfolio/vinylbuyback-desktop-600.webp";
+import outletDesktop from "@/assets/portfolio/wlv-outlet-desktop.webp";
+import outletDesktopMid from "@/assets/portfolio/wlv-outlet-desktop-800.webp";
+import outletDesktopSmall from "@/assets/portfolio/wlv-outlet-desktop-600.webp";
 import dibsThumb from "@/assets/portfolio/dibs-thumb.webp";
 import dibsMid from "@/assets/portfolio/dibs-thumb-800.webp";
 import dibsSmall from "@/assets/portfolio/dibs-thumb-600.webp";
@@ -22,10 +32,6 @@ import ptThumb from "@/assets/portfolio/pt-simons-thumb.webp";
 import ptMid from "@/assets/portfolio/pt-simons-thumb-800.webp";
 import ptSmall from "@/assets/portfolio/pt-simons-thumb-600.webp";
 import ptFull from "@/assets/portfolio/pt-simons-full.webp";
-import buybackThumb from "@/assets/portfolio/vinyl-buyback-thumb.webp";
-import buybackMid from "@/assets/portfolio/vinyl-buyback-thumb-800.webp";
-import buybackSmall from "@/assets/portfolio/vinyl-buyback-thumb-600.webp";
-import buybackFull from "@/assets/portfolio/vinyl-buyback-full.webp";
 
 export const SITE_URL = "https://wholelottasites.co.uk";
 
@@ -159,6 +165,7 @@ export const proofSites = [
   { name: "wholelottavinyl.com", href: "https://www.wholelottavinyl.com" },
   { name: "safeplate.org.uk", href: "https://safeplate.org.uk" },
   { name: "mcdecoratingni.co.uk", href: "https://mcdecoratingni.co.uk" },
+  { name: "vinylbuyback.co.uk", href: "https://vinylbuyback.co.uk" },
 ] as const;
 
 export const offers = [
@@ -274,7 +281,7 @@ export const faqs = [
   ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
   ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],
   ["Is GEO the same as SEO?", "Related, not the same. SEO is mostly about search results. GEO is about being clear enough that AI assistants can describe your business correctly when someone asks. Both need honest titles, real contact details, and pages that say what you do."],
-  ["Do you invent reviews or traffic numbers?", "No. I only name live sites I’ve built: wholelottavinyl.com, safeplate.org.uk and mcdecoratingni.co.uk. No fake testimonials, rankings or visit counts."],
+  ["Do you invent reviews or traffic numbers?", "No. I name sites I’ve built, and I don’t attach testimonials, rankings or visit counts. The portfolio is screenshots. Live addresses I link: wholelottavinyl.com, safeplate.org.uk, mcdecoratingni.co.uk and vinylbuyback.co.uk."],
   ["Is GEO included in the £500 site?", "Yes. Clear entity copy, service pages and contact paths are part of a normal build. A rescue or rebuild can add the same clarity if the old site was vague. The East Midlands £100 mini-fix is one agreed fix only; GEO rewrite of a whole site is quoted separately."],
 ] as const;
 
@@ -294,32 +301,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    name: "wholelottavinyl.com",
-    desc: "Vinyl record shop",
-    long: "Chris’s vinyl record shop. The site is for browsing and buying records.",
-    img: vinylThumb,
-    imgMid: vinylMid,
-    imgSmall: vinylSmall,
-    full: vinylFull,
-    fullWidth: 1280,
-    fullHeight: 1908,
-    alt: "Screenshot of the WholeLottaVinyl shop, with second-hand records for sale",
-    url: "https://www.wholelottavinyl.com",
-  },
-  {
-    name: "SafePlate",
-    desc: "Allergy-safe restaurant finder",
-    long: "A free UK site for finding allergy-safe restaurants. Chris built it because he has severe food allergies.",
-    img: safeThumb,
-    imgMid: safeMid,
-    imgSmall: safeSmall,
-    full: safeFull,
-    fullWidth: 1280,
-    fullHeight: 800,
-    alt: "Screenshot of the SafePlate website, a free UK site for finding allergy-safe restaurants",
-    url: "https://safeplate.org.uk",
-  },
   {
     name: "dibs",
     desc: "Buy it now or bid marketplace",
@@ -370,58 +351,101 @@ export const projects: Project[] = [
   },
 ];
 
-export type CaseStudy = {
+export type BuiltSite = {
+  id: string;
   name: string;
   summary: string;
+  alt: string;
   img: string;
   imgMid: string;
   imgSmall: string;
-  full: string;
-  fullWidth: number;
-  fullHeight: number;
-  alt: string;
-  /** Live link. Omitted for Vinyl Buyback. */
+  width: number;
+  height: number;
+  /** Live address. Omitted when there is no public URL to offer. */
   url?: string;
   linkLabel?: string;
+  /** Shown as a badge. The shop is not described as finished. */
+  inProgress?: boolean;
 };
 
-/** Chris’s own sites. Copy is limited to facts he has stated — no stats, testimonials or results. */
-export const caseStudies: CaseStudy[] = [
+/**
+ * Sites shown on the portfolio. Summaries are the agreed wording.
+ * No testimonials, traffic, rankings or results are attached.
+ */
+export const builtSites: BuiltSite[] = [
   {
+    id: "mc-decorating",
+    name: "MC Decorating (Omagh)",
+    summary: "A clean, simple site for a painters and decorators firm, so customers see the work, the area covered and how to get a quote.",
+    alt: "Screenshot of the top of the MC Decorating website, a painters and decorators site for Omagh, with the headline, quote buttons and the start of the services.",
+    img: mcDecorating,
+    imgMid: mcDecoratingMid,
+    imgSmall: mcDecoratingSmall,
+    width: 1200,
+    height: 750,
+    url: "https://mcdecoratingni.co.uk",
+    linkLabel: "mcdecoratingni.co.uk",
+  },
+  {
+    id: "the-sticky-service",
+    name: "The Sticky Service",
+    summary: "A blue and white sales page for a £19 a month promo service for UK eBay, Vinted and Discogs sellers. It gives one clear offer and one clear next step.",
+    alt: "Screenshot of the top of The Sticky Service sales page, a blue and white offer for a £19 a month promo service for UK eBay, Vinted and Discogs sellers.",
+    img: stickyService,
+    imgMid: stickyServiceMid,
+    imgSmall: stickyServiceSmall,
+    width: 1200,
+    height: 750,
+  },
+  {
+    id: "safeplate",
     name: "SafePlate",
-    summary: "SafePlate is a free UK site for finding allergy-safe restaurants. Chris built it because he has severe food allergies, and he runs it. It is at safeplate.org.uk.",
-    img: safeThumb,
-    imgMid: safeMid,
-    imgSmall: safeSmall,
-    full: safeFull,
-    fullWidth: 1280,
-    fullHeight: 800,
-    alt: "Screenshot of the SafePlate website, a free UK site for finding allergy-safe restaurants",
+    summary: "A UK restaurant finder for people with allergies, built so diners can check allergy info before they book.",
+    alt: "Screenshot of the top of the SafePlate website, a UK restaurant finder where diners can check allergy information before they book.",
+    img: safeDesktop,
+    imgMid: safeDesktopMid,
+    imgSmall: safeDesktopSmall,
+    width: 1200,
+    height: 750,
     url: "https://safeplate.org.uk",
-    linkLabel: "Visit safeplate.org.uk",
+    linkLabel: "safeplate.org.uk",
   },
   {
-    name: "WholeLottaVinyl",
-    summary: "WholeLottaVinyl is Chris’s vinyl record shop. The site, at wholelottavinyl.com, is for browsing and buying records.",
-    img: vinylThumb,
-    imgMid: vinylMid,
-    imgSmall: vinylSmall,
-    full: vinylFull,
-    fullWidth: 1280,
-    fullHeight: 1908,
-    alt: "Screenshot of the WholeLottaVinyl shop, with second-hand records for sale",
-    url: "https://www.wholelottavinyl.com",
-    linkLabel: "Visit wholelottavinyl.com",
+    id: "whole-lotta-vinyl",
+    name: "Whole Lotta Vinyl",
+    summary: "An online shop for a used-record dealer, with the stock, the contact details and the policies in one place.",
+    alt: "Screenshot of the top of the Whole Lotta Vinyl online shop, showing the shop navigation, the Mansfield headline and used records for sale.",
+    img: vinylDesktop,
+    imgMid: vinylDesktopMid,
+    imgSmall: vinylDesktopSmall,
+    width: 1200,
+    height: 750,
+    url: "https://wholelottavinyl.com",
+    linkLabel: "wholelottavinyl.com",
   },
   {
+    id: "vinyl-buyback",
     name: "Vinyl Buyback",
-    summary: "Vinyl Buyback is a site where people sell their vinyl to Chris.",
-    img: buybackThumb,
-    imgMid: buybackMid,
-    imgSmall: buybackSmall,
-    full: buybackFull,
-    fullWidth: 1280,
-    fullHeight: 1976,
-    alt: "Screenshot of Vinyl Buyback, where people sell their vinyl to Chris",
+    summary: "A site for selling your records, built around one job: get people to ask for an offer.",
+    alt: "Screenshot of the top of the Vinyl Buyback website, with the offer headline and a button for people to ask for an offer on their records.",
+    img: buybackDesktop,
+    imgMid: buybackDesktopMid,
+    imgSmall: buybackDesktopSmall,
+    width: 1200,
+    height: 1208,
+    url: "https://vinylbuyback.co.uk",
+    linkLabel: "vinylbuyback.co.uk",
+  },
+  {
+    id: "wlv-outlet",
+    name: "WLV Outlet",
+    summary: "A shop for new and sealed vinyl and CDs, set up as a sister store to Whole Lotta Vinyl.",
+    alt: "Screenshot of the top of the WLV Outlet shop for new and sealed vinyl and CDs, set up as a sister store to Whole Lotta Vinyl. The shop is in progress.",
+    img: outletDesktop,
+    imgMid: outletDesktopMid,
+    imgSmall: outletDesktopSmall,
+    width: 1200,
+    height: 750,
+    inProgress: true,
   },
 ];

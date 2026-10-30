@@ -39,7 +39,7 @@ People call this GEO, short for generative engine optimisation. It sounds techni
 
 ## Where I can help
 
-If your site is live but muddled, the [£100 East Midlands mini-fix](/website-mini-fix/) covers a short audit and one concrete fix, such as rewriting your homepage so it says clearly who you are, what you do and where. If the facts don't match across Google, a [Google Business Profile setup or fix](/google-business-profile/) sorts that side. Bigger tidy-ups are quoted after a free audit.
+If your site is live but muddled, the [£50 + VAT East Midlands mini-fix](/website-mini-fix/) covers a short audit and one concrete fix, such as rewriting your homepage so it says clearly who you are, what you do and where. If the facts don't match across Google, a [Google Business Profile setup or fix](/google-business-profile/) sorts that side. Bigger tidy-ups are quoted after a free audit.
 
 I won't promise you'll be recommended. I'll make your business accurate and easy to describe, which is the part you can control.
 

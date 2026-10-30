@@ -23,7 +23,7 @@ const groups = [
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Website built from scratch", text: "No theme. Also the route for a first website." },
   { to: "/website-redesign" as const, title: "Website redesign", text: "When the old site is in the way, including a straight update." },
-  { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
+  { to: "/website-mini-fix" as const, title: "£50 + VAT mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it mobile friendly", text: "If people have to pinch and zoom to phone you." },
   { to: "/cheap-website-for-small-business" as const, title: "Cheap website, £200 + VAT (£240 inc VAT)", text: "What the fixed price includes, and what it doesn’t." },
   { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "£50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT)." },

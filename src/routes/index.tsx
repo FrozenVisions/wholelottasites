@@ -13,7 +13,7 @@ import { newWebsitePricing, seo } from "@/lib/site-data";
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Built from scratch", text: "A first website, or a replacement for a template." },
   { to: "/website-redesign" as const, title: "Fix or redesign", text: "A free audit first. A rebuild if patching won’t hold." },
-  { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
+  { to: "/website-mini-fix" as const, title: "£50 + VAT mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it work on a phone", text: "If customers have to pinch and zoom." },
   { to: "/cheap-website-for-small-business" as const, title: "£200 + VAT, explained", text: "A cheap website for a small business, and what that excludes." },
   { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "£50 a month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT) one-off." },
@@ -23,8 +23,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     ...seo(
       "/",
-      "Websites, Fixes & Google | £200 + VAT or £100 Fix",
-      "Founding client offer: £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months. East Midlands £100 mini-fix. No ranking promises.",
+      "Websites, Fixes & Google | £200 + VAT or £50 + VAT Fix",
+      "Founding client offer: £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months. East Midlands £50 + VAT mini-fix. No ranking promises.",
     ),
   }),
   component: Home,
@@ -56,7 +56,7 @@ function Home() {
             </p>
             <p className="mt-3 max-w-2xl text-sm text-navy-foreground/80">
               Site already live in the East Midlands, and only one thing is broken?{" "}
-              <Link to="/website-mini-fix" className="font-semibold text-copper underline-offset-4 hover:underline">£100 mini-fix — one fix, not a rebuild</Link>.
+              <Link to="/website-mini-fix" className="font-semibold text-copper underline-offset-4 hover:underline">£50 + VAT mini-fix — one fix, not a rebuild</Link>.
             </p>
           </div>
           <DeviceMockup />
@@ -149,7 +149,7 @@ function Home() {
       </Section>
 
       <Section>
-        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The founding price for a small site is. A live East Midlands site that only needs one fix is the £100 mini-fix." />
+        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The founding price for a small site is. A live East Midlands site that only needs one fix is the £50 + VAT mini-fix." />
         <Link to="/websites-for" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           Browse websites by type of business <ArrowRight className="size-4" aria-hidden />
         </Link>

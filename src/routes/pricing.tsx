@@ -10,7 +10,7 @@ export const Route = createFileRoute("/pricing")({
     ...seo(
       "/pricing",
       "Pricing | £50/month or £200 + VAT | WholeLottaSites",
-      "Founding client offer: £50/month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT). East Midlands mini-fix £100. Fixes typically £150–£400. Google setup £149. Care from £29.",
+      "Founding client offer: £50/month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT). East Midlands mini-fix £50 + VAT. Fixes typically £150–£400. Google setup £149. Care from £29.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]))],
   }),
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/pricing")({
 function Pricing() {
   return (
     <>
-      <PageHero eyebrow="Pricing" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. If the site is already live in the East Midlands and only needs one fix, that’s £100. Wider fixes, Google Business Profile and monthly care are priced on their own. Bundles are those pieces, quoted together.`} crumbs={[{ name: "Home", href: "/" }, { name: "Pricing" }]} />
+      <PageHero eyebrow="Pricing" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. If the site is already live in the East Midlands and only needs one fix, that’s £50 + VAT. Wider fixes, Google Business Profile and monthly care are priced on their own. Bundles are those pieces, quoted together.`} crumbs={[{ name: "Home", href: "/" }, { name: "Pricing" }]} />
       <Section id="offers" className="!pt-4">
         <FoundingOfferPromo />
         <div className="mt-8">

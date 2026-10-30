@@ -33,7 +33,7 @@ A full online shop with stock levels and shipping is not this price. A booking s
 
 A Google Business Profile is included with the founding website: setup, normally £149 on its own. You stay the owner. I am added as a manager. I will not tell you that you will be first on Maps. If you only want the listing, and you already have a site, the £149 price still applies.
 
-If the site you have is already live and only one concrete thing is wrong, the [£100 mini-fix](/website-mini-fix/) may be the job instead. It covers Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new website and not a redesign.
+If the site you have is already live and only one concrete thing is wrong, the [£50 + VAT mini-fix](/website-mini-fix/) may be the job instead. It covers Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new website and not a redesign.
 
 ## How the payments work
 

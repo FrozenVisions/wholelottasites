@@ -12,16 +12,16 @@ export const miniFixExamples = [
 
 export const miniFixFaqs = [
   [
-    "Is the £100 mini-fix a redesign?",
+    "Is the £50 + VAT mini-fix a redesign?",
     "No. It is a short audit and one concrete fix on a site that’s already live. It is not a redesign and it is not a full rebuild.",
   ],
   [
-    "What does the £100 cover?",
+    "What does the £50 + VAT cover?",
     "A short look at the live site, then one fix we agree before I start. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile.",
   ],
   [
     "What if the site needs more than one fix?",
-    "I quote that separately. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business website. I won’t stretch the £100 job into either of those.",
+    "I quote that separately. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business website. I won’t stretch the £50 + VAT job into either of those.",
   ],
   [
     "Where is the mini-fix available?",
@@ -33,6 +33,6 @@ export const miniFixFaqs = [
   ],
   [
     "What can I add after the fix?",
-    "If you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site at £200 + VAT (£240 inc VAT). None of that is included in the £100.",
+    "If you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site at £200 + VAT (£240 inc VAT). None of that is included in the £50 + VAT.",
   ],
 ] as const;

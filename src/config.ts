@@ -14,3 +14,4 @@ export const CONTACT = {
   location: "Mansfield, Nottinghamshire",
 };
 
+export const STRIPE_MINI_FIX_URL = "https://buy.stripe.com/dRmdRbb5E2Qy9S19Oa5Vu0e";

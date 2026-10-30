@@ -11,13 +11,13 @@ export const Route = createFileRoute("/website-mini-fix")({
   head: () => ({
     ...seo(
       "/website-mini-fix",
-      "East Midlands £100 Website Mini-Fix | WholeLottaSites",
-      "A £100 website mini-fix for a live East Midlands site: a short audit and one concrete fix. Not a redesign. Rescue and rebuilds are quoted separately.",
+      "East Midlands £50 + VAT Website Mini-Fix | WholeLottaSites",
+      "A £50 + VAT website mini-fix for a live East Midlands site: a short audit and one concrete fix. Not a redesign. Rescue and rebuilds are quoted separately.",
     ),
     scripts: [
       jsonLd(breadcrumbJsonLd([
         { name: "Home", path: "/" },
-        { name: "East Midlands £100 website mini-fix", path: "/website-mini-fix" },
+        { name: "East Midlands £50 + VAT website mini-fix", path: "/website-mini-fix" },
       ])),
       jsonLd(faqJsonLd(miniFixFaqs)),
     ],
@@ -30,9 +30,9 @@ function WebsiteMiniFix() {
     <>
       <PageHero
         eyebrow="East Midlands"
-        title="£100 website mini-fix."
+        title="£50 + VAT website mini-fix."
         lead="A short audit and one concrete fix on a site that’s already live. Not a redesign, and not a full rebuild."
-        crumbs={[{ name: "Home", href: "/" }, { name: "£100 website mini-fix" }]}
+        crumbs={[{ name: "Home", href: "/" }, { name: "£50 + VAT website mini-fix" }]}
       />
       <Section className="!pt-4">
         <MiniFixOffer showHeading={false} />

@@ -7,7 +7,7 @@ const links = [
   { href: "/pay-monthly-website", label: "Pay monthly website" },
   { href: "/website-built-from-scratch", label: "Website built from scratch" },
   { href: "/website-redesign", label: "Website redesign" },
-  { href: "/website-mini-fix", label: "£100 East Midlands mini-fix" },
+  { href: "/website-mini-fix", label: "£50 + VAT East Midlands mini-fix" },
   { href: "/google-business-profile", label: `Google Business Profile, ${GBP_SETUP_PRICE}` },
   { href: "/mobile-friendly-website", label: "Make a website mobile friendly" },
   { href: "/websites-for", label: "Websites by type of business" },

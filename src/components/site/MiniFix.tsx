@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DecoratingProofLink, SafePlateProofLink, VinylProofLink } from "@/components/site/Geo";
 import { Heading } from "@/components/site/Sections";
-import { CONTACT } from "@/config";
+import { CONTACT, STRIPE_MINI_FIX_URL } from "@/config";
 import { miniFixExamples } from "@/lib/mini-fix";
 
 export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) {
@@ -14,16 +14,16 @@ export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) 
       {showHeading && (
         <Heading
           eyebrow="Already live"
-          title="East Midlands £100 website mini-fix."
+          title="East Midlands £50 + VAT website mini-fix."
           lead="A short audit and one concrete fix on a site that’s already live. Not a redesign, and not a full rebuild."
         />
       )}
       <div className={`${showHeading ? "mt-10" : ""} grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start`}>
         <div className="max-w-3xl space-y-5 text-lg text-muted-foreground">
           <div>
-            <DetailTitle className="font-display text-2xl font-bold text-foreground md:text-3xl">What the £100 pays for.</DetailTitle>
+            <DetailTitle className="font-display text-2xl font-bold text-foreground md:text-3xl">What the £50 + VAT pays for.</DetailTitle>
             <p className="mt-4">
-              £100 is a short audit, then one concrete fix, on a website that is already live. We agree the fix before I start. It is one job, not a new design and not a rebuild.
+              £50 + VAT (£60 inc VAT) is a short audit, then one concrete fix, on a website that is already live. We agree the fix before I start. It is one job, not a new design and not a rebuild.
             </p>
           </div>
           <ul className="grid gap-2">
@@ -41,7 +41,7 @@ export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) 
             If the work is bigger than one fix, I quote it separately. A normal rescue is usually around £150–£400. A rebuild is the founding-price small-business website (£200 + VAT, or £50 a month inc VAT for 12 months), with the same payment options as everywhere else on this site. I won’t call a rescue or a rebuild a mini-fix.
           </p>
           <p>
-            After the fix, if you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site. None of that is inside the £100. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
+            After the fix, if you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site. None of that is inside the £50 + VAT. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
           </p>
           <p>
             A mini-fix will not rewrite your whole site for AI assistants. If the agreed fix is a form, mobile layout, SSL, redirects or a missing Google Business Profile website link, that is the job. If your pages still don’t say clearly who you are, what you do and how to get in touch, ask about a rescue (usually around £150–£400) or a full rebuild at £200 + VAT (£240 inc VAT). Those can include the clearer GEO copy above.
@@ -62,10 +62,14 @@ export function MiniFixCard() {
   return (
     <aside className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
       <p className="eyebrow">East Midlands mini-fix</p>
-      <p className="mt-4 font-display text-6xl font-bold text-foreground">£100</p>
+      <p className="mt-4 font-display text-6xl font-bold text-foreground">£50</p>
+      <p className="mt-1 text-sm text-muted-foreground">+ VAT (£60 inc VAT)</p>
       <p className="mt-2 text-muted-foreground">Short audit and one concrete fix. Not a redesign. Not a full rebuild.</p>
       <Button asChild size="lg" className="mt-8 w-full">
-        <Link to="/contact" hash="mini-fix">Send the site address</Link>
+        <a href={STRIPE_MINI_FIX_URL} target="_blank" rel="noopener noreferrer">Pay £60 (inc VAT)</a>
+      </Button>
+      <Button asChild size="lg" variant="outline" className="mt-3 w-full">
+        <Link to="/contact" hash="mini-fix">Send the site address first</Link>
       </Button>
       <div className="mt-6 space-y-2 text-sm">
         <p>

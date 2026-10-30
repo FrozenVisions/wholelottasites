@@ -97,7 +97,7 @@ function GoogleBusinessProfilePage() {
                 <li className="flex gap-2">
                   <Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden />
                   <span>
-                    <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">The £100 East Midlands mini-fix</Link>
+                    <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">The £50 + VAT East Midlands mini-fix</Link>
                     , if the only problem is a missing or broken website link on your profile
                   </span>
                 </li>

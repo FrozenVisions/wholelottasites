@@ -31,7 +31,7 @@ None of that is a promise of a Google position, a Maps ranking, or a number of l
 
 A large shop with stock and shipping, a web app, or a site with a great many pages is a different job. I quote those from around £1,200, and I say so before you pay if that is what you are describing.
 
-If you already have a live site and only one thing is broken — a form, the mobile layout, speed, SSL or redirects, or the website link on your Google Business Profile — that can be the [£100 East Midlands mini-fix](/website-mini-fix/). It covers Nottinghamshire, including Mansfield, plus Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is one fix, not a new website.
+If you already have a live site and only one thing is broken — a form, the mobile layout, speed, SSL or redirects, or the website link on your Google Business Profile — that can be the [£50 + VAT East Midlands mini-fix](/website-mini-fix/). It covers Nottinghamshire, including Mansfield, plus Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is one fix, not a new website.
 
 A wider rescue, after a free audit, is usually around £150–£400. If patching is a false economy, the honest job is a rebuild at the founding price, not a mini-fix stretched until it pretends to be one.
 

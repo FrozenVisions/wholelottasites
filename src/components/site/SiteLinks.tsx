@@ -2,6 +2,7 @@ import { TextLink } from "@/components/site/RichText";
 import { GBP_SETUP_PRICE } from "@/lib/google-business-profile";
 
 const links = [
+  { href: "/founding-offer", label: "Founding client offer" },
   { href: "/cheap-website-for-small-business", label: "Cheap website for a small business" },
   { href: "/pay-monthly-website", label: "Pay monthly website" },
   { href: "/website-built-from-scratch", label: "Website built from scratch" },

@@ -11,6 +11,7 @@ const core = [
   ["/", "1.0"],
   ["/services", "0.9"],
   ["/pricing", "0.9"],
+  ["/founding-offer", "0.9"],
   ["/portfolio", "0.8"],
   ["/how-it-works", "0.7"],
   ["/faq", "0.7"],

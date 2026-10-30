@@ -1,5 +1,5 @@
 import type { Faq } from "@/lib/landing-data";
-import { instalmentPlansTotalNote, payMonthlyPlan } from "@/lib/site-data";
+import { newWebsitePriceAnswer, newWebsitePricing } from "@/lib/site-data";
 
 export interface IntentSection {
   id: string;
@@ -26,18 +26,18 @@ export interface IntentPage {
 }
 
 const priceParagraph =
-  `The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. ${instalmentPlansTotalNote}. Monthly payments are taken by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year. Once the site is paid for, monthly care is optional, typically £29–£50, or you can take a full handover. Fixes and Google Business Profile are separate offers on the [pricing page](/pricing/).`;
+  `${newWebsitePriceAnswer} Fixes and Google Business Profile bought on their own are separate offers on the [pricing page](/pricing/).`;
 
 export const intentPages: IntentPage[] = [
   {
     slug: "cheap-website-for-small-business",
     path: "/cheap-website-for-small-business",
     keyword: "cheap website for small business UK",
-    title: "Cheap Website for a Small Business UK | £500 | WholeLottaSites",
-    description: "A cheap website for a small business in the UK: £500 for a custom site, or the same £500 on a payment plan. What’s included, and what isn’t.",
-    eyebrow: "£500, not a teaser",
+    title: "Cheap Website for a Small Business UK | £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A cheap website for a small business in the UK: £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months. Founding client offer. What’s included, and what isn’t.",
+    eyebrow: "£200 + VAT (£240 inc VAT), not a teaser",
     h1: "A cheap website for a small business.",
-    lead: "If you want a cheap website for a small business in the UK, this is that offer: a custom site for £500. Not a template with a low first month and a higher price later.",
+    lead: "If you want a cheap website for a small business in the UK, this is that offer: a custom site for £200 + VAT (£240 inc VAT). Not a template with a low first month and a higher price later.",
     showIncluded: true,
     showPlans: true,
     sections: [
@@ -45,7 +45,7 @@ export const intentPages: IntentPage[] = [
         id: "what-cheap-means",
         heading: "What “cheap” means here",
         paragraphs: [
-          "£500 is the price of the website, for a small business or an individual. It is the same price as on the [pricing page](/pricing/). It is not a deposit against a larger bill, and it is not a monthly fee that quietly becomes the real cost.",
+          "£200 + VAT (£240 inc VAT) is the price of the website, for a small business or an individual. It is the same price as on the [pricing page](/pricing/). It is not a deposit against a larger bill, and it is not a monthly fee that quietly becomes the real cost.",
           "Cheap, on this site, means a small scope done properly: pages we agree, built from scratch, working on a phone, with HTTPS, a title on every page, a contact form, help going live, the first year of hosting, and the first year of a standard domain. It does not mean a shared theme, stock photos of someone else’s workshop, or reviews I wrote for you.",
           priceParagraph,
         ],
@@ -54,36 +54,36 @@ export const intentPages: IntentPage[] = [
         id: "who-its-for",
         heading: "Who it’s for",
         paragraphs: [
-          "Trades are a large part of the work, and there are pages for [plumbers](/websites-for/plumbers/), [electricians](/websites-for/electricians/) and the other trades. The same £500 site is also for other small businesses and for people who aren’t a trade at all.",
+          "Trades are a large part of the work, and there are pages for [plumbers](/websites-for/plumbers/), [electricians](/websites-for/electricians/) and the other trades. The same £200 + VAT (£240 inc VAT) site is also for other small businesses and for people who aren’t a trade at all.",
           "That includes [restaurants](/websites-for/restaurants/), [cafés](/websites-for/cafes/), [hairdressers](/websites-for/hairdressers/), [beauty salons](/websites-for/salons/), [gyms](/websites-for/gyms/), [shops](/websites-for/shops/), [consultants](/websites-for/consultants/), [freelancers](/websites-for/freelancers/), [startups](/websites-for/startups/) and [individuals](/websites-for/individuals/). The pages differ. The price for a small site does not.",
-          "A bigger build — lots of pages, a web app, a full online shop with stock and shipping — is quoted separately, from around £1,200. I’ll tell you if what you’re describing isn’t the £500 site, before you pay anything.",
+          "A bigger build — lots of pages, a web app, a full online shop with stock and shipping — is quoted separately, from around £1,200. I’ll tell you if what you’re describing isn’t the £200 + VAT (£240 inc VAT) site, before you pay anything.",
         ],
       },
       {
         id: "not-included",
         heading: "What is not included",
         paragraphs: [
-          "Premium domains cost extra. You pay the renewal of a standard domain from year two, at around £5–£10 a year. The domain is registered in your name. I help you connect it. I don’t need to own the account.",
-          "After the £500 is paid, monthly care is a choice, typically £29–£50: uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover. Care is not added while you’re still paying for the build, and it isn’t required.",
+          "Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name. I help you connect it. I don’t need to own the account.",
+          "A founding-client website includes 3 months free care. After that, monthly care is a choice, from £29/month: uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover. The £50 a month website payments are not the care plan.",
           "The detail of the three plans is on the [pay monthly website](/pay-monthly-website/) page. The cards below are the same three.",
         ],
       },
     ],
     faqs: [
-      ["Is £500 the full price?", "Yes, for paying £500 up front. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year."],
-      ["Why is a template sometimes advertised for less?", "Introductory prices often leave you to do the writing, the layout and the launch yourself, on a theme other businesses are using. This £500 includes me designing and building the site. It isn’t the cheapest number on the internet. It is a finished small site at a fixed price."],
-      ["Can any kind of business use this?", "Any small business or individual who needs a modest site. If the project is really a product, a large shop or a multi-location brand, I’ll quote it rather than force it into £500."],
+      ["Is £200 + VAT the full price?", `Paying up front is ${newWebsitePricing.upfront}. Paying monthly is a different total: ${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.notCredit} ${newWebsitePricing.domain}`],
+      ["Why is a template sometimes advertised for less?", "Introductory prices often leave you to do the writing, the layout and the launch yourself, on a theme other businesses are using. This price includes me designing and building the site. It isn’t the cheapest number on the internet. It is a finished small site with solid foundations."],
+      ["Can any kind of business use this?", "Any small business or individual who needs a modest site. If the project is really a product, a large shop or a multi-location brand, I’ll quote it rather than force it into the founding-price site."],
     ],
   },
   {
     slug: "pay-monthly-website",
     path: "/pay-monthly-website",
     keyword: "pay monthly website UK",
-    title: "Pay Monthly Website UK | Plans Totalling £500 | WholeLottaSites",
-    description: `A pay monthly website in the UK: £50 a month for 15 months (£750), or £500 up front. ${instalmentPlansTotalNote}.`,
-    eyebrow: "Pay monthly or £500 up front",
+    title: "Pay Monthly Website UK | £50 a Month | WholeLottaSites",
+    description: `A pay monthly website in the UK: ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Founding client offer.`,
+    eyebrow: "Pay monthly or £200 + VAT",
     h1: "A pay monthly website in the UK.",
-    lead: `Pay monthly is ${payMonthlyPlan.amount} a month for ${payMonthlyPlan.payments} months (${payMonthlyPlan.total}). Or pay £500 up front and save £250. ${instalmentPlansTotalNote}.`,
+    lead: `${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. ${newWebsitePricing.founding}`,
     showIncluded: false,
     showPlans: true,
     sections: [
@@ -91,8 +91,8 @@ export const intentPages: IntentPage[] = [
         id: "website-payment-plan",
         heading: "Website payment plan",
         paragraphs: [
-          "The £500 price has three instalment plans. They are not finance or credit, and they do not change the £500 total. Pay monthly is a separate £750 price, £50 a month for 15 months, not finance or credit, and it isn’t a subscription for the site itself.",
-          "Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Add any of them up and you get £500.",
+          `${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. ${newWebsitePricing.notCredit} It isn’t a subscription for the site itself, and it isn’t finance or credit.`,
+          "Pay monthly is the main way to spread it: £50 inc VAT each month for 12 months, £600 in total. That is £41.67 + VAT a month. Paying £200 + VAT up front is £240 inc VAT, a lower total.",
           "Payments are taken automatically by card through Stripe, so there isn’t a monthly invoice to remember. The [pricing page](/pricing/) shows the same figures. Nothing on this page overrides them.",
         ],
       },
@@ -100,33 +100,33 @@ export const intentPages: IntentPage[] = [
         id: "affordable-monthly",
         heading: "Affordable website monthly payments",
         paragraphs: [
-          "Affordable website monthly payments, in this case, means the £750 pay monthly price or those three £500 schedules. Instalment plans on the £500 price have no interest and no setup fee. Pay monthly is a separate £750 price, not finance or credit.",
-          "The site you get is the same one as if you paid £500 at once: built from scratch, mobile, HTTPS, page titles, a contact form, Stripe payment links if you want them, help going live, the first year of hosting, and the first year of a standard domain. There’s a plain list on the [cheap website](/cheap-website-for-small-business/) page.",
-          "The first year of a standard domain is included in the £500, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.",
+          `Affordable website monthly payments, here, means ${newWebsitePricing.monthlyPlain}. That total is higher than paying ${newWebsitePricing.upfront}. There is no interest and no setup fee, and it is not finance or credit.`,
+          "The site you get is the same one either way: built from scratch, fast, mobile-first, HTTPS, proper local SEO keywords, page titles, a contact form, Stripe payment links if you want them, help going live, the first year of hosting, and the first year of a standard low-cost domain. There’s a plain list on the [cheap website](/cheap-website-for-small-business/) page. That is not a promise of a Google position or of leads.",
+          newWebsitePricing.domain,
         ],
       },
       {
         id: "after-payoff",
         heading: "What happens after the last payment",
         paragraphs: [
-          "Once the £500 is paid, you choose. Optional monthly care, typically £29–£50, covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover of the site.",
-          "Care is not one of the build plans, and it doesn’t start instead of them. The £50 a month on plan 1 is paying off the £500. It is not the care plan.",
+          "A founding-client website includes 3 months free website care. After that you choose. Optional care, from £29/month (usually £29–£50), covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover of the site.",
+          "Care is not the £50 a month website payment. That £50 pays for the site. It is not the care plan.",
           "You can see the sequence — sample sites, deposit, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve decided to go ahead. A design for your business starts after the deposit.",
         ],
       },
     ],
     faqs: [
-      ["Do the monthly plans cost more than £500 in total?", `The £500 instalment plans do not. £150 plus seven payments of £50 is £500. £100 plus four payments of £100 is £500. £166.67 plus £166.67 plus £166.66 is £500. ${instalmentPlansTotalNote}. Pay monthly is a separate £750 price, not finance or credit.`],
-      ["When do I pick a plan?", "When you decide to go ahead. You can pay the £500 in one payment or use a plan. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio."],
-      ["Is monthly care required?", "No. After the site is paid for you can take optional monthly care, typically £29–£50, or a full handover. It’s a choice, not a condition of the £500."],
+      ["Does paying monthly cost more than £200 + VAT?", `${newWebsitePricing.upfront} if you pay once. ${newWebsitePricing.monthlyPlain}. The monthly total is higher. ${newWebsitePricing.notCredit}`],
+      ["When do I pick a plan?", "When you decide to go ahead. You can pay £200 + VAT (£240 inc VAT) in one payment, or £50 a month inc VAT for 12 months. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio."],
+      ["Is monthly care required?", "A founding-client website includes 3 months free. After that, care is optional, from £29/month, or you can take a full handover. It isn’t a condition of paying for the build."],
     ],
   },
   {
     slug: "website-redesign",
     path: "/website-redesign",
     keyword: "website redesign",
-    title: "Website Redesign for Small Businesses | £500 | WholeLottaSites",
-    description: "A website redesign for a small business that has outgrown its old site. When an update is enough, and when a new build for £500 is the honest answer.",
+    title: "Website Redesign for Small Businesses | £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A website redesign for a small business that has outgrown its old site. When an update is enough, and when a new build for £200 + VAT (£240 inc VAT) is the honest answer.",
     eyebrow: "Old sites",
     h1: "A website redesign.",
     lead: "A website redesign is worth it when the current site is getting in the way: hard to use on a phone, unclear, or so brittle that a simple change isn’t simple.",
@@ -140,7 +140,7 @@ export const intentPages: IntentPage[] = [
         heading: "When a redesign is the right job",
         paragraphs: [
           "I look at the same problems repeatedly. The page has to be pinched and zoomed on a phone. The phone number isn’t tappable. The browser says the site isn’t secure. The Google title still says “Home”. The contact form doesn’t arrive, or there isn’t one. The business has changed and the site describes an older version of it.",
-          "There are three honest routes. One concrete fix on a live East Midlands site can be the [£100 mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £500, with the [payment plans](/pay-monthly-website/) if you want them. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio.",
+          "There are three honest routes. One concrete fix on a live East Midlands site can be the [£100 mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £200 + VAT (£240 inc VAT), with the [payment plans](/pay-monthly-website/) if you want them. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio.",
         ],
       },
       {
@@ -149,7 +149,7 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (typically £29–£50), or as a one-off if we’ve agreed it.",
           "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
-          "If the job is bigger than one fix, start with the [free fix audit](/contact/#fix-audit). I’ll look at the live site and tell you whether a repair will hold. A normal rescue is usually around £150–£400. A rebuild is the £500 small-business site. I’ll say which job it is before you pay.",
+          "If the job is bigger than one fix, start with the [free fix audit](/contact/#fix-audit). I’ll look at the live site and tell you whether a repair will hold. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business site. I’ll say which job it is before you pay.",
           "Send the address of the current site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
         ],
       },
@@ -163,17 +163,17 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, the quote is for a rebuild, which is £500 for a small business."],
+      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, the quote is for a rebuild, which is £200 + VAT (£240 inc VAT) for a small business."],
       ["Do I have to change my domain?", "No. The domain stays yours. If it’s in your name, we keep it and point it at the site when you’re ready."],
-      ["How much is a redesign?", "One fix on a live East Midlands site is the £100 mini-fix. A larger repair is typically £150–£400 after the audit. A small-business rebuild is £500. Larger projects are quoted from around £1,200."],
+      ["How much is a redesign?", "One fix on a live East Midlands site is the £100 mini-fix. A larger repair is typically £150–£400 after the audit. A small-business rebuild is £200 + VAT (£240 inc VAT). Larger projects are quoted from around £1,200."],
     ],
   },
   {
     slug: "mobile-friendly-website",
     path: "/mobile-friendly-website",
     keyword: "make my website mobile friendly",
-    title: "Make My Website Mobile Friendly | £500 Rebuild | WholeLottaSites",
-    description: "Make my website mobile friendly: what a phone-friendly small business site actually needs, and why the fix here is a new build for £500 rather than a patch.",
+    title: "Make My Website Mobile Friendly | £200 + VAT (£240 inc VAT) Rebuild | WholeLottaSites",
+    description: "Make my website mobile friendly: what a phone-friendly small business site actually needs, and why the fix here is a new build for £200 + VAT (£240 inc VAT) rather than a patch.",
     eyebrow: "Phones first",
     h1: "Make my website mobile friendly.",
     lead: "If you have to pinch, zoom or turn the phone sideways to use your site, it isn’t mobile friendly. For a small business, that’s where most enquiries start.",
@@ -202,7 +202,7 @@ export const intentPages: IntentPage[] = [
         heading: "What I do about it",
         paragraphs: [
           "I don’t drop a mobile plugin into an old page builder and call it finished. Those layouts often look passable and still fail the real test: a thumb, in a hurry, trying to call you.",
-          "If the site is dead on a phone, that can be a fix or a rebuild. I audit first. A typical fix is £150–£400. If the old layout won’t stay usable on a phone, the honest job is a new site at £500, laid out for a phone first. If it also needs a proper [redesign](/website-redesign/) — old content, no clear enquiry, a title that says “Home” — we do that together.",
+          "If the site is dead on a phone, that can be a fix or a rebuild. I audit first. A typical fix is £150–£400. If the old layout won’t stay usable on a phone, the honest job is a new site at £200 + VAT (£240 inc VAT), laid out for a phone first. If it also needs a proper [redesign](/website-redesign/) — old content, no clear enquiry, a title that says “Home” — we do that together.",
           "For a rebuild, a design for your business starts after the deposit. Before that, look at sample sites. If the phone layout still feels awkward once you can see your own pages, say so.",
         ],
       },
@@ -212,12 +212,12 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, typically £29–£50, once any build is paid for.",
           "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £100 website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
-          "If the whole site has to be replaced so it can be used on a phone, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need the £500 rebuild. I won’t invoice £500 for a stylesheet tweak.",
+          "If the whole site has to be replaced so it can be used on a phone, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need the £200 + VAT (£240 inc VAT) rebuild. I won’t invoice £200 + VAT (£240 inc VAT) for a stylesheet tweak.",
         ],
       },
     ],
     faqs: [
-      ["Can you just make my current site mobile friendly?", "I’ll audit it first. One concrete layout fix on a live East Midlands site can be the £100 mini-fix. If a wider repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £500."],
+      ["Can you just make my current site mobile friendly?", "I’ll audit it first. One concrete layout fix on a live East Midlands site can be the £100 mini-fix. If a wider repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £200 + VAT (£240 inc VAT)."],
       ["Do you design the phone version separately?", "It’s one site. The layout is designed for a phone, then adjusted so a larger screen still reads well. You don’t maintain two websites."],
       ["Will a mobile-friendly site guarantee more calls?", "No. It removes a reason for people to give up when they try to phone you or read the page. It doesn’t promise a number of enquiries."],
     ],
@@ -227,7 +227,7 @@ export const intentPages: IntentPage[] = [
     path: "/website-built-from-scratch",
     keyword: "website built from scratch",
     title: "Website Built from Scratch | No Templates | WholeLottaSites",
-    description: "A website built from scratch for a small business: no theme, designed around you, for £500. Also the right route for a first website.",
+    description: "A website built from scratch for a small business: no theme, designed around you, for £200 + VAT (£240 inc VAT). Also the right route for a first website.",
     eyebrow: "No theme",
     h1: "A website built from scratch.",
     lead: "Built from scratch means I design and code the site for your business. There isn’t a theme underneath that a thousand other sites are also using.",
@@ -240,7 +240,7 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "A template starts from someone else’s layout and turns features on and off. It’s a fair way to get something online if you have the time to do it yourself. It also means unused parts, a look customers have seen before, and a builder you have to learn.",
           "A website built from scratch starts from what the business needs to say. The pages, the order, and the way someone gets in touch are decided for you, then I build them. You still approve the design after the deposit — [how it works](/how-it-works/) is that sequence — but you don’t assemble it. Before the deposit, you look at sample sites.",
-          "The small-business price is £500. That’s the same offer as the rest of this site, including the [pay monthly](/pay-monthly-website/) plans. “From scratch” is how it’s made, not a luxury tier.",
+          "The small-business price is £200 + VAT (£240 inc VAT). That’s the same offer as the rest of this site, including the [pay monthly](/pay-monthly-website/) plans. “From scratch” is how it’s made, not a luxury tier.",
         ],
       },
       {
@@ -268,7 +268,7 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Is a bespoke site more expensive than £500?", "Not here. The £500 small-business website is built from scratch. Bigger projects, with many more pages or a web app, are quoted from around £1,200."],
+      ["Is a bespoke site more expensive than £200 + VAT (£240 inc VAT)?", "Not here. The £200 + VAT (£240 inc VAT) small-business website is built from scratch. Bigger projects, with many more pages or a web app, are quoted from around £1,200."],
       ["I’ve never had a website. Can I still start?", "Yes. Tell me what you do. Before a deposit you look at sample sites. A design for your business starts after the deposit."],
       ["Do I need to write everything first?", "No. A few honest sentences are enough to design the homepage. I won’t invent services or claims to fill the page."],
     ],

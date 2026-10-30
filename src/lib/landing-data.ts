@@ -2,7 +2,7 @@
 // Rules: no invented clients, testimonials, reviews or stats. Prices must match the pricing page.
 import slugs from "@/data/landing-slugs.json";
 import { moreAudiences } from "@/lib/more-audiences";
-import { instalmentPlansTotalNote } from "@/lib/site-data";
+import { newWebsitePriceAnswer } from "@/lib/site-data";
 
 export type Faq = readonly [string, string];
 
@@ -23,15 +23,15 @@ export interface TradePage {
 /** Same wording as the pricing page and the main FAQ, so the price is always consistent. */
 export const PRICE_FAQ: Faq = [
   "How much does it cost, and can I pay monthly?",
-  `A full website is £500, or you can spread the cost: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. ${instalmentPlansTotalNote}. Monthly payments are taken automatically by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year.`,
+  newWebsitePriceAnswer,
 ];
 
 const tradePages: TradePage[] = [
   {
     slug: "plumbers",
     name: "Plumbers",
-    title: "Website for Plumbers | Custom Sites £500 | WholeLottaSites",
-    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £500, for the trade.",
+    title: "Website for Plumbers | Custom Sites £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £200 + VAT (£240 inc VAT), for the trade.",
     h1: "A website for plumbers.",
     lead: "When a pipe bursts, people search on their phone and ring the first plumber who looks trustworthy. Your site should make that call one tap away.",
     intro: [
@@ -60,8 +60,8 @@ const tradePages: TradePage[] = [
   {
     slug: "electricians",
     name: "Electricians",
-    title: "Electrician Website Design | £500 | WholeLottaSites",
-    description: "Electrician website design for UK sole traders and small firms: services, registration details and a quote form. Built from scratch for £500.",
+    title: "Electrician Website Design | £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "Electrician website design for UK sole traders and small firms: services, registration details and a quote form. Built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "Electrician website design.",
     lead: "Electrical work is about trust and safety. Your website should prove you’re qualified and explain what you do in plain English.",
     intro: [
@@ -90,8 +90,8 @@ const tradePages: TradePage[] = [
   {
     slug: "builders",
     name: "Builders",
-    title: "Website for Builders | Project Galleries £500 | WholeLottaSites",
-    description: "A website for builders: project galleries, the work you take on and a quote form. Custom-built for £500. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750).",
+    title: "Website for Builders | Project Galleries £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A website for builders: project galleries, the work you take on and a quote form. Custom-built for £200 + VAT (£240 inc VAT). £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT).",
     h1: "A website for builders.",
     lead: "Extensions, loft conversions and renovations are big decisions. Customers want to see your finished work before they invite you round to quote.",
     intro: [
@@ -114,14 +114,14 @@ const tradePages: TradePage[] = [
     faqs: [
       ["Can I add new projects myself?", "If you’d like, yes. Otherwise send me the photos and a few lines about the job, and I’ll add them for you on the optional monthly care plan (typically £29–£50)."],
       ["Can the quote form take drawings or plans?", "Yes. Customers can attach drawings, plans or photos so you can see the scope before you visit."],
-      ["I’m a bigger firm with several teams. Is £500 enough?", "£500 covers a full small-business site. Firms that need lots of pages or extra features are quoted individually, from around £1,200."],
+      ["I’m a bigger firm with several teams. Is £200 + VAT (£240 inc VAT) enough?", "£200 + VAT (£240 inc VAT) covers a full small-business site. Firms that need lots of pages or extra features are quoted individually, from around £1,200."],
     ],
   },
   {
     slug: "decorators",
     name: "Decorators",
-    title: "Painter and Decorator Website | £500 | WholeLottaSites",
-    description: "A painter and decorator website with a gallery of your own work, a photo quote form and the areas you cover. Built from scratch for £500.",
+    title: "Painter and Decorator Website | £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A painter and decorator website with a gallery of your own work, a photo quote form and the areas you cover. Built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "A painter and decorator website.",
     lead: "Decorating sells on the finish. A good gallery of your own work and an easy quote form do most of the selling for you.",
     intro: [
@@ -151,7 +151,7 @@ const tradePages: TradePage[] = [
     slug: "hairdressers",
     name: "Hairdressers & salons",
     title: "Hairdresser & Barber Website Design | WholeLottaSites",
-    description: "Hairdresser website design for salons and barbers: booking links, a price list, stylist profiles and opening hours. Custom sites built for £500.",
+    description: "Hairdresser website design for salons and barbers: booking links, a price list, stylist profiles and opening hours. Custom sites built for £200 + VAT (£240 inc VAT).",
     h1: "Hairdresser website design.",
     lead: "Clients want to see your work, check your prices and book a slot, often late at night on their phone. Your site should let them do all three in a minute.",
     intro: [
@@ -182,7 +182,7 @@ const tradePages: TradePage[] = [
     slug: "cafes",
     name: "Cafés",
     title: "Café Website Design | Menus, Hours & Maps | WholeLottaSites",
-    description: "Café website design with a real-text menu, opening hours, allergen notes and a map. Built from scratch for £500. Full restaurants have a separate page.",
+    description: "Café website design with a real-text menu, opening hours, allergen notes and a map. Built from scratch for £200 + VAT (£240 inc VAT). Full restaurants have a separate page.",
     h1: "Café website design.",
     lead: "People want three things from a café website: what’s on the menu, when you’re open and where you are. Get those right on a phone and they’ll come through the door.",
     intro: [
@@ -212,8 +212,8 @@ const tradePages: TradePage[] = [
   {
     slug: "cleaners",
     name: "Cleaners",
-    title: "Cleaning Business Website | £500 | WholeLottaSites",
-    description: "A cleaning business website with clear services, a quote form and the areas you cover. Domestic and commercial cleans, built from scratch for £500.",
+    title: "Cleaning Business Website | £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A cleaning business website with clear services, a quote form and the areas you cover. Domestic and commercial cleans, built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "A cleaning business website.",
     lead: "People are letting you into their home or workplace. Your site needs to feel trustworthy and make it simple to ask for a quote.",
     intro: [
@@ -243,7 +243,7 @@ const tradePages: TradePage[] = [
     slug: "gardeners",
     name: "Gardeners",
     title: "Gardener & Landscaping Website Design | WholeLottaSites",
-    description: "Gardener website design for maintenance rounds and landscaping: galleries, seasonal work and a quote form. Built from scratch for £500.",
+    description: "Gardener website design for maintenance rounds and landscaping: galleries, seasonal work and a quote form. Built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "Gardener website design.",
     lead: "Gardening is visual and seasonal. Your site should show off your work and bring in the right jobs at the right time of year.",
     intro: [

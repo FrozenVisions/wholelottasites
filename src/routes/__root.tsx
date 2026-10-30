@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import fraunces700 from "@fontsource/fraunces/files/fraunces-latin-700-normal.woff2?url";
 import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
 import { Header, Footer, CtaBand, StickyMobileCta } from "@/components/site/Layout";
+import { foundingBonusesText, newWebsiteOffer, newWebsitePricing } from "@/lib/site-data";
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -29,7 +30,7 @@ const businessJsonLd = {
   "@type": "ProfessionalService",
   "@id": "https://wholelottasites.co.uk/#business",
   name: "WholeLottaSites",
-  description: "Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new site is £500. An East Midlands mini-fix is £100: one concrete fix on a live site.",
+  description: `Websites, fixes, Google Business Profile and monthly care for UK small businesses. ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. Or ${newWebsitePricing.monthlyPlain}. An East Midlands mini-fix is £100: one concrete fix on a live site.`,
   url: "https://wholelottasites.co.uk/",
   logo: "https://wholelottasites.co.uk/icon-512.png",
   image: "https://wholelottasites.co.uk/og-image.jpg",
@@ -77,26 +78,33 @@ const businessJsonLd = {
     },
     {
       "@type": "Offer",
-      name: "New small business website, pay monthly",
-      price: "750",
+      name: "Founding client offer: new small business website, pay monthly",
+      price: String(newWebsiteOffer.monthlyTotalIncVatPounds),
       priceCurrency: "GBP",
-      description: "Pay monthly: £50/month for 15 months (£750 total). Same site and inclusions as paying £500 up front, including the first year of hosting and the first year of a standard domain, registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit. Want help growing it? Blog posts and SEO are an optional monthly extra on top - ask for a quote.",
+      description: `${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.notCredit} Same founding-client site as paying ${newWebsitePricing.upfront}. ${newWebsitePricing.founding} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} ${foundingBonusesText}`,
       priceSpecification: {
         "@type": "UnitPriceSpecification",
-        price: "50",
+        price: String(newWebsiteOffer.monthlyIncVatPounds),
         priceCurrency: "GBP",
+        valueAddedTaxIncluded: true,
         unitText: "MONTH",
-        referenceQuantity: { "@type": "QuantitativeValue", value: 15, unitText: "MONTH" },
+        referenceQuantity: { "@type": "QuantitativeValue", value: newWebsiteOffer.monthlyMonths, unitText: "MONTH" },
       },
       url: "https://wholelottasites.co.uk/pricing/#new-website",
     },
     {
       "@type": "Offer",
-      name: "New small business website, pay up front",
-      price: "500",
+      name: "Founding client offer: new small business website, pay up front",
+      price: String(newWebsiteOffer.incVatPounds),
       priceCurrency: "GBP",
-      description: "Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). First year of hosting included. The first year of a standard domain is included and registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit.",
-      url: "https://wholelottasites.co.uk/pricing/#new-website",
+      description: `${newWebsitePricing.upfront}. £200 is the price before VAT and £240 is the price including VAT. ${newWebsitePricing.founding} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} ${foundingBonusesText}`,
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: String(newWebsiteOffer.incVatPounds),
+        priceCurrency: "GBP",
+        valueAddedTaxIncluded: true,
+      },
+      url: "https://wholelottasites.co.uk/pricing/#founding-offer",
     },
     {
       "@type": "Offer",

@@ -5,7 +5,7 @@ export const moreAudiences: TradePage[] = [
     slug: "restaurants",
     name: "Restaurants",
     title: "Restaurant Website Design | Menus & Bookings | WholeLottaSites",
-    description: "Restaurant website design for independent restaurants: a real-text menu, opening hours, booking and allergen notes. Built from scratch for £500, not a listing.",
+    description: "Restaurant website design for independent restaurants: a real-text menu, opening hours, booking and allergen notes. Built from scratch for £200 + VAT (£240 inc VAT), not a listing.",
     h1: "Restaurant website design.",
     lead: "People decide on a restaurant from a phone: what’s on the menu, whether you’re open, and how to book. The site’s job is to answer those three without a fuss.",
     intro: [
@@ -29,14 +29,14 @@ export const moreAudiences: TradePage[] = [
     faqs: [
       ["Can you put the menu on the site as text?", "Yes. That’s the useful way to do it. You can send changes and I’ll update them on the optional monthly care plan (typically £29–£50), or I can set it up so a simple edit is possible."],
       ["We already use a booking app. Can the site use it?", "Yes. I’ll link or embed the system you already pay for. I don’t sell a separate booking product."],
-      ["Is a restaurant site the same £500?", "Yes, for a small-business site: menu, hours, about and a way to book or enquire. A large multi-location brand, or online ordering with a big back office, is quoted separately, from around £1,200."],
+      ["Is a restaurant site the same £200 + VAT (£240 inc VAT)?", "Yes, for a small-business site: menu, hours, about and a way to book or enquire. A large multi-location brand, or online ordering with a big back office, is quoted separately, from around £1,200."],
     ],
   },
   {
     slug: "salons",
     name: "Beauty salons",
     title: "Beauty Salon Websites | Nails & Treatments | WholeLottaSites",
-    description: "A beauty salon website with treatment lists, prices, booking and patch-test notes. For nail bars, spas and beauty rooms. Built from scratch for £500.",
+    description: "A beauty salon website with treatment lists, prices, booking and patch-test notes. For nail bars, spas and beauty rooms. Built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "A beauty salon website.",
     lead: "Clients want the treatment, the price and a way to book — often the evening before. Hairdressers and barbers have a separate page, because the work and the photos are different.",
     intro: [
@@ -67,13 +67,13 @@ export const moreAudiences: TradePage[] = [
     slug: "gyms",
     name: "Gyms",
     title: "Gym Website Design | Classes & Timetables | WholeLottaSites",
-    description: "Gym website design for independent gyms and studios: timetable, memberships, coaches and how to book a trial. A custom site for £500.",
+    description: "Gym website design for independent gyms and studios: timetable, memberships, coaches and how to book a trial. A custom site for £200 + VAT (£240 inc VAT).",
     h1: "Gym website design.",
     lead: "Someone comparing gyms wants the address, what’s on the timetable, and how to try a class or join. Hide those and they go to the next result.",
     intro: [
       "This page is for people who run a gym, a studio or a class timetable and want a website. It is not a gym, and it doesn’t list clubs to join.",
       "A personal trainer working alone usually needs fewer pages than a gym with several classes a day. There’s an example personal-trainer design in the [portfolio](/portfolio/). It is an example design, not a claim that a particular trainer is a client.",
-      "A £500 site can present the gym, the timetable, how joining works and a way to enquire or book a trial. Membership billing, door access and class apps are separate products you may already use. I’ll link to them. I don’t rebuild them into the website.",
+      "A £200 + VAT (£240 inc VAT) site can present the gym, the timetable, how joining works and a way to enquire or book a trial. Membership billing, door access and class apps are separate products you may already use. I’ll link to them. I don’t rebuild them into the website.",
     ],
     features: [
       { title: "Timetable in text", text: "Class names, days and times as text, so a phone can read them. A picture of a whiteboard is not a timetable." },
@@ -98,13 +98,13 @@ export const moreAudiences: TradePage[] = [
     slug: "shops",
     name: "Shops",
     title: "Shop Website Design | Opening Hours & Stock | WholeLottaSites",
-    description: "Shop website design for independent shops: what you sell, opening hours, how to find you, and card payments if you want them. Built for £500.",
+    description: "Shop website design for independent shops: what you sell, opening hours, how to find you, and card payments if you want them. Built for £200 + VAT (£240 inc VAT).",
     h1: "Shop website design.",
     lead: "A lot of independent shops don’t need a full online store. They need a page that says what you sell, when you’re open, and where the door is.",
     intro: [
       "This is for shop owners who want a website. It isn’t a shop, and it won’t list other people’s products.",
-      "Searchers looking for “shops near me”, or for your shop by name, want hours and a reason to visit. If you also sell online, we can connect payment links from your own Stripe account. A large catalogue with stock levels and shipping rules is more than the £500 site — that kind of build is quoted from around £1,200.",
-      "The £500 version is a proper brochure: your range in plain language, photos of your own shelves or products, opening hours, and how to visit, call or reserve something.",
+      "Searchers looking for “shops near me”, or for your shop by name, want hours and a reason to visit. If you also sell online, we can connect payment links from your own Stripe account. A large catalogue with stock levels and shipping rules is more than the £200 + VAT (£240 inc VAT) site — that kind of build is quoted from around £1,200.",
+      "The £200 + VAT (£240 inc VAT) version is a proper brochure: your range in plain language, photos of your own shelves or products, opening hours, and how to visit, call or reserve something.",
     ],
     features: [
       { title: "What you sell", text: "Categories in real text — not a single photo of the window — so someone can tell if you stock what they need." },
@@ -120,8 +120,8 @@ export const moreAudiences: TradePage[] = [
       "If you don’t sell online, say that. People would rather know than hunt for a basket that isn’t there.",
     ],
     faqs: [
-      ["Will I get a full online shop for £500?", "No. £500 covers a small-business site: what you sell, hours, location and enquiries, plus payment links if you want a few products or deposits. A full catalogue shop is quoted separately, from around £1,200."],
-      ["Can people check if something is in stock?", "The form can ask the question, and you reply. Live stock levels need a system behind them, which isn’t part of the £500 site."],
+      ["Will I get a full online shop for £200 + VAT (£240 inc VAT)?", "No. £200 + VAT (£240 inc VAT) covers a small-business site: what you sell, hours, location and enquiries, plus payment links if you want a few products or deposits. A full catalogue shop is quoted separately, from around £1,200."],
+      ["Can people check if something is in stock?", "The form can ask the question, and you reply. Live stock levels need a system behind them, which isn’t part of the £200 + VAT (£240 inc VAT) site."],
       ["I already sell on a marketplace. Do I still need this?", "A marketplace is useful, and you can keep it. Your own site is the address you put on the bag, the window and Google, with your hours and your story, not only a product grid."],
     ],
   },
@@ -129,7 +129,7 @@ export const moreAudiences: TradePage[] = [
     slug: "consultants",
     name: "Consultants",
     title: "Website for Independent Consultants | WholeLottaSites",
-    description: "A consultant website that says who you help, how you work and how to book a conversation. Built from scratch for £500. No invented case-study figures.",
+    description: "A consultant website that says who you help, how you work and how to book a conversation. Built from scratch for £200 + VAT (£240 inc VAT). No invented case-study figures.",
     h1: "A consultant website.",
     lead: "People don’t hire a consultant from a slogan. They want to know who you help, what the work involves, and how to start.",
     intro: [
@@ -153,14 +153,14 @@ export const moreAudiences: TradePage[] = [
     faqs: [
       ["Can you write case studies?", "I can lay out a case study you provide. I won’t invent a client, a result or a quote. If you can’t share numbers, we leave them out."],
       ["I don’t want my phone number public.", "That’s fine. A form and an email are enough. Say which you prefer when you get in touch."],
-      ["Is £500 enough for a consultancy site?", "Yes for a small, clear site. If you need a large resource library, a client login or several languages, I’ll quote that separately, from around £1,200."],
+      ["Is £200 + VAT (£240 inc VAT) enough for a consultancy site?", "Yes for a small, clear site. If you need a large resource library, a client login or several languages, I’ll quote that separately, from around £1,200."],
     ],
   },
   {
     slug: "freelancers",
     name: "Freelancers",
     title: "Freelancer Website | Sites for Sole Traders | WholeLottaSites",
-    description: "A freelancer website: your services, examples of your own work and a way to get hired. Built from scratch for £500, with pay-monthly plans.",
+    description: "A freelancer website: your services, examples of your own work and a way to get hired. Built from scratch for £200 + VAT (£240 inc VAT), with pay-monthly plans.",
     h1: "A freelancer website.",
     lead: "A freelancer doesn’t need an agency website. You need a page you can send to someone who’s thinking of hiring you.",
     intro: [
@@ -172,7 +172,7 @@ export const moreAudiences: TradePage[] = [
       { title: "Services in one screen", text: "The kinds of work you want more of, named plainly, and the kinds you’re not taking." },
       { title: "Your own examples", text: "Projects you supply. I won’t pad the page with stock work or pretend an example design is a commission." },
       { title: "Hire me", text: "A short form: what they need, when, and how to reply. Phone and email if you want them." },
-      { title: "A proper address on the web", text: "Your own domain, registered in your name. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year." },
+      { title: "A proper address on the web", text: "Your own domain, registered in your name. We cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care." },
       { title: "Invoices and payments", text: "If you take card payments, I’ll connect Stripe payment links from your account. The site doesn’t take a cut, because the Stripe account is yours." },
     ],
     pages: ["Home", "Services", "Work", "About", "Contact"],
@@ -183,20 +183,20 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["I only have two projects I can show. Is that enough?", "Yes. Two real examples beat a grid of placeholders. We can add more later."],
-      ["Can I pay monthly?", "Yes. £50 a month for 15 months (£750), or £500 up front. The £500 price can also be £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)."],
+      ["Can I pay monthly?", "Yes. £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT). The monthly price is not finance or credit, and it is not the care plan. Founding client offer for the first 20 clients."],
       ["Will you write the words?", "I’ll shape them into the page and fix anything that isn’t clear. I need the facts from you: what you do, who for, and which projects we can show. I won’t invent clients."],
     ],
   },
   {
     slug: "startups",
     name: "Startups",
-    title: "Startup Website | Explain the Product, from £500 | WholeLottaSites",
-    description: "A startup website that explains the product, who it’s for and how to get in touch. Marketing sites from £500. Web apps are quoted separately.",
+    title: "Startup Website | Explain the Product, from £200 + VAT (£240 inc VAT) | WholeLottaSites",
+    description: "A startup website that explains the product, who it’s for and how to get in touch. Marketing sites from £200 + VAT (£240 inc VAT). Web apps are quoted separately.",
     h1: "A startup website.",
     lead: "Before anyone searches your product by name, the site has one job: say what it is, who it’s for, and what to do next.",
     intro: [
       "This page is for founders who need a website. I’m not an investor, and the page I build is yours — it won’t be a fake product demo with made-up users.",
-      "A £500 site is a marketing site: the explanation, a way to request access or ask a question, and the practical pages (about, contact, a simple privacy note if you collect enquiries). It is not a logged-in product, a marketplace or a billing platform. Those are larger builds. I quote them from around £1,200, and I’ll say so before any work starts if that’s what you actually need.",
+      "A £200 + VAT (£240 inc VAT) site is a marketing site: the explanation, a way to request access or ask a question, and the practical pages (about, contact, a simple privacy note if you collect enquiries). It is not a logged-in product, a marketplace or a billing platform. Those are larger builds. I quote them from around £1,200, and I’ll say so before any work starts if that’s what you actually need.",
       "You don’t need a finished brand to start. A straight description of the product is enough. A design for the business starts after the deposit. Before that, look at sample sites.",
     ],
     features: [
@@ -213,29 +213,29 @@ export const moreAudiences: TradePage[] = [
       "Use a domain you own. A free subdomain is a poor link to put on a pitch.",
     ],
     faqs: [
-      ["Can you build our app for £500?", "No. £500 is the marketing website. An application with accounts, payments or a database is a different project, quoted from around £1,200 after we’ve talked about what it has to do."],
+      ["Can you build our app for £200 + VAT (£240 inc VAT)?", "No. £200 + VAT (£240 inc VAT) is the marketing website. An application with accounts, payments or a database is a different project, quoted from around £1,200 after we’ve talked about what it has to do."],
       ["We don’t have customers yet. Is a site premature?", "A single clear page is still useful: it gives you an address to send people, and it forces the explanation into plain language. It doesn’t need a blog or a press page."],
-      ["Can we pay monthly?", "Yes. £50 a month for 15 months (£750), or £500 up front. The £500 price can also be £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)."],
+      ["Can we pay monthly?", "Yes. £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT). The monthly price is not finance or credit, and it is not the care plan. Founding client offer for the first 20 clients."],
     ],
   },
   {
     slug: "individuals",
     name: "Individuals",
     title: "Personal Website | A Page of Your Own | WholeLottaSites",
-    description: "A personal website for an individual: who you are, what you do and how to contact you. Built from scratch for £500, or the same total paid monthly.",
+    description: "A personal website for an individual: who you are, what you do and how to contact you. Built from scratch for £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months.",
     h1: "A personal website.",
     lead: "Not every site is for a limited company. A personal website is a page you control, usually so people who hear your name can see who you are.",
     intro: [
       "This is for an individual — a maker, a speaker, someone between jobs, a person with a side project, or anyone who wants their own page rather than only a social profile. It is not a dating site, and it isn’t a profile of someone else.",
       "People who have been given your name will search it. A personal site lets them find a sentence about you, examples of work you’re allowed to show, and a way to email you, without needing an account on a social network.",
-      "It can be very small. One page is sometimes enough. If you later trade under a business name, the same approach scales into a [freelancer website](/websites-for/freelancers/). The price for the small-business site is still £500.",
+      "It can be very small. One page is sometimes enough. If you later trade under a business name, the same approach scales into a [freelancer website](/websites-for/freelancers/). The price for the small-business site is still £200 + VAT (£240 inc VAT).",
     ],
     features: [
       { title: "Your name, clearly", text: "The title and the first line say who you are. That’s the search friends, employers and collaborators actually type." },
       { title: "What you want known", text: "A short bio in your words. I won’t add awards, follower counts or job titles you didn’t give me." },
       { title: "Work you can show", text: "Optional. If you have projects, writing or photos that are yours to publish, they can go on the page. If you don’t, we leave the gap empty rather than filling it." },
       { title: "Contact on your terms", text: "A form, an email, or both. If you don’t want a public phone number, it stays off the page." },
-      { title: "A domain that is yours", text: "Often your name. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year, and I help you point it at the site when we launch." },
+      { title: "A domain that is yours", text: "Often your name. We cover the first year of a standard low-cost domain, and it’s registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care, and I help you point it at the site when we launch." },
     ],
     pages: ["Home", "About", "Work, if you have any", "Contact"],
     tips: [
@@ -244,7 +244,7 @@ export const moreAudiences: TradePage[] = [
       "A social link is fine. It shouldn’t be the only way to reach you.",
     ],
     faqs: [
-      ["Do I need a company to have a website?", "No. The £500 site is for a person as well as for a business. The domain is registered in your name. We cover the first year of a standard domain."],
+      ["Do I need a company to have a website?", "No. The £200 + VAT (£240 inc VAT) site is for a person as well as for a business. The domain is registered in your name. We cover the first year of a standard low-cost domain."],
       ["Can it just be one page?", "Yes. If one page says who you are and how to get in touch, we don’t add empty sections to make it look bigger."],
       ["I might start a business later. Will I have to begin again?", "Not necessarily. We can add services and a business name later. Structural changes can be part of the care plan or quoted if they’re large. The domain, if it’s your name, can stay."],
     ],

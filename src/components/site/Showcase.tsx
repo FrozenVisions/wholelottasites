@@ -9,6 +9,7 @@ import safeMobileMid from "@/assets/portfolio/safeplate-mobile-280.webp";
 import safeMobileSmall from "@/assets/portfolio/safeplate-mobile-200.webp";
 import { Reveal } from "@/components/site/Reveal";
 import { Heading } from "@/components/site/Sections";
+import { newWebsitePricing } from "@/lib/site-data";
 
 /** Laptop + phone frames showing real, live work (WholeLottaVinyl and SafePlate). */
 export function DeviceMockup() {
@@ -108,7 +109,7 @@ export function Comparison() {
           <thead>
             <tr className="border-b">
               <th scope="col" className="px-5 py-4 font-semibold text-muted-foreground"><span className="sr-only">Feature</span></th>
-              <th scope="col" className="bg-navy px-5 py-4 font-display text-base text-navy-foreground">WholeLottaSites <span className="ml-1 text-copper">£500</span></th>
+              <th scope="col" className="bg-navy px-5 py-4 font-display text-base text-navy-foreground">WholeLottaSites <span className="ml-1 text-copper">{newWebsitePricing.price}</span></th>
               <th scope="col" className="px-5 py-4 font-display text-base">DIY template builder</th>
             </tr>
           </thead>

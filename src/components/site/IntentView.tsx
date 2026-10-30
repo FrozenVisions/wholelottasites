@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { LandingFaqs, faqJsonLd } from "@/components/site/Landing";
-import { PageHero, Section, Heading, PaymentPlans, WhatsIncluded } from "@/components/site/Sections";
+import { PageHero, Section, Heading, PaymentPlans, WhatsIncluded, FoundingBanner } from "@/components/site/Sections";
 import { RichText } from "@/components/site/RichText";
 import { SiteLinks } from "@/components/site/SiteLinks";
 import { intentBySlug } from "@/lib/intent-pages";
@@ -32,6 +32,11 @@ export function IntentView({ slug }: { slug: string }) {
         crumbs={[{ name: "Home", href: "/" }, { name: page.h1.replace(/\.$/, "") }]}
       />
       <Section className="!pt-4">
+        {(page.showPlans || page.showIncluded) && (
+          <div className="mb-12">
+            <FoundingBanner />
+          </div>
+        )}
         {page.sections.map((section) => (
           <div key={section.id} id={section.id} className="scroll-mt-28 mt-12 max-w-3xl first:mt-0">
             <h2 className="font-display text-3xl font-bold md:text-4xl">{section.heading}</h2>

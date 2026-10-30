@@ -56,13 +56,13 @@ If the old site is the problem — not just the phone layout — that’s a [web
 
 ## A domain you own
 
-The site should live on an address you control, such as yourbusiness.co.uk, not only on a Facebook page or a free subdomain. A domain is the address. It is not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.
+The site should live on an address you control, such as yourbusiness.co.uk, not only on a Facebook page or a free subdomain. A domain is the address. It is not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.
 
 A first website doesn’t need a complicated brief. [A website built from scratch](/website-built-from-scratch/) can start from a name and a few true sentences. You don’t need a logo first.
 
 ## What it costs, and what can wait
 
-The small-business website I build is £500. That’s a [cheap website for a small business](/cheap-website-for-small-business/) in the sense of a fixed price, not a bargain template. If you’d rather spread it, a [pay monthly website](/pay-monthly-website/) uses one of three plans — £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750).
+A new small-business website is the founding client offer on the [pricing](/pricing/) page: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, which is £41.67 + VAT a month). It’s for the first 20 clients. I’m building up reviews, so those first 20 get this price, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The monthly price is not finance or credit, and it is not the care plan. The site is cheap and built to last: proper local SEO keywords, fast pages, and a mobile-first layout. That is not a promise of a Google position or of leads. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding-client website includes 3 months free care, then optional care from £29/month. Refer a new customer who buys and you get £50 off the website, or off care once the site is paid off. The other founding bonuses, including the WholeLottaVinyl partner bonus, are on the [founding client offer](/founding-offer/).
 
 A few things can wait.
 

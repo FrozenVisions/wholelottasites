@@ -1,7 +1,7 @@
 ---
 title: Your first website for a new business
 seoTitle: First Website for My Business | WholeLottaSites
-description: A first website for my business: the pages a new UK firm should publish, what can wait, and the £500 price with the payment plans.
+description: A first website for my business: the pages a new UK firm should publish, what can wait, and the £200 + VAT (£240 inc VAT) price with the payment plans.
 date: 2026-10-27
 keyword: first website for my business
 slug: first-website-for-my-business
@@ -53,9 +53,9 @@ Leave these until you need them: a blog you will not write, booking before you h
 
 ## What it costs
 
-A new small-business website is £500. That is the same figure as on the [pricing](/pricing/) page. It is the price of the website, not a deposit against a larger bill, and not a monthly fee that quietly becomes the real cost.
+A new small-business website is £200 + VAT (£240 inc VAT). That is the same figure as on the [pricing](/pricing/) page. It is the price of the website, not a deposit against a larger bill, and not a monthly fee that quietly becomes the real cost.
 
-If you’d rather not pay it all at once, pick one of the [pay monthly](/pay-monthly-website/) plans. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit. Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card, through Stripe.
+A new small-business website is the founding client offer on the [pricing](/pricing/) page: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, which is £41.67 + VAT a month). It’s for the first 20 clients. I’m building up reviews, so those first 20 get this price, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The monthly price is not finance or credit, and it is not the care plan. The site is cheap and built to last: proper local SEO keywords, fast pages, and a mobile-first layout. That is not a promise of a Google position or of leads. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding-client website includes 3 months free care, then optional care from £29/month. Refer a new customer who buys and you get £50 off the website, or off care once the site is paid off. The other founding bonuses, including the WholeLottaVinyl partner bonus, are on the [founding client offer](/founding-offer/).
 
 ## How to start
 

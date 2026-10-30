@@ -4,7 +4,8 @@ import { Smartphone, Link2Off, ShieldAlert, SearchX, Check, ArrowUpRight, Chevro
 import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, newWebsitePricing, instalmentPlansTotalNote, type EnquiryHash, type Project } from "@/lib/site-data";
+import { STRIPE_ONE_OFF_URL, STRIPE_PAY_MONTHLY_URL } from "@/config";
+import { problems, why, included, steps, stages, faqs, offers, bundles, proofSites, foundingBonuses, newWebsiteOffer, newWebsitePricing, websitePaymentOptions, type EnquiryHash, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
@@ -71,13 +72,80 @@ export function WhyGrid() {
   );
 }
 
+export function BuyButtons({ onNavy = false }: { onNavy?: boolean }) {
+  return (
+    <div className="flex flex-wrap gap-3">
+      <Button asChild variant="copper" size="lg">
+        <a href={STRIPE_PAY_MONTHLY_URL}>Pay monthly, {websitePaymentOptions[1].headline}</a>
+      </Button>
+      <Button asChild variant={onNavy ? "navyOutline" : "outline"} size="lg">
+        <a href={STRIPE_ONE_OFF_URL}>Or pay {newWebsitePricing.price}</a>
+      </Button>
+    </div>
+  );
+}
+
+export function FoundingBanner() {
+  return (
+    <div id="founding-offer" className="scroll-mt-28 rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
+      <p className="eyebrow">{newWebsitePricing.name}</p>
+      <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">First {newWebsiteOffer.foundingClients} clients.</h2>
+      <p className="mt-4 text-muted-foreground">{newWebsitePricing.founding}</p>
+      <p className="mt-4 text-lg font-semibold">{newWebsitePricing.upfront}. {newWebsitePricing.monthlyPlain}.</p>
+      <p className="mt-3 text-muted-foreground">{newWebsitePricing.foundations} {newWebsitePricing.domain} {newWebsitePricing.notCredit}</p>
+      <h3 className="mt-8 text-xl font-semibold">Founding client bonuses</h3>
+      <ul className="mt-4 grid gap-3 text-muted-foreground">
+        {foundingBonuses.map((bonus) => (
+          <li key={bonus.title} className="flex gap-2">
+            <Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden />
+            <span>
+              <span className="font-semibold text-foreground">{bonus.title}. </span>
+              {bonus.text}
+              {"href" in bonus && bonus.href ? (
+                <>
+                  {" "}
+                  <a href={bonus.href} className="font-semibold text-primary underline-offset-4 hover:underline">wholelottavinyl.com</a>
+                </>
+              ) : null}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+        <BuyButtons />
+        <Button asChild variant="outline" size="lg">
+          <Link to="/founding-offer">Full founding offer</Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+/** Short local banner that points at the dedicated founding-offer page. */
+export function FoundingOfferPromo() {
+  return (
+    <div className="rounded-lg bg-navy p-8 text-navy-foreground shadow-sm md:p-10">
+      <p className="eyebrow text-copper">Mansfield, Nottingham and the East Midlands</p>
+      <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">Cheap website design, with local SEO built in.</h2>
+      <p className="mt-4 max-w-3xl text-navy-foreground/85">
+        {newWebsitePricing.founding} {newWebsitePricing.upfront}. Or {newWebsitePricing.monthlyPlain}. First year of hosting and a standard low-cost domain included. I don’t promise a Google position or a number of leads.
+      </p>
+      <div className="mt-6">
+        <Button asChild variant="copper" size="lg">
+          <Link to="/founding-offer">See the founding offer</Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 export function WhatsIncluded() {
   return (
     <div id="included" className="scroll-mt-28">
       <Heading
-        eyebrow="The £500 package"
-        title="What the £500 includes."
-        lead="A full small-business website, built from scratch. The list is the same wherever you read it."
+        eyebrow="The founding-price site"
+        title={`What ${newWebsitePricing.price} includes.`}
+        lead="A full small-business website, cheap and built to last. The list is the same wherever you read it."
       />
       <ul className="mt-10 grid gap-6 md:grid-cols-2">
         {included.map(([title, text]) => (
@@ -88,14 +156,15 @@ export function WhatsIncluded() {
         ))}
       </ul>
       <div className="mt-8 max-w-3xl rounded-lg border bg-card p-6">
-        <h3 className="text-xl font-semibold">Separate from the £500</h3>
+        <h3 className="text-xl font-semibold">Separate from the website price</h3>
         <ul className="mt-4 grid gap-3 text-muted-foreground">
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Premium domains cost extra. You pay the renewal of a standard domain from year two, around £5–£10 a year. The domain is registered in your name.</li>
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly care is optional, typically £29–£50: uptime and SSL checks, small edits, a form check, and a nudge before the domain renews. Or a full handover.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> After the 3 months included with a founding-client website, care is optional, from £29/month (usually £29–£50): uptime and SSL checks, small edits, a form check, and a nudge before the domain renews. Or a full handover.</li>
         </ul>
         <p className="mt-4 text-muted-foreground">
-          The <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly plans</Link> all total £500. A plain-English note on{" "}
-          <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">what the cheap website includes</Link> is here if you want the longer version.
+          Pay monthly is {newWebsitePricing.monthlyPlain}. It is not the same total as paying {newWebsitePricing.upfront}. A plain-English note on{" "}
+          <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">what the cheap website includes</Link> and the{" "}
+          <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly page</Link> uses the same figures.
         </p>
       </div>
     </div>
@@ -284,7 +353,28 @@ export function OfferCards() {
               .
             </p>
           )}
+          {offer.id === "new-website" && (
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold">Founding client bonuses</h4>
+              <ul className="mt-3 grid gap-2 text-sm text-muted-foreground">
+                {foundingBonuses.map((bonus) => (
+                  <li key={bonus.title}>
+                    <span className="font-semibold text-foreground">{bonus.title}. </span>
+                    {bonus.text}
+                    {"href" in bonus && bonus.href ? (
+                      <> <a href={bonus.href} className="font-semibold text-primary underline-offset-4 hover:underline">wholelottavinyl.com</a></>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="mt-auto pt-8">
+            {offer.id === "new-website" && (
+              <div className="mb-4">
+                <BuyButtons />
+              </div>
+            )}
             {offer.id === "google-business-profile" && (
               <p className="mb-4">
                 <Link to="/google-business-profile" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
@@ -334,7 +424,7 @@ export function BundleStrip() {
 export function DomainNote() {
   return (
     <p className="mt-8 max-w-3xl text-muted-foreground">
-      We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two (around £5–£10 a year). Want to take payments? You set up your own Stripe account and I’ll connect it. Monthly care, typically £29–£50, is optional. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
+      {newWebsitePricing.domain} Want to take payments? You set up your own Stripe account and I’ll connect it. After 3 months free on a founding-client website, monthly care is optional, from £29/month. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
     </p>
   );
 }
@@ -363,7 +453,7 @@ const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebr
     label: "New website",
     eyebrow: "New website",
     title: "Ask about a new website.",
-    lead: "Tell me what the business does. Before a deposit, the sample is a site I’ve already built — not a design made for you. A design for your business starts after the deposit. A new small-business site is £500.",
+    lead: `Tell me what the business does. Before a deposit, the sample is a site I’ve already built — not a design made for you. A design for your business starts after the deposit. ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. ${newWebsitePricing.monthlyPlain}.`,
     subject: "New website enquiry – WholeLottaSites",
     button: "Ask about a new site",
     placeholder: "What does your business do, and what should the site help people do?",
@@ -523,35 +613,36 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
 }
 
 export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFirst?: boolean }) {
+  const options = showPayMonthlyFirst ? [...websitePaymentOptions].reverse() : [websitePaymentOptions[1], websitePaymentOptions[0]];
   return (
     <div id="payment-plans" className="mt-16 scroll-mt-24">
-      {showPayMonthlyFirst && (
-        <div className="mb-10 max-w-3xl">
-          <p className="font-display text-3xl font-bold leading-snug md:text-4xl">{newWebsitePricing.monthly}</p>
-          <p className="mt-3 text-xl font-semibold">{newWebsitePricing.upfront}</p>
-        </div>
-      )}
       <Heading
-        eyebrow={showPayMonthlyFirst ? "The £500 price" : "Payment plans"}
-        title={showPayMonthlyFirst ? "Instalment plans for the £500." : "Rather spread the cost?"}
-        lead={showPayMonthlyFirst
-          ? `${instalmentPlansTotalNote}. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.`
-          : `The £500 price can be paid up front. If you’d rather not pay it all at once, pick one of these plans. ${instalmentPlansTotalNote}. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.`}
+        eyebrow={newWebsitePricing.name}
+        title="Pay monthly, or pay once."
+        lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. ${newWebsitePricing.notCredit}`}
       />
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {paymentPlans.map((p) => (
-          <div key={p.name} className="rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm">
-            <p className="eyebrow">{p.name}</p>
-            <p className="mt-3 font-display text-3xl font-bold">{p.headline}</p>
-            <p className="mt-2 text-muted-foreground">{p.detail}</p>
-            <p className="mt-4 text-sm font-semibold text-primary">Total: £500</p>
-          </div>
-        ))}
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {options.map((plan) => {
+          const monthly = plan.name === "Pay monthly";
+          return (
+            <div key={plan.name} className={monthly ? "rounded-lg border-t-4 border-copper bg-card p-7 shadow-sm" : "rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm"}>
+              <p className="eyebrow">{monthly ? "Most popular" : plan.name}</p>
+              <p className="mt-3 font-display text-3xl font-bold">{plan.headline}</p>
+              <p className="mt-2 text-muted-foreground">{plan.detail}</p>
+              <p className="mt-4 text-sm font-semibold text-primary">Total: {plan.total}</p>
+              <div className="mt-6">
+                <Button asChild variant={monthly ? "copper" : "outline"}>
+                  <a href={monthly ? STRIPE_PAY_MONTHLY_URL : STRIPE_ONE_OFF_URL}>{monthly ? "Pay monthly" : "Pay £200 + VAT"}</a>
+                </Button>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These plans pay off the £500 website. They are not monthly care. Care is optional, typically £29–£50, or you can take a full handover.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> The first year of a standard domain is included. Premium domains cost extra. You pay the renewal from year two, at around £5–£10 a year.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These payments pay for the website. They are not monthly care. A founding-client website includes 3 months free care, then optional care from £29/month, or you can take a full handover.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.domain}</li>
       </ul>
     </div>
   );

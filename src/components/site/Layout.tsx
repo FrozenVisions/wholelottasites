@@ -26,6 +26,7 @@ export const serviceLinks = [
   { to: "/website-mini-fix" as const, label: "£100 East Midlands mini-fix" },
   { to: "/google-business-profile" as const, label: `Google Business Profile, ${GBP_SETUP_PRICE}` },
   { to: "/mobile-friendly-website" as const, label: "Mobile-friendly website" },
+  { to: "/founding-offer" as const, label: "Founding offer" },
   { to: "/cheap-website-for-small-business" as const, label: `Cheap website, ${newWebsitePricing.price}` },
   { to: "/pay-monthly-website" as const, label: "Pay monthly website" },
 ] as const;
@@ -219,6 +220,7 @@ export function Footer() {
             {posts.map((post) => (
               <li key={post.slug}><Link to="/blog/$slug" params={{ slug: post.slug }} className="text-navy-foreground/85 hover:text-copper">{post.title}</Link></li>
             ))}
+            <li><Link to="/founding-offer" className="text-navy-foreground/85 hover:text-copper">Founding offer</Link></li>
             <li><Link to="/cheap-website-for-small-business" className="text-navy-foreground/85 hover:text-copper">Cheap website, {newWebsitePricing.price}</Link></li>
             <li><Link to="/pay-monthly-website" className="text-navy-foreground/85 hover:text-copper">Pay monthly website</Link></li>
             <li><Link to="/website-redesign" className="text-navy-foreground/85 hover:text-copper">Website redesign</Link></li>

@@ -111,8 +111,29 @@ export function FoundingBanner() {
           </li>
         ))}
       </ul>
-      <div className="mt-8">
+      <div className="mt-8 flex flex-wrap items-center gap-4">
         <BuyButtons />
+        <Button asChild variant="outline" size="lg">
+          <Link to="/founding-offer">Full founding offer</Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+/** Short local banner that points at the dedicated founding-offer page. */
+export function FoundingOfferPromo() {
+  return (
+    <div className="rounded-lg bg-navy p-8 text-navy-foreground shadow-sm md:p-10">
+      <p className="eyebrow text-copper">Mansfield, Nottingham and the East Midlands</p>
+      <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">Cheap website design, with local SEO built in.</h2>
+      <p className="mt-4 max-w-3xl text-navy-foreground/85">
+        {newWebsitePricing.founding} {newWebsitePricing.upfront}. Or {newWebsitePricing.monthlyPlain}. First year of hosting and a standard low-cost domain included. I don’t promise a Google position or a number of leads.
+      </p>
+      <div className="mt-6">
+        <Button asChild variant="copper" size="lg">
+          <Link to="/founding-offer">See the founding offer</Link>
+        </Button>
       </div>
     </div>
   );

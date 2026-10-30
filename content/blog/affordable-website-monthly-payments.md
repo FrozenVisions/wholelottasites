@@ -7,7 +7,7 @@ keyword: affordable website monthly payments
 slug: affordable-website-monthly-payments
 ---
 
-Affordable website monthly payments spread a fixed price. They are not a free website, and they are not a cheap first month that becomes a different bill. I’m Chris Faulkes, a web designer. The small-business website I build is a founding client offer: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, which is £41.67 + VAT a month). It’s for the first 20 clients. I’m building up reviews, so those first 20 get this price, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The schedules are on the [pay monthly website](/pay-monthly-website/) page. This is what to check before you agree to one, including mine.
+Affordable website monthly payments spread a fixed price. They are not a free website, and they are not a cheap first month that becomes a different bill. I’m Chris Faulkes, a web designer. The small-business website I build is a founding client offer: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, which is £41.67 + VAT a month). It’s for the first 20 clients. I’m building up reviews, so those first 20 get this price, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The schedules are on the [founding client offer](/founding-offer/) and the [pay monthly website](/pay-monthly-website/) page. This is what to check before you agree to one, including mine.
 
 ## Add up the total
 

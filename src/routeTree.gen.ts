@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CheapWebsiteForSmallBusinessRouteImport } from './routes/cheap-website-for-small-business'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FoundingOfferRouteImport } from './routes/founding-offer'
 import { Route as GoogleBusinessProfileRouteImport } from './routes/google-business-profile'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as LeaveAReviewRouteImport } from './routes/leave-a-review'
@@ -56,6 +57,11 @@ const ContactRoute = ContactRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FoundingOfferRoute = FoundingOfferRouteImport.update({
+  id: '/founding-offer',
+  path: '/founding-offer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GoogleBusinessProfileRoute = GoogleBusinessProfileRouteImport.update({
@@ -150,6 +156,7 @@ export interface FileRoutesByFullPath {
   '/cheap-website-for-small-business': typeof CheapWebsiteForSmallBusinessRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/founding-offer': typeof FoundingOfferRoute
   '/google-business-profile': typeof GoogleBusinessProfileRoute
   '/how-it-works': typeof HowItWorksRoute
   '/leave-a-review': typeof LeaveAReviewRoute
@@ -174,6 +181,7 @@ export interface FileRoutesByTo {
   '/cheap-website-for-small-business': typeof CheapWebsiteForSmallBusinessRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/founding-offer': typeof FoundingOfferRoute
   '/google-business-profile': typeof GoogleBusinessProfileRoute
   '/how-it-works': typeof HowItWorksRoute
   '/leave-a-review': typeof LeaveAReviewRoute
@@ -199,6 +207,7 @@ export interface FileRoutesById {
   '/cheap-website-for-small-business': typeof CheapWebsiteForSmallBusinessRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/founding-offer': typeof FoundingOfferRoute
   '/google-business-profile': typeof GoogleBusinessProfileRoute
   '/how-it-works': typeof HowItWorksRoute
   '/leave-a-review': typeof LeaveAReviewRoute
@@ -225,6 +234,7 @@ export interface FileRouteTypes {
     | '/cheap-website-for-small-business'
     | '/contact'
     | '/faq'
+    | '/founding-offer'
     | '/google-business-profile'
     | '/how-it-works'
     | '/leave-a-review'
@@ -249,6 +259,7 @@ export interface FileRouteTypes {
     | '/cheap-website-for-small-business'
     | '/contact'
     | '/faq'
+    | '/founding-offer'
     | '/google-business-profile'
     | '/how-it-works'
     | '/leave-a-review'
@@ -273,6 +284,7 @@ export interface FileRouteTypes {
     | '/cheap-website-for-small-business'
     | '/contact'
     | '/faq'
+    | '/founding-offer'
     | '/google-business-profile'
     | '/how-it-works'
     | '/leave-a-review'
@@ -298,6 +310,7 @@ export interface RootRouteChildren {
   CheapWebsiteForSmallBusinessRoute: typeof CheapWebsiteForSmallBusinessRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
+  FoundingOfferRoute: typeof FoundingOfferRoute
   GoogleBusinessProfileRoute: typeof GoogleBusinessProfileRoute
   HowItWorksRoute: typeof HowItWorksRoute
   LeaveAReviewRoute: typeof LeaveAReviewRoute
@@ -352,6 +365,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/founding-offer': {
+      id: '/founding-offer'
+      path: '/founding-offer'
+      fullPath: '/founding-offer'
+      preLoaderRoute: typeof FoundingOfferRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/google-business-profile': {
@@ -482,6 +502,7 @@ const rootRouteChildren: RootRouteChildren = {
   CheapWebsiteForSmallBusinessRoute: CheapWebsiteForSmallBusinessRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
+  FoundingOfferRoute: FoundingOfferRoute,
   GoogleBusinessProfileRoute: GoogleBusinessProfileRoute,
   HowItWorksRoute: HowItWorksRoute,
   LeaveAReviewRoute: LeaveAReviewRoute,

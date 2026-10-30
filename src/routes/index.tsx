@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, Heading, JourneyBand, WhatsIncluded, OfferCards, FoundingBanner, BuyButtons } from "@/components/site/Sections";
+import { Section, Heading, JourneyBand, WhatsIncluded, OfferCards, FoundingBanner, FoundingOfferPromo, BuyButtons } from "@/components/site/Sections";
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { SitesBuiltStrip } from "@/components/site/SitesBuilt";
 import { Reveal } from "@/components/site/Reveal";
@@ -64,7 +64,10 @@ function Home() {
       </section>
 
       <Section className="!py-12">
-        <FoundingBanner />
+        <FoundingOfferPromo />
+        <div className="mt-8">
+          <FoundingBanner />
+        </div>
       </Section>
 
       <TrustStrip />

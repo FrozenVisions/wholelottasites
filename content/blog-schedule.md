@@ -29,6 +29,8 @@ Write a useful article that answers the keyword. If a service page already targe
 
 The post already live is `content/blog/what-a-small-business-website-needs.md` (21 October 2026, keyword “what a small business website needs”). It is not part of the 30 days below.
 
+Also published, and not part of the 30-day table: `how-much-does-a-website-cost-in-mansfield.md` (30 October 2026), `pay-monthly-websites-in-nottingham.md` (31 October 2026) and `do-trades-in-derby-and-leicester-need-a-website.md` (1 November 2026). Link them to `/founding-offer/` when a post is about the price. Do not publish promo code names.
+
 ## Next 30 days
 
 | Date | Group | Title | Keyword | Slug |

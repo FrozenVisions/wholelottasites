@@ -1,6 +1,6 @@
 ---
 title: Affordable website monthly payments, explained
-seoTitle: Affordable Website Monthly Payments, Explained | WholeLottaSites
+seoTitle: Affordable Website Monthly Payments | WholeLottaSites
 description: How affordable website monthly payments work: add up the £500 total, check who owns the domain and the site, and what a missed payment does.
 date: 2026-10-23
 keyword: affordable website monthly payments

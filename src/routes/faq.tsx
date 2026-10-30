@@ -14,8 +14,8 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     ...seo(
       "/faq",
-      "FAQ | Sites, Fixes, Google, Care & £100",
-      "£200 + VAT (£240 inc VAT) websites, the £100 East Midlands mini-fix, who owns the domain and Google listing, and why there are no ranking promises. Care is optional.",
+      "FAQ | Sites, Fixes, Google, Care & £50 + VAT",
+      "£200 + VAT (£240 inc VAT) websites, the £50 + VAT East Midlands mini-fix, who owns the domain and Google listing, and why there are no ranking promises. Care is optional.",
     ),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "FAQ", path: "/faq" }])),
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/faq")({
 function Faq() {
   return (
     <>
-      <PageHero eyebrow="FAQ" title="Questions, answered." lead="The £200 + VAT (£240 inc VAT) website, the £100 mini-fix, how a fix is priced, who owns the domain and the Google listing, and what I won’t promise." crumbs={[{ name: "Home", href: "/" }, { name: "FAQ" }]} />
+      <PageHero eyebrow="FAQ" title="Questions, answered." lead="The £200 + VAT (£240 inc VAT) website, the £50 + VAT mini-fix, how a fix is priced, who owns the domain and the Google listing, and what I won’t promise." crumbs={[{ name: "Home", href: "/" }, { name: "FAQ" }]} />
       <section className="mx-auto max-w-3xl px-5 pb-20 md:pb-28">
         <FaqList />
         <p className="mt-8 text-muted-foreground">

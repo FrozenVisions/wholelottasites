@@ -13,7 +13,7 @@ export const Route = createFileRoute("/services")({
     ...seo(
       "/services",
       "Websites, Fixes, Google & Care | WholeLottaSites",
-      "Founding client offer: £50 a month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT). East Midlands mini-fix £100. Fixes typically £150–£400. Google Business Profile £149. Optional care from £29.",
+      "Founding client offer: £50 a month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT). East Midlands mini-fix £50 + VAT. Fixes typically £150–£400. Google Business Profile £149. Optional care from £29.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]))],
   }),
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/services")({
 function Services() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Same site either way, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £100 East Midlands mini-fix when a live site only needs one change.`} crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
+      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Same site either way, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £50 + VAT East Midlands mini-fix when a live site only needs one change.`} crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
       <Section className="!pt-4">
         <FoundingBanner />
         <Heading eyebrow="Four offers" title="The job that matches where you are." lead={`${newWebsitePricing.domain} You stay the owner of your Google listing. Care after the included months is optional. I don’t promise a ranking.`} />
@@ -50,7 +50,7 @@ function Services() {
         </p>
       </Section>
       <Section muted>
-        <Heading eyebrow="Quick check" title="Is your website costing you customers?" lead="If the answer is yes, start with a free fix audit. I’ll send screenshots and 3–5 issues before a price. One concrete East Midlands fix can be the £100 mini-fix." />
+        <Heading eyebrow="Quick check" title="Is your website costing you customers?" lead="If the answer is yes, start with a free fix audit. I’ll send screenshots and 3–5 issues before a price. One concrete East Midlands fix can be the £50 + VAT mini-fix." />
         <ProblemsGrid />
         <div className="mt-8">
           <Button asChild size="lg"><Link to="/contact" hash="fix-audit">Get a free fix audit</Link></Button>

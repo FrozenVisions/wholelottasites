@@ -140,7 +140,7 @@ export const intentPages: IntentPage[] = [
         heading: "When a redesign is the right job",
         paragraphs: [
           "I look at the same problems repeatedly. The page has to be pinched and zoomed on a phone. The phone number isn’t tappable. The browser says the site isn’t secure. The Google title still says “Home”. The contact form doesn’t arrive, or there isn’t one. The business has changed and the site describes an older version of it.",
-          "There are three honest routes. One concrete fix on a live East Midlands site can be the [£100 mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £200 + VAT (£240 inc VAT), with the [payment plans](/pay-monthly-website/) if you want them. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio.",
+          "There are three honest routes. One concrete fix on a live East Midlands site can be the [£50 + VAT mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £200 + VAT (£240 inc VAT), with the [payment plans](/pay-monthly-website/) if you want them. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio.",
         ],
       },
       {
@@ -148,7 +148,7 @@ export const intentPages: IntentPage[] = [
         heading: "Update my old website",
         paragraphs: [
           "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (typically £29–£50), or as a one-off if we’ve agreed it.",
-          "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
+          "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
           "If the job is bigger than one fix, start with the [free fix audit](/contact/#fix-audit). I’ll look at the live site and tell you whether a repair will hold. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business site. I’ll say which job it is before you pay.",
           "Send the address of the current site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
         ],
@@ -163,9 +163,9 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, the quote is for a rebuild, which is £200 + VAT (£240 inc VAT) for a small business."],
+      ["Will you fix a Wix, WordPress or Shopify site?", "Sometimes. I audit it first and list 3–5 issues, then quote. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £50 + VAT mini-fix. If patching is a false economy, the quote is for a rebuild, which is £200 + VAT (£240 inc VAT) for a small business."],
       ["Do I have to change my domain?", "No. The domain stays yours. If it’s in your name, we keep it and point it at the site when you’re ready."],
-      ["How much is a redesign?", "One fix on a live East Midlands site is the £100 mini-fix. A larger repair is typically £150–£400 after the audit. A small-business rebuild is £200 + VAT (£240 inc VAT). Larger projects are quoted from around £1,200."],
+      ["How much is a redesign?", "One fix on a live East Midlands site is the £50 + VAT mini-fix. A larger repair is typically £150–£400 after the audit. A small-business rebuild is £200 + VAT (£240 inc VAT). Larger projects are quoted from around £1,200."],
     ],
   },
   {
@@ -211,13 +211,13 @@ export const intentPages: IntentPage[] = [
         heading: "When a tweak is enough",
         paragraphs: [
           "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, typically £29–£50, once any build is paid for.",
-          "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £100 website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
+          "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
           "If the whole site has to be replaced so it can be used on a phone, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need the £200 + VAT (£240 inc VAT) rebuild. I won’t invoice £200 + VAT (£240 inc VAT) for a stylesheet tweak.",
         ],
       },
     ],
     faqs: [
-      ["Can you just make my current site mobile friendly?", "I’ll audit it first. One concrete layout fix on a live East Midlands site can be the £100 mini-fix. If a wider repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £200 + VAT (£240 inc VAT)."],
+      ["Can you just make my current site mobile friendly?", "I’ll audit it first. One concrete layout fix on a live East Midlands site can be the £50 + VAT mini-fix. If a wider repair will hold, a typical fix is £150–£400. If the old builder won’t stay usable on a phone, the honest job is a new site for £200 + VAT (£240 inc VAT)."],
       ["Do you design the phone version separately?", "It’s one site. The layout is designed for a phone, then adjusted so a larger screen still reads well. You don’t maintain two websites."],
       ["Will a mobile-friendly site guarantee more calls?", "No. It removes a reason for people to give up when they try to phone you or read the page. It doesn’t promise a number of enquiries."],
     ],

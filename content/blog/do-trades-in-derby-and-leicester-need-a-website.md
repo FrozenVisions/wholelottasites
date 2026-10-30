@@ -29,7 +29,7 @@ There is a longer trade-by-trade note on [websites for small businesses](/websit
 
 ## If you already have a site
 
-Plenty of trade sites from a few years ago still exist and still fail the phone test. The number is inside a picture. The towns are missing. The browser says the connection is not secure. The contact form does not arrive. One concrete fault on a live East Midlands site can be the [£100 mini-fix](/website-mini-fix/). Derby is in Derbyshire and Leicester is in Leicestershire, so both are inside that area. It is one fix, not a new website.
+Plenty of trade sites from a few years ago still exist and still fail the phone test. The number is inside a picture. The towns are missing. The browser says the connection is not secure. The contact form does not arrive. One concrete fault on a live East Midlands site can be the [£50 + VAT mini-fix](/website-mini-fix/). Derby is in Derbyshire and Leicester is in Leicestershire, so both are inside that area. It is one fix, not a new website.
 
 If several things are wrong, a rescue after a free audit is usually £150–£400. If the old builder will not stay usable, the honest answer is a new site rather than another patch. I will say which it is before you pay.
 

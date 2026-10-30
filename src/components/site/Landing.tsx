@@ -69,7 +69,7 @@ export function PriceBlock() {
       <PaymentPlans />
       <DomainNote />
       <p className="mt-4 text-muted-foreground">See the <Link to="/pricing" className="font-semibold text-primary underline-offset-4 hover:underline">full pricing page</Link> for what’s included.</p>
-      <p className="mt-4 text-muted-foreground">Already got a live site in the East Midlands and only one thing is broken? The <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">£100 website mini-fix</Link> is a short audit and one fix. It is not this founding-price rebuild.</p>
+      <p className="mt-4 text-muted-foreground">Already got a live site in the East Midlands and only one thing is broken? The <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">£50 + VAT website mini-fix</Link> is a short audit and one fix. It is not this founding-price rebuild.</p>
     </>
   );
 }

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
     ...seo(
       "/contact",
       "New Website or Free Fix Audit | WholeLottaSites",
-      "Ask Chris Faulkes in Mansfield about a new website, a free fix audit, the £100 mini-fix, Google Business Profile, or monthly care.",
+      "Ask Chris Faulkes in Mansfield about a new website, a free fix audit, the £50 + VAT mini-fix, Google Business Profile, or monthly care.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]))],
   }),
@@ -22,8 +22,8 @@ function Contact() {
     <Section className="!pt-8 md:!pt-12">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Contact" }]} />
       <p className="mt-6 max-w-3xl text-muted-foreground">
-        For a new site, use the form. If you already have a live site in the East Midlands and want the £100 mini-fix, say so in the message and include the address.{" "}
-        <Link to="/website-mini-fix" className="font-semibold text-primary hover:underline">What the £100 covers</Link>.
+        For a new site, use the form. If you already have a live site in the East Midlands and want the £50 + VAT mini-fix, say so in the message and include the address.{" "}
+        <Link to="/website-mini-fix" className="font-semibold text-primary hover:underline">What the £50 + VAT covers</Link>.
       </p>
       <div className="mt-6">
         <MockupForm heading="h1" />

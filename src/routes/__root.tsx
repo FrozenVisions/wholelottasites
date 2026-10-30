@@ -30,7 +30,7 @@ const businessJsonLd = {
   "@type": "ProfessionalService",
   "@id": "https://wholelottasites.co.uk/#business",
   name: "WholeLottaSites",
-  description: `Websites, fixes, Google Business Profile and monthly care for UK small businesses. ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. Or ${newWebsitePricing.monthlyPlain}. An East Midlands mini-fix is £100: one concrete fix on a live site.`,
+  description: `Websites, fixes, Google Business Profile and monthly care for UK small businesses. ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. Or ${newWebsitePricing.monthlyPlain}. An East Midlands mini-fix is £50 + VAT: one concrete fix on a live site.`,
   url: "https://wholelottasites.co.uk/",
   logo: "https://wholelottasites.co.uk/icon-512.png",
   image: "https://wholelottasites.co.uk/og-image.jpg",
@@ -63,8 +63,8 @@ const businessJsonLd = {
   makesOffer: [
     {
       "@type": "Offer",
-      name: "East Midlands £100 website mini-fix",
-      price: "100",
+      name: "East Midlands £50 + VAT website mini-fix",
+      price: "60",
       priceCurrency: "GBP",
       description: "A short audit and one concrete fix on a website that’s already live. Not a redesign and not a full rebuild. No ranking promise.",
       url: "https://wholelottasites.co.uk/website-mini-fix/",

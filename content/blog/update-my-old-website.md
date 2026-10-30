@@ -35,7 +35,7 @@ Do these even if a new site comes later.
 
 Use the same wording on your Google Business Profile. When the name, address and phone disagree, a customer cannot tell which copy to trust.
 
-If I look after the site, these edits sit on optional monthly care (typically £29–£50), or as an agreed one-off. If the site is already live and you only need one concrete fix — a broken form, a mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £100 website mini-fix](/website-mini-fix/), for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a redesign. If the job is bigger than one fix, send the address for a [free fix audit](/contact/#fix-audit). A typical rescue is £150–£400. If patching is a false economy, the honest job is a new site at £200 + VAT (£240 inc VAT).
+If I look after the site, these edits sit on optional monthly care (typically £29–£50), or as an agreed one-off. If the site is already live and you only need one concrete fix — a broken form, a mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/), for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a redesign. If the job is bigger than one fix, send the address for a [free fix audit](/contact/#fix-audit). A typical rescue is £150–£400. If patching is a false economy, the honest job is a new site at £200 + VAT (£240 inc VAT).
 
 ## Make three lists before anyone redesigns it
 

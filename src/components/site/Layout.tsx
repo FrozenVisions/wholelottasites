@@ -23,7 +23,7 @@ export const navLinks = [
 export const serviceLinks = [
   { to: "/website-built-from-scratch" as const, label: "Built from scratch" },
   { to: "/website-redesign" as const, label: "Website redesign" },
-  { to: "/website-mini-fix" as const, label: "£100 East Midlands mini-fix" },
+  { to: "/website-mini-fix" as const, label: "£50 + VAT East Midlands mini-fix" },
   { to: "/google-business-profile" as const, label: `Google Business Profile, ${GBP_SETUP_PRICE}` },
   { to: "/mobile-friendly-website" as const, label: "Mobile-friendly website" },
   { to: "/founding-offer" as const, label: "Founding offer" },
@@ -224,7 +224,7 @@ export function Footer() {
             <li><Link to="/cheap-website-for-small-business" className="text-navy-foreground/85 hover:text-copper">Cheap website, {newWebsitePricing.price}</Link></li>
             <li><Link to="/pay-monthly-website" className="text-navy-foreground/85 hover:text-copper">Pay monthly website</Link></li>
             <li><Link to="/website-redesign" className="text-navy-foreground/85 hover:text-copper">Website redesign</Link></li>
-            <li><Link to="/website-mini-fix" className="text-navy-foreground/85 hover:text-copper">£100 East Midlands mini-fix</Link></li>
+            <li><Link to="/website-mini-fix" className="text-navy-foreground/85 hover:text-copper">£50 + VAT East Midlands mini-fix</Link></li>
             <li><Link to="/google-business-profile" className="text-navy-foreground/85 hover:text-copper">Google Business Profile, {GBP_SETUP_PRICE}</Link></li>
             <li><Link to="/mobile-friendly-website" className="text-navy-foreground/85 hover:text-copper">Mobile-friendly website</Link></li>
             <li><Link to="/website-built-from-scratch" className="text-navy-foreground/85 hover:text-copper">Built from scratch</Link></li>

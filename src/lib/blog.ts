@@ -6,6 +6,8 @@ export interface BlogPost {
   date: string;
   keyword: string;
   body: string;
+  /** Question/answer pairs from a "## Quick answers" section, when the post has one. */
+  faqs: [string, string][];
 }
 
 const files = import.meta.glob("../../content/blog/*.md", {
@@ -35,6 +37,25 @@ function frontmatter(raw: string, filename: string) {
   return { data, body: match[2].trim() };
 }
 
+/** Plain-text Q&As under "## Quick answers", matching the text on the page. */
+export function quickAnswers(body: string): [string, string][] {
+  const heading = body.match(/^## Quick answers\s*$/m);
+  if (!heading || heading.index === undefined) return [];
+  const after = body.slice(heading.index + heading[0].length);
+  const nextHeading = after.search(/^## /m);
+  const section = (nextHeading === -1 ? after : after.slice(0, nextHeading)).trim();
+  const faqs: [string, string][] = [];
+  for (const match of section.matchAll(/\*\*([^*]+)\*\*\s*\n+([\s\S]*?)(?=\n+\*\*|$)/g)) {
+    const question = match[1]?.replace(/\s+/g, " ").trim();
+    const answer = match[2]
+      ?.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (question && answer) faqs.push([question, answer]);
+  }
+  return faqs;
+}
+
 function parse(raw: string, filename: string): BlogPost {
   const { data, body } = frontmatter(raw, filename);
   for (const key of ["title", "description", "date", "keyword", "slug"] as const) {
@@ -48,8 +69,12 @@ function parse(raw: string, filename: string): BlogPost {
   if (slug !== filename) throw new Error(`${filename}: slug "${slug}" must match the filename`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error(`${filename}: date must be YYYY-MM-DD`);
   if (!body) throw new Error(`${filename}: write the article under the frontmatter`);
+  const faqs = quickAnswers(body);
+  if (/^## Quick answers\s*$/m.test(body) && faqs.length === 0) {
+    throw new Error(`${filename}: "## Quick answers" did not parse into questions`);
+  }
   const seoTitle = data["seoTitle"] || `${title} | WholeLottaSites`;
-  return { slug, title, seoTitle, description, date, keyword, body };
+  return { slug, title, seoTitle, description, date, keyword, body, faqs };
 }
 
 export const posts: BlogPost[] = Object.entries(files)

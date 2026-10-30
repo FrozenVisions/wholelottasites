@@ -77,10 +77,25 @@ const businessJsonLd = {
     },
     {
       "@type": "Offer",
-      name: "New small business website",
+      name: "New small business website, pay monthly",
+      price: "750",
+      priceCurrency: "GBP",
+      description: "Pay monthly: £50/month for 15 months (£750 total). Same site and inclusions as paying £500 up front, including the first year of hosting and the first year of a standard domain, registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit. Want help growing it? Blog posts and SEO are an optional monthly extra on top - ask for a quote.",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "50",
+        priceCurrency: "GBP",
+        unitText: "MONTH",
+        referenceQuantity: { "@type": "QuantitativeValue", value: 15, unitText: "MONTH" },
+      },
+      url: "https://wholelottasites.co.uk/pricing/#new-website",
+    },
+    {
+      "@type": "Offer",
+      name: "New small business website, pay up front",
       price: "500",
       priceCurrency: "GBP",
-      description: "A full custom website or small shop built from scratch for £500. Payment plans total the same £500. The client buys the domain. A personalised design starts after the deposit.",
+      description: "Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). First year of hosting included. The first year of a standard domain is included and registered in the client’s name. Premium domains cost extra. The client pays the renewal from year two. A personalised design starts after the deposit.",
       url: "https://wholelottasites.co.uk/pricing/#new-website",
     },
     {

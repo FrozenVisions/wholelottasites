@@ -56,13 +56,13 @@ If the old site is the problem — not just the phone layout — that’s a [web
 
 ## A domain you own
 
-The site should live on an address you control, such as yourbusiness.co.uk, not only on a Facebook page or a free subdomain. A domain is the address. It is not the website. It costs around £5–£10 a year, and you should buy it so the account is yours.
+The site should live on an address you control, such as yourbusiness.co.uk, not only on a Facebook page or a free subdomain. A domain is the address. It is not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.
 
 A first website doesn’t need a complicated brief. [A website built from scratch](/website-built-from-scratch/) can start from a name and a few true sentences. You don’t need a logo first.
 
 ## What it costs, and what can wait
 
-The small-business website I build is £500. That’s a [cheap website for a small business](/cheap-website-for-small-business/) in the sense of a fixed price, not a bargain template. If you’d rather spread it, a [pay monthly website](/pay-monthly-website/) uses one of three plans — £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500.
+The small-business website I build is £500. That’s a [cheap website for a small business](/cheap-website-for-small-business/) in the sense of a fixed price, not a bargain template. If you’d rather spread it, a [pay monthly website](/pay-monthly-website/) uses one of three plans — £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750).
 
 A few things can wait.
 

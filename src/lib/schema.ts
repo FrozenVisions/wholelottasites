@@ -26,7 +26,7 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
 export function articleJsonLd(opts: { title: string; description: string; path: string; date: string }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: opts.title,
     description: opts.description,
     datePublished: opts.date,

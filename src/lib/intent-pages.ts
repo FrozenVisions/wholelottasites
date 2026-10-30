@@ -1,4 +1,5 @@
 import type { Faq } from "@/lib/landing-data";
+import { instalmentPlansTotalNote, payMonthlyPlan } from "@/lib/site-data";
 
 export interface IntentSection {
   id: string;
@@ -25,7 +26,7 @@ export interface IntentPage {
 }
 
 const priceParagraph =
-  "The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals exactly £500. Monthly payments are taken by card through Stripe. Your domain is extra, around £5–£10 a year, and you buy it so you own it. Once the site is paid for, monthly care is optional, typically £29–£50, or you can take a full handover. Fixes and Google Business Profile are separate offers on the [pricing page](/pricing/).";
+  `The website is £500. You can pay it in one go, or use a payment plan: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. ${instalmentPlansTotalNote}. Monthly payments are taken by card through Stripe. The first year of hosting is included. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year. Once the site is paid for, monthly care is optional, typically £29–£50, or you can take a full handover. Fixes and Google Business Profile are separate offers on the [pricing page](/pricing/).`;
 
 export const intentPages: IntentPage[] = [
   {
@@ -45,7 +46,7 @@ export const intentPages: IntentPage[] = [
         heading: "What “cheap” means here",
         paragraphs: [
           "£500 is the price of the website, for a small business or an individual. It is the same price as on the [pricing page](/pricing/). It is not a deposit against a larger bill, and it is not a monthly fee that quietly becomes the real cost.",
-          "Cheap, on this site, means a small scope done properly: pages we agree, built from scratch, working on a phone, with HTTPS, a title on every page, a contact form, and help going live. It does not mean a shared theme, stock photos of someone else’s workshop, or reviews I wrote for you.",
+          "Cheap, on this site, means a small scope done properly: pages we agree, built from scratch, working on a phone, with HTTPS, a title on every page, a contact form, help going live, the first year of hosting, and the first year of a standard domain. It does not mean a shared theme, stock photos of someone else’s workshop, or reviews I wrote for you.",
           priceParagraph,
         ],
       },
@@ -62,14 +63,14 @@ export const intentPages: IntentPage[] = [
         id: "not-included",
         heading: "What is not included",
         paragraphs: [
-          "The domain is yours to buy, at around £5–£10 a year. I help you connect it. I don’t need to own the account.",
+          "Premium domains cost extra. You pay the renewal of a standard domain from year two, at around £5–£10 a year. The domain is registered in your name. I help you connect it. I don’t need to own the account.",
           "After the £500 is paid, monthly care is a choice, typically £29–£50: uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover. Care is not added while you’re still paying for the build, and it isn’t required.",
           "The detail of the three plans is on the [pay monthly website](/pay-monthly-website/) page. The cards below are the same three.",
         ],
       },
     ],
     faqs: [
-      ["Is £500 the full price?", "Yes, for the small-business website. Payment plans split that same £500. They don’t add interest on top. Your domain, at around £5–£10 a year, is separate."],
+      ["Is £500 the full price?", "Yes, for paying £500 up front. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year."],
       ["Why is a template sometimes advertised for less?", "Introductory prices often leave you to do the writing, the layout and the launch yourself, on a theme other businesses are using. This £500 includes me designing and building the site. It isn’t the cheapest number on the internet. It is a finished small site at a fixed price."],
       ["Can any kind of business use this?", "Any small business or individual who needs a modest site. If the project is really a product, a large shop or a multi-location brand, I’ll quote it rather than force it into £500."],
     ],
@@ -79,10 +80,10 @@ export const intentPages: IntentPage[] = [
     path: "/pay-monthly-website",
     keyword: "pay monthly website UK",
     title: "Pay Monthly Website UK | Plans Totalling £500 | WholeLottaSites",
-    description: "A pay monthly website in the UK: £150 then £50×7, £100 then £100×4, or three payments of £166.67, £166.67 and £166.66. Every plan totals £500.",
-    eyebrow: "Same £500, spread out",
+    description: `A pay monthly website in the UK: £50 a month for 15 months (£750), or £500 up front. ${instalmentPlansTotalNote}.`,
+    eyebrow: "Pay monthly or £500 up front",
     h1: "A pay monthly website in the UK.",
-    lead: "You can pay monthly for the website. The price is still £500. The plans only change when the money leaves your account, not what you get.",
+    lead: `Pay monthly is ${payMonthlyPlan.amount} a month for ${payMonthlyPlan.payments} months (${payMonthlyPlan.total}). Or pay £500 up front and save £250. ${instalmentPlansTotalNote}.`,
     showIncluded: false,
     showPlans: true,
     sections: [
@@ -90,7 +91,7 @@ export const intentPages: IntentPage[] = [
         id: "website-payment-plan",
         heading: "Website payment plan",
         paragraphs: [
-          "There is one product and three ways to pay for it. A website payment plan here is not a finance agreement with a different total, and it isn’t a subscription for the site itself.",
+          "The £500 price has three instalment plans. They are not finance or credit, and they do not change the £500 total. Pay monthly is a separate £750 price, £50 a month for 15 months, not finance or credit, and it isn’t a subscription for the site itself.",
           "Plan 1 is £150 up front, then £50 a month for 7 months. Plan 2 is £100 up front, then £100 a month for 4 months. Plan 3 is three payments of £166.67, £166.67 and £166.66. Add any of them up and you get £500.",
           "Payments are taken automatically by card through Stripe, so there isn’t a monthly invoice to remember. The [pricing page](/pricing/) shows the same figures. Nothing on this page overrides them.",
         ],
@@ -99,9 +100,9 @@ export const intentPages: IntentPage[] = [
         id: "affordable-monthly",
         heading: "Affordable website monthly payments",
         paragraphs: [
-          "Affordable website monthly payments, in this case, means those three schedules. I don’t add a setup fee, and I don’t charge interest on top of the £500.",
-          "The site you get is the same one as if you paid £500 at once: built from scratch, mobile, HTTPS, page titles, a contact form, Stripe payment links if you want them, and help going live. There’s a plain list on the [cheap website](/cheap-website-for-small-business/) page.",
-          "Your domain is not inside the monthly payments. You buy it yourself, around £5–£10 a year, so the address stays in your name.",
+          "Affordable website monthly payments, in this case, means the £750 pay monthly price or those three £500 schedules. Instalment plans on the £500 price have no interest and no setup fee. Pay monthly is a separate £750 price, not finance or credit.",
+          "The site you get is the same one as if you paid £500 at once: built from scratch, mobile, HTTPS, page titles, a contact form, Stripe payment links if you want them, help going live, the first year of hosting, and the first year of a standard domain. There’s a plain list on the [cheap website](/cheap-website-for-small-business/) page.",
+          "The first year of a standard domain is included in the £500, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.",
         ],
       },
       {
@@ -115,7 +116,7 @@ export const intentPages: IntentPage[] = [
       },
     ],
     faqs: [
-      ["Do the monthly plans cost more than £500 in total?", "No. £150 plus seven payments of £50 is £500. £100 plus four payments of £100 is £500. £166.67 plus £166.67 plus £166.66 is £500."],
+      ["Do the monthly plans cost more than £500 in total?", `The £500 instalment plans do not. £150 plus seven payments of £50 is £500. £100 plus four payments of £100 is £500. £166.67 plus £166.67 plus £166.66 is £500. ${instalmentPlansTotalNote}. Pay monthly is a separate £750 price, not finance or credit.`],
       ["When do I pick a plan?", "When you decide to go ahead. You can pay the £500 in one payment or use a plan. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio."],
       ["Is monthly care required?", "No. After the site is paid for you can take optional monthly care, typically £29–£50, or a full handover. It’s a choice, not a condition of the £500."],
     ],

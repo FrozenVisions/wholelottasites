@@ -26,7 +26,7 @@ const situations = [
   { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it mobile friendly", text: "If people have to pinch and zoom to phone you." },
   { to: "/cheap-website-for-small-business" as const, title: "Cheap website, £500", text: "What the fixed price includes, and what it doesn’t." },
-  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Three plans. Each one totals £500." },
+  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)." },
 ];
 
 export const Route = createFileRoute("/websites-for/")({

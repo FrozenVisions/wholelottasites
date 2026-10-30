@@ -8,7 +8,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
 import { GeoBlurb } from "@/components/site/Geo";
 import { MiniFixOffer } from "@/components/site/MiniFix";
-import { seo } from "@/lib/site-data";
+import { newWebsitePricing, seo } from "@/lib/site-data";
 
 const situations = [
   { to: "/website-built-from-scratch" as const, title: "Built from scratch", text: "A first website, or a replacement for a template." },
@@ -16,7 +16,7 @@ const situations = [
   { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it work on a phone", text: "If customers have to pinch and zoom." },
   { to: "/cheap-website-for-small-business" as const, title: "£500, explained", text: "A cheap website for a small business, and what that excludes." },
-  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Three plans. Every one totals £500." },
+  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)." },
 ] as const;
 
 export const Route = createFileRoute("/")({
@@ -42,7 +42,7 @@ function Home() {
               Websites, fixes, and your <span className="text-copper">Google listing</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">
-              A new small-business website, built from scratch, is £500. Look at sample sites first. A design for your business starts after the deposit. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
+              {newWebsitePricing.monthly}. {newWebsitePricing.upfront}. Same site either way, built from scratch. Look at sample sites first. A design for your business starts after the deposit. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button asChild variant="copper" size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
@@ -69,7 +69,7 @@ function Home() {
         <Heading
           eyebrow="What I do"
           title="Four ways to get help."
-          lead="A new website is £500. Fixes, Google Business Profile and monthly care are priced on their own. No ranking promises."
+          lead={`${newWebsitePricing.monthly}. ${newWebsitePricing.upfront}. Fixes, Google Business Profile and monthly care are priced on their own. No ranking promises.`}
         />
         <OfferCards />
         <p className="mt-8 max-w-3xl text-muted-foreground">
@@ -91,10 +91,12 @@ function Home() {
           </Reveal>
           <Reveal delay={100} className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
             <p className="eyebrow">Small business website</p>
-            <p className="mt-3 font-display text-5xl font-bold">£500</p>
+            <p className="mt-3 font-display text-3xl font-bold leading-snug">{newWebsitePricing.monthly}</p>
+            <p className="mt-3 text-xl font-semibold">{newWebsitePricing.upfront}</p>
             <p className="mt-2 text-muted-foreground">
-              A full custom website. <Link to="/pay-monthly-website" className="font-semibold text-primary hover:underline">Payment plans</Link> are available if you’d rather spread the cost. Fixes, Google Business Profile and care are <Link to="/pricing" className="font-semibold text-primary hover:underline">priced separately</Link>. Bigger businesses from around £1,200.
+              Same site and inclusions either way, including the first year of hosting and the first year of a standard domain. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Fixes, Google Business Profile and care are <Link to="/pricing" className="font-semibold text-primary hover:underline">priced separately</Link>. Bigger businesses from around £1,200.
             </p>
+            <p className="mt-2 text-muted-foreground">{newWebsitePricing.growth}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild><Link to="/pricing">See pricing</Link></Button>
               <Button asChild variant="outline"><a href="#included">What’s included</a></Button>

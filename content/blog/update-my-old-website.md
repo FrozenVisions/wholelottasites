@@ -51,15 +51,15 @@ A plumber’s update needs the jobs and the towns, on [websites for plumbers](/w
 
 ## Log in to the domain
 
-The domain, such as yourbusiness.co.uk, is the address, not the website. It costs around £5–£10 a year. Log in where you bought it, or find who can, before you commission a new site. Keep that domain and point it at the new site when the new one is ready. You do not need a second address just because the pages look dated.
+The domain, such as yourbusiness.co.uk, is the address, not the website. If you already own it, log in where you bought it, or find who can, before you commission a new site. Keep that domain and point it at the new site when the new one is ready. You do not need a second address just because the pages look dated. With a new website we cover the first year of a standard domain, registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.
 
-If you only have a free subdomain, or only a Facebook page, buy the domain in your name. I can help connect it. I don’t need the account to be mine.
+If you only have a free subdomain, or only a Facebook page, we can register a standard domain in your name. I can help connect it. I don’t need the account to be mine.
 
 ## When the honest update is a new site
 
 Replace the site if the phone checks failed, the form does not arrive, or every small change needs a developer you cannot reach. That is [a website built from scratch](/website-built-from-scratch/): your domain, your true words and your photos, not a new skin on the old builder.
 
-A small-business site is £500, the same figure as on the [pricing](/pricing/) page, whether it is your first or a replacement. A [pay monthly website](/pay-monthly-website/) spreads that £500 in one of three ways: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each totals £500. Nothing is added as interest.
+A small-business site is £500, the same figure as on the [pricing](/pricing/) page, whether it is your first or a replacement. A [pay monthly website](/pay-monthly-website/) spreads that £500 in one of three ways: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.
 
 Once the £500 is paid, monthly care is optional, typically £29–£50, or you can take a full handover. Care covers uptime and SSL checks and small edits, such as a changed number. It isn’t required, and it starts after payoff. Bigger projects — many more pages, a web app, or a shop with stock and shipping — are quoted from around £1,200. I will say so before you pay if that is the job.
 

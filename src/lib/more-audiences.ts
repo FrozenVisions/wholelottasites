@@ -172,7 +172,7 @@ export const moreAudiences: TradePage[] = [
       { title: "Services in one screen", text: "The kinds of work you want more of, named plainly, and the kinds you’re not taking." },
       { title: "Your own examples", text: "Projects you supply. I won’t pad the page with stock work or pretend an example design is a commission." },
       { title: "Hire me", text: "A short form: what they need, when, and how to reply. Phone and email if you want them." },
-      { title: "A proper address on the web", text: "Your own domain, bought by you for around £5–£10 a year, so the link is yours." },
+      { title: "A proper address on the web", text: "Your own domain, registered in your name. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year." },
       { title: "Invoices and payments", text: "If you take card payments, I’ll connect Stripe payment links from your account. The site doesn’t take a cut, because the Stripe account is yours." },
     ],
     pages: ["Home", "Services", "Work", "About", "Contact"],
@@ -183,7 +183,7 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["I only have two projects I can show. Is that enough?", "Yes. Two real examples beat a grid of placeholders. We can add more later."],
-      ["Can I pay monthly?", "Yes. The site is £500, or £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every plan totals £500."],
+      ["Can I pay monthly?", "Yes. £50 a month for 15 months (£750), or £500 up front. The £500 price can also be £150 then £50 a month for 7 months, £100 then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)."],
       ["Will you write the words?", "I’ll shape them into the page and fix anything that isn’t clear. I need the facts from you: what you do, who for, and which projects we can show. I won’t invent clients."],
     ],
   },
@@ -215,7 +215,7 @@ export const moreAudiences: TradePage[] = [
     faqs: [
       ["Can you build our app for £500?", "No. £500 is the marketing website. An application with accounts, payments or a database is a different project, quoted from around £1,200 after we’ve talked about what it has to do."],
       ["We don’t have customers yet. Is a site premature?", "A single clear page is still useful: it gives you an address to send people, and it forces the explanation into plain language. It doesn’t need a blog or a press page."],
-      ["Can we pay monthly?", "Yes. £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Each plan totals £500."],
+      ["Can we pay monthly?", "Yes. £50 a month for 15 months (£750), or £500 up front. The £500 price can also be £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)."],
     ],
   },
   {
@@ -235,7 +235,7 @@ export const moreAudiences: TradePage[] = [
       { title: "What you want known", text: "A short bio in your words. I won’t add awards, follower counts or job titles you didn’t give me." },
       { title: "Work you can show", text: "Optional. If you have projects, writing or photos that are yours to publish, they can go on the page. If you don’t, we leave the gap empty rather than filling it." },
       { title: "Contact on your terms", text: "A form, an email, or both. If you don’t want a public phone number, it stays off the page." },
-      { title: "A domain that is yours", text: "Often your name. You buy it, around £5–£10 a year, and I help you point it at the site when we launch." },
+      { title: "A domain that is yours", text: "Often your name. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year, and I help you point it at the site when we launch." },
     ],
     pages: ["Home", "About", "Work, if you have any", "Contact"],
     tips: [
@@ -244,7 +244,7 @@ export const moreAudiences: TradePage[] = [
       "A social link is fine. It shouldn’t be the only way to reach you.",
     ],
     faqs: [
-      ["Do I need a company to have a website?", "No. The £500 site is for a person as well as for a business. You still buy the domain in your own name."],
+      ["Do I need a company to have a website?", "No. The £500 site is for a person as well as for a business. The domain is registered in your name. We cover the first year of a standard domain."],
       ["Can it just be one page?", "Yes. If one page says who you are and how to get in touch, we don’t add empty sections to make it look bigger."],
       ["I might start a business later. Will I have to begin again?", "Not necessarily. We can add services and a business name later. Structural changes can be part of the care plan or quoted if they’re large. The domain, if it’s your name, can stay."],
     ],

@@ -4,7 +4,7 @@ import { Smartphone, Link2Off, ShieldAlert, SearchX, Check, ArrowUpRight, Chevro
 import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, type EnquiryHash, type Project } from "@/lib/site-data";
+import { problems, why, included, steps, stages, paymentPlans, faqs, offers, bundles, proofSites, newWebsitePricing, instalmentPlansTotalNote, type EnquiryHash, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
@@ -90,7 +90,7 @@ export function WhatsIncluded() {
       <div className="mt-8 max-w-3xl rounded-lg border bg-card p-6">
         <h3 className="text-xl font-semibold">Separate from the £500</h3>
         <ul className="mt-4 grid gap-3 text-muted-foreground">
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your domain, around £5–£10 a year. You buy it, so you own it.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Premium domains cost extra. You pay the renewal of a standard domain from year two, around £5–£10 a year. The domain is registered in your name.</li>
           <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly care is optional, typically £29–£50: uptime and SSL checks, small edits, a form check, and a nudge before the domain renews. Or a full handover.</li>
         </ul>
         <p className="mt-4 text-muted-foreground">
@@ -258,8 +258,8 @@ export function OfferCards() {
       {offers.map((offer) => (
         <article key={offer.id} id={offer.id} className="scroll-mt-28 flex flex-col rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
           <h3 className="font-display text-2xl font-semibold">{offer.title}</h3>
-          <p className="mt-4 font-display text-5xl font-bold leading-none">{offer.price}</p>
-          <p className="mt-3 text-sm font-semibold text-primary">{offer.priceNote}</p>
+          <p className={offer.id === "new-website" ? "mt-4 font-display text-2xl font-bold leading-snug md:text-3xl" : "mt-4 font-display text-5xl font-bold leading-none"}>{offer.price}</p>
+          <p className={offer.id === "new-website" ? "mt-3 text-lg font-semibold" : "mt-3 text-sm font-semibold text-primary"}>{offer.priceNote}</p>
           <p className="mt-4 text-muted-foreground">{offer.summary}</p>
           <ul className="mt-4 grid gap-2 text-sm text-muted-foreground">
             {offer.points.map((point) => (
@@ -334,7 +334,7 @@ export function BundleStrip() {
 export function DomainNote() {
   return (
     <p className="mt-8 max-w-3xl text-muted-foreground">
-      You buy your own domain (around £5–£10 a year) and you keep the account. Want to take payments? You set up your own Stripe account and I’ll connect it. Monthly care, typically £29–£50, is optional. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
+      We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two (around £5–£10 a year). Want to take payments? You set up your own Stripe account and I’ll connect it. Monthly care, typically £29–£50, is optional. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
     </p>
   );
 }
@@ -522,13 +522,21 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
   );
 }
 
-export function PaymentPlans() {
+export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFirst?: boolean }) {
   return (
     <div id="payment-plans" className="mt-16 scroll-mt-24">
+      {showPayMonthlyFirst && (
+        <div className="mb-10 max-w-3xl">
+          <p className="font-display text-3xl font-bold leading-snug md:text-4xl">{newWebsitePricing.monthly}</p>
+          <p className="mt-3 text-xl font-semibold">{newWebsitePricing.upfront}</p>
+        </div>
+      )}
       <Heading
-        eyebrow="Payment plans"
-        title="Rather spread the cost?"
-        lead="A full website is £500. If you’d rather not pay it all at once, pick one of these plans. Every plan adds up to exactly £500, with nothing extra on top."
+        eyebrow={showPayMonthlyFirst ? "The £500 price" : "Payment plans"}
+        title={showPayMonthlyFirst ? "Instalment plans for the £500." : "Rather spread the cost?"}
+        lead={showPayMonthlyFirst
+          ? `${instalmentPlansTotalNote}. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.`
+          : `The £500 price can be paid up front. If you’d rather not pay it all at once, pick one of these plans. ${instalmentPlansTotalNote}. Instalment plans on the £500 price have no interest. Pay monthly is a separate £750 price, not finance or credit.`}
       />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {paymentPlans.map((p) => (
@@ -543,7 +551,7 @@ export function PaymentPlans() {
       <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These plans pay off the £500 website. They are not monthly care. Care is optional, typically £29–£50, or you can take a full handover.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Your own domain is extra, at around £5–£10 a year.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> The first year of a standard domain is included. Premium domains cost extra. You pay the renewal from year two, at around £5–£10 a year.</li>
       </ul>
     </div>
   );

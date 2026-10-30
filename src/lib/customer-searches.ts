@@ -99,7 +99,7 @@ export const customerSearches: Record<string, CustomerSearch> = {
     who: "a startup",
     tradeSearch: "startup website",
     queries: ["your product name", "the problem the product solves"],
-    angle: "Early customers search for the problem or the product, not for “startup website”. A £500 site can explain the product and collect enquiries. A web application is a larger build, quoted from around £1,200.",
+    angle: "Early customers search for the problem or the product, not for “startup website”. A £200 + VAT (£240 inc VAT) site can explain the product and collect enquiries. A web application is a larger build, quoted from around £1,200.",
   },
   individuals: {
     who: "you",

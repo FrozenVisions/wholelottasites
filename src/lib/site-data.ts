@@ -37,7 +37,7 @@ export const SITE_URL = "https://wholelottasites.co.uk";
 
 /** Designed 1200×630 share card (title and description on the image), not the logo. */
 export const SHARE_IMAGE = `${SITE_URL}/og-image.jpg`;
-export const SHARE_IMAGE_ALT = "WholeLottaSites: websites built from scratch for UK small businesses. No templates. A full small-business website for £500.";
+export const SHARE_IMAGE_ALT = "WholeLottaSites: websites built from scratch for UK small businesses. No templates. Founding client offer: £200 + VAT (£240 inc VAT).";
 
 export function seo(path: string, title: string, description: string, options?: { type?: string }) {
   return {
@@ -80,23 +80,138 @@ export const why = [
   ["Made around your customers", "Layout and content shaped by what your customers actually need to find."],
 ] as const;
 
+function pounds(amount: number) {
+  return Number.isInteger(amount) ? `£${amount}` : `£${amount.toFixed(2)}`;
+}
+
+/**
+ * Founding-client new-website price. Change these numbers to retune the offer.
+ * Pages, FAQ and JSON-LD should read the strings below, not hard-code figures.
+ * foundingClients is the offer limit. Do not render a live “spots left” counter from it.
+ */
+export const newWebsiteOffer = {
+  exVatPounds: 200,
+  incVatPounds: 240,
+  monthlyIncVatPounds: 50,
+  monthlyExVatPounds: 41.67,
+  monthlyMonths: 12,
+  monthlyTotalIncVatPounds: 600,
+  foundingClients: 20,
+  promoteDiscountPounds: 50,
+  referralDiscountPounds: 50,
+  freeCareMonths: 3,
+  vinylUrl: "https://www.wholelottavinyl.com",
+  vinylFollowerPercent: 10,
+  vinylSpendPounds: 20,
+  vinylSpendCreditPounds: 10,
+  vinylCollectionCreditPounds: 50,
+  careFromPounds: 29,
+  gbpSetupPounds: 149,
+  launchDays: 7,
+  promoteFollowerMinimum: 1000,
+} as const;
+
+const oneOffExVat = `${pounds(newWebsiteOffer.exVatPounds)} + VAT`;
+const oneOffIncVat = `${pounds(newWebsiteOffer.incVatPounds)} inc VAT`;
+const monthlyIncVat = pounds(newWebsiteOffer.monthlyIncVatPounds);
+const monthlyExVat = pounds(newWebsiteOffer.monthlyExVatPounds);
+const monthlyTotalIncVat = pounds(newWebsiteOffer.monthlyTotalIncVatPounds);
+
+export const newWebsitePricing = {
+  name: "Founding client offer",
+  price: oneOffExVat,
+  priceNote: `${oneOffIncVat}, one-off`,
+  upfront: `${oneOffExVat} one-off (${oneOffIncVat})`,
+  monthly: `Or ${monthlyIncVat}/month inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyTotalIncVat} total, ${monthlyExVat} + VAT a month)`,
+  monthlyPlain: `${monthlyIncVat}/month inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyTotalIncVat} total, ${monthlyExVat} + VAT a month)`,
+  founding: `Founding client offer, for the first ${newWebsiteOffer.foundingClients} clients. I’m building up reviews, so those first ${newWebsiteOffer.foundingClients} get this price. In return, an honest Google review and permission to show the site in the portfolio once it’s live.`,
+  foundations:
+    "Cheap, and built to last: proper local SEO keywords, fast pages, a mobile-first layout, and solid foundations. That is the build, not a promise of a Google position or of leads.",
+  domain:
+    "The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.",
+  notCredit: "The monthly price is not finance or credit, and it is not the care plan.",
+  growth: "Want help growing it? Blog posts and SEO are an optional monthly extra on top - ask for a quote.",
+} as const;
+
+export const foundingBonuses = [
+  {
+    title: "Google Business Profile setup",
+    text: `Free Google Business Profile setup (normally ${pounds(newWebsiteOffer.gbpSetupPounds)}). You stay the owner. No ranking promises.`,
+  },
+  {
+    title: "Website care",
+    text: `${newWebsiteOffer.freeCareMonths} months free website care, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month.`,
+  },
+  {
+    title: "Review starter pack",
+    text: "A review starter pack: a QR code, plus review-request text and email scripts. Digital only.",
+  },
+  {
+    title: "Business email forwarding",
+    text: "Free business email forwarding on your domain, for example info@yourbusiness.co.uk forwarding to your existing inbox. Not a separate hosted mailbox.",
+  },
+  {
+    title: "Referral reward",
+    text: `${pounds(newWebsiteOffer.referralDiscountPounds)} off your website, or off care once the site is paid off, for every new WholeLottaSites customer who buys through your referral.`,
+  },
+  {
+    title: "Launch timing",
+    text: `Launch within ${newWebsiteOffer.launchDays} days of receiving your content.`,
+  },
+  {
+    title: "Tweaks before launch",
+    text: "We tweak until you’re happy before launch.",
+  },
+  {
+    title: "Promote us, save £50",
+    text: `Promote us, save ${pounds(newWebsiteOffer.promoteDiscountPounds)}. Businesses with 1,000 or more real followers on Facebook, Instagram or TikTok get ${pounds(newWebsiteOffer.promoteDiscountPounds)} off their website if they post about their new site, tagging WholeLottaSites, once it’s live, and keep a “Website by WholeLottaSites” footer link. The post must be labelled as an ad or paid partnership (UK ASA rules).`,
+  },
+  {
+    title: "WholeLottaVinyl partner bonus",
+    text: `WholeLottaVinyl partner bonus. You get a personal discount code for wholelottavinyl.com (${newWebsiteOffer.vinylUrl}) giving your followers ${newWebsiteOffer.vinylFollowerPercent}% off records. For every ${pounds(newWebsiteOffer.vinylSpendPounds)} your followers spend with that code, you get ${pounds(newWebsiteOffer.vinylSpendCreditPounds)} off your website, and ${pounds(newWebsiteOffer.vinylCollectionCreditPounds)} off for every record collection sold to WholeLottaVinyl through you. Credit can’t take the price below £0. Anything above that comes off care.`,
+    href: newWebsiteOffer.vinylUrl,
+  },
+] as const;
+
+export const foundingBonusesText = foundingBonuses.map((bonus) => bonus.text).join(" ");
+
+/** Same wording for landing FAQs, so the price does not drift. */
+export const newWebsitePriceAnswer =
+  `${newWebsitePricing.founding} A full new website is ${newWebsitePricing.upfront}. ${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.notCredit} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} Monthly payments are taken automatically by card through Stripe. ${foundingBonusesText}`;
+
+export const websitePaymentOptions = [
+  {
+    name: "One-off",
+    headline: oneOffExVat,
+    detail: oneOffIncVat,
+    total: oneOffIncVat,
+  },
+  {
+    name: "Pay monthly",
+    headline: `${monthlyIncVat}/month`,
+    detail: `inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyExVat} + VAT a month)`,
+    total: `${monthlyTotalIncVat} inc VAT`,
+  },
+] as const;
+
 export const included = [
   ["Custom design, built from scratch", "Designed and coded around your business, not a theme shared with other companies."],
   ["Fully mobile responsive", "Laid out for a phone first, so people can read it and tap to call without zooming."],
   ["Secure HTTPS", "The padlock browsers expect, with no “not secure” warning."],
   ["SEO titles & descriptions", "Every page gets a proper title and description, so the page says what it is about."],
+  ["Local SEO keywords", "Proper local keywords for what you do and where you work, written into the pages. Fast, mobile-first, and built to last. Not a promise of a Google position or of leads."],
   ["Contact form and links", "A form that reaches you, plus your phone number, email and any links you want shown."],
   ["Stripe payment links connected, if you want them", "If you take payments, you set up your own Stripe account and I’ll connect the payment links."],
   ["Help going live", "I help you point your domain at the new site and check it before you send people there."],
-  ["First year of hosting included", "The first year of hosting is included with a new website."],
-  ["First year of a standard domain included", "We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two. The domain is registered in your name."],
+  ["First year of hosting included", "The first year of hosting is included with a new website. From year two you pay hosting, or monthly care."],
+  ["First year of a standard low-cost domain included", "We cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name."],
 ] as const;
 
 export const steps = [
   ["Samples", "Look at live sites and example designs. That’s what you see before a deposit."],
   ["Deposit", "A design for your business starts once the deposit is in. We agree the pages."],
-  ["Built in days", "I build the full site from scratch, usually within days of that."],
-  ["Go live", "I help you connect your domain and launch."],
+  ["Built to launch", `I build the full site from scratch. A founding client launches within ${newWebsiteOffer.launchDays} days of receiving the content.`],
+  ["Go live", "We tweak until you’re happy before launch. Then I help you connect your domain."],
 ] as const;
 
 /** Short homepage version, and the longer copy used on the how-it-works page and in HowTo structured data. */
@@ -104,7 +219,7 @@ export const stages = [
   {
     title: "Sample",
     summary: "Before a deposit, you look at sample sites. Not a design made for your business.",
-    body: "The portfolio is the sample: live sites and example designs. A personalised design starts after the deposit, not before. Tell me what the business does when you get in touch, and I’ll say whether the £500 site is the right job.",
+    body: `The portfolio is the sample: live sites and example designs. A personalised design starts after the deposit, not before. Tell me what the business does when you get in touch, and I’ll say whether the founding-price site (${newWebsitePricing.upfront}) is the right job.`,
     points: [
       "Sample sites you can open today",
       "No custom homepage before the deposit",
@@ -113,8 +228,8 @@ export const stages = [
   },
   {
     title: "Build",
-    summary: "After the deposit, I design and build the full site from scratch, usually within days.",
-    body: "Once the deposit is in, I design and build the full site from scratch, usually within days. For a small business that is typically a home page, your services, an about page and contact — the pages we agreed. It’s laid out for phones, served over HTTPS, with a title and description on every page and a form that reaches you. If you want to take card payments, you set up your own Stripe account and I connect the payment links.",
+    summary: `After the deposit, I design and build the full site from scratch. Launch is within ${newWebsiteOffer.launchDays} days of receiving your content.`,
+    body: `Once the deposit is in, I design and build the full site from scratch. Launch is within ${newWebsiteOffer.launchDays} days of receiving your content, and we tweak until you’re happy before launch. For a small business that is typically a home page, your services, an about page and contact — the pages we agreed. It’s laid out for phones first, kept fast, and served over HTTPS, with proper local SEO keywords, a title and description on every page, and a form that reaches you. If you want to take card payments, you set up your own Stripe account and I connect the payment links. That is solid foundations, not a promise of a Google position or of leads.`,
     points: [
       "The pages we agreed, built from scratch",
       "Mobile layout, HTTPS, page titles and a contact form",
@@ -123,39 +238,15 @@ export const stages = [
   },
   {
     title: "Launch",
-    summary: "I help you connect your domain and go live.",
-    body: "I help you point your domain at the site and check it on a phone before you share the address. We cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra, and you pay the renewal from year two, at around £5–£10 a year. The first year of hosting is included. Pay monthly: £50/month for 15 months (£750 total). Or pay £500 up front and save £250. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Once it’s paid for, monthly care is optional, typically £29–£50, or you can take a full handover.",
+    summary: "We tweak until you’re happy, then I help you connect your domain and go live.",
+    body: `I help you point your domain at the site and check it on a phone before you share the address. ${newWebsitePricing.domain} ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. ${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.notCredit} ${foundingBonusesText}`,
     points: [
       "Help connecting the domain you own",
-      "A check on a phone before you announce it",
-      "Then optional monthly care, or a full handover",
+      "Tweaks until you’re happy, before launch",
+      `${newWebsiteOffer.freeCareMonths} months free website care, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month`,
     ],
   },
 ] as const;
-
-export const paymentPlans = [
-  { name: "Plan 1", headline: "£150 up front", detail: "then £50 a month for 7 months" },
-  { name: "Plan 2", headline: "£100 up front", detail: "then £100 a month for 4 months" },
-  { name: "Plan 3", headline: "3 payments", detail: "of £166.67, £166.67 and £166.66" },
-] as const;
-
-/** Separate from the £500 instalment plans. Not finance or credit. */
-export const payMonthlyPlan = {
-  name: "Pay monthly",
-  payments: 15,
-  amount: "£50",
-  total: "£750",
-} as const;
-
-export const instalmentPlansTotalNote =
-  `Every £500 instalment plan totals exactly £500; the pay monthly option is ${payMonthlyPlan.amount} a month for ${payMonthlyPlan.payments} months (${payMonthlyPlan.total})`;
-
-/** Shown first on the new-website package. The £500 price, and its instalment plans, stay second. */
-export const newWebsitePricing = {
-  monthly: `Pay monthly: ${payMonthlyPlan.amount}/month for ${payMonthlyPlan.payments} months (${payMonthlyPlan.total} total)`,
-  upfront: "Or pay £500 up front and save £250",
-  growth: "Want help growing it? Blog posts and SEO are an optional monthly extra on top - ask for a quote.",
-} as const;
 
 /** Contact-form anchors. The hash sets which enquiry the form opens on. */
 export type EnquiryHash = "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle" | "mini-fix";
@@ -172,16 +263,16 @@ export const offers = [
   {
     id: "new-website",
     title: "New website or store",
-    price: newWebsitePricing.monthly,
-    priceNote: newWebsitePricing.upfront,
+    price: newWebsitePricing.price,
+    priceNote: `${newWebsitePricing.priceNote}. ${newWebsitePricing.monthlyPlain}.`,
     summary:
-      "The same site either way: a brochure site or a small shop, built from scratch. Before a deposit, you look at sample sites. A design for your business starts after that. The first year of hosting is included, and we cover the first year of a standard domain. It’s registered in your name.",
+      `${newWebsitePricing.founding} The same site either way: a brochure site or a small shop, built from scratch. Cheap, and built to last. Before a deposit, you look at sample sites. A design for your business starts after that. ${newWebsitePricing.domain}`,
     points: [
-      "Instalment plans for the £500: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66.",
+      newWebsitePricing.notCredit,
+      newWebsitePricing.foundations,
       "Bigger businesses are quoted from around £1,200.",
       "Stripe payment links if you want them. You set up your own Stripe account.",
-      "First year of hosting included.",
-      "First year of a standard domain included. Premium domains cost extra. You pay the renewal from year two, around £5–£10 a year.",
+      newWebsitePricing.domain,
       newWebsitePricing.growth,
     ],
     cta: "Ask about a new site",
@@ -197,7 +288,7 @@ export const offers = [
     points: [
       "WordPress, Wix, Squarespace, Shopify, custom HTML, or a rebuild from scratch.",
       "The audit is free. The price comes after it, not before.",
-      "A small-business rebuild is £500, the same as a new site.",
+      `A small-business rebuild is ${newWebsitePricing.upfront}, the same founding price as a new site.`,
     ],
     cta: "Get a free fix audit",
     hash: "fix-audit",
@@ -223,11 +314,11 @@ export const offers = [
     price: "£29–£50",
     priceNote: "A month. Optional.",
     summary:
-      "Uptime and SSL checks, small copy or photo edits, a check that the form still reaches you, and a nudge before the domain renews. It isn’t required with a new site or a fix.",
+      `Uptime and SSL checks, small copy or photo edits, a check that the form still reaches you, and a nudge before the domain renews. A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month. A fix does not include care.`,
     points: [
       "Say when you want to stop, and I’ll confirm how we end it.",
       "You can also take a full handover of a site I built, and skip care.",
-      "Care is separate from the £500 payment plans. Those plans pay off the website.",
+      `The ${monthlyIncVat} a month for ${newWebsiteOffer.monthlyMonths} months pays for the website. It is not the care plan.`,
     ],
     cta: "Ask about care",
     hash: "care",
@@ -250,7 +341,7 @@ export const bundles = [
   },
   {
     name: "Site + Google Business Profile",
-    text: "The £500 website, plus Google Business Profile setup at £149, so the site and the listing match.",
+    text: `The founding-price website (${newWebsitePricing.upfront}) already includes Google Business Profile setup. Bought on its own, setup is still £149, so the site and the listing match.`,
   },
   {
     name: "Fix + Google Business Profile",
@@ -263,26 +354,27 @@ export const bundles = [
 ] as const;
 
 export const faqs = [
-  ["What is the £100 website mini-fix?", "For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £100 is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at £500. It is not a promise of a Google position."],
-  ["Who owns the domain?", "You do. The domain is registered in your name. We cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two, around £5–£10 a year. I’ll help you point it at the site. I don’t need to own it."],
-  ["Is the domain included?", "Yes, we cover the first year of a standard domain. Premium domains cost extra, and you pay the renewal from year two. The domain is registered in your name."],
-  ["Can I pay monthly?", "Yes. £50 a month for 15 months, or £500 up front if you’d rather save. Instalment plans for the £500 are still available."],
-  ["Can I pay monthly for a new website?", "Yes. You can spread the £500 up-front price: £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Monthly payments are taken automatically by card through Stripe. Those payments are paying off the website. They are not the care plan."],
-  ["What does the £500 include?", "A custom site built from scratch, a mobile layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, help going live, the first year of hosting, and the first year of a standard domain. Premium domains cost extra, and you pay the domain renewal from year two, around £5–£10 a year. Monthly care is optional after that, typically £29–£50, or you can take a full handover."],
-  ["Is hosting included?", "Yes, the first year of hosting is included with a new website. After that it’s covered by monthly care (from £29/month) or we can quote hosting on its own."],
-  ["How do you price a website fix?", "I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, I’ll quote a rebuild instead — £500 for a small business — before you agree to anything."],
-  ["Who owns the Google Business Profile?", "You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix is £149. Optional monthly management is £99–£150."],
+  ["What is the £100 website mini-fix?", `For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £100 is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at ${newWebsitePricing.upfront}. It is not a promise of a Google position.`],
+  ["Who owns the domain?", "You do. The domain is registered in your name. We cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. I’ll help you point it at the site. I don’t need to own it."],
+  ["Is the domain included?", "Yes, we cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name."],
+  ["Can I pay monthly?", `${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. ${newWebsitePricing.notCredit} ${newWebsitePricing.founding}`],
+  ["Can I pay monthly for a new website?", `Yes. ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Monthly payments are taken automatically by card through Stripe. Those payments are paying for the website. They are not the care plan. ${newWebsitePricing.notCredit}`],
+  ["What does the founding website price include?", `A custom site built from scratch, with solid foundations: proper local SEO keywords, fast pages, a mobile-first layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. ${newWebsitePricing.domain} ${newWebsitePricing.founding} ${foundingBonusesText}`],
+  ["What are the founding client bonuses?", foundingBonusesText],
+  ["Is hosting included?", `Yes, the first year of hosting is included with a new website. From year two you pay hosting, or monthly care (from ${pounds(newWebsiteOffer.careFromPounds)}/month).`],
+  ["How do you price a website fix?", `I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £100 mini-fix. If patching is a false economy, I’ll quote a rebuild instead — ${newWebsitePricing.upfront} for a small business — before you agree to anything.`],
+  ["Who owns the Google Business Profile?", `You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix on its own is £149. It is included free with a founding-client website. Optional monthly management is £99–£150. No ranking promises.`],
   ["Do you promise a Google ranking?", "No. I don’t promise a position on Google or Maps, and I won’t say you’re “#1”. A clear website and a looked-after Business Profile make you easier to find. They don’t guarantee where you appear."],
-  ["Is monthly care required?", "No. Care is optional, typically £29–£50 a month. You can take a new site or a fix without it. It covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Say when you want to stop and I’ll confirm how we end it."],
+  ["Is monthly care required?", `A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free. After that, care is optional, from ${pounds(newWebsiteOffer.careFromPounds)}/month (the usual range is £29–£50). A fix does not include it. Care covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Say when you want to stop and I’ll confirm how we end it.`],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
-  ["How long does a new site take?", "Usually built within days of the deposit and an agreed direction."],
+  ["How long does a new site take?", `A founding client launches within ${newWebsiteOffer.launchDays} days of receiving the content. We tweak until you’re happy before launch.`],
   ["Can I make edits later?", "Yes. Small copy or photo edits can sit on optional monthly care, typically £29–£50, or as a one-off if we’ve agreed it."],
   ["Do I get a free design before I pay?", "No. Before a deposit you can look at sample sites — live sites and example designs. A design for your business starts after the deposit. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price."],
   ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
   ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],
   ["Is GEO the same as SEO?", "Related, not the same. SEO is mostly about search results. GEO is about being clear enough that AI assistants can describe your business correctly when someone asks. Both need honest titles, real contact details, and pages that say what you do."],
   ["Do you invent reviews or traffic numbers?", "No. I name sites I’ve built, and I don’t attach testimonials, rankings or visit counts. The portfolio is screenshots. Live addresses I link: wholelottavinyl.com, safeplate.org.uk, mcdecoratingni.co.uk and vinylbuyback.co.uk."],
-  ["Is GEO included in the £500 site?", "Yes. Clear entity copy, service pages and contact paths are part of a normal build. A rescue or rebuild can add the same clarity if the old site was vague. The East Midlands £100 mini-fix is one agreed fix only; GEO rewrite of a whole site is quoted separately."],
+  ["Is GEO included in the founding-price site?", "Yes. Clear entity copy, service pages and contact paths are part of a normal build. A rescue or rebuild can add the same clarity if the old site was vague. The East Midlands £100 mini-fix is one agreed fix only; GEO rewrite of a whole site is quoted separately."],
 ] as const;
 
 export type Project = {

@@ -1,6 +1,6 @@
-// TODO: Paste your Stripe Payment Link here (e.g. "https://buy.stripe.com/xxxx").
-// While empty, the "Pay deposit / buy" button scrolls to the mock-up form instead.
-export const STRIPE_PAYMENT_LINK = "";
+/** Founding-offer checkout. Pay monthly is the primary button. */
+export const STRIPE_PAY_MONTHLY_URL = "https://buy.stripe.com/14AcN7gpYcr8c09aSe5Vu0c";
+export const STRIPE_ONE_OFF_URL = "https://buy.stripe.com/4gM00l2z862Kggp5xU5Vu0d";
 
 // FormSubmit endpoint for the enquiry form (plain HTML POST).
 export const FORM_ENDPOINT = "https://formsubmit.co/chris@wholelottasites.co.uk";

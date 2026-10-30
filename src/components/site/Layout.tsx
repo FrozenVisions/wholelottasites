@@ -4,7 +4,9 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config";
 import { posts } from "@/lib/blog";
+import { STRIPE_PAY_MONTHLY_URL } from "@/config";
 import { GBP_SETUP_PRICE } from "@/lib/google-business-profile";
+import { newWebsitePricing } from "@/lib/site-data";
 
 export const navLinks = [
   { to: "/services", label: "Services" },
@@ -24,7 +26,7 @@ export const serviceLinks = [
   { to: "/website-mini-fix" as const, label: "£100 East Midlands mini-fix" },
   { to: "/google-business-profile" as const, label: `Google Business Profile, ${GBP_SETUP_PRICE}` },
   { to: "/mobile-friendly-website" as const, label: "Mobile-friendly website" },
-  { to: "/cheap-website-for-small-business" as const, label: "Cheap website, £500" },
+  { to: "/cheap-website-for-small-business" as const, label: `Cheap website, ${newWebsitePricing.price}` },
   { to: "/pay-monthly-website" as const, label: "Pay monthly website" },
 ] as const;
 
@@ -196,7 +198,7 @@ export function Footer() {
           <p className="font-display text-2xl font-bold">WholeLottaSites</p>
           <p className="mt-2 text-sm text-navy-foreground/85">{CONTACT.name} – {CONTACT.role}</p>
           <p className="text-sm text-navy-foreground/85">{CONTACT.location}</p>
-          <p className="mt-4 max-w-xs text-sm text-navy-foreground/85">Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new small site is £500, built from scratch.</p>
+          <p className="mt-4 max-w-xs text-sm text-navy-foreground/85">Websites, fixes, Google Business Profile and monthly care for UK small businesses. A new small site is {newWebsitePricing.upfront}, built from scratch.</p>
         </div>
         <nav aria-label="Footer">
           <p className="eyebrow text-copper">Pages</p>
@@ -217,7 +219,7 @@ export function Footer() {
             {posts.map((post) => (
               <li key={post.slug}><Link to="/blog/$slug" params={{ slug: post.slug }} className="text-navy-foreground/85 hover:text-copper">{post.title}</Link></li>
             ))}
-            <li><Link to="/cheap-website-for-small-business" className="text-navy-foreground/85 hover:text-copper">Cheap website, £500</Link></li>
+            <li><Link to="/cheap-website-for-small-business" className="text-navy-foreground/85 hover:text-copper">Cheap website, {newWebsitePricing.price}</Link></li>
             <li><Link to="/pay-monthly-website" className="text-navy-foreground/85 hover:text-copper">Pay monthly website</Link></li>
             <li><Link to="/website-redesign" className="text-navy-foreground/85 hover:text-copper">Website redesign</Link></li>
             <li><Link to="/website-mini-fix" className="text-navy-foreground/85 hover:text-copper">£100 East Midlands mini-fix</Link></li>
@@ -248,7 +250,7 @@ export function StickyMobileCta() {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-navy-foreground/15 bg-navy/95 px-4 py-3 backdrop-blur lg:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
       <div className="mx-auto flex max-w-xl items-center gap-3">
         <Button asChild variant="copper" className="flex-1">
-            <Link to="/contact" hash="mockup-form">Ask about a new site</Link>
+            <a href={STRIPE_PAY_MONTHLY_URL}>Pay monthly, £50</a>
         </Button>
         <Button asChild variant="navyOutline" className="shrink-0">
           <a href={CONTACT.phoneHref} aria-label={`Call ${CONTACT.phoneDisplay}`}>Call</a>

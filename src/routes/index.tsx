@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, Heading, JourneyBand, WhatsIncluded, OfferCards } from "@/components/site/Sections";
+import { Section, Heading, JourneyBand, WhatsIncluded, OfferCards, FoundingBanner, BuyButtons } from "@/components/site/Sections";
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { SitesBuiltStrip } from "@/components/site/SitesBuilt";
 import { Reveal } from "@/components/site/Reveal";
@@ -15,16 +15,16 @@ const situations = [
   { to: "/website-redesign" as const, title: "Fix or redesign", text: "A free audit first. A rebuild if patching won’t hold." },
   { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it work on a phone", text: "If customers have to pinch and zoom." },
-  { to: "/cheap-website-for-small-business" as const, title: "£500, explained", text: "A cheap website for a small business, and what that excludes." },
-  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)." },
+  { to: "/cheap-website-for-small-business" as const, title: "£200 + VAT, explained", text: "A cheap website for a small business, and what that excludes." },
+  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "£50 a month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT) one-off." },
 ] as const;
 
 export const Route = createFileRoute("/")({
   head: () => ({
     ...seo(
       "/",
-      "Websites, Fixes & Google | £500 or £100 Fix",
-      "New sites £500. East Midlands £100 mini-fix for one live-site fix. Google Business Profile and optional care. Chris Faulkes, Mansfield. No ranking promises.",
+      "Websites, Fixes & Google | £200 + VAT or £100 Fix",
+      "Founding client offer: £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months. East Midlands £100 mini-fix. No ranking promises.",
     ),
   }),
   component: Home,
@@ -42,10 +42,10 @@ function Home() {
               Websites, fixes, and your <span className="text-copper">Google listing</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">
-              {newWebsitePricing.monthly}. {newWebsitePricing.upfront}. Same site either way, built from scratch. Look at sample sites first. A design for your business starts after the deposit. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
+              {newWebsitePricing.founding} {newWebsitePricing.upfront}. {newWebsitePricing.monthlyPlain}. Same site either way, cheap and built to last. Look at sample sites first. A design for your business starts after the deposit. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Button asChild variant="copper" size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
+              <BuyButtons onNavy />
               <Button asChild variant="navyOutline" size="lg"><Link to="/contact" hash="fix-audit">Free fix audit</Link></Button>
             </div>
             <p className="mt-4 text-sm text-navy-foreground/80">
@@ -62,6 +62,10 @@ function Home() {
           <DeviceMockup />
         </div>
       </section>
+
+      <Section className="!py-12">
+        <FoundingBanner />
+      </Section>
 
       <TrustStrip />
 
@@ -91,10 +95,10 @@ function Home() {
           </Reveal>
           <Reveal delay={100} className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
             <p className="eyebrow">Small business website</p>
-            <p className="mt-3 font-display text-3xl font-bold leading-snug">{newWebsitePricing.monthly}</p>
+            <p className="mt-3 font-display text-3xl font-bold leading-snug">{newWebsitePricing.monthlyPlain}</p>
             <p className="mt-3 text-xl font-semibold">{newWebsitePricing.upfront}</p>
             <p className="mt-2 text-muted-foreground">
-              Same site and inclusions either way, including the first year of hosting and the first year of a standard domain. Instalment plans for the £500 are £150 up front then £50 a month for 7 months, £100 up front then £100 a month for 4 months, or three payments of £166.67, £166.67 and £166.66. Fixes, Google Business Profile and care are <Link to="/pricing" className="font-semibold text-primary hover:underline">priced separately</Link>. Bigger businesses from around £1,200.
+              {newWebsitePricing.foundations} {newWebsitePricing.domain} Fixes, Google Business Profile on its own and care are <Link to="/pricing" className="font-semibold text-primary hover:underline">priced separately</Link>. Bigger businesses from around £1,200.
             </p>
             <p className="mt-2 text-muted-foreground">{newWebsitePricing.growth}</p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -142,7 +146,7 @@ function Home() {
       </Section>
 
       <Section>
-        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The £500 price for a small site is. A live East Midlands site that only needs one fix is the £100 mini-fix." />
+        <Heading eyebrow="By business" title="Websites shaped around the work you do." lead="Trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. The pages aren’t the same. The founding price for a small site is. A live East Midlands site that only needs one fix is the £100 mini-fix." />
         <Link to="/websites-for" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           Browse websites by type of business <ArrowRight className="size-4" aria-hidden />
         </Link>

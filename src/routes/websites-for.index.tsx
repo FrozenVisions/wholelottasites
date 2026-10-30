@@ -25,13 +25,13 @@ const situations = [
   { to: "/website-redesign" as const, title: "Website redesign", text: "When the old site is in the way, including a straight update." },
   { to: "/website-mini-fix" as const, title: "£100 mini-fix", text: "One concrete fix on a live East Midlands site. Not a rebuild." },
   { to: "/mobile-friendly-website" as const, title: "Make it mobile friendly", text: "If people have to pinch and zoom to phone you." },
-  { to: "/cheap-website-for-small-business" as const, title: "Cheap website, £500", text: "What the fixed price includes, and what it doesn’t." },
-  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750)." },
+  { to: "/cheap-website-for-small-business" as const, title: "Cheap website, £200 + VAT (£240 inc VAT)", text: "What the fixed price includes, and what it doesn’t." },
+  { to: "/pay-monthly-website" as const, title: "Pay monthly", text: "£50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT)." },
 ];
 
 export const Route = createFileRoute("/websites-for/")({
   head: () => ({
-    ...seo("/websites-for", "Websites for Small Businesses by Trade | WholeLottaSites", "Websites for small businesses: trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. Built from scratch for £500."),
+    ...seo("/websites-for", "Websites for Small Businesses by Trade | WholeLottaSites", "Websites for small businesses: trades, restaurants, salons, gyms, shops, consultants, freelancers, startups and individuals. Built from scratch for £200 + VAT (£240 inc VAT)."),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Websites", path: "/websites-for" }])),
       jsonLd(faqJsonLd(hubFaqs)),
@@ -46,7 +46,7 @@ function Hub() {
       <PageHero
         eyebrow="Websites by type of business"
         title="Websites for small businesses."
-        lead="A plumber, a restaurant, a consultant and a sole trader don’t need the same pages. Here’s what I build for each, from scratch, for £500. These pages are for the business owner — not for their customers."
+        lead="A plumber, a restaurant, a consultant and a sole trader don’t need the same pages. Here’s what I build for each, from scratch, for £200 + VAT (£240 inc VAT). These pages are for the business owner — not for their customers."
         crumbs={[{ name: "Home", href: "/" }, { name: "Websites" }]}
       />
       {groups.map((group) => (

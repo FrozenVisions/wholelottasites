@@ -21,7 +21,7 @@ export const miniFixFaqs = [
   ],
   [
     "What if the site needs more than one fix?",
-    "I quote that separately. A normal rescue is usually around £150–£400. A rebuild is the £500 small-business website. I won’t stretch the £100 job into either of those.",
+    "I quote that separately. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business website. I won’t stretch the £100 job into either of those.",
   ],
   [
     "Where is the mini-fix available?",
@@ -33,6 +33,6 @@ export const miniFixFaqs = [
   ],
   [
     "What can I add after the fix?",
-    "If you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site at £500. None of that is included in the £100.",
+    "If you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site at £200 + VAT (£240 inc VAT). None of that is included in the £100.",
   ],
 ] as const;

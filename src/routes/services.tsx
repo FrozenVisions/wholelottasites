@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { GeoBlurb } from "@/components/site/Geo";
 import { MiniFixOffer } from "@/components/site/MiniFix";
-import { PageHero, Section, Heading, WhyGrid, WhatsIncluded, ProblemsGrid, OfferCards } from "@/components/site/Sections";
+import { PageHero, Section, Heading, WhyGrid, WhatsIncluded, ProblemsGrid, OfferCards, FoundingBanner } from "@/components/site/Sections";
 import { Button } from "@/components/ui/button";
 import { SiteLinks } from "@/components/site/SiteLinks";
 import { newWebsitePricing, seo } from "@/lib/site-data";
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/services")({
     ...seo(
       "/services",
       "Websites, Fixes, Google & Care | WholeLottaSites",
-      "Pay monthly: £50/month for 15 months (£750 total). Or pay £500 up front and save £250. East Midlands mini-fix £100. Fixes typically £150–£400. Google Business Profile £149. Optional care £29–£50.",
+      "Founding client offer: £50 a month inc VAT for 12 months (£600), or £200 + VAT (£240 inc VAT). East Midlands mini-fix £100. Fixes typically £150–£400. Google Business Profile £149. Optional care from £29.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]))],
   }),
@@ -23,9 +23,10 @@ export const Route = createFileRoute("/services")({
 function Services() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.monthly}. ${newWebsitePricing.upfront}. Same site either way, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £100 East Midlands mini-fix when a live site only needs one change.`} crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
+      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Same site either way, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £100 East Midlands mini-fix when a live site only needs one change.`} crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
       <Section className="!pt-4">
-        <Heading eyebrow="Four offers" title="The job that matches where you are." lead="The domain is registered in your name. We cover the first year of a standard domain. You stay the owner of your Google listing. Care is optional. I don’t promise a ranking." />
+        <FoundingBanner />
+        <Heading eyebrow="Four offers" title="The job that matches where you are." lead={`${newWebsitePricing.domain} You stay the owner of your Google listing. Care after the included months is optional. I don’t promise a ranking.`} />
         <OfferCards />
         <p className="mt-8 max-w-3xl text-muted-foreground">
           Prefer them together? Fix + care, Site + Google Business Profile, Fix + Google Business Profile, or Full (a site or a fix, Google management, and care) are on the{" "}

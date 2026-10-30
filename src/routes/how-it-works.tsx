@@ -46,7 +46,7 @@ function HowItWorks() {
           <CheckList items={["A logo, if you already use one", "Photos of your work, premises or van", "The towns you cover, or your address and hours", "A domain, if you already own one"]} />
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
-            <Button asChild size="lg" variant="outline"><Link to="/pricing">See the £500 and the plans</Link></Button>
+            <Button asChild size="lg" variant="outline"><Link to="/pricing">See the founding price</Link></Button>
           </div>
         </div>
       </Section>

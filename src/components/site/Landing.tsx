@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, Heading, PaymentPlans, DomainNote, StepsBand } from "@/components/site/Sections";
+import { Section, Heading, PaymentPlans, DomainNote, StepsBand, FoundingBanner } from "@/components/site/Sections";
 import { trades, type Faq } from "@/lib/landing-data";
 import { customerSearches } from "@/lib/customer-searches";
 import { RichText } from "@/components/site/RichText";
@@ -65,10 +65,11 @@ export function LandingCta({ label }: { label: string }) {
 export function PriceBlock() {
   return (
     <>
+      <FoundingBanner />
       <PaymentPlans />
       <DomainNote />
       <p className="mt-4 text-muted-foreground">See the <Link to="/pricing" className="font-semibold text-primary underline-offset-4 hover:underline">full pricing page</Link> for what’s included.</p>
-      <p className="mt-4 text-muted-foreground">Already got a live site in the East Midlands and only one thing is broken? The <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">£100 website mini-fix</Link> is a short audit and one fix. It is not this £500 rebuild.</p>
+      <p className="mt-4 text-muted-foreground">Already got a live site in the East Midlands and only one thing is broken? The <Link to="/website-mini-fix" className="font-semibold text-primary underline-offset-4 hover:underline">£100 website mini-fix</Link> is a short audit and one fix. It is not this founding-price rebuild.</p>
     </>
   );
 }

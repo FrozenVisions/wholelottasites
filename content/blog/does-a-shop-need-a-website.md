@@ -1,7 +1,7 @@
 ---
 title: Does a local shop need a website?
 seoTitle: Does a Local Shop Need a Website? | WholeLottaSites
-description: Does a shop need a website? Hours, what you sell and how to find the door, in text a customer can read on a phone. What to publish, and the £500 price.
+description: Does a shop need a website? Hours, what you sell and how to find the door, in text a customer can read on a phone. What to publish, and the £200 + VAT (£240 inc VAT) price.
 date: 2026-10-29
 keyword: does a shop need a website
 slug: does-a-shop-need-a-website
@@ -13,7 +13,7 @@ A full online shop, with live stock, a basket and shipping rules, is a different
 
 ## An address you control
 
-A Facebook page, an Instagram grid or a marketplace listing can still earn its place. None of those is an address you own. A domain such as yourshop.co.uk is the address, not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. You pay the renewal from year two, at around £5–£10 a year.
+A Facebook page, an Instagram grid or a marketplace listing can still earn its place. None of those is an address you own. A domain such as yourshop.co.uk is the address, not the website. With a new website we cover the first year of a standard domain, and it’s registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.
 
 Hours left in a comment get buried. A photo of the window does not say whether you close on Monday, or whether there is a step at the door. Your own page is the link you can put on the bag, the window and your Google listing.
 
@@ -43,17 +43,15 @@ If you want me to set the profile up, or fix the one you have, that is £149, on
 
 ## What it costs
 
-A new small-business website is £500, the same figure as on the [pricing](/pricing/) page. It is the price of the website, not a deposit on a larger bill.
+A new small-business website is £200 + VAT (£240 inc VAT), the same figure as on the [pricing](/pricing/) page. It is the price of the website, not a deposit on a larger bill.
 
-The [pay monthly website](/pay-monthly-website/) page has the schedules. Every £500 instalment plan totals exactly £500; the pay monthly option is £50 a month for 15 months (£750). Instalment plans on the £500 price have no interest and no setup fee. Pay monthly is a separate £750 price, not finance or credit. Monthly payments are taken automatically by card through Stripe.
+A new small-business website is the founding client offer on the [pricing](/pricing/) page: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, which is £41.67 + VAT a month). It’s for the first 20 clients. I’m building up reviews, so those first 20 get this price, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The monthly price is not finance or credit, and it is not the care plan. The site is cheap and built to last: proper local SEO keywords, fast pages, and a mobile-first layout. That is not a promise of a Google position or of leads. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding-client website includes 3 months free care, then optional care from £29/month. Refer a new customer who buys and you get £50 off the website, or off care once the site is paid off. The other founding bonuses, including the WholeLottaVinyl partner bonus, are on the pricing page.
 
-- **£150 up front, then £50 a month for 7 months.** £150 plus seven payments of £50 is £500.
-- **£100 up front, then £100 a month for 4 months.** £100 plus four payments of £100 is £500.
-- **Three payments of £166.67, £166.67 and £166.66.** The last payment is one penny less than the first two, so the three add up to £500.
 
-What the £500 includes is on [cheap website for a small business](/cheap-website-for-small-business/): built from scratch, readable on a phone, HTTPS, a title on every page, a contact form, help going live, the first year of hosting, and the first year of a standard domain. [Built from scratch](/website-built-from-scratch/) is how it is made, not a dearer tier. Premium domains cost extra, and you pay the renewal from year two, at around £5–£10 a year.
 
-Once the £500 is paid, monthly care is optional, typically £29–£50, or you can take a full handover. Care does not replace the build payments.
+What the £200 + VAT (£240 inc VAT) includes is on [cheap website for a small business](/cheap-website-for-small-business/): built from scratch, readable on a phone, HTTPS, a title on every page, a contact form, help going live, the first year of hosting, and the first year of a standard domain. [Built from scratch](/website-built-from-scratch/) is how it is made, not a dearer tier. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.
+
+Once the £200 + VAT (£240 inc VAT) is paid, monthly care is optional, typically £29–£50, or you can take a full handover. Care does not replace the build payments.
 
 ## How to start
 

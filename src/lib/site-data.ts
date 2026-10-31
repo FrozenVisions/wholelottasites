@@ -168,7 +168,7 @@ export const foundingBonuses = [
   },
   {
     title: "WholeLottaVinyl partner bonus",
-    text: `WholeLottaVinyl partner bonus. You get a personal discount code for wholelottavinyl.com (${newWebsiteOffer.vinylUrl}) giving your followers ${newWebsiteOffer.vinylFollowerPercent}% off records. For every ${pounds(newWebsiteOffer.vinylSpendPounds)} your followers spend with that code, you get ${pounds(newWebsiteOffer.vinylSpendCreditPounds)} off your website, and ${pounds(newWebsiteOffer.vinylCollectionCreditPounds)} off for every record collection sold to WholeLottaVinyl through you. Credit can’t take the price below £0. Anything above that comes off care.`,
+    text: `You get a personal discount code for wholelottavinyl.com (${newWebsiteOffer.vinylUrl}) giving your followers ${newWebsiteOffer.vinylFollowerPercent}% off records. For every ${pounds(newWebsiteOffer.vinylSpendPounds)} your followers spend with that code, you get ${pounds(newWebsiteOffer.vinylSpendCreditPounds)} off your website, and ${pounds(newWebsiteOffer.vinylCollectionCreditPounds)} off for every record collection sold to WholeLottaVinyl through you. Credit can’t take the price below £0. Anything above that comes off care.`,
     href: newWebsiteOffer.vinylUrl,
   },
 ] as const;

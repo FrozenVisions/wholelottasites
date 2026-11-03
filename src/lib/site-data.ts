@@ -164,7 +164,7 @@ export const foundingBonuses = [
   },
   {
     title: "Promote us, save £50",
-    text: `Promote us, save ${pounds(newWebsiteOffer.promoteDiscountPounds)}. Businesses with 1,000 or more real followers on Facebook, Instagram or TikTok get ${pounds(newWebsiteOffer.promoteDiscountPounds)} off their website if they post about their new site, tagging WholeLottaSites, once it’s live, and keep a “Website by WholeLottaSites” footer link. The post must be labelled as an ad or paid partnership (UK ASA rules).`,
+    text: `Businesses with 1,000 or more real followers on Facebook, Instagram or TikTok get ${pounds(newWebsiteOffer.promoteDiscountPounds)} off their website if they post about their new site, tagging WholeLottaSites, once it’s live, and keep a “Website by WholeLottaSites” footer link. The post must be labelled as an ad or paid partnership (UK ASA rules).`,
   },
   {
     title: "WholeLottaVinyl partner bonus",

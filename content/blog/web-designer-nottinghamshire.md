@@ -34,7 +34,7 @@ Write the towns you cover. Your Google Business Profile should use the same name
 
 A free mock-up of your business, sent before any agreement, is often one screen. It does not show who owns the domain, whether the form arrives, or what year two costs.
 
-Before a deposit, look at sites that already exist. A design for your business starts after the deposit, not before. The sample is the [portfolio](/portfolio/): wholelottavinyl.com, safeplate.org.uk, mcdecoratingni.co.uk, vinylbuyback.co.uk and The Sticky Service. WLV Outlet is in progress. I am not attaching a result, a ranking or a number of visits to any of them. An example design on that page is not a claim that a named local firm is a client.
+Before a deposit, look at sites that already exist. A design for your business starts after the deposit, not before. The sample is the [portfolio](/portfolio/): wholelottavinyl.com, safeplate.org.uk and mcdecoratingni.co.uk. I am not attaching a result, a ranking or a number of visits to any of them. An example design on that page is not a claim that a named local firm is a client.
 
 ## What a small site costs
 

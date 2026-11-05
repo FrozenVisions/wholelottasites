@@ -54,7 +54,7 @@ export const Route = createFileRoute("/founding-offer")({
     ...seo(
       "/founding-offer",
       "Cheap Website Design Mansfield | Founding Offer | WholeLottaSites",
-      "Cheap website design in Mansfield, and an affordable website for Nottingham and the East Midlands. Founding offer: £200 + VAT, or £50 a month inc VAT for 12 months. No ranking promises.",
+      "Cheap website design in Mansfield and the East Midlands. Founding offer: £200 + VAT, or £50 a month inc VAT for 12 months. No ranking promises.",
     ),
     scripts: [
       jsonLd(breadcrumbJsonLd([

@@ -91,7 +91,7 @@ const tradePages: TradePage[] = [
     slug: "builders",
     name: "Builders",
     title: "Website for Builders | Project Galleries £200 + VAT (£240 inc VAT) | WholeLottaSites",
-    description: "A website for builders: project galleries, the work you take on and a quote form. Custom-built for £200 + VAT (£240 inc VAT). £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT).",
+    description: "Builder websites with project galleries and a quote form. £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months (£600; £41.67 + VAT/mo).",
     h1: "A website for builders.",
     lead: "Extensions, loft conversions and renovations are big decisions. Customers want to see your finished work before they invite you round to quote.",
     intro: [

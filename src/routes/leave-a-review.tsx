@@ -77,7 +77,7 @@ function ReviewForm() {
         </label>
         <label htmlFor="review-website" className="block text-sm font-medium">
           Website <span className="font-normal text-muted-foreground">(optional)</span>
-          <input id="review-website" type="url" name="website" autoComplete="url" inputMode="url" placeholder="https://" className={field} />
+          <input id="review-website" type="text" name="website" autoComplete="url" inputMode="url" placeholder="e.g. yourbusiness.co.uk" className={field} />
         </label>
 
         <fieldset aria-describedby="rating-hint">

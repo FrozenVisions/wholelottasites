@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Fragment, useEffect, useState } from "react";
 import { PageHero, Section } from "@/components/site/Sections";
+import { ClientReviews } from "@/components/site/ClientReviews";
 import { Button } from "@/components/ui/button";
 import { CONTACT, FORM_ENDPOINT } from "@/config";
 import { SITE_URL, seo } from "@/lib/site-data";
@@ -31,7 +32,12 @@ function LeaveAReview() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Leave a review" }]}
       />
       <Section className="!pt-10 md:!pt-14">
-        <ReviewForm />
+        <div id="what-clients-say">
+          <ClientReviews />
+        </div>
+        <div className="mt-16">
+          <ReviewForm />
+        </div>
       </Section>
     </>
   );

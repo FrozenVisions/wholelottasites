@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Section, Heading, JourneyBand, WhatsIncluded, OfferCards, FoundingBanner, FoundingOfferPromo, BuyButtons } from "@/components/site/Sections";
 import { DeviceMockup, TrustStrip, BeforeAfter, Comparison, AboutChris } from "@/components/site/Showcase";
 import { SitesBuiltStrip } from "@/components/site/SitesBuilt";
+import { ClientReviews } from "@/components/site/ClientReviews";
 import { Reveal } from "@/components/site/Reveal";
 import { posts, formatPostDate } from "@/lib/blog";
 import { GeoBlurb } from "@/components/site/Geo";
@@ -135,13 +136,17 @@ function Home() {
           <Heading
             eyebrow="Portfolio"
             title="Sites we’ve built."
-            lead="Screenshots of six sites. The portfolio page has a short note on each one."
+            lead="Screenshots of seven sites. The portfolio page has a short note on each one."
           />
         </Reveal>
         <SitesBuiltStrip />
         <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
           See the portfolio <ArrowRight className="size-4" aria-hidden />
         </Link>
+      </Section>
+
+      <Section id="reviews">
+        <ClientReviews />
       </Section>
 
       <Section muted>

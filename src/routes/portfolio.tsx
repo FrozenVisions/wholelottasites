@@ -5,7 +5,7 @@ import { builtSites, projects, seo, SITE_URL } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
 const title = "Sites we’ve built | WholeLottaSites, Mansfield";
-const description = "Screenshots of sites built by Chris Faulkes: MC Decorating, The Sticky Service, SafePlate, Whole Lotta Vinyl, Vinyl Buyback and WLV Outlet.";
+const description = "Screenshots of sites built by Chris Faulkes: Pink Moon Records, MC Decorating, The Sticky Service, SafePlate, Whole Lotta Vinyl, Vinyl Buyback and WLV Outlet.";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -37,7 +37,7 @@ function Portfolio() {
       <PageHero
         eyebrow="Portfolio"
         title="Sites we’ve built."
-        lead="Six sites, shown as screenshots. The picture is what you can judge here. A text link is included where there is a live address. Example designs, which are not live sites, are further down."
+        lead="Seven sites, shown as screenshots. The picture is what you can judge here. A text link is included where there is a live address. Example designs, which are not live sites, are further down."
         crumbs={[{ name: "Home", href: "/" }, { name: "Portfolio" }]}
       />
       <Section className="!pt-4">

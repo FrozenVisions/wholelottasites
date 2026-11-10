@@ -23,6 +23,7 @@ import { Route as NotFoundRouteImport } from './routes/not-found'
 import { Route as PayMonthlyWebsiteRouteImport } from './routes/pay-monthly-website'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as WebDesignMansfieldRouteImport } from './routes/web-design-mansfield'
 import { Route as WebsiteBuiltFromScratchRouteImport } from './routes/website-built-from-scratch'
@@ -104,6 +105,11 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -165,6 +171,7 @@ export interface FileRoutesByFullPath {
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
@@ -190,6 +197,7 @@ export interface FileRoutesByTo {
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
@@ -216,6 +224,7 @@ export interface FileRoutesById {
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
@@ -243,6 +252,7 @@ export interface FileRouteTypes {
     | '/pay-monthly-website'
     | '/portfolio'
     | '/pricing'
+    | '/reviews'
     | '/services'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
@@ -268,6 +278,7 @@ export interface FileRouteTypes {
     | '/pay-monthly-website'
     | '/portfolio'
     | '/pricing'
+    | '/reviews'
     | '/services'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
@@ -293,6 +304,7 @@ export interface FileRouteTypes {
     | '/pay-monthly-website'
     | '/portfolio'
     | '/pricing'
+    | '/reviews'
     | '/services'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
@@ -319,6 +331,7 @@ export interface RootRouteChildren {
   PayMonthlyWebsiteRoute: typeof PayMonthlyWebsiteRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
+  ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
   WebDesignMansfieldRoute: typeof WebDesignMansfieldRoute
   WebsiteBuiltFromScratchRoute: typeof WebsiteBuiltFromScratchRoute
@@ -430,6 +443,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -511,6 +531,7 @@ const rootRouteChildren: RootRouteChildren = {
   PayMonthlyWebsiteRoute: PayMonthlyWebsiteRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
+  ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
   WebDesignMansfieldRoute: WebDesignMansfieldRoute,
   WebsiteBuiltFromScratchRoute: WebsiteBuiltFromScratchRoute,

@@ -11,6 +11,7 @@ import { newWebsitePricing } from "@/lib/site-data";
 export const navLinks = [
   { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
+  { to: "/reviews", label: "Reviews" },
   { to: "/pricing", label: "Pricing" },
   { to: "/how-it-works", label: "How it works" },
   { to: "/blog", label: "Blog" },
@@ -103,7 +104,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-navy/95 text-navy-foreground backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
         <Logo />
-        <nav aria-label="Main" className="hidden items-center gap-4 xl:gap-5 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-4 xl:gap-5 xl:flex">
           {navLinks.map((l) => (
             l.to === "/services" ? (
               <ServicesMenu key={l.to} open={servicesOpen} setOpen={setServicesOpen} />
@@ -119,7 +120,7 @@ export function Header() {
         </nav>
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -129,7 +130,7 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <nav id="mobile-menu" aria-label="Mobile" className="border-t border-navy-foreground/15 px-5 pb-6 lg:hidden">
+        <nav id="mobile-menu" aria-label="Mobile" className="border-t border-navy-foreground/15 px-5 pb-6 xl:hidden">
           <ul>
             {navLinks.map((l) => (
               <li key={l.to}>

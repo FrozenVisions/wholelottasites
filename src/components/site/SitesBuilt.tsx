@@ -78,7 +78,7 @@ export function SitesBuiltList() {
                   <p>{site.pullQuote}</p>
                 </blockquote>
                 <p className="mt-3">
-                  <Link to="/" hash="reviews" className="text-sm font-semibold text-primary hover:underline">
+                  <Link to="/reviews" className="text-sm font-semibold text-primary hover:underline">
                     Full review
                   </Link>
                 </p>

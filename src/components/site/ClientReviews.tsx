@@ -20,11 +20,11 @@ function ClientReviewCard({ review }: { review: (typeof clientReviews)[number] }
   );
 }
 
-export function ClientReviews() {
+export function ClientReviews({ heading = true }: { heading?: boolean }) {
   return (
     <>
-      <Heading eyebrow="Reviews" title="What clients say." />
-      <div className="mt-10 grid max-w-3xl gap-6">
+      {heading ? <Heading eyebrow="Reviews" title="What clients say." /> : null}
+      <div className={heading ? "mt-10 grid max-w-3xl gap-6" : "grid max-w-3xl gap-6"}>
         {clientReviews.map((review) => (
           <ClientReviewCard key={review.id} review={review} />
         ))}

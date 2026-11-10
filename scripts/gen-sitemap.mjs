@@ -13,6 +13,7 @@ const core = [
   ["/pricing", "0.9"],
   ["/founding-offer", "0.9"],
   ["/portfolio", "0.8"],
+  ["/reviews", "0.7"],
   ["/how-it-works", "0.7"],
   ["/faq", "0.7"],
   ["/contact", "0.8"],

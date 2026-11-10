@@ -5,7 +5,7 @@ export const moreAudiences: TradePage[] = [
     slug: "restaurants",
     name: "Restaurants",
     title: "Restaurant Website Design | Menus & Bookings | WholeLottaSites",
-    description: "Restaurant website design for independent restaurants: a real-text menu, opening hours, booking and allergen notes. Built from scratch for £200 + VAT (£240 inc VAT), not a listing.",
+    description: "Independent restaurant websites: a real-text menu, opening hours, booking and allergen notes. Built from scratch for £200 + VAT (£240 inc VAT), not a listing.",
     h1: "Restaurant website design.",
     lead: "People decide on a restaurant from a phone: what’s on the menu, whether you’re open, and how to book. The site’s job is to answer those three without a fuss.",
     intro: [

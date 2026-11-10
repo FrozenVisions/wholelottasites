@@ -16,6 +16,10 @@ import buybackDesktopSmall from "@/assets/portfolio/vinylbuyback-desktop-600.web
 import outletDesktop from "@/assets/portfolio/wlv-outlet-desktop.webp";
 import outletDesktopMid from "@/assets/portfolio/wlv-outlet-desktop-800.webp";
 import outletDesktopSmall from "@/assets/portfolio/wlv-outlet-desktop-600.webp";
+import pinkMoon from "@/assets/portfolio/pinkmoon-desktop.webp";
+import pinkMoonMid from "@/assets/portfolio/pinkmoon-desktop-800.webp";
+import pinkMoonSmall from "@/assets/portfolio/pinkmoon-desktop-600.webp";
+import { pinkMoonPullQuote } from "@/lib/reviews";
 import dibsThumb from "@/assets/portfolio/dibs-thumb.webp";
 import dibsMid from "@/assets/portfolio/dibs-thumb-800.webp";
 import dibsSmall from "@/assets/portfolio/dibs-thumb-600.webp";
@@ -251,12 +255,13 @@ export const stages = [
 /** Contact-form anchors. The hash sets which enquiry the form opens on. */
 export type EnquiryHash = "mockup-form" | "fix-audit" | "gbp" | "care" | "bundle" | "mini-fix";
 
-/** Sites that may be named as work. No results, rankings or testimonials are attached. */
+/** Sites that may be named as work. No results or rankings are attached. */
 export const proofSites = [
   { name: "wholelottavinyl.com", href: "https://www.wholelottavinyl.com" },
   { name: "safeplate.org.uk", href: "https://safeplate.org.uk" },
   { name: "mcdecoratingni.co.uk", href: "https://mcdecoratingni.co.uk" },
   { name: "vinylbuyback.co.uk", href: "https://vinylbuyback.co.uk" },
+  { name: "pinkmoonrecords.co.uk", href: "https://pinkmoonrecords.co.uk" },
 ] as const;
 
 export const offers = [
@@ -373,7 +378,7 @@ export const faqs = [
   ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
   ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],
   ["Is GEO the same as SEO?", "Related, not the same. SEO is mostly about search results. GEO is about being clear enough that AI assistants can describe your business correctly when someone asks. Both need honest titles, real contact details, and pages that say what you do."],
-  ["Do you invent reviews or traffic numbers?", "No. I name sites I’ve built, and I don’t attach testimonials, rankings or visit counts. The portfolio is screenshots. Live addresses I link: wholelottavinyl.com, safeplate.org.uk, mcdecoratingni.co.uk and vinylbuyback.co.uk."],
+  ["Do you invent reviews or traffic numbers?", "No. I don’t invent reviews, rankings or visit counts. A review is shown only when the client wrote it and agreed it can appear. The portfolio is screenshots. Live addresses I link: wholelottavinyl.com, safeplate.org.uk, mcdecoratingni.co.uk, vinylbuyback.co.uk and pinkmoonrecords.co.uk."],
   ["Is GEO included in the founding-price site?", "Yes. Clear entity copy, service pages and contact paths are part of a normal build. A rescue or rebuild can add the same clarity if the old site was vague. The East Midlands £50 + VAT mini-fix is one agreed fix only; GEO rewrite of a whole site is quoted separately."],
 ] as const;
 
@@ -456,15 +461,31 @@ export type BuiltSite = {
   /** Live address. Omitted when there is no public URL to offer. */
   url?: string;
   linkLabel?: string;
+  /** Client’s own sentence. Shown as a link to the full review. */
+  pullQuote?: string;
   /** Shown as a badge. The shop is not described as finished. */
   inProgress?: boolean;
 };
 
 /**
  * Sites shown on the portfolio. Summaries are the agreed wording.
- * No testimonials, traffic, rankings or results are attached.
+ * A pull-quote, when present, is the client’s own words. No traffic, rankings or results are attached.
  */
 export const builtSites: BuiltSite[] = [
+  {
+    id: "pink-moon-records",
+    name: "Pink Moon Records",
+    summary: "A new website built from scratch for Steven’s new record-buying business, Pink Moon Records, with its own domain. Steven Gee buys vinyl record collections and comes to the seller’s home to view them.",
+    alt: "Screenshot of the top of the Pink Moon Records website, with the business name and the headline about buying vinyl collections.",
+    img: pinkMoon,
+    imgMid: pinkMoonMid,
+    imgSmall: pinkMoonSmall,
+    width: 1200,
+    height: 750,
+    url: "https://pinkmoonrecords.co.uk",
+    linkLabel: "pinkmoonrecords.co.uk",
+    pullQuote: pinkMoonPullQuote,
+  },
   {
     id: "mc-decorating",
     name: "MC Decorating (Omagh)",

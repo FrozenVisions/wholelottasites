@@ -72,6 +72,18 @@ export function SitesBuiltList() {
               {site.inProgress ? <InProgressBadge /> : null}
             </div>
             <p className="mt-3 text-muted-foreground">{site.summary}</p>
+            {site.pullQuote ? (
+              <>
+                <blockquote className="mt-4 border-l-4 border-primary pl-4 text-foreground">
+                  <p>{site.pullQuote}</p>
+                </blockquote>
+                <p className="mt-3">
+                  <Link to="/" hash="reviews" className="text-sm font-semibold text-primary hover:underline">
+                    Full review
+                  </Link>
+                </p>
+              </>
+            ) : null}
             {site.url && site.linkLabel ? (
               <a
                 href={site.url}

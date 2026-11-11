@@ -31,7 +31,7 @@ const tradePages: TradePage[] = [
     slug: "plumbers",
     name: "Plumbers",
     title: "Website for Plumbers | Custom Sites £200 + VAT (£240 inc VAT) | WholeLottaSites",
-    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £200 + VAT (£240 inc VAT), for the trade.",
+    description: "A website for plumbers and heating engineers: tap-to-call, emergency call-outs and the towns you cover. Built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "A website for plumbers.",
     lead: "When a pipe bursts, people search on their phone and ring the first plumber who looks trustworthy. Your site should make that call one tap away.",
     intro: [

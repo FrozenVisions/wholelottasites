@@ -10,7 +10,7 @@ const faqs = [...mansfieldFaqs, PRICE_FAQ];
 
 export const Route = createFileRoute("/web-design-mansfield")({
   head: () => ({
-    ...seo("/web-design-mansfield", "Web Designer Mansfield | £200 + VAT (£240 inc VAT) Websites | WholeLottaSites", "Web designer in Mansfield, Notts. Chris Faulkes builds custom small business websites for £200 + VAT (£240 inc VAT), can meet in person, and starts a design after the deposit."),
+    ...seo("/web-design-mansfield", "Web Designer Mansfield | £200 + VAT (£240 inc VAT) Websites | WholeLottaSites", "Web designer in Mansfield, Notts. Chris Faulkes builds custom small business websites for £200 + VAT (£240 inc VAT) and can meet in person."),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Web designer Mansfield", path: "/web-design-mansfield" }])),
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd(faqs)) },

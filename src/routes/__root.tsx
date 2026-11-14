@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import fraunces700 from "@fontsource/fraunces/files/fraunces-latin-700-normal.woff2?url";
 import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
 import { Header, Footer, CtaBand, StickyMobileCta } from "@/components/site/Layout";
-import { foundingBonusesText, newWebsiteOffer, newWebsitePricing } from "@/lib/site-data";
+import { careTiers, foundingBonusesText, newWebsiteOffer, newWebsitePricing } from "@/lib/site-data";
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const businessJsonLd = {
   image: "https://wholelottasites.co.uk/og-image.jpg",
   email: "chris@wholelottasites.co.uk",
   telephone: "+447517214483",
-  priceRange: "£29–£1,200",
+  priceRange: "£25–£1,200",
   currenciesAccepted: "GBP",
   founder: {
     "@type": "Person",
@@ -122,14 +122,20 @@ const businessJsonLd = {
       description: "One-off setup or fix. The client stays the Google owner. No ranking promise. Optional monthly management is £99–£150.",
       url: "https://wholelottasites.co.uk/google-business-profile/",
     },
-    {
+    ...careTiers.map((tier) => ({
       "@type": "Offer",
-      name: "Monthly website care",
+      name: tier.name,
+      price: String(tier.pricePounds),
       priceCurrency: "GBP",
-      priceSpecification: { "@type": "PriceSpecification", minPrice: "29", maxPrice: "50", priceCurrency: "GBP", unitText: "MONTH" },
-      description: "Optional monthly care: uptime and SSL checks, small edits, form checks and domain renewal nudges.",
+      description: tier.schemaDescription,
       url: "https://wholelottasites.co.uk/pricing/#monthly-care",
-    },
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: String(tier.pricePounds),
+        priceCurrency: "GBP",
+        unitText: "MONTH",
+      },
+    })),
   ],
 };
 

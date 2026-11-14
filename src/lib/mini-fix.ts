@@ -33,6 +33,6 @@ export const miniFixFaqs = [
   ],
   [
     "What can I add after the fix?",
-    "If you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site at £200 + VAT (£240 inc VAT). None of that is included in the £50 + VAT.",
+    "If you want to carry on, the usual next steps are optional monthly care (Essential £25, Growth £50 or Pro £75 a month), help with your Google Business Profile, or a full site at £200 + VAT (£240 inc VAT). None of that is included in the £50 + VAT.",
   ],
 ] as const;

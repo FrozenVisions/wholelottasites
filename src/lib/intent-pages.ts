@@ -64,7 +64,7 @@ export const intentPages: IntentPage[] = [
         heading: "What is not included",
         paragraphs: [
           "Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name. I help you connect it. I don’t need to own the account.",
-          "A founding-client website includes 3 months free care. After that, monthly care is a choice, from £29/month: uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover. The £50 a month website payments are not the care plan.",
+          "A founding-client website includes 3 months free care. After that, monthly care is optional, from £25/month (Essential £25, Growth £50 or Pro £75). Essential keeps hosting and the domain paid and running, with updates, backups, small changes up to 30 minutes, fixes, a monthly check, and email support. No blog posts. Growth adds 4 SEO blog posts a month, up to 1 hour of changes, and a monthly Google Business Profile post. Pro is the same as Growth, with 8 blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. Or you take a full handover. The £50 a month website payments are not the care plan.",
           "The detail of the three plans is on the [pay monthly website](/pay-monthly-website/) page. The cards below are the same three.",
         ],
       },
@@ -109,7 +109,7 @@ export const intentPages: IntentPage[] = [
         id: "after-payoff",
         heading: "What happens after the last payment",
         paragraphs: [
-          "A founding-client website includes 3 months free website care. After that you choose. Optional care, from £29/month (usually £29–£50), covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Or you take a full handover of the site.",
+          "A founding-client website includes 3 months free website care. After that you choose. Optional care, from £25/month (Essential £25, Growth £50 or Pro £75), keeps hosting and the domain paid and running, with updates, backups, small changes, fixes and a monthly check. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. Or you take a full handover of the site.",
           "Care is not the £50 a month website payment. That £50 pays for the site. It is not the care plan.",
           "You can see the sequence — sample sites, deposit, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve decided to go ahead. A design for your business starts after the deposit.",
         ],
@@ -118,7 +118,7 @@ export const intentPages: IntentPage[] = [
     faqs: [
       ["Does paying monthly cost more than £200 + VAT?", `${newWebsitePricing.upfront} if you pay once. ${newWebsitePricing.monthlyPlain}. The monthly total is higher. ${newWebsitePricing.notCredit}`],
       ["When do I pick a plan?", "When you decide to go ahead. You can pay £200 + VAT (£240 inc VAT) in one payment, or £50 a month inc VAT for 12 months. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio."],
-      ["Is monthly care required?", "A founding-client website includes 3 months free. After that, care is optional, from £29/month, or you can take a full handover. It isn’t a condition of paying for the build."],
+      ["Is monthly care required?", "A founding-client website includes 3 months free. After that, care is optional, from £25/month (Essential £25, Growth £50 or Pro £75), or you can take a full handover. It isn’t a condition of paying for the build."],
     ],
   },
   {
@@ -147,7 +147,7 @@ export const intentPages: IntentPage[] = [
         id: "update-my-old-website",
         heading: "Update my old website",
         paragraphs: [
-          "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (typically £29–£50), or as a one-off if we’ve agreed it.",
+          "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (Essential £25, Growth £50 or Pro £75 a month), or as a one-off if we’ve agreed it.",
           "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
           "If the job is bigger than one fix, start with the [free fix audit](/contact/#fix-audit). I’ll look at the live site and tell you whether a repair will hold. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business site. I’ll say which job it is before you pay.",
           "Send the address of the current site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
@@ -210,7 +210,7 @@ export const intentPages: IntentPage[] = [
         id: "not-a-tweak",
         heading: "When a tweak is enough",
         paragraphs: [
-          "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, typically £29–£50, once any build is paid for.",
+          "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, Essential £25, Growth £50 or Pro £75 a month, once any build is paid for.",
           "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
           "If the whole site has to be replaced so it can be used on a phone, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need the £200 + VAT (£240 inc VAT) rebuild. I won’t invoice £200 + VAT (£240 inc VAT) for a stylesheet tweak.",
         ],

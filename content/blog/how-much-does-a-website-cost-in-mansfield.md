@@ -35,7 +35,7 @@ If you already have a live site and only one thing is broken — a form, the mob
 
 A wider rescue, after a free audit, is usually around £150–£400. If patching is a false economy, the honest job is a rebuild at the founding price, not a mini-fix stretched until it pretends to be one.
 
-Google Business Profile setup on its own is £149. It is included with a founding-client website. You stay the Google owner. I don’t promise a position on Maps. Optional management after that is £99–£150 a month. Optional website care, after 3 months included with a founding site, is from £29 a month, usually £29–£50.
+Google Business Profile setup on its own is £149. It is included with a founding-client website. You stay the Google owner. I don’t promise a position on Maps. Optional management after that is £99–£150 a month. Optional website care, after 3 months included with a founding site, is from £25 a month (Essential £25, Growth £50 or Pro £75).
 
 ## Pay monthly or pay once
 

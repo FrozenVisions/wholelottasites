@@ -28,7 +28,7 @@ The number £50 is used for more than one job.
 - **One concrete fix on a live site.** The East Midlands [website mini-fix](/website-mini-fix/) is £50 + VAT (£60 including VAT). We agree that one fix before I start. It covers Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is one job, not twelve payments.
 - **A wider rescue.** After a free audit that lists 3–5 issues, a typical fix is usually around £150–£400. If patching will not hold, the rebuild is the founding price.
 - **Google Business Profile.** Setup or a fix is £149 on its own, and setup is included with a founding website. Optional management is separate, at £99–£150 a month. You stay the owner. I am added as a manager. I don’t promise a place on Maps.
-- **Website care.** Three months are included. After that, care is optional and costs extra, from £29 a month, usually £29–£50, while the website instalments continue.
+- **Website care.** Three months are included. After that, care is optional and monthly, from £25 a month (Essential £25, Growth £50 or Pro £75), while the website instalments continue. Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. No blog posts. Growth adds 4 SEO blog posts a month. Pro adds 8. Nothing is guaranteed.
 - **A bigger business.** Quoted from around £1,200, and I say so before you pay. A small shop stays on the founding price.
 
 ## What the twelve payments buy
@@ -45,9 +45,9 @@ A founding client launches within 7 days of receiving the content.
 
 ## Care, beside the instalments
 
-A founding website includes 3 months of website care. After that, optional care costs extra, from £29 a month, usually £29–£50. The twelve £50 instalments carry on. Care in a later month does not replace that month’s £50. You pay the care amount as well, if you choose it.
+A founding website includes 3 months of website care. After that, optional care costs extra, from £25 a month (Essential £25, Growth £50 or Pro £75). The twelve £50 instalments carry on. Care in a later month does not replace that month’s £50. You pay the care amount as well, if you choose it.
 
-Care covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. You can take a full handover of a site I built, and skip care. Care is not a condition of paying for the build.
+Essential is £25 a month: hosting and domain renewal kept paid and running, security and software updates, regular backups, small changes up to 30 minutes, fixes, a monthly check that the site, forms and contact links work, and email support. Growth is £50 a month (4 SEO blog posts, up to 1 hour of changes, and a monthly Google Business Profile post). Pro is £75 a month (8 SEO blog posts). Blog posts help the site grow on Google over time. Nothing is guaranteed. You can take a full handover of a site I built, and skip care. Care is not a condition of paying for the build.
 
 Google setup is included with the founding website. Optional management, at £99–£150 a month, stays separate from the £50 and from care. Other bonuses are on the [founding client offer](/founding-offer/).
 

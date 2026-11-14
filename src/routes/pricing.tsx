@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MiniFixOffer } from "@/components/site/MiniFix";
-import { PageHero, Section, Heading, OfferCards, BundleStrip, DomainNote, PaymentPlans, WhatsIncluded, FoundingBanner, FoundingOfferPromo } from "@/components/site/Sections";
+import { PageHero, Section, Heading, OfferCards, CareComparison, BundleStrip, DomainNote, PaymentPlans, WhatsIncluded, FoundingBanner, FoundingOfferPromo } from "@/components/site/Sections";
 import { Comparison } from "@/components/site/Showcase";
 import { newWebsitePricing, seo } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/pricing")({
     ...seo(
       "/pricing",
       "Pricing | £50/month or £200 + VAT | WholeLottaSites",
-      "Founding offer: £50/month inc VAT for 12 months (£600), or £200 + VAT (£240). East Midlands mini-fix £50 + VAT. Fixes £150–£400. Google £149. Care from £29.",
+      "Founding offer: £50/month inc VAT for 12 months (£600), or £200 + VAT (£240). East Midlands mini-fix £50 + VAT. Fixes £150–£400. Google £149. Care from £25/month.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]))],
   }),
@@ -28,6 +28,7 @@ function Pricing() {
         </div>
         <Heading eyebrow="Four offers" title="The price before you start." lead="Ranges are typical. A fix is quoted after a free audit. Nothing here is a promise of a Google ranking." />
         <OfferCards />
+        <CareComparison />
         <BundleStrip />
         <div className="mt-16">
           <MiniFixOffer />

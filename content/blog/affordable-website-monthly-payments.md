@@ -20,7 +20,7 @@ On the [pricing](/pricing/) page there are two ways to pay for the same founding
 
 The monthly total is higher than paying up front. It is not finance or credit, and it is not the care plan. There is no interest and no setup fee.
 
-The first year of hosting is included, and we cover the first year of a standard low-cost domain. The domain is registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding-client website includes 3 months free care, then optional care from £29/month. A bigger project is quoted from around £1,200.
+The first year of hosting is included, and we cover the first year of a standard low-cost domain. The domain is registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding-client website includes 3 months free care, then optional care from £25/month. A bigger project is quoted from around £1,200.
 
 ## Paying monthly or paying up front
 
@@ -46,14 +46,14 @@ If a monthly payment is missed, the site is paused until that payment is caught 
 
 The payments buy that same website. The first year of hosting is included, and we cover the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. If you want card payments, that uses your own Stripe account. An existing site can be a [website redesign](/website-redesign/), or a new build when the old pages fail on a phone ([make my website mobile friendly](/mobile-friendly-website/)). What the pages should say is in [what a small business website needs](/blog/what-a-small-business-website-needs/).
 
-A founding-client website includes 3 months free website care. After that, optional monthly care, from £29/month (usually £29–£50), covers uptime and SSL checks and small edits, such as a changed number or a new town. It is optional. It does not replace the £50 website payments, and those payments are not the care plan. A full handover is the other choice. From year two you pay hosting, or that monthly care, and you pay the domain renewal.
+A founding-client website includes 3 months free website care. After that, optional monthly care, from £25/month (Essential £25, Growth £50 or Pro £75), keeps hosting and the domain paid and running, with updates, backups and small changes such as a changed number or a new town (up to 30 minutes a month on Essential). Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. It is optional. It does not replace the £50 website payments, and those payments are not the care plan. A full handover is the other choice. From year two you pay hosting, or that monthly care, and you pay the domain renewal.
 
 ## Five checks before you say yes
 
 1. Add the payments up. £200 + VAT is £240 inc VAT. £50 a month inc VAT for 12 months is £600 inc VAT. The monthly price is not finance or credit.
 2. Check whose name the domain is in. Here it is registered in your name. The first year of a standard low-cost domain is included, and the first year of hosting is included. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.
 3. Ask what a missed card payment does. Here the site is paused until that payment is paid. There is no late fee and no interest. The monthly total stays £600 inc VAT.
-4. Separate the website price from year two. You pay the domain renewal and hosting, or monthly care. The first 3 months of care are included with a founding-client website. After that, care from £29/month is optional.
+4. Separate the website price from year two. You pay the domain renewal and hosting, or monthly care. The first 3 months of care are included with a founding-client website. After that, care from £25/month is optional.
 5. Look at sample sites before you pay. A design for your business starts after the deposit. If an email disagrees with the [pricing](/pricing/) page, trust the pricing page.
 
 Affordable, here, means a clear founding price: £240 inc VAT up front, or £50 a month inc VAT for 12 months. The monthly payments finish. They are not a way to skip the price.

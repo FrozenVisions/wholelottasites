@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { STRIPE_ONE_OFF_URL, STRIPE_PAY_MONTHLY_URL } from "@/config";
-import { problems, why, included, steps, stages, faqs, offers, bundles, proofSites, foundingBonuses, newWebsiteOffer, newWebsitePricing, websitePaymentOptions, type EnquiryHash, type Project } from "@/lib/site-data";
+import { problems, why, included, steps, stages, faqs, offers, bundles, proofSites, foundingBonuses, careTiers, careTierPrices, whyBlogPosts, newWebsiteOffer, newWebsitePricing, websitePaymentOptions, type EnquiryHash, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
@@ -159,7 +159,7 @@ export function WhatsIncluded() {
         <h3 className="text-xl font-semibold">Separate from the website price</h3>
         <ul className="mt-4 grid gap-3 text-muted-foreground">
           <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name.</li>
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> After the 3 months included with a founding-client website, care is optional, from £29/month (usually £29–£50): uptime and SSL checks, small edits, a form check, and a nudge before the domain renews. Or a full handover.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> After the 3 months included with a founding-client website, care is optional, from {careTiers[0].priceLabel}/month ({careTierPrices}). Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Or a full handover.</li>
         </ul>
         <p className="mt-4 text-muted-foreground">
           Pay monthly is {newWebsitePricing.monthlyPlain}. It is not the same total as paying {newWebsitePricing.upfront}. A plain-English note on{" "}
@@ -392,6 +392,50 @@ export function OfferCards() {
   );
 }
 
+export function CareComparison() {
+  return (
+    <div id="what-care-includes" className="mt-16 scroll-mt-28">
+      <Heading
+        eyebrow="Monthly care"
+        title="What monthly care includes."
+        lead={`Care is optional and monthly. A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${careTiers[0].priceLabel}/month. You can take a full handover instead. Blog posts on Growth and Pro help the site grow on Google over time. Nothing is guaranteed.`}
+      />
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {careTiers.map((tier) => (
+          <article key={tier.id} className="flex flex-col rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm">
+            <h3 className="font-display text-2xl font-semibold">{tier.name}</h3>
+            <p className="mt-3 font-display text-4xl font-bold leading-none">{tier.priceLabel}</p>
+            <p className="mt-2 text-sm font-semibold text-primary">{tier.period}</p>
+            <ul className="mt-5 grid gap-2 text-sm text-muted-foreground">
+              {tier.points.map((point) => (
+                <li key={point} className="flex gap-2">
+                  <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <div className="mt-6 grid gap-6 md:grid-cols-3">
+        <div className="rounded-lg border bg-card p-6 shadow-sm md:col-span-2 md:col-start-2">
+        <h3 className="font-display text-xl font-semibold">{whyBlogPosts.title}</h3>
+        <p className="mt-2 text-sm text-muted-foreground">{whyBlogPosts.intro}</p>
+        <ul className="mt-4 grid gap-2 text-sm text-muted-foreground">
+          {whyBlogPosts.points.map((point) => (
+            <li key={point} className="flex gap-2">
+              <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+              {point}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm text-muted-foreground">{whyBlogPosts.close}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function BundleStrip() {
   return (
     <div id="bundles" className="mt-16 scroll-mt-28">
@@ -424,7 +468,7 @@ export function BundleStrip() {
 export function DomainNote() {
   return (
     <p className="mt-8 max-w-3xl text-muted-foreground">
-      {newWebsitePricing.domain} Want to take payments? You set up your own Stripe account and I’ll connect it. After 3 months free on a founding-client website, monthly care is optional, from £29/month. The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
+      {newWebsitePricing.domain} Want to take payments? You set up your own Stripe account and I’ll connect it. After 3 months free on a founding-client website, monthly care is optional, from {careTiers[0].priceLabel}/month ({careTierPrices}). The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
     </p>
   );
 }
@@ -483,7 +527,7 @@ const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebr
     label: "Monthly care",
     eyebrow: "Monthly care",
     title: "Ask about monthly care.",
-    lead: "Typically £29–£50 a month, and optional. Uptime and SSL, small edits, form checks, and a nudge before the domain renews.",
+    lead: `Optional and monthly, ${careTierPrices}. Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed.`,
     subject: "Monthly website care enquiry – WholeLottaSites",
     button: "Ask about care",
     placeholder: "Which site should I look after, and what tends to need changing?",
@@ -641,7 +685,7 @@ export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFi
       </div>
       <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These payments pay for the website. They are not monthly care. A founding-client website includes 3 months free care, then optional care from £29/month, or you can take a full handover.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These payments pay for the website. They are not monthly care. A founding-client website includes 3 months free care, then optional care from {careTiers[0].priceLabel}/month, or you can take a full handover.</li>
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.domain}</li>
       </ul>
     </div>

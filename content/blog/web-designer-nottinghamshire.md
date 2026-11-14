@@ -42,7 +42,7 @@ The founding client offer is £200 + VAT one-off, which is £240 including VAT, 
 
 It is for the first 20 clients, because I am building up reviews. In return I ask for an honest Google review and permission to show the site once it is live. I don’t write the review, and I don’t publish a counter of how many places are left.
 
-You get a small site built from scratch, readable on a phone. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding website includes 3 free months of care, then optional website care at £29–£50 a month. A larger job, such as a shop with stock and shipping, is quoted from around £1,200. None of this is a promise of a Google position or of enquiries.
+You get a small site built from scratch, readable on a phone. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding website includes 3 free months of care, then optional website care at Essential £25, Growth £50 or Pro £75 a month. A larger job, such as a shop with stock and shipping, is quoted from around £1,200. None of this is a promise of a Google position or of enquiries.
 
 The same figures are on [pricing](/pricing/) and the [founding client offer](/founding-offer/). See also [how much a website costs in Mansfield](/blog/how-much-does-a-website-cost-in-mansfield/) and [pay monthly websites in Nottingham](/blog/pay-monthly-websites-in-nottingham/).
 

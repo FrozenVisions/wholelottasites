@@ -53,7 +53,7 @@ The founding client offer is for the first 20 clients. I’m building up reviews
 
 £200 + VAT one-off is £240 including VAT. Or pay £50 a month including VAT for 12 months: £600 in total, £41.67 + VAT a month. The monthly total is higher because the payments are spread out. It is not interest, not finance and not a credit agreement, and it is not the care plan.
 
-The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Care is free for 3 months on a founding website, then optional at £29–£50 a month, including a nudge before the domain renews. The same figures are on [pricing](/pricing/) and the [founding client offer](/founding-offer/). See also [a cheap website for a small business](/cheap-website-for-small-business/). A shop with stock and shipping is quoted from around £1,200. This is not a promise of a Google position or of enquiries.
+The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Care is free for 3 months on a founding website, then optional from £25 a month (Essential £25, Growth £50 or Pro £75). Essential keeps hosting and the domain paid and running. The same figures are on [pricing](/pricing/) and the [founding client offer](/founding-offer/). See also [a cheap website for a small business](/cheap-website-for-small-business/). A shop with stock and shipping is quoted from around £1,200. This is not a promise of a Google position or of enquiries.
 
 ## Decide it this week
 

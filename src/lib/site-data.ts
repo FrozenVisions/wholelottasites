@@ -89,6 +89,82 @@ function pounds(amount: number) {
 }
 
 /**
+ * Optional monthly website care. Prices are per month, with no VAT claim,
+ * matching how care has always been stated on the site.
+ * Approved by Chris Faulkes, 14 Nov 2026.
+ */
+export const careTiers = [
+  {
+    id: "essential",
+    name: "Essential care",
+    pricePounds: 25,
+    priceLabel: "£25",
+    period: "per month",
+    schemaDescription:
+      "Optional monthly Essential care. Hosting and domain renewal kept paid and running. Security and software updates, plus regular backups. Small text, photo and price changes, up to 30 minutes a month. Fixes if something on the site breaks. A monthly check that the site, forms and contact links work. Email support, normally answered within one working day. No blog posts.",
+    points: [
+      "Hosting and domain renewal kept paid and running",
+      "Security and software updates, plus regular backups",
+      "Small text, photo and price changes, up to 30 minutes a month",
+      "Fixes if something on the site breaks",
+      "A monthly check that the site, forms and contact links work",
+      "Email support, normally answered within one working day",
+      "No blog posts",
+    ],
+  },
+  {
+    id: "growth",
+    name: "Growth care",
+    pricePounds: 50,
+    priceLabel: "£50",
+    period: "per month",
+    schemaDescription:
+      "Optional monthly Growth care. Everything in Essential, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Blog posts help the site grow on Google over time. Nothing is guaranteed.",
+    points: [
+      "Everything in Essential",
+      "4 SEO blog posts a month, written around local search phrases for the business",
+      "Up to 1 hour of changes a month",
+      "A monthly Google Business Profile post",
+    ],
+  },
+  {
+    id: "pro",
+    name: "Pro care",
+    pricePounds: 75,
+    priceLabel: "£75",
+    period: "per month",
+    schemaDescription:
+      "Optional monthly Pro care. Everything in Growth, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed.",
+    points: [
+      "Everything in Growth",
+      "8 SEO blog posts a month, instead of 4",
+    ],
+  },
+] as const;
+
+export const whyBlogPosts = {
+  title: "Why blog posts are worth it",
+  intro: "Growth includes 4 SEO blog posts a month. Pro includes 8. Essential does not include blog posts.",
+  points: [
+    "Each post is another page Google can find, so the business turns up for more of the searches customers actually type (for example, “boiler repair in Mansfield”).",
+    "Posts answer the questions customers ask before they call, which builds trust.",
+    "Regular fresh content shows Google and AI search tools the business is active.",
+    "Posts link to the service pages, helping those pages too.",
+  ],
+  close: "It builds over months, not overnight, and we never promise a position on Google.",
+} as const;
+
+const essentialCare = careTiers[0];
+const growthCare = careTiers[1];
+const proCare = careTiers[2];
+
+/** “Essential £25, Growth £50 or Pro £75 a month” */
+export const careTierPrices = `${essentialCare.name.replace(" care", "")} ${essentialCare.priceLabel}, ${growthCare.name.replace(" care", "")} ${growthCare.priceLabel} or ${proCare.name.replace(" care", "")} ${proCare.priceLabel} a month`;
+
+export const careIncludedAnswer =
+  `Care is optional and monthly. Essential is ${essentialCare.priceLabel} a month: hosting and domain renewal kept paid and running, security and software updates plus regular backups, small text, photo and price changes up to 30 minutes a month, fixes if something on the site breaks, a monthly check that the site, forms and contact links work, and email support normally answered within one working day. No blog posts. Growth is ${growthCare.priceLabel} a month: everything in Essential, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Pro is ${proCare.priceLabel} a month: everything in Growth, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed.`;
+
+/**
  * Founding-client new-website price. Change these numbers to retune the offer.
  * Pages, FAQ and JSON-LD should read the strings below, not hard-code figures.
  * foundingClients is the offer limit. Do not render a live “spots left” counter from it.
@@ -109,7 +185,7 @@ export const newWebsiteOffer = {
   vinylSpendPounds: 20,
   vinylSpendCreditPounds: 10,
   vinylCollectionCreditPounds: 50,
-  careFromPounds: 29,
+  careFromPounds: essentialCare.pricePounds,
   gbpSetupPounds: 149,
   launchDays: 7,
   promoteFollowerMinimum: 1000,
@@ -134,7 +210,7 @@ export const newWebsitePricing = {
   domain:
     "The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.",
   notCredit: "The monthly price is not finance or credit, and it is not the care plan.",
-  growth: "Want help growing it? Blog posts and SEO are an optional monthly extra on top - ask for a quote.",
+  growth: "Blog posts are included in the Growth and Pro care tiers, or can be quoted separately for clients who are not on a care plan.",
 } as const;
 
 export const foundingBonuses = [
@@ -316,13 +392,15 @@ export const offers = [
   {
     id: "monthly-care",
     title: "Monthly website care",
-    price: "£29–£50",
-    priceNote: "A month. Optional.",
+    price: `from ${essentialCare.priceLabel}`,
+    priceNote: "per month. Optional.",
     summary:
-      `Uptime and SSL checks, small copy or photo edits, a check that the form still reaches you, and a nudge before the domain renews. A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month. A fix does not include care.`,
+      `${careIncludedAnswer} A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month. A fix does not include care.`,
     points: [
-      "Say when you want to stop, and I’ll confirm how we end it.",
+      `${careTierPrices}.`,
+      newWebsitePricing.growth,
       "You can also take a full handover of a site I built, and skip care.",
+      "Say when you want to stop, and I’ll confirm how we end it.",
       `The ${monthlyIncVat} a month for ${newWebsiteOffer.monthlyMonths} months pays for the website. It is not the care plan.`,
     ],
     cta: "Ask about care",
@@ -342,7 +420,7 @@ export const offers = [
 export const bundles = [
   {
     name: "Fix + care",
-    text: "A website fix, then monthly care so small edits and form checks continue.",
+    text: "A website fix, then optional monthly care so updates, backups and small changes continue.",
   },
   {
     name: "Site + Google Business Profile",
@@ -354,7 +432,7 @@ export const bundles = [
   },
   {
     name: "Full",
-    text: "A new site or a fix, monthly Google Business Profile management (£99–£150), and website care (£29–£50).",
+    text: `A new site or a fix, monthly Google Business Profile management (£99–£150), and website care (from ${essentialCare.priceLabel} a month: ${careTierPrices}).`,
   },
 ] as const;
 
@@ -367,13 +445,14 @@ export const faqs = [
   ["What does the founding website price include?", `A custom site built from scratch, with solid foundations: proper local SEO keywords, fast pages, a mobile-first layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. ${newWebsitePricing.domain} ${newWebsitePricing.founding} ${foundingBonusesText}`],
   ["What are the founding client bonuses?", foundingBonusesText],
   ["Is hosting included?", `Yes, the first year of hosting is included with a new website. From year two you pay hosting, or monthly care (from ${pounds(newWebsiteOffer.careFromPounds)}/month).`],
+  ["What does monthly care include?", `${careIncludedAnswer} A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month.`],
   ["How do you price a website fix?", `I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £50 + VAT mini-fix. If patching is a false economy, I’ll quote a rebuild instead — ${newWebsitePricing.upfront} for a small business — before you agree to anything.`],
   ["Who owns the Google Business Profile?", `You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix on its own is £149. It is included free with a founding-client website. Optional monthly management is £99–£150. No ranking promises.`],
   ["Do you promise a Google ranking?", "No. I don’t promise a position on Google or Maps, and I won’t say you’re “#1”. A clear website and a looked-after Business Profile make you easier to find. They don’t guarantee where you appear."],
-  ["Is monthly care required?", `A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free. After that, care is optional, from ${pounds(newWebsiteOffer.careFromPounds)}/month (the usual range is £29–£50). A fix does not include it. Care covers uptime and SSL checks, small edits, a check that the form still reaches you, and a nudge before the domain renews. Say when you want to stop and I’ll confirm how we end it.`],
+  ["Is monthly care required?", `A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free. After that, care is optional and monthly, from ${pounds(newWebsiteOffer.careFromPounds)}/month (${careTierPrices}). A fix does not include it. Say when you want to stop and I’ll confirm how we end it.`],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
   ["How long does a new site take?", `A founding client launches within ${newWebsiteOffer.launchDays} days of receiving the content. We tweak until you’re happy before launch.`],
-  ["Can I make edits later?", "Yes. Small copy or photo edits can sit on optional monthly care, typically £29–£50, or as a one-off if we’ve agreed it."],
+  ["Can I make edits later?", `Yes. Small text, photo and price changes can sit on optional monthly care: up to 30 minutes a month on Essential (${essentialCare.priceLabel}), or up to 1 hour a month on Growth (${growthCare.priceLabel}) and Pro (${proCare.priceLabel}). Or as a one-off if we’ve agreed it.`],
   ["Do I get a free design before I pay?", "No. Before a deposit you can look at sample sites — live sites and example designs. A design for your business starts after the deposit. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price."],
   ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
   ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],

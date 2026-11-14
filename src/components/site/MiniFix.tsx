@@ -41,7 +41,7 @@ export function MiniFixOffer({ showHeading = true }: { showHeading?: boolean }) 
             If the work is bigger than one fix, I quote it separately. A normal rescue is usually around £150–£400. A rebuild is the founding-price small-business website (£200 + VAT, or £50 a month inc VAT for 12 months), with the same payment options as everywhere else on this site. I won’t call a rescue or a rebuild a mini-fix.
           </p>
           <p>
-            After the fix, if you want to carry on, the usual next steps are optional monthly care (typically £29–£50), help with your Google Business Profile, or a full site. None of that is inside the £50 + VAT. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
+            After the fix, if you want to carry on, the usual next steps are optional monthly care (Essential £25, Growth £50 or Pro £75 a month), help with your Google Business Profile, or a full site. None of that is inside the £50 + VAT. Help with the profile means the listing and the site can match. It is not a promise of a place in Google’s results.
           </p>
           <p>
             A mini-fix will not rewrite your whole site for AI assistants. If the agreed fix is a form, mobile layout, SSL, redirects or a missing Google Business Profile website link, that is the job. If your pages still don’t say clearly who you are, what you do and how to get in touch, ask about a rescue (usually around £150–£400) or a full rebuild at £200 + VAT (£240 inc VAT). Those can include the clearer GEO copy above.

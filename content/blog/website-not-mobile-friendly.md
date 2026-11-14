@@ -43,7 +43,7 @@ Keep one website. A second phone-only address means two copies of the hours and 
 
 **A site that will not stay usable.** The old builder breaks again after each small change. Replace it with a site laid out for a phone first. That is [make my website mobile friendly](/mobile-friendly-website/), and a [website redesign](/website-redesign/) when the words are out of date too. [A website built from scratch](/website-built-from-scratch/) starts from your words and your photos.
 
-If I already look after the site and one section overflows, that edit can sit on optional care at £29–£50 a month, once any build is paid for.
+If I already look after the site and one section overflows, that edit can sit on optional care at Essential £25, Growth £50 or Pro £75 a month, once any build is paid for.
 
 ## Test it again
 
@@ -53,7 +53,7 @@ Give each page its own title. “Home” does not say what the business does. Ke
 
 ## What a replacement costs
 
-A new small-business website is the founding client offer on the [pricing](/pricing/) page: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month). It’s for the first 20 clients, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The monthly price is not finance or credit, and it is not the care plan. That is not a promise of a Google position or of leads. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Care is free for 3 months, then optional at £29–£50 a month. Bigger projects are quoted from around £1,200. The full offer is on the [founding client offer](/founding-offer/), and the Mansfield note is [how much a website costs in Mansfield](/blog/how-much-does-a-website-cost-in-mansfield/).
+A new small-business website is the founding client offer on the [pricing](/pricing/) page: £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month). It’s for the first 20 clients, in return for an honest Google review and permission to show the site in the portfolio once it’s live. The monthly price is not finance or credit, and it is not the care plan. That is not a promise of a Google position or of leads. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Care is free for 3 months, then optional at Essential £25, Growth £50 or Pro £75 a month. Bigger projects are quoted from around £1,200. The full offer is on the [founding client offer](/founding-offer/), and the Mansfield note is [how much a website costs in Mansfield](/blog/how-much-does-a-website-cost-in-mansfield/).
 
 ## What to send
 

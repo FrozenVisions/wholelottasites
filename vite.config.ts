@@ -22,6 +22,7 @@ export default defineConfig({
       pages: [
         { path: "/" }, { path: "/services" }, { path: "/portfolio" }, { path: "/reviews" }, { path: "/pricing" },
         { path: "/how-it-works" }, { path: "/faq" }, { path: "/contact" }, { path: "/leave-a-review" }, { path: "/about" }, { path: "/not-found" },
+        { path: "/pay-what-you-want" },
         { path: "/blog" }, ...blogPosts.map((path) => ({ path })),
         ...extra.pages.map((path) => ({ path })),
         { path: landing.hub }, ...landing.locations.map((path) => ({ path })),

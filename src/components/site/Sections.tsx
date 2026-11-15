@@ -15,18 +15,18 @@ export function Section({ children, muted, className = "", id }: { children: Rea
   );
 }
 
-export function Heading({ eyebrow, title, lead, onNavy, as = "h2" }: { eyebrow: string; title: ReactNode; lead?: ReactNode; onNavy?: boolean; as?: "h1" | "h2" }) {
+export function Heading({ eyebrow, title, lead, onNavy, as = "h2", titleId }: { eyebrow: string; title: ReactNode; lead?: ReactNode; onNavy?: boolean; as?: "h1" | "h2"; titleId?: string }) {
   const Title = as;
   return (
     <div className="max-w-2xl">
       <p className={`eyebrow ${onNavy ? "text-copper" : ""}`}>{eyebrow}</p>
-      <Title className={`mt-3 ${as === "h1" ? "text-4xl leading-[1.05] md:text-6xl" : "text-3xl md:text-5xl"}`}>{title}</Title>
+      <Title id={titleId} className={`mt-3 ${as === "h1" ? "text-4xl leading-[1.05] md:text-6xl" : "text-3xl md:text-5xl"}`}>{title}</Title>
       {lead && <p className={`mt-5 text-lg ${onNavy ? "text-navy-foreground/80" : "text-muted-foreground"}`}>{lead}</p>}
     </div>
   );
 }
 
-export function PageHero({ eyebrow, title, lead, crumbs, actions }: { eyebrow: string; title: ReactNode; lead?: ReactNode; crumbs?: { name: string; href?: string }[]; actions?: ReactNode }) {
+export function PageHero({ eyebrow, title, lead, note, crumbs, actions }: { eyebrow: string; title: ReactNode; lead?: ReactNode; note?: ReactNode; crumbs?: { name: string; href?: string }[]; actions?: ReactNode }) {
   return (
     <section className="pitch-bottom hero-navy pb-28 text-navy-foreground">
       <div className="mx-auto max-w-7xl px-5 pt-12 md:pt-20">
@@ -34,6 +34,7 @@ export function PageHero({ eyebrow, title, lead, crumbs, actions }: { eyebrow: s
         <p className="eyebrow text-copper">{eyebrow}</p>
         <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] md:text-6xl">{title}</h1>
         {lead && <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">{lead}</p>}
+        {note && <p className="mt-3 max-w-2xl text-sm font-semibold text-copper">{note}</p>}
         {actions && <div className="mt-8">{actions}</div>}
       </div>
     </section>
@@ -559,21 +560,35 @@ function modeFromHash(hash: string): EnquiryMode {
   return match ?? "website";
 }
 
-export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
+export function MockupForm({ heading = "h2", lock }: {
+  heading?: "h1" | "h2";
+  /** Preset the email subject and hide the enquiry-type menu. Used by the unlisted pay-what-you-want page. */
+  lock?: { subject: string; eyebrow: string; title: string; lead: ReactNode; button: string; placeholder: string; points?: readonly string[] };
+}) {
   const [next, setNext] = useState("");
   const [thanks, setThanks] = useState(false);
   const [mode, setMode] = useState<EnquiryMode>("website");
   useEffect(() => {
-    setNext(`${window.location.origin}/contact#thanks`);
+    const path = lock
+      ? (window.location.pathname.replace(/\/$/, "") || "/")
+      : "/contact";
+    const withSlash = !lock || path === "/" ? path : `${path}/`;
+    setNext(`${window.location.origin}${withSlash}#thanks`);
     const check = () => {
       setThanks(window.location.hash === "#thanks");
-      if (window.location.hash !== "#thanks") setMode(modeFromHash(window.location.hash));
+      if (!lock && window.location.hash !== "#thanks") setMode(modeFromHash(window.location.hash));
     };
     check();
     window.addEventListener("hashchange", check);
     return () => window.removeEventListener("hashchange", check);
-  }, []);
+  }, [lock]);
   const copy = enquiryCopy[mode];
+  const eyebrow = lock?.eyebrow ?? copy.eyebrow;
+  const title = lock?.title ?? copy.title;
+  const lead = lock?.lead ?? copy.lead;
+  const subject = lock?.subject ?? copy.subject;
+  const button = lock?.button ?? copy.button;
+  const placeholder = lock?.placeholder ?? copy.placeholder;
   const chooseMode = (nextMode: EnquiryMode) => {
     setMode(nextMode);
     const hash = `#${enquiryCopy[nextMode].hash}`;
@@ -585,9 +600,10 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
     <div id="thanks" className="grid gap-10 md:grid-cols-2 md:items-start">
       <Heading
         as={heading}
-        eyebrow={copy.eyebrow}
-        title={copy.title}
-        lead={copy.lead}
+        eyebrow={eyebrow}
+        title={title}
+        lead={lead}
+        {...(lock ? { titleId: "get-in-touch" } : {})}
       />
       <div className="scroll-mt-28 md:col-start-2 md:row-span-2 md:row-start-1">
         <div id="mockup-form" className="scroll-mt-28" />
@@ -603,22 +619,26 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
           </div>
         ) : (
           <form action={FORM_ENDPOINT} method="POST" className="space-y-5 rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm md:p-8">
-            <input type="hidden" name="_subject" value={copy.subject} />
+            <input type="hidden" name="_subject" value={subject} />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={next} />
             <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" aria-label="Leave this field blank" />
-            <label htmlFor="mockup-enquiry" className="block text-sm font-medium">What do you need?
-              <select id="mockup-enquiry" required name="enquiry" value={mode} onChange={(event) => chooseMode(event.target.value as EnquiryMode)} className={field}>
-                {(Object.keys(enquiryCopy) as EnquiryMode[]).map((key) => (
-                  <option key={key} value={key}>{enquiryCopy[key].label}</option>
-                ))}
-              </select>
-            </label>
+            {lock ? (
+              <input type="hidden" name="enquiry" value={lock.subject} />
+            ) : (
+              <label htmlFor="mockup-enquiry" className="block text-sm font-medium">What do you need?
+                <select id="mockup-enquiry" required name="enquiry" value={mode} onChange={(event) => chooseMode(event.target.value as EnquiryMode)} className={field}>
+                  {(Object.keys(enquiryCopy) as EnquiryMode[]).map((key) => (
+                    <option key={key} value={key}>{enquiryCopy[key].label}</option>
+                  ))}
+                </select>
+              </label>
+            )}
             <label htmlFor="mockup-name" className="block text-sm font-medium">Your name
               <input id="mockup-name" required name="name" autoComplete="name" className={field} />
             </label>
-            <label htmlFor="mockup-business" className="block text-sm font-medium">Business name
+            <label htmlFor="mockup-business" className="block text-sm font-medium">{lock ? "Business or project name" : "Business name"}
               <input id="mockup-business" required name="business" autoComplete="organization" className={field} />
             </label>
             <label htmlFor="mockup-email" className="block text-sm font-medium">Email
@@ -627,25 +647,31 @@ export function MockupForm({ heading = "h2" }: { heading?: "h1" | "h2" }) {
             <label htmlFor="mockup-phone" className="block text-sm font-medium">Phone <span className="font-normal text-muted-foreground">(optional, if you’d rather I call)</span>
               <input id="mockup-phone" type="tel" name="phone" autoComplete="tel" inputMode="tel" className={field} />
             </label>
-            <label htmlFor="mockup-website" className="block text-sm font-medium">Current website {mode === "fix" || mode === "mini" ? <span className="font-normal text-muted-foreground">(the live site)</span> : <span className="font-normal text-muted-foreground">(optional)</span>}
-              <input id="mockup-website" required={mode === "fix" || mode === "mini"} type="url" name="current_website" autoComplete="url" placeholder="https://" className={field} />
+            <label htmlFor="mockup-website" className="block text-sm font-medium">{lock ? <>Current website or social page <span className="font-normal text-muted-foreground">(optional, if you have one)</span></> : <>Current website {mode === "fix" || mode === "mini" ? <span className="font-normal text-muted-foreground">(the live site)</span> : <span className="font-normal text-muted-foreground">(optional)</span>}</>}
+              <input id="mockup-website" required={mode === "fix" || mode === "mini"} type={lock ? "text" : "url"} name="current_website" autoComplete="url" placeholder="https://" className={field} />
             </label>
             <label htmlFor="mockup-message" className="block text-sm font-medium">Message
-              <textarea id="mockup-message" required name="message" rows={4} placeholder={copy.placeholder} className={field} />
+              <textarea id="mockup-message" required name="message" rows={4} placeholder={placeholder} className={field} />
             </label>
-            <Button type="submit" size="lg" className="w-full">{copy.button}</Button>
+            <Button type="submit" size="lg" className="w-full">{button}</Button>
           </form>
         )}
       </div>
       <div className="space-y-8">
-        <ol className="space-y-4">
-          {stages.map((stage, index) => (
-            <li key={stage.title} className="flex gap-3">
-              <span aria-hidden className="inline-grid size-8 shrink-0 place-items-center rounded-full border-2 border-primary font-display font-bold text-primary">{index + 1}</span>
-              <span><span className="font-semibold">{stage.title}. </span><span className="text-muted-foreground">{stage.summary}</span></span>
-            </li>
-          ))}
-        </ol>
+        {lock?.points ? (
+          <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
+            {lock.points.map((point) => <li key={point}>{point}</li>)}
+          </ul>
+        ) : (
+          <ol className="space-y-4">
+            {stages.map((stage, index) => (
+              <li key={stage.title} className="flex gap-3">
+                <span aria-hidden className="inline-grid size-8 shrink-0 place-items-center rounded-full border-2 border-primary font-display font-bold text-primary">{index + 1}</span>
+                <span><span className="font-semibold">{stage.title}. </span><span className="text-muted-foreground">{stage.summary}</span></span>
+              </li>
+            ))}
+          </ol>
+        )}
         <div className="space-y-2">
           <p>Prefer email? <a className="font-semibold text-primary hover:underline" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
           <p>Or call: <a className="font-semibold text-primary hover:underline" href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a></p>

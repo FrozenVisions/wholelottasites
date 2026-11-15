@@ -162,7 +162,7 @@ export function Header() {
 
 function isFormPage(pathname: string) {
   const path = pathname.replace(/\/$/, "") || "/";
-  return path === "/contact" || path === "/leave-a-review";
+  return path === "/contact" || path === "/leave-a-review" || path === "/pay-what-you-want";
 }
 
 export function CtaBand() {

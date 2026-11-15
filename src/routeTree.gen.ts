@@ -21,6 +21,7 @@ import { Route as LeaveAReviewRouteImport } from './routes/leave-a-review'
 import { Route as MobileFriendlyWebsiteRouteImport } from './routes/mobile-friendly-website'
 import { Route as NotFoundRouteImport } from './routes/not-found'
 import { Route as PayMonthlyWebsiteRouteImport } from './routes/pay-monthly-website'
+import { Route as PayWhatYouWantRouteImport } from './routes/pay-what-you-want'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ReviewsRouteImport } from './routes/reviews'
@@ -93,6 +94,11 @@ const NotFoundRoute = NotFoundRouteImport.update({
 const PayMonthlyWebsiteRoute = PayMonthlyWebsiteRouteImport.update({
   id: '/pay-monthly-website',
   path: '/pay-monthly-website',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayWhatYouWantRoute = PayWhatYouWantRouteImport.update({
+  id: '/pay-what-you-want',
+  path: '/pay-what-you-want',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortfolioRoute = PortfolioRouteImport.update({
@@ -169,6 +175,7 @@ export interface FileRoutesByFullPath {
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
   '/not-found': typeof NotFoundRoute
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
+  '/pay-what-you-want': typeof PayWhatYouWantRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -195,6 +202,7 @@ export interface FileRoutesByTo {
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
   '/not-found': typeof NotFoundRoute
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
+  '/pay-what-you-want': typeof PayWhatYouWantRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -222,6 +230,7 @@ export interface FileRoutesById {
   '/mobile-friendly-website': typeof MobileFriendlyWebsiteRoute
   '/not-found': typeof NotFoundRoute
   '/pay-monthly-website': typeof PayMonthlyWebsiteRoute
+  '/pay-what-you-want': typeof PayWhatYouWantRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -250,6 +259,7 @@ export interface FileRouteTypes {
     | '/mobile-friendly-website'
     | '/not-found'
     | '/pay-monthly-website'
+    | '/pay-what-you-want'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -276,6 +286,7 @@ export interface FileRouteTypes {
     | '/mobile-friendly-website'
     | '/not-found'
     | '/pay-monthly-website'
+    | '/pay-what-you-want'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -302,6 +313,7 @@ export interface FileRouteTypes {
     | '/mobile-friendly-website'
     | '/not-found'
     | '/pay-monthly-website'
+    | '/pay-what-you-want'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -329,6 +341,7 @@ export interface RootRouteChildren {
   MobileFriendlyWebsiteRoute: typeof MobileFriendlyWebsiteRoute
   NotFoundRoute: typeof NotFoundRoute
   PayMonthlyWebsiteRoute: typeof PayMonthlyWebsiteRoute
+  PayWhatYouWantRoute: typeof PayWhatYouWantRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -427,6 +440,13 @@ declare module '@tanstack/react-router' {
       path: '/pay-monthly-website'
       fullPath: '/pay-monthly-website'
       preLoaderRoute: typeof PayMonthlyWebsiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pay-what-you-want': {
+      id: '/pay-what-you-want'
+      path: '/pay-what-you-want'
+      fullPath: '/pay-what-you-want'
+      preLoaderRoute: typeof PayWhatYouWantRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -529,6 +549,7 @@ const rootRouteChildren: RootRouteChildren = {
   MobileFriendlyWebsiteRoute: MobileFriendlyWebsiteRoute,
   NotFoundRoute: NotFoundRoute,
   PayMonthlyWebsiteRoute: PayMonthlyWebsiteRoute,
+  PayWhatYouWantRoute: PayWhatYouWantRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ReviewsRoute: ReviewsRoute,

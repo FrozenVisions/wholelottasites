@@ -43,7 +43,7 @@ function Home() {
               Websites, fixes, and your <span className="text-copper">Google listing</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85">
-              {newWebsitePricing.founding} {newWebsitePricing.upfront}. {newWebsitePricing.monthlyPlain}. Same site either way, cheap and built to last. Look at sample sites first. A design for your business starts after the deposit. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care.
+              {newWebsitePricing.founding} {newWebsitePricing.upfront}. {newWebsitePricing.monthlyPlain}. {newWebsitePricing.monthlyCare} Same site either way, cheap and built to last. Look at sample sites first. You pay the deposit to start. If we can’t get the homepage design right, the deposit is refunded in full before any further work. That refund ends once you approve the design. I also rescue sites that aren’t working, set up Google Business Profile, and offer optional monthly care on the one-off price.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <BuyButtons onNavy />

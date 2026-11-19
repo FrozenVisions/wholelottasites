@@ -20,7 +20,7 @@ I work from Mansfield. You deal with me, and I build the site. I am not a plumbe
 1. **Whose name is the domain in?** Yours. A designer does not need to own it to build the site.
 2. **What is the total, including VAT, and what happens in year two?** Write both down. A low first month is not the price.
 3. **Is this a finished site, or a login you have to learn?** A template you fill in yourself is a different product from someone building the pages.
-4. **What can you see before you pay?** Live sites. A drawing of your homepage, before you have agreed the job, is a sales picture.
+4. **What can you see before you pay?** Live sites, not a free mock-up. You pay the deposit to start. If the homepage design still isn’t right after reasonable revisions, the deposit comes back in full, before any further work. That refund ends once you approve the homepage design.
 5. **If only one thing is broken, is a new site the right job?** A form that never arrives, a page you have to zoom, or a missing padlock can be the whole problem.
 6. **Will they promise a Google position, a number of enquiries, or write the reviews?** I won’t promise a ranking, and I won’t invent a review.
 
@@ -34,15 +34,15 @@ Write the towns you cover. Your Google Business Profile should use the same name
 
 A free mock-up of your business, sent before any agreement, is often one screen. It does not show who owns the domain, whether the form arrives, or what year two costs.
 
-Before a deposit, look at sites that already exist. A design for your business starts after the deposit, not before. The sample is the [portfolio](/portfolio/): wholelottavinyl.com, safeplate.org.uk and mcdecoratingni.co.uk. I am not attaching a result, a ranking or a number of visits to any of them. An example design on that page is not a claim that a named local firm is a client.
+Before a deposit, look at sites that already exist. You pay the deposit to start. There are no free mock-ups for unpaid leads. If you don’t like the homepage design, and we can’t get it right after reasonable revisions, you get the deposit back in full, before any further work. Once you approve the homepage design, that refund no longer applies. The sample is the [portfolio](/portfolio/): wholelottavinyl.com, safeplate.org.uk and mcdecoratingni.co.uk. I am not attaching a result, a ranking or a number of visits to any of them. An example design on that page is not a claim that a named local firm is a client.
 
 ## What a small site costs
 
-The founding client offer is £200 + VAT one-off, which is £240 including VAT, or £50 a month including VAT for 12 months. That is £600 in total, and £41.67 + VAT a month. The monthly total is higher because the payments are spread out. It is not interest, not finance and not a credit agreement, and it is not the care plan.
+The founding client offer is £200 + VAT one-off, which is £240 including VAT, or £50 a month including VAT for 12 months. That is £600 in total, and £41.67 + VAT a month. The monthly total is higher because the payments are spread out. It is not interest, not finance and not a credit agreement. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave.
 
 It is for the first 20 clients, because I am building up reviews. In return I ask for an honest Google review and permission to show the site once it is live. I don’t write the review, and I don’t publish a counter of how many places are left.
 
-You get a small site built from scratch, readable on a phone. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding website includes 3 free months of care, then optional website care at Essential £25, Growth £50 or Pro £75 a month. A larger job, such as a shop with stock and shipping, is quoted from around £1,200. None of this is a promise of a Google position or of enquiries.
+You get a small site built from scratch, readable on a phone. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Paying once includes 3 free months of care, then optional website care at Essential £25, Growth £50 or Pro £75 a month. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. A larger job, such as a shop with stock and shipping, is quoted from around £1,200. None of this is a promise of a Google position or of enquiries.
 
 The same figures are on [pricing](/pricing/) and the [founding client offer](/founding-offer/). See also [how much a website costs in Mansfield](/blog/how-much-does-a-website-cost-in-mansfield/) and [pay monthly websites in Nottingham](/blog/pay-monthly-websites-in-nottingham/).
 

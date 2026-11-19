@@ -1,4 +1,5 @@
 import type { TradePage } from "@/lib/landing-data";
+import { homepageDepositText, newWebsitePricing } from "@/lib/site-data";
 
 export const moreAudiences: TradePage[] = [
   {
@@ -183,7 +184,7 @@ export const moreAudiences: TradePage[] = [
     ],
     faqs: [
       ["I only have two projects I can show. Is that enough?", "Yes. Two real examples beat a grid of placeholders. We can add more later."],
-      ["Can I pay monthly?", "Yes. £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT). The monthly price is not finance or credit, and it is not the care plan. Founding client offer for the first 20 clients."],
+      ["Can I pay monthly?", `Yes. ${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.monthlyCare} Or ${newWebsitePricing.upfront}. ${newWebsitePricing.oneOffCare} ${newWebsitePricing.notCredit} Founding client offer for the first 20 clients.`],
       ["Will you write the words?", "I’ll shape them into the page and fix anything that isn’t clear. I need the facts from you: what you do, who for, and which projects we can show. I won’t invent clients."],
     ],
   },
@@ -197,7 +198,7 @@ export const moreAudiences: TradePage[] = [
     intro: [
       "This page is for founders who need a website. I’m not an investor, and the page I build is yours — it won’t be a fake product demo with made-up users.",
       "A £200 + VAT (£240 inc VAT) site is a marketing site: the explanation, a way to request access or ask a question, and the practical pages (about, contact, a simple privacy note if you collect enquiries). It is not a logged-in product, a marketplace or a billing platform. Those are larger builds. I quote them from around £1,200, and I’ll say so before any work starts if that’s what you actually need.",
-      "You don’t need a finished brand to start. A straight description of the product is enough. A design for the business starts after the deposit. Before that, look at sample sites.",
+      `You don’t need a finished brand to start. A straight description of the product is enough. ${homepageDepositText} Before the deposit, look at sample sites.`,
     ],
     features: [
       { title: "One clear explanation", text: "What the product does, in the first screen, without a slogan that could belong to anyone." },
@@ -215,7 +216,7 @@ export const moreAudiences: TradePage[] = [
     faqs: [
       ["Can you build our app for £200 + VAT (£240 inc VAT)?", "No. £200 + VAT (£240 inc VAT) is the marketing website. An application with accounts, payments or a database is a different project, quoted from around £1,200 after we’ve talked about what it has to do."],
       ["We don’t have customers yet. Is a site premature?", "A single clear page is still useful: it gives you an address to send people, and it forces the explanation into plain language. It doesn’t need a blog or a press page."],
-      ["Can we pay monthly?", "Yes. £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month), or £200 + VAT one-off (£240 inc VAT). The monthly price is not finance or credit, and it is not the care plan. Founding client offer for the first 20 clients."],
+      ["Can we pay monthly?", `Yes. ${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.monthlyCare} Or ${newWebsitePricing.upfront}. ${newWebsitePricing.oneOffCare} ${newWebsitePricing.notCredit} Founding client offer for the first 20 clients.`],
     ],
   },
   {

@@ -11,7 +11,7 @@ People in Mansfield ask this because the quotes they have seen do not agree with
 
 ## The price on this site
 
-The founding client offer is £200 + VAT one-off, which is £240 including VAT. Or you can pay £50 a month including VAT for 12 months. That is £600 in total, and £41.67 + VAT a month. The monthly total is higher. It is not interest, not finance, and not a credit agreement. It is also not the care plan. Care is a separate choice later.
+The founding client offer is £200 + VAT one-off, which is £240 including VAT. Or you can pay £50 a month including VAT for 12 months. That is £600 in total, and £41.67 + VAT a month. The monthly total is higher. It is not interest, not finance, and not a credit agreement. The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Paying once, care stays optional: 3 months free, then from £25 a month.
 
 It is for the first 20 clients. I am building up reviews, so those first 20 get this price. In return I ask for an honest Google review, and permission to show the site in the portfolio once it is live. I do not write the review. I do not invent one. I also do not publish a counter of how many places are left.
 
@@ -35,17 +35,17 @@ If you already have a live site and only one thing is broken — a form, the mob
 
 A wider rescue, after a free audit, is usually around £150–£400. If patching is a false economy, the honest job is a rebuild at the founding price, not a mini-fix stretched until it pretends to be one.
 
-Google Business Profile setup on its own is £149. It is included with a founding-client website. You stay the Google owner. I don’t promise a position on Maps. Optional management after that is £99–£150 a month. Optional website care, after 3 months included with a founding site, is from £25 a month (Essential £25, Growth £50 or Pro £75).
+Google Business Profile setup on its own is £149. It is included with a founding-client website. You stay the Google owner. I don’t promise a position on Maps. Optional management after that is £99–£150 a month. Optional website care on the one-off price, after 3 months included, is from £25 a month (Essential £25, Growth £50 or Pro £75).
 
 ## Pay monthly or pay once
 
 Paying £240 including VAT once is the lower total. Paying £50 a month including VAT for a year is £600 including VAT. Same site. You pick when you decide to go ahead. Monthly payments are taken by card through Stripe.
 
-A design for your business starts after the deposit. Before that, look at sample sites on the [portfolio](/portfolio/). I will not pretend an example design is a site I built for a Mansfield client I do not have.
+You pay the deposit to start. There are no free mock-ups for unpaid leads. If you don’t like the homepage design, and we can’t get it right after reasonable revisions, you get the deposit back in full, before any further work. Once you approve the homepage design, that refund no longer applies. Before the deposit, look at sample sites on the [portfolio](/portfolio/). I will not pretend an example design is a site I built for a Mansfield client I do not have.
 
 ## A sensible way to compare quotes
 
-When you are asking how much a website costs in Mansfield, write the total down, not only the first month. Ask whose name the domain is in. Ask what happens in year two. Ask whether the price is a finished site or a login to a builder you then have to learn. Ask what a missed card payment does. On my monthly plan the site is paused until that payment is caught up. I don’t add a late fee. The total stays £600 including VAT.
+When you are asking how much a website costs in Mansfield, write the total down, not only the first month. Ask whose name the domain is in. Ask what happens in year two. Ask whether the price is a finished site or a login to a builder you then have to learn. Ask what you see before you pay. On this site you look at live samples, then pay a deposit to start. There is no free mock-up. If the homepage design still isn’t right after reasonable revisions, the deposit comes back in full, before any further work. That refund ends once you approve the homepage design. Ask what a missed card payment does. On my monthly plan the site is paused until that payment is caught up. I don’t add a late fee. The total stays £600 including VAT, and that £600 includes 12 months of Essential care, normally £25 a month.
 
 Then ask what the page will actually say. A Mansfield plumber, café or decorator does not need the same pages, but they do need the towns, the phone number and the job names in text a person can read. There is a longer checklist in [what a small business website needs](/blog/what-a-small-business-website-needs/).
 

@@ -56,7 +56,7 @@ Monthly website care is optional. The tiers are on [pricing](/pricing/).
 
 If you are not on a care plan, blog posts can be quoted separately. The longer note is [what monthly website care actually includes](/blog/monthly-website-care/).
 
-The founding client offer, for the first 20 clients, is £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total). In return, an honest Google review and permission to show the site in the portfolio once it’s live. The £50 a month pays for the website. It is not finance or credit, and it is not the care plan. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding site includes 3 months free care, then optional care from £25 a month. That offer is on the [founding client offer](/founding-offer/) page.
+The founding client offer, for the first 20 clients, is £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total). In return, an honest Google review and permission to show the site in the portfolio once it’s live. The £50 a month pays for the website. It is not finance or credit. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Paying once, care stays optional: 3 months free, then from £25 a month, or a full handover. That offer is on the [founding client offer](/founding-offer/) page.
 
 If the site is already live and one thing on it is wrong, the East Midlands [website mini-fix](/website-mini-fix/) is £50 + VAT (£60 inc VAT): a short audit and one concrete fix on a live site.
 
@@ -80,7 +80,7 @@ When the content is received. Before a deposit you look at sample sites. A desig
 Samples, then the deposit, then built to launch, then go live. We tweak until you’re happy before launch. The detail is on [how it works](/how-it-works/).
 
 **Is the £50 a month website plan the same as care?**
-No. On the founding client offer, £50 a month inc VAT for 12 months (£600 total) pays for the website. It is not the care plan. The one-off price is £200 + VAT (£240 inc VAT). Essential is £25 a month and has no blog posts. Growth is £50 a month, with 4 SEO blog posts a month. Pro is £75 a month, with 8 SEO blog posts a month. A founding site includes 3 months free care.
+No. On the founding client offer, £50 a month inc VAT for 12 months (£600 total) pays for the website. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. The one-off price is £200 + VAT (£240 inc VAT). Essential is £25 a month and has no blog posts. Growth is £50 a month, with 4 SEO blog posts a month. Pro is £75 a month, with 8 SEO blog posts a month. Paying once includes 3 months free care. Pay monthly includes Essential care for the 12 months you pay.
 
 ## If you want a date
 

@@ -164,6 +164,16 @@ export const careTierPrices = `${essentialCare.name.replace(" care", "")} ${esse
 export const careIncludedAnswer =
   `Care is optional and monthly. Essential is ${essentialCare.priceLabel} a month: hosting and domain renewal kept paid and running, security and software updates plus regular backups, small text, photo and price changes up to 30 minutes a month, fixes if something on the site breaks, a monthly check that the site, forms and contact links work, and email support normally answered within one working day. No blog posts. Growth is ${growthCare.priceLabel} a month: everything in Essential, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Pro is ${proCare.priceLabel} a month: everything in Growth, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed.`;
 
+/** Deposit starts the homepage. The refund ends once that design is approved. Approved by Chris Faulkes, 19 Nov 2026. */
+export const homepageDeposit = {
+  start: "You pay the deposit to start. There are no free mock-ups for unpaid leads.",
+  refund:
+    "If you don’t like the homepage design, and we can’t get it right after reasonable revisions, you get the deposit back in full, before any further work.",
+  ends: "Once you approve the homepage design, that refund no longer applies.",
+} as const;
+
+export const homepageDepositText = `${homepageDeposit.start} ${homepageDeposit.refund} ${homepageDeposit.ends}`;
+
 /**
  * Founding-client new-website price. Change these numbers to retune the offer.
  * Pages, FAQ and JSON-LD should read the strings below, not hard-code figures.
@@ -197,6 +207,16 @@ const monthlyIncVat = pounds(newWebsiteOffer.monthlyIncVatPounds);
 const monthlyExVat = pounds(newWebsiteOffer.monthlyExVatPounds);
 const monthlyTotalIncVat = pounds(newWebsiteOffer.monthlyTotalIncVatPounds);
 
+/** Live Essential price only. Shown beside the 12-month total. */
+export const monthlyCareValue =
+  `includes ${newWebsiteOffer.monthlyMonths} months of ${essentialCare.name}, normally ${essentialCare.priceLabel} a month`;
+
+export const payMonthlyCare =
+  `The ${monthlyTotalIncVat} ${monthlyCareValue}, for as long as the monthly payments run. After the ${newWebsiteOffer.monthlyMonths} months the site is yours. You can keep care at the normal prices (${careTierPrices}) or leave.`;
+
+export const oneOffCare =
+  `On the one-off price, care stays optional: ${newWebsiteOffer.freeCareMonths} months free, then from ${essentialCare.priceLabel} a month (${careTierPrices}), or a full handover.`;
+
 export const newWebsitePricing = {
   name: "Founding client offer",
   price: oneOffExVat,
@@ -204,12 +224,15 @@ export const newWebsitePricing = {
   upfront: `${oneOffExVat} one-off (${oneOffIncVat})`,
   monthly: `Or ${monthlyIncVat}/month inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyTotalIncVat} total, ${monthlyExVat} + VAT a month)`,
   monthlyPlain: `${monthlyIncVat}/month inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyTotalIncVat} total, ${monthlyExVat} + VAT a month)`,
+  monthlyCare: payMonthlyCare,
+  oneOffCare,
+  deposit: homepageDepositText,
   founding: `Founding client offer, for the first ${newWebsiteOffer.foundingClients} clients. I’m building up reviews, so those first ${newWebsiteOffer.foundingClients} get this price. In return, an honest Google review and permission to show the site in the portfolio once it’s live.`,
   foundations:
     "Cheap, and built to last: proper local SEO keywords, fast pages, a mobile-first layout, and solid foundations. That is the build, not a promise of a Google position or of leads.",
   domain:
     "The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care.",
-  notCredit: "The monthly price is not finance or credit, and it is not the care plan.",
+  notCredit: "The monthly price is not finance or credit.",
   growth: "Blog posts are included in the Growth and Pro care tiers, or can be quoted separately for clients who are not on a care plan.",
 } as const;
 
@@ -220,7 +243,7 @@ export const foundingBonuses = [
   },
   {
     title: "Website care",
-    text: `${newWebsiteOffer.freeCareMonths} months free website care, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month.`,
+    text: `${payMonthlyCare} ${oneOffCare}`,
   },
   {
     title: "Review starter pack",
@@ -269,7 +292,7 @@ export const websitePaymentOptions = [
   {
     name: "Pay monthly",
     headline: `${monthlyIncVat}/month`,
-    detail: `inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyExVat} + VAT a month)`,
+    detail: `inc VAT for ${newWebsiteOffer.monthlyMonths} months (${monthlyExVat} + VAT a month). Includes ${newWebsiteOffer.monthlyMonths} months of ${essentialCare.name}, normally ${essentialCare.priceLabel} a month`,
     total: `${monthlyTotalIncVat} inc VAT`,
   },
 ] as const;
@@ -289,7 +312,7 @@ export const included = [
 
 export const steps = [
   ["Samples", "Look at live sites and example designs. That’s what you see before a deposit."],
-  ["Deposit", "A design for your business starts once the deposit is in. We agree the pages."],
+  ["Deposit", homepageDepositText],
   ["Built to launch", `I build the full site from scratch. A founding client launches within ${newWebsiteOffer.launchDays} days of receiving the content.`],
   ["Go live", "We tweak until you’re happy before launch. Then I help you connect your domain."],
 ] as const;
@@ -298,18 +321,20 @@ export const steps = [
 export const stages = [
   {
     title: "Sample",
-    summary: "Before a deposit, you look at sample sites. Not a design made for your business.",
-    body: `The portfolio is the sample: live sites and example designs. A personalised design starts after the deposit, not before. Tell me what the business does when you get in touch, and I’ll say whether the founding-price site (${newWebsitePricing.upfront}) is the right job.`,
+    summary: "Before a deposit, you look at sample sites. A homepage for your business starts once you pay.",
+    body: `The portfolio is the sample: live sites and example designs. ${homepageDepositText} Tell me what the business does when you get in touch, and I’ll say whether the founding-price site (${newWebsitePricing.upfront}) is the right job.`,
     points: [
       "Sample sites you can open today",
-      "No custom homepage before the deposit",
+      "Deposit to start. No free mock-ups for unpaid leads",
+      "Full deposit refund if we can’t get the homepage right, before any further work",
+      "That refund ends once you approve the homepage design",
       "A fix audit is separate, and that one is free",
     ],
   },
   {
     title: "Build",
-    summary: `After the deposit, I design and build the full site from scratch. Launch is within ${newWebsiteOffer.launchDays} days of receiving your content.`,
-    body: `Once the deposit is in, I design and build the full site from scratch. Launch is within ${newWebsiteOffer.launchDays} days of receiving your content, and we tweak until you’re happy before launch. For a small business that is typically a home page, your services, an about page and contact — the pages we agreed. It’s laid out for phones first, kept fast, and served over HTTPS, with proper local SEO keywords, a title and description on every page, and a form that reaches you. If you want to take card payments, you set up your own Stripe account and I connect the payment links. That is solid foundations, not a promise of a Google position or of leads.`,
+    summary: `Once you approve the homepage design, I build the rest of the site from scratch. Launch is within ${newWebsiteOffer.launchDays} days of receiving your content.`,
+    body: `The deposit starts the homepage design. ${homepageDeposit.ends} After that I build the full site from scratch. Launch is within ${newWebsiteOffer.launchDays} days of receiving your content, and we tweak until you’re happy before launch. For a small business that is typically a home page, your services, an about page and contact — the pages we agreed. It’s laid out for phones first, kept fast, and served over HTTPS, with proper local SEO keywords, a title and description on every page, and a form that reaches you. If you want to take card payments, you set up your own Stripe account and I connect the payment links. That is solid foundations, not a promise of a Google position or of leads.`,
     points: [
       "The pages we agreed, built from scratch",
       "Mobile layout, HTTPS, page titles and a contact form",
@@ -323,7 +348,8 @@ export const stages = [
     points: [
       "Help connecting the domain you own",
       "Tweaks until you’re happy, before launch",
-      `${newWebsiteOffer.freeCareMonths} months free website care, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month`,
+      `Pay monthly: includes ${newWebsiteOffer.monthlyMonths} months of ${essentialCare.name}, normally ${essentialCare.priceLabel} a month`,
+      `One-off: ${newWebsiteOffer.freeCareMonths} months free care, then optional`,
     ],
   },
 ] as const;
@@ -347,7 +373,7 @@ export const offers = [
     price: newWebsitePricing.price,
     priceNote: `${newWebsitePricing.priceNote}. ${newWebsitePricing.monthlyPlain}.`,
     summary:
-      `${newWebsitePricing.founding} The same site either way: a brochure site or a small shop, built from scratch. Cheap, and built to last. Before a deposit, you look at sample sites. A design for your business starts after that. ${newWebsitePricing.domain}`,
+      `${newWebsitePricing.founding} The same site either way: a brochure site or a small shop, built from scratch. Cheap, and built to last. ${homepageDepositText} ${newWebsitePricing.domain}`,
     points: [
       newWebsitePricing.notCredit,
       newWebsitePricing.foundations,
@@ -395,13 +421,13 @@ export const offers = [
     price: `from ${essentialCare.priceLabel}`,
     priceNote: "per month. Optional.",
     summary:
-      `${careIncludedAnswer} A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month. A fix does not include care.`,
+      `${careIncludedAnswer} ${payMonthlyCare} ${oneOffCare} A fix does not include care.`,
     points: [
       `${careTierPrices}.`,
       newWebsitePricing.growth,
       "You can also take a full handover of a site I built, and skip care.",
       "Say when you want to stop, and I’ll confirm how we end it.",
-      `The ${monthlyIncVat} a month for ${newWebsiteOffer.monthlyMonths} months pays for the website. It is not the care plan.`,
+      payMonthlyCare,
     ],
     cta: "Ask about care",
     hash: "care",
@@ -440,20 +466,20 @@ export const faqs = [
   ["What is the £50 + VAT website mini-fix?", `For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £50 + VAT (£60 inc VAT) is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at ${newWebsitePricing.upfront}. It is not a promise of a Google position.`],
   ["Who owns the domain?", "You do. The domain is registered in your name. We cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. I’ll help you point it at the site. I don’t need to own it."],
   ["Is the domain included?", "Yes, we cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name."],
-  ["Can I pay monthly?", `${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. ${newWebsitePricing.notCredit} ${newWebsitePricing.founding}`],
-  ["Can I pay monthly for a new website?", `Yes. ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Monthly payments are taken automatically by card through Stripe. Those payments are paying for the website. They are not the care plan. ${newWebsitePricing.notCredit}`],
+  ["Can I pay monthly?", `${newWebsitePricing.monthlyPlain}. ${payMonthlyCare} Or ${newWebsitePricing.upfront}. ${oneOffCare} ${newWebsitePricing.notCredit} ${newWebsitePricing.founding}`],
+  ["Can I pay monthly for a new website?", `Yes. ${newWebsitePricing.monthlyPlain}. ${payMonthlyCare} Or ${newWebsitePricing.upfront}. ${oneOffCare} Monthly payments are taken automatically by card through Stripe. ${newWebsitePricing.notCredit}`],
   ["What does the founding website price include?", `A custom site built from scratch, with solid foundations: proper local SEO keywords, fast pages, a mobile-first layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. ${newWebsitePricing.domain} ${newWebsitePricing.founding} ${foundingBonusesText}`],
   ["What are the founding client bonuses?", foundingBonusesText],
   ["Is hosting included?", `Yes, the first year of hosting is included with a new website. From year two you pay hosting, or monthly care (from ${pounds(newWebsiteOffer.careFromPounds)}/month).`],
-  ["What does monthly care include?", `${careIncludedAnswer} A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${pounds(newWebsiteOffer.careFromPounds)}/month.`],
+  ["What does monthly care include?", `${careIncludedAnswer} ${payMonthlyCare} ${oneOffCare}`],
   ["How do you price a website fix?", `I audit first, free of charge, and send screenshots plus 3–5 issues. A typical fix is £150–£400. One concrete fix on a live East Midlands site can be the £50 + VAT mini-fix. If patching is a false economy, I’ll quote a rebuild instead — ${newWebsitePricing.upfront} for a small business — before you agree to anything.`],
   ["Who owns the Google Business Profile?", `You do. You stay the Google owner. WholeLottaSites is added as a manager only. Setup or a fix on its own is £149. It is included free with a founding-client website. Optional monthly management is £99–£150. No ranking promises.`],
   ["Do you promise a Google ranking?", "No. I don’t promise a position on Google or Maps, and I won’t say you’re “#1”. A clear website and a looked-after Business Profile make you easier to find. They don’t guarantee where you appear."],
-  ["Is monthly care required?", `A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free. After that, care is optional and monthly, from ${pounds(newWebsiteOffer.careFromPounds)}/month (${careTierPrices}). A fix does not include it. Say when you want to stop and I’ll confirm how we end it.`],
+  ["Is monthly care required?", `${oneOffCare} ${payMonthlyCare} Care is not required once the site is yours. A fix does not include it. Say when you want to stop and I’ll confirm how we end it.`],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
   ["How long does a new site take?", `A founding client launches within ${newWebsiteOffer.launchDays} days of receiving the content. We tweak until you’re happy before launch.`],
   ["Can I make edits later?", `Yes. Small text, photo and price changes can sit on optional monthly care: up to 30 minutes a month on Essential (${essentialCare.priceLabel}), or up to 1 hour a month on Growth (${growthCare.priceLabel}) and Pro (${proCare.priceLabel}). Or as a one-off if we’ve agreed it.`],
-  ["Do I get a free design before I pay?", "No. Before a deposit you can look at sample sites — live sites and example designs. A design for your business starts after the deposit. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price."],
+  ["Do I get a free design before I pay?", `No. ${homepageDepositText} Before the deposit you can look at sample sites — live sites and example designs. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price.`],
   ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
   ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],
   ["Is GEO the same as SEO?", "Related, not the same. SEO is mostly about search results. GEO is about being clear enough that AI assistants can describe your business correctly when someone asks. Both need honest titles, real contact details, and pages that say what you do."],

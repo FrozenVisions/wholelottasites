@@ -2,12 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Sections";
 import { Section, Heading, LandingCta, PriceBlock, LandingFaqs, faqJsonLd } from "@/components/site/Landing";
 import { SiteLinks } from "@/components/site/SiteLinks";
-import { seo } from "@/lib/site-data";
+import { homepageDepositText, seo } from "@/lib/site-data";
 import { PRICE_FAQ, type Faq, tradeBySlug } from "@/lib/landing-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
 const hubFaqs: Faq[] = [
-  ["My type of business isn’t listed. Can you still help?", "Yes. These pages are examples of how the site changes. Every site is built from scratch around the business, whatever you do. Tell me about the work. A design for your business starts after the deposit."],
+  ["My type of business isn’t listed. Can you still help?", `Yes. These pages are examples of how the site changes. Every site is built from scratch around the business, whatever you do. Tell me about the work. ${homepageDepositText}`],
   ["Are these pages for customers looking for a plumber or a restaurant?", "No. They’re for people who want a website for that kind of business. Your customers’ searches — “plumber near me”, “restaurant near me” and the rest — are explained on each page, including how a clear site and a Google Business Profile help. This site doesn’t pretend to be the tradesperson or the restaurant."],
   PRICE_FAQ,
 ];

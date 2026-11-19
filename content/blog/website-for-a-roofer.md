@@ -45,11 +45,11 @@ Use the same name, phone number and area on your [Google Business Profile](/goog
 
 ## What it costs, and when it can go live
 
-The [founding client offer](/founding-offer/), for the first 20 clients, is £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month). The figures are on [pricing](/pricing/). In return, an honest Google review and permission to show the site in the portfolio once it’s live. The £50 a month pays for the website. It is not finance or credit, and it is not the care plan. Firms that need lots of pages or extra features are quoted from around £1,200.
+The [founding client offer](/founding-offer/), for the first 20 clients, is £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month). The figures are on [pricing](/pricing/). In return, an honest Google review and permission to show the site in the portfolio once it’s live. The £50 a month pays for the website. It is not finance or credit. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Firms that need lots of pages or extra features are quoted from around £1,200.
 
 The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. A founding client launches within 7 days of receiving the content, and we tweak until you’re happy before launch. I don’t promise a Google position or a number of leads.
 
-Care is free for 3 months, then optional: Essential £25 a month, with no blog posts; Growth £50 a month, with 4 SEO blog posts a month; Pro £75 a month, with 8. That is not a promise of rankings or leads. See [monthly website care](/blog/monthly-website-care/).
+On the one-off price, care is free for 3 months, then optional: Essential £25 a month, with no blog posts; Growth £50 a month, with 4 SEO blog posts a month; Pro £75 a month, with 8. That is not a promise of rankings or leads. See [monthly website care](/blog/monthly-website-care/).
 
 One fault on a live East Midlands site can be the [website mini-fix](/website-mini-fix/) at £50 + VAT (£60 inc VAT): a short audit and one agreed fix. A wider rescue is usually £150–£400 after a free audit. Before a deposit, look at the [portfolio](/portfolio/): [wholelottavinyl.com](https://wholelottavinyl.com), a used-record shop; [safeplate.org.uk](https://safeplate.org.uk), allergy information for restaurants; and [mcdecoratingni.co.uk](https://mcdecoratingni.co.uk), a decorating firm. Send the business name, the towns and the jobs through the [contact form](/contact/), or email chris@wholelottasites.co.uk, or call 07517 214483.
 
@@ -65,4 +65,4 @@ Only a town you cover.
 No. I don’t promise a Google position or a number of leads.
 
 **What does the founding price include?**
-For the first 20 clients, £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total), with the first year of hosting and a standard domain, free Google Business Profile setup, and 3 months free care.
+For the first 20 clients, £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total), with the first year of hosting and a standard domain, free Google Business Profile setup, and, if you pay once, 3 months free care. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave.

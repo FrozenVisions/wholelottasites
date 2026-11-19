@@ -95,7 +95,7 @@ const rows = [
   ["Google titles & descriptions", "Set up on every page", "Up to you to remember"],
   ["Contact form & payment links", "Set up and tested for you", "You configure them yourself"],
   ["Going live", "I help you connect your domain", "You work it out"],
-  ["Before you buy", "Sample sites, then a design after the deposit", "You build it yourself"],
+  ["Before you buy", "Sample sites, then a deposit. Full refund if the homepage still isn’t right, before any further work. Ends once you approve the design", "You build it yourself"],
 ] as const;
 
 export function Comparison() {

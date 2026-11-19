@@ -10,7 +10,7 @@ export const Route = createFileRoute("/pricing")({
     ...seo(
       "/pricing",
       "Pricing | £50/month or £200 + VAT | WholeLottaSites",
-      "Founding offer: £50/month inc VAT for 12 months (£600), or £200 + VAT (£240). East Midlands mini-fix £50 + VAT. Fixes £150–£400. Google £149. Care from £25/month.",
+      "Founding offer: £50/month inc VAT for 12 months (£600), including 12 months of Essential care, normally £25 a month. Or £200 + VAT (£240), with care optional. East Midlands mini-fix £50 + VAT. Fixes £150–£400. Google £149.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]))],
   }),

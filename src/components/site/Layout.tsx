@@ -175,7 +175,7 @@ export function CtaBand() {
           <p className="eyebrow">New website</p>
           <h2 className="mt-3 text-3xl md:text-4xl">Ask about a new website.</h2>
           <p className="mt-3 text-muted-foreground">
-            Sample sites are on the portfolio. A design for your business starts after the deposit. Already got a site?{" "}
+            Sample sites are on the portfolio. You pay the deposit to start. If we can’t get the homepage design right, the deposit is refunded in full before any further work. That refund ends once you approve the design. Already got a site?{" "}
             <Link to="/contact" hash="fix-audit" className="font-semibold text-primary hover:underline">Get a free fix audit</Link>.
           </p>
         </div>

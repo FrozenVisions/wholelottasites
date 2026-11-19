@@ -160,10 +160,11 @@ export function WhatsIncluded() {
         <h3 className="text-xl font-semibold">Separate from the website price</h3>
         <ul className="mt-4 grid gap-3 text-muted-foreground">
           <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name.</li>
-          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> After the 3 months included with a founding-client website, care is optional, from {careTiers[0].priceLabel}/month ({careTierPrices}). Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Or a full handover.</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.monthlyCare}</li>
+          <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.oneOffCare} Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts.</li>
         </ul>
         <p className="mt-4 text-muted-foreground">
-          Pay monthly is {newWebsitePricing.monthlyPlain}. It is not the same total as paying {newWebsitePricing.upfront}. A plain-English note on{" "}
+          Pay monthly is {newWebsitePricing.monthlyPlain}. {newWebsitePricing.monthlyCare} It is not the same total as paying {newWebsitePricing.upfront}. A plain-English note on{" "}
           <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">what the cheap website includes</Link> and the{" "}
           <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly page</Link> uses the same figures.
         </p>
@@ -176,7 +177,7 @@ export function JourneyBand() {
   return (
     <section className="pitch-top bg-navy pb-20 pt-32 text-navy-foreground" aria-labelledby="journey-heading">
       <div className="mx-auto max-w-7xl px-5">
-        <Heading onNavy eyebrow="How it works" title={<span id="journey-heading">Sample, build, launch.</span>} lead="Before a deposit, you look at sample sites. A design for your business starts after that." />
+        <Heading onNavy eyebrow="How it works" title={<span id="journey-heading">Sample, build, launch.</span>} lead="Before a deposit, you look at sample sites. You pay the deposit to start. If we can’t get the homepage design right, the deposit comes back in full before any further work. That refund ends once you approve the homepage design." />
         <div className="mt-6 flex flex-wrap gap-3">
           <Button asChild variant="copper"><Link to="/contact" hash="mockup-form">Ask about a new site</Link></Button>
           <Button asChild variant="navyOutline"><Link to="/how-it-works">The full process</Link></Button>
@@ -399,7 +400,7 @@ export function CareComparison() {
       <Heading
         eyebrow="Monthly care"
         title="What monthly care includes."
-        lead={`Care is optional and monthly. A founding-client website includes ${newWebsiteOffer.freeCareMonths} months free, then optional care from ${careTiers[0].priceLabel}/month. You can take a full handover instead. Blog posts on Growth and Pro help the site grow on Google over time. Nothing is guaranteed.`}
+        lead={`Care is optional and monthly, except where pay monthly includes it. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare} Blog posts on Growth and Pro help the site grow on Google over time. Nothing is guaranteed.`}
       />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {careTiers.map((tier) => (
@@ -469,7 +470,7 @@ export function BundleStrip() {
 export function DomainNote() {
   return (
     <p className="mt-8 max-w-3xl text-muted-foreground">
-      {newWebsitePricing.domain} Want to take payments? You set up your own Stripe account and I’ll connect it. After 3 months free on a founding-client website, monthly care is optional, from {careTiers[0].priceLabel}/month ({careTierPrices}). The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
+      {newWebsitePricing.domain} Want to take payments? You set up your own Stripe account and I’ll connect it. {newWebsitePricing.monthlyCare} {newWebsitePricing.oneOffCare} The longer notes are a <Link to="/cheap-website-for-small-business" className="font-semibold text-primary underline-offset-4 hover:underline">cheap website for a small business</Link> and a <Link to="/pay-monthly-website" className="font-semibold text-primary underline-offset-4 hover:underline">pay monthly website</Link>.
     </p>
   );
 }
@@ -498,7 +499,7 @@ const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebr
     label: "New website",
     eyebrow: "New website",
     title: "Ask about a new website.",
-    lead: `Tell me what the business does. Before a deposit, the sample is a site I’ve already built — not a design made for you. A design for your business starts after the deposit. ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. ${newWebsitePricing.monthlyPlain}.`,
+    lead: `Tell me what the business does. Before a deposit, the sample is a site I’ve already built. ${newWebsitePricing.deposit} ${newWebsitePricing.founding} ${newWebsitePricing.upfront}. ${newWebsitePricing.monthlyPlain}.`,
     subject: "New website enquiry – WholeLottaSites",
     button: "Ask about a new site",
     placeholder: "What does your business do, and what should the site help people do?",
@@ -528,7 +529,7 @@ const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebr
     label: "Monthly care",
     eyebrow: "Monthly care",
     title: "Ask about monthly care.",
-    lead: `Optional and monthly, ${careTierPrices}. Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed.`,
+    lead: `Optional and monthly, ${careTierPrices}. Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare}`,
     subject: "Monthly website care enquiry – WholeLottaSites",
     button: "Ask about care",
     placeholder: "Which site should I look after, and what tends to need changing?",
@@ -711,7 +712,8 @@ export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFi
       </div>
       <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> Monthly payments are taken automatically by card, through Stripe — nothing to remember.</li>
-        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> These payments pay for the website. They are not monthly care. A founding-client website includes 3 months free care, then optional care from {careTiers[0].priceLabel}/month, or you can take a full handover.</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.monthlyCare}</li>
+        <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.oneOffCare}</li>
         <li className="flex gap-2"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden /> {newWebsitePricing.domain}</li>
       </ul>
     </div>

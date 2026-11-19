@@ -129,8 +129,9 @@
 }
 
 /* Leave-a-review form. Stars are the rating control, not a published score.
-   The thank-you block is shown from the #thanks hash after FormSubmit redirects back,
-   including when JavaScript is off. Scoped so the contact page’s #thanks is left alone. */
+   The thank-you block is shown from the #thanks hash after a no-JS FormSubmit redirect,
+   and from .is-sent after a successful in-page submit.
+   Scoped so the contact page’s #thanks is left alone. */
 .star-rating {
   display: flex;
   width: fit-content;
@@ -197,5 +198,12 @@
   display: none;
 }
 .review-page:has(#thanks:target) #review-form {
+  display: none;
+}
+/* Successful in-page submit. The hash rule above still covers the no-JS redirect. */
+.review-page.is-sent #thanks:not(:target) {
+  display: block;
+}
+.review-page.is-sent #review-form {
   display: none;
 }

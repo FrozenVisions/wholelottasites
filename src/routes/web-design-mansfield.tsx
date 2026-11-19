@@ -100,10 +100,14 @@ function Mansfield() {
                     <span key={review.id}>
                       {index > 0 && (index === reviewCount - 1 ? " and " : ", ")}
                       {review.name} of{" "}
-                      <a href={review.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                        {review.business}
-                        <span className="sr-only"> (opens in a new tab)</span>
-                      </a>
+                      {"href" in review && review.href ? (
+                        <a href={review.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                          {review.business}
+                          <span className="sr-only"> (opens in a new tab)</span>
+                        </a>
+                      ) : (
+                        review.business
+                      )}
                     </span>
                   ))}
                   . Read {reviewCount === 1 ? "it" : "them"} on the <a href="/reviews/" className={linkClass}>reviews page</a>.

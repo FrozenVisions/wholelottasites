@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState, type FormEvent } from "react";
 import { PageHero, Section } from "@/components/site/Sections";
 import { ClientReviews } from "@/components/site/ClientReviews";
 import { Button } from "@/components/ui/button";
 import { CONTACT, FORM_ENDPOINT } from "@/config";
+import { buildReviewMailto, submitReview } from "@/lib/review-form";
 import { SITE_URL, seo } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
@@ -45,8 +46,30 @@ function LeaveAReview() {
 
 const field = "mt-2 w-full rounded-md border border-input bg-card px-4 py-3 placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/40";
 
+function formPayload(form: HTMLFormElement): Record<string, string> {
+  const payload: Record<string, string> = {};
+  for (const [key, value] of new FormData(form).entries()) {
+    if (typeof value === "string") payload[key] = value;
+  }
+  return payload;
+}
+
+function mailtoForForm(form: HTMLFormElement): string {
+  const payload = formPayload(form);
+  return buildReviewMailto({
+    name: payload["name"] ?? "",
+    business: payload["business"] ?? "",
+    rating: payload["rating"] ?? "",
+    review: payload["review"] ?? "",
+  }, CONTACT.email);
+}
+
 function ReviewForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const sendingRef = useRef(false);
   const [next, setNext] = useState(THANKS_URL);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "failed">("idle");
+  const [mailtoHref, setMailtoHref] = useState(`mailto:${CONTACT.email}`);
 
   useEffect(() => {
     const base = import.meta.env.BASE_URL || "/";
@@ -58,9 +81,38 @@ function ReviewForm() {
     }
   }, []);
 
+  useEffect(() => {
+    if (status === "sent") document.getElementById("thanks-title")?.focus();
+    if (status === "failed") document.getElementById("review-fallback")?.scrollIntoView({ block: "nearest" });
+  }, [status]);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (sendingRef.current) return;
+    const form = event.currentTarget;
+    sendingRef.current = true;
+    setStatus("sending");
+    const ok = await submitReview(formPayload(form));
+    sendingRef.current = false;
+    if (ok) {
+      setStatus("sent");
+      return;
+    }
+    setMailtoHref(mailtoForForm(form));
+    setStatus("failed");
+  }
+
+  function refreshMailto(event: { currentTarget: HTMLAnchorElement }) {
+    const form = formRef.current;
+    if (!form) return;
+    const href = mailtoForForm(form);
+    event.currentTarget.href = href;
+    setMailtoHref(href);
+  }
+
   return (
-    <div className="review-page mx-auto max-w-xl">
-      <form id="review-form" action={FORM_ENDPOINT} method="POST" className="space-y-5 rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm md:p-8">
+    <div className={`review-page mx-auto max-w-xl${status === "sent" ? " is-sent" : ""}`}>
+      <form ref={formRef} id="review-form" action={FORM_ENDPOINT} method="POST" className="space-y-5 rounded-lg border-t-4 border-primary bg-card p-6 shadow-sm md:p-8" onSubmit={onSubmit} aria-busy={status === "sending"}>
         <input type="hidden" name="_subject" value="New website review – WholeLottaSites" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
@@ -112,7 +164,17 @@ function ReviewForm() {
           <span>I’m happy for my review to be shown on WholeLottaSites.</span>
         </label>
 
-        <Button type="submit" size="lg" className="w-full">Send review</Button>
+        <Button type="submit" size="lg" className="w-full" disabled={status === "sending"}>
+          {status === "sending" ? "Sending…" : "Send review"}
+        </Button>
+        {status === "failed" ? (
+          <div id="review-fallback" role="alert" className="rounded-md border border-input bg-background px-4 py-4">
+            <p className="text-sm">Our form service isn’t responding right now. Tap below to email your review instead.</p>
+            <Button asChild size="lg" className="mt-3 w-full">
+              <a href={mailtoHref} onPointerDown={refreshMailto} onClick={refreshMailto}>Email your review</a>
+            </Button>
+          </div>
+        ) : null}
         <p className="text-sm text-muted-foreground">
           This sends an email to Chris. It does not put the review on the site. Or email{" "}
           <a className="font-semibold text-primary hover:underline" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.

@@ -5,6 +5,7 @@ function ClientReviewCard({ review }: { review: (typeof clientReviews)[number] }
   return (
     <article className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm md:p-10">
       <p className="text-sm font-semibold text-primary">{review.rating}</p>
+      {"date" in review && review.date ? <p className="mt-1 text-sm text-muted-foreground">{review.date}</p> : null}
       <blockquote className="mt-5 space-y-4 text-lg">
         {review.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
@@ -12,9 +13,13 @@ function ClientReviewCard({ review }: { review: (typeof clientReviews)[number] }
       </blockquote>
       <p className="mt-6 font-semibold">
         {review.name},{" "}
-        <a href={review.href} rel="noopener" className="text-primary underline-offset-4 hover:underline">
-          {review.business}
-        </a>
+        {"href" in review && review.href ? (
+          <a href={review.href} rel="noopener" className="text-primary underline-offset-4 hover:underline">
+            {review.business}
+          </a>
+        ) : (
+          review.business
+        )}
       </p>
     </article>
   );

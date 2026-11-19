@@ -4,6 +4,8 @@ export const STRIPE_ONE_OFF_URL = "https://buy.stripe.com/4gM00l2z862Kggp5xU5Vu0
 
 // FormSubmit endpoint for the enquiry form (plain HTML POST).
 export const FORM_ENDPOINT = "https://formsubmit.co/chris@wholelottasites.co.uk";
+// Same inbox, but the AJAX endpoint so the review page can submit without navigating away.
+export const FORM_AJAX_ENDPOINT = "https://formsubmit.co/ajax/chris@wholelottasites.co.uk";
 
 export const CONTACT = {
   name: "Chris Faulkes",

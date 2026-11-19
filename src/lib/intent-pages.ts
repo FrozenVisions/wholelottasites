@@ -173,7 +173,7 @@ export const intentPages: IntentPage[] = [
     path: "/mobile-friendly-website",
     keyword: "make my website mobile friendly",
     title: "Make My Website Mobile Friendly | £200 + VAT (£240 inc VAT) Rebuild | WholeLottaSites",
-    description: "Make my website mobile friendly: what a phone-friendly small business site actually needs, and why the fix here is a new build for £200 + VAT (£240 inc VAT) rather than a patch.",
+    description: "Make my website mobile friendly: what a phone-friendly site needs, and why the fix here is a new build for £200 + VAT (£240 inc VAT) rather than a patch.",
     eyebrow: "Phones first",
     h1: "Make my website mobile friendly.",
     lead: "If you have to pinch, zoom or turn the phone sideways to use your site, it isn’t mobile friendly. For a small business, that’s where most enquiries start.",

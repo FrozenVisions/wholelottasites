@@ -15,7 +15,7 @@ export const Route = createFileRoute("/faq")({
     ...seo(
       "/faq",
       "FAQ | Sites, Fixes, Google, Care & £50 + VAT",
-      "£200 + VAT (£240 inc VAT) websites, the £50 + VAT East Midlands mini-fix, who owns the domain and Google listing, and why there are no ranking promises. Care is optional.",
+      "£200 + VAT (£240 inc VAT) websites, £50/month inc VAT for 12 months with Essential care included, the £50 + VAT East Midlands mini-fix, and why there are no ranking promises.",
     ),
     scripts: [
       jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "FAQ", path: "/faq" }])),

@@ -21,7 +21,7 @@ const foundingFaqs = [
   ],
   [
     "Can I pay monthly for a website in Nottingham?",
-    `Yes. ${newWebsitePricing.monthlyPlain}. That is a higher total than paying ${newWebsitePricing.upfront}. Monthly payments are taken by card through Stripe. They pay for the website. They are not monthly care, and they are not finance or credit.`,
+    `Yes. ${newWebsitePricing.monthlyPlain}. That is a higher total than paying ${newWebsitePricing.upfront}. ${newWebsitePricing.monthlyCare} Monthly payments are taken by card through Stripe. ${newWebsitePricing.notCredit}`,
   ],
   [
     "Is this only for Mansfield?",
@@ -45,7 +45,7 @@ const foundingFaqs = [
   ],
   [
     "What happens after the first year?",
-    newWebsitePricing.domain,
+    `${newWebsitePricing.domain} ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare}`,
   ],
 ] as const satisfies readonly Faq[];
 
@@ -87,12 +87,12 @@ function FoundingOfferPage() {
           <article className="rounded-lg border-t-4 border-copper bg-card p-8 shadow-sm">
             <p className="eyebrow">Pay monthly</p>
             <p className="mt-3 font-display text-3xl font-bold">{newWebsitePricing.monthlyPlain}</p>
-            <p className="mt-3 text-muted-foreground">{newWebsitePricing.notCredit}</p>
+            <p className="mt-3 text-muted-foreground">{newWebsitePricing.monthlyCare} {newWebsitePricing.notCredit}</p>
           </article>
           <article className="rounded-lg border-t-4 border-primary bg-card p-8 shadow-sm">
             <p className="eyebrow">One-off</p>
             <p className="mt-3 font-display text-3xl font-bold">{newWebsitePricing.upfront}</p>
-            <p className="mt-3 text-muted-foreground">A lower total than paying monthly. Same site either way.</p>
+            <p className="mt-3 text-muted-foreground">A lower total than paying monthly. Same site either way. {newWebsitePricing.oneOffCare}</p>
           </article>
         </div>
         <ul className="mt-8 grid max-w-3xl gap-3 text-muted-foreground">
@@ -139,7 +139,7 @@ function FoundingOfferPage() {
         <Heading
           eyebrow="Ask Chris"
           title="Talk it through before you pay."
-          lead="Tell me what the business does and which towns you cover. Before a deposit, the sample is a site I’ve already built. A design for your business starts after the deposit."
+          lead={`Tell me what the business does and which towns you cover. Before a deposit, the sample is a site I’ve already built. ${newWebsitePricing.deposit}`}
         />
         <div className="mt-8 flex flex-wrap gap-3">
           <BuyButtons />

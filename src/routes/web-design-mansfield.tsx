@@ -38,7 +38,7 @@ function Mansfield() {
       <PageHero eyebrow="Mansfield" title="Web designer in Mansfield." lead="I’m Chris, a web designer based in Mansfield, Nottinghamshire. I build websites from scratch for local small businesses, and we can sit down and plan yours face to face." crumbs={[{ name: "Home", href: "/" }, { name: "Web designer Mansfield" }]} />
       <Section className="!pt-4">
         <div className="max-w-3xl space-y-5 text-lg text-muted-foreground">
-          <p>Plenty of small businesses would rather talk to a real person than fill in forms with a faraway agency. Because I’m based in Mansfield, I can meet you in person, in Mansfield or elsewhere in Nottinghamshire, to look at what you have now and talk about what you want. A design for your business starts after the deposit. Before that, you can look at sample sites.</p>
+          <p>Plenty of small businesses would rather talk to a real person than fill in forms with a faraway agency. Because I’m based in Mansfield, I can meet you in person, in Mansfield or elsewhere in Nottinghamshire, to look at what you have now and talk about what you want. Before a deposit, you look at sample sites. You still pay the deposit to start, and that deposit is refundable until you approve the homepage design. The checks are below.</p>
           <p>You deal with me from start to finish. I design and build the site, help you connect a domain you own, and explain how to set up your free Google Business Profile so the name, address and phone match the site. That gives Google accurate information. It isn’t a promise of a search position.</p>
           <p>If the site is already live and you only need one thing fixed — a form, the mobile layout, speed, SSL or redirects, or the website link on your Google Business Profile — that’s the <a href="/website-mini-fix/" className="font-semibold text-primary hover:underline">£50 + VAT East Midlands mini-fix</a>. It covers Nottinghamshire, including Mansfield, plus Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new website. A new small-business site is still £200 + VAT (£240 inc VAT).</p>
           <p>People in and around Mansfield who want a website often search “web designer Mansfield”. That’s this page. Their customers search for the business itself — “plumber near me”, “café near me” and so on. Those are covered on the <a href="/websites-for/" className="font-semibold text-primary hover:underline">websites by type of business</a> pages, which explain the difference.</p>
@@ -46,6 +46,17 @@ function Mansfield() {
         <LandingCta label="" />
       </Section>
       <Section muted>
+        <Heading eyebrow="Before you hire" title="How to check any web designer." lead="The same checks apply to me. A free drawing of your homepage, before you’ve agreed the job, is a sales picture." />
+        <CheckList items={[
+          "Open live sites, not a mock-up made for you before you’ve paid.",
+          "You pay the deposit to start. There are no free mock-ups for unpaid leads.",
+          "If the homepage design still isn’t right after reasonable revisions, the deposit comes back in full, before any further work.",
+          "That refund ends once you approve the homepage design.",
+          "Ask whose name the domain is in, and what you pay in year two.",
+          "A clear site is not a promise of a Google position or a number of leads.",
+        ]} />
+      </Section>
+      <Section>
         <Heading eyebrow="Why go local" title="What working with a Mansfield web designer looks like." />
         <CheckList items={[
           "Meet in person in Mansfield or around Nottinghamshire, or by phone or video if you prefer.",

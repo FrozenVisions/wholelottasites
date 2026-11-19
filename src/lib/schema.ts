@@ -44,7 +44,7 @@ export function howToJsonLd() {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: "How a WholeLottaSites website is made",
-    description: "Sample sites first. A design for your business starts after the deposit, then the build, then help going live.",
+    description: "Sample sites first. You pay the deposit to start the homepage design. If we can’t get that design right after reasonable revisions, the deposit is refunded in full before any further work. That refund ends once you approve the homepage design. Then the build, then help going live.",
     inLanguage: "en-GB",
     step: stages.map((stage, index) => ({
       "@type": "HowToStep",

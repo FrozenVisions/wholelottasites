@@ -1,5 +1,5 @@
 import type { Faq } from "@/lib/landing-data";
-import { newWebsitePriceAnswer, newWebsitePricing } from "@/lib/site-data";
+import { homepageDepositText, newWebsitePriceAnswer, newWebsitePricing } from "@/lib/site-data";
 
 export interface IntentSection {
   id: string;
@@ -64,7 +64,7 @@ export const intentPages: IntentPage[] = [
         heading: "What is not included",
         paragraphs: [
           "Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name. I help you connect it. I don’t need to own the account.",
-          "A founding-client website includes 3 months free care. After that, monthly care is optional, from £25/month (Essential £25, Growth £50 or Pro £75). Essential keeps hosting and the domain paid and running, with updates, backups, small changes up to 30 minutes, fixes, a monthly check, and email support. No blog posts. Growth adds 4 SEO blog posts a month, up to 1 hour of changes, and a monthly Google Business Profile post. Pro is the same as Growth, with 8 blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. Or you take a full handover. The £50 a month website payments are not the care plan.",
+          `${newWebsitePricing.oneOffCare} ${newWebsitePricing.monthlyCare} Essential keeps hosting and the domain paid and running, with updates, backups, small changes up to 30 minutes, fixes, a monthly check, and email support. No blog posts. Growth adds 4 SEO blog posts a month, up to 1 hour of changes, and a monthly Google Business Profile post. Pro is the same as Growth, with 8 blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed.`,
           "The detail of the three plans is on the [pay monthly website](/pay-monthly-website/) page. The cards below are the same three.",
         ],
       },
@@ -91,7 +91,7 @@ export const intentPages: IntentPage[] = [
         id: "website-payment-plan",
         heading: "Website payment plan",
         paragraphs: [
-          `${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. ${newWebsitePricing.notCredit} It isn’t a subscription for the site itself, and it isn’t finance or credit.`,
+          `${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.monthlyCare} Or ${newWebsitePricing.upfront}. ${newWebsitePricing.oneOffCare} ${newWebsitePricing.notCredit} It isn’t a subscription for the site itself, and it isn’t finance or credit.`,
           "Pay monthly is the main way to spread it: £50 inc VAT each month for 12 months, £600 in total. That is £41.67 + VAT a month. Paying £200 + VAT up front is £240 inc VAT, a lower total.",
           "Payments are taken automatically by card through Stripe, so there isn’t a monthly invoice to remember. The [pricing page](/pricing/) shows the same figures. Nothing on this page overrides them.",
         ],
@@ -109,16 +109,16 @@ export const intentPages: IntentPage[] = [
         id: "after-payoff",
         heading: "What happens after the last payment",
         paragraphs: [
-          "A founding-client website includes 3 months free website care. After that you choose. Optional care, from £25/month (Essential £25, Growth £50 or Pro £75), keeps hosting and the domain paid and running, with updates, backups, small changes, fixes and a monthly check. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. Or you take a full handover of the site.",
-          "Care is not the £50 a month website payment. That £50 pays for the site. It is not the care plan.",
-          "You can see the sequence — sample sites, deposit, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve decided to go ahead. A design for your business starts after the deposit.",
+          newWebsitePricing.monthlyCare,
+          `${newWebsitePricing.oneOffCare} Essential keeps hosting and the domain paid and running, with updates, backups, small changes, fixes and a monthly check. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed.`,
+          `You can see the sequence — sample sites, deposit, build, launch — on [how it works](/how-it-works/). You don’t choose a plan until you’ve decided to go ahead. ${homepageDepositText}`,
         ],
       },
     ],
     faqs: [
-      ["Does paying monthly cost more than £200 + VAT?", `${newWebsitePricing.upfront} if you pay once. ${newWebsitePricing.monthlyPlain}. The monthly total is higher. ${newWebsitePricing.notCredit}`],
-      ["When do I pick a plan?", "When you decide to go ahead. You can pay £200 + VAT (£240 inc VAT) in one payment, or £50 a month inc VAT for 12 months. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio."],
-      ["Is monthly care required?", "A founding-client website includes 3 months free. After that, care is optional, from £25/month (Essential £25, Growth £50 or Pro £75), or you can take a full handover. It isn’t a condition of paying for the build."],
+      ["Does paying monthly cost more than £200 + VAT?", `${newWebsitePricing.upfront} if you pay once. ${newWebsitePricing.oneOffCare} ${newWebsitePricing.monthlyPlain}. The monthly total is higher. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.notCredit}`],
+      ["When do I pick a plan?", `When you decide to go ahead. You can pay £200 + VAT (£240 inc VAT) in one payment, or £50 a month inc VAT for 12 months. ${homepageDepositText} Before the deposit, the sample is a site already on the portfolio.`],
+      ["Is monthly care required?", `${newWebsitePricing.oneOffCare} ${newWebsitePricing.monthlyCare} Care is not required once the site is yours.`],
     ],
   },
   {
@@ -140,7 +140,7 @@ export const intentPages: IntentPage[] = [
         heading: "When a redesign is the right job",
         paragraphs: [
           "I look at the same problems repeatedly. The page has to be pinched and zoomed on a phone. The phone number isn’t tappable. The browser says the site isn’t secure. The Google title still says “Home”. The contact form doesn’t arrive, or there isn’t one. The business has changed and the site describes an older version of it.",
-          "There are three honest routes. One concrete fix on a live East Midlands site can be the [£50 + VAT mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £200 + VAT (£240 inc VAT), with the [payment plans](/pay-monthly-website/) if you want them. A design for your business starts after the deposit. Before that, the sample is a site already on the portfolio.",
+          `There are three honest routes. One concrete fix on a live East Midlands site can be the [£50 + VAT mini-fix](/website-mini-fix/). A wider fix, after a free audit that lists 3–5 issues, is typically £150–£400 — a broken page, a slow site, a dead form, a phone layout that doesn’t work, or an outdated Wix, WordPress or Shopify site. If patching is a false economy, I’ll say so. The rebuild is a new small-business site for £200 + VAT (£240 inc VAT), with the [payment plans](/pay-monthly-website/) if you want them. ${homepageDepositText} Before the deposit, the sample is a site already on the portfolio.`,
         ],
       },
       {
@@ -203,7 +203,7 @@ export const intentPages: IntentPage[] = [
         paragraphs: [
           "I don’t drop a mobile plugin into an old page builder and call it finished. Those layouts often look passable and still fail the real test: a thumb, in a hurry, trying to call you.",
           "If the site is dead on a phone, that can be a fix or a rebuild. I audit first. A typical fix is £150–£400. If the old layout won’t stay usable on a phone, the honest job is a new site at £200 + VAT (£240 inc VAT), laid out for a phone first. If it also needs a proper [redesign](/website-redesign/) — old content, no clear enquiry, a title that says “Home” — we do that together.",
-          "For a rebuild, a design for your business starts after the deposit. Before that, look at sample sites. If the phone layout still feels awkward once you can see your own pages, say so.",
+          `For a rebuild, ${homepageDepositText} Before the deposit, look at sample sites. If the phone layout still feels awkward once you can see your own pages, say so.`,
         ],
       },
       {
@@ -239,7 +239,7 @@ export const intentPages: IntentPage[] = [
         heading: "What that changes",
         paragraphs: [
           "A template starts from someone else’s layout and turns features on and off. It’s a fair way to get something online if you have the time to do it yourself. It also means unused parts, a look customers have seen before, and a builder you have to learn.",
-          "A website built from scratch starts from what the business needs to say. The pages, the order, and the way someone gets in touch are decided for you, then I build them. You still approve the design after the deposit — [how it works](/how-it-works/) is that sequence — but you don’t assemble it. Before the deposit, you look at sample sites.",
+          `A website built from scratch starts from what the business needs to say. The pages, the order, and the way someone gets in touch are decided for you, then I build them. You still approve the homepage design after the deposit — [how it works](/how-it-works/) is that sequence — but you don’t assemble it. ${homepageDepositText} Before the deposit, you look at sample sites.`,
           "The small-business price is £200 + VAT (£240 inc VAT). That’s the same offer as the rest of this site, including the [pay monthly](/pay-monthly-website/) plans. “From scratch” is how it’s made, not a luxury tier.",
         ],
       },
@@ -269,7 +269,7 @@ export const intentPages: IntentPage[] = [
     ],
     faqs: [
       ["Is a bespoke site more expensive than £200 + VAT (£240 inc VAT)?", "Not here. The £200 + VAT (£240 inc VAT) small-business website is built from scratch. Bigger projects, with many more pages or a web app, are quoted from around £1,200."],
-      ["I’ve never had a website. Can I still start?", "Yes. Tell me what you do. Before a deposit you look at sample sites. A design for your business starts after the deposit."],
+      ["I’ve never had a website. Can I still start?", `Yes. Tell me what you do. Before a deposit you look at sample sites. ${homepageDepositText}`],
       ["Do I need to write everything first?", "No. A few honest sentences are enough to design the homepage. I won’t invent services or claims to fill the page."],
     ],
   },

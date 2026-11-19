@@ -23,7 +23,7 @@ export const Route = createFileRoute("/services")({
 function Services() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. Or ${newWebsitePricing.upfront}. Same site either way, built from scratch. Before a deposit, you look at sample sites. The other work is a fix, your Google Business Profile, optional monthly care, or a £50 + VAT East Midlands mini-fix when a live site only needs one change.`} crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
+      <PageHero eyebrow="Services" title="Websites, fixes, Google and care." lead={`${newWebsitePricing.founding} ${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.monthlyCare} Or ${newWebsitePricing.upfront}. ${newWebsitePricing.oneOffCare} Same site either way, built from scratch. ${newWebsitePricing.deposit} The other work is a fix, your Google Business Profile, or a £50 + VAT East Midlands mini-fix when a live site only needs one change.`} crumbs={[{ name: "Home", href: "/" }, { name: "Services" }]} />
       <Section className="!pt-4">
         <FoundingBanner />
         <Heading eyebrow="Four offers" title="The job that matches where you are." lead={`${newWebsitePricing.domain} You stay the owner of your Google listing. Care after the included months is optional. I don’t promise a ranking.`} />

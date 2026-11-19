@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import fraunces700 from "@fontsource/fraunces/files/fraunces-latin-700-normal.woff2?url";
 import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
 import { Header, Footer, CtaBand, StickyMobileCta } from "@/components/site/Layout";
-import { careTiers, foundingBonusesText, newWebsiteOffer, newWebsitePricing } from "@/lib/site-data";
+import { careTiers, foundingBonusesText, newWebsiteOffer, newWebsitePricing, payMonthlyCare, oneOffCare } from "@/lib/site-data";
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -81,7 +81,7 @@ const businessJsonLd = {
       name: "Founding client offer: new small business website, pay monthly",
       price: String(newWebsiteOffer.monthlyTotalIncVatPounds),
       priceCurrency: "GBP",
-      description: `${newWebsitePricing.monthlyPlain}. ${newWebsitePricing.notCredit} Same founding-client site as paying ${newWebsitePricing.upfront}. ${newWebsitePricing.founding} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} ${foundingBonusesText}`,
+      description: `${newWebsitePricing.monthlyPlain}. ${payMonthlyCare} ${newWebsitePricing.notCredit} Same founding-client site as paying ${newWebsitePricing.upfront}. ${oneOffCare} ${newWebsitePricing.founding} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} ${foundingBonusesText}`,
       priceSpecification: {
         "@type": "UnitPriceSpecification",
         price: String(newWebsiteOffer.monthlyIncVatPounds),
@@ -97,7 +97,7 @@ const businessJsonLd = {
       name: "Founding client offer: new small business website, pay up front",
       price: String(newWebsiteOffer.incVatPounds),
       priceCurrency: "GBP",
-      description: `${newWebsitePricing.upfront}. £200 is the price before VAT and £240 is the price including VAT. ${newWebsitePricing.founding} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} ${foundingBonusesText}`,
+      description: `${newWebsitePricing.upfront}. £200 is the price before VAT and £240 is the price including VAT. ${oneOffCare} ${newWebsitePricing.founding} ${newWebsitePricing.foundations} ${newWebsitePricing.domain} ${foundingBonusesText}`,
       priceSpecification: {
         "@type": "PriceSpecification",
         price: String(newWebsiteOffer.incVatPounds),

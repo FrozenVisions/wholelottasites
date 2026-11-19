@@ -10,7 +10,7 @@ export const Route = createFileRoute("/reviews")({
     ...seo(
       "/reviews",
       "Client reviews | WholeLottaSites",
-      "A review from Steven of Pink Moon Records, in his own words. Past clients can leave a review for Chris Faulkes.",
+      "Reviews from Steven of Pink Moon Records and Denise Reynolds of Whimsical Winnie, in their own words. Past clients can leave a review for Chris Faulkes.",
     ),
     scripts: [jsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Reviews", path: "/reviews" }]))],
   }),

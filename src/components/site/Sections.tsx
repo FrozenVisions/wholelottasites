@@ -695,11 +695,11 @@ export function PaymentPlans({ showPayMonthlyFirst = false }: { showPayMonthlyFi
         {options.map((plan) => {
           const monthly = plan.name === "Pay monthly";
           return (
-            <div key={plan.name} className={monthly ? "rounded-lg border-t-4 border-copper bg-card p-7 shadow-sm" : "rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm"}>
+            <div key={plan.name} data-live-price-card="" data-live-name={plan.name} className={monthly ? "rounded-lg border-t-4 border-copper bg-card p-7 shadow-sm" : "rounded-lg border-t-4 border-primary bg-card p-7 shadow-sm"}>
               <p className="eyebrow">{monthly ? "Most popular" : plan.name}</p>
-              <p className="mt-3 font-display text-3xl font-bold">{plan.headline}</p>
-              <p className="mt-2 text-muted-foreground">{plan.detail}</p>
-              <p className="mt-4 text-sm font-semibold text-primary">Total: {plan.total}</p>
+              <p className="mt-3 font-display text-3xl font-bold" data-live-price="">{plan.headline}</p>
+              <p className="mt-2 text-muted-foreground" data-live-detail="">{plan.detail}</p>
+              <p className="mt-4 text-sm font-semibold text-primary" data-live-total="">Total: {plan.total}</p>
               <div className="mt-6">
                 <Button asChild variant={monthly ? "copper" : "outline"}>
                   <a href={monthly ? STRIPE_PAY_MONTHLY_URL : STRIPE_ONE_OFF_URL}>{monthly ? "Pay monthly" : "Pay £200 + VAT"}</a>

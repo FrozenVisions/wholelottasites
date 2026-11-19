@@ -188,6 +188,11 @@
   outline: 2px solid var(--ring);
   outline-offset: 3px;
 }
+/* Calculator stays hidden until job-worth.js has read the prices on the page.
+   Without JavaScript the html.js class is absent, so the block stays hidden. */
+.job-worth { display: none; }
+.js .job-worth.is-ready { display: block; }
+
 .review-page #thanks:not(:target) {
   display: none;
 }

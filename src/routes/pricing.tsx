@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { JobWorth } from "@/components/site/JobWorth";
 import { MiniFixOffer } from "@/components/site/MiniFix";
 import { PageHero, Section, Heading, OfferCards, CareComparison, BundleStrip, DomainNote, PaymentPlans, WhatsIncluded, FoundingBanner, FoundingOfferPromo } from "@/components/site/Sections";
 import { Comparison } from "@/components/site/Showcase";
@@ -35,6 +36,7 @@ function Pricing() {
         </div>
         <DomainNote />
         <PaymentPlans showPayMonthlyFirst />
+        <JobWorth />
       </Section>
       <Section muted>
         <WhatsIncluded />

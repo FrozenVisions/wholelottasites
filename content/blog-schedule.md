@@ -1,6 +1,6 @@
 # Blog schedule
 
-One post a day for the next 30 days, starting 22 October 2026. No two days in a row are the same group. A further 30 days, 21 November to 20 December 2026, follow the first table. Each of those keywords is unused by any post or earlier row.
+One post a day from 22 October to 19 November 2026 is in the first table. No two days in a row are the same group. The next table runs from 20 November to 25 December 2026. Five posts are inserted from 20 November, and the later rows move on by five days. Each keyword is unused by any post or earlier row. Each inserted post has one primary keyword, and that keyword includes the area.
 
 To publish the post for a date, add a new file at `content/blog/<slug>.md`. The build prerenders `/blog/<slug>/`, adds it to the sitemap, and lists it on `/blog/`. You do not register the slug anywhere else. Do not publish a file before you mean it to go live: whatever is in `content/blog/` is public after the next deploy.
 
@@ -31,7 +31,7 @@ The post already live is `content/blog/what-a-small-business-website-needs.md` (
 
 Also published, and not part of the 30-day table: `how-much-does-a-website-cost-in-mansfield.md` (30 October 2026), `pay-monthly-websites-in-nottingham.md` (31 October 2026) and `do-trades-in-derby-and-leicester-need-a-website.md` (1 November 2026). Link them to `/founding-offer/` when a post is about the price. Do not publish promo code names.
 
-## Next 30 days
+## 22 October to 19 November 2026
 
 | Date | Group | Title | Keyword | Slug |
 | --- | --- | --- | --- | --- |
@@ -64,41 +64,48 @@ Also published, and not part of the 30-day table: `how-much-does-a-website-cost-
 | 2026-11-17 | startups | A startup website before you have customers | startup website before launch | startup-website-before-launch |
 | 2026-11-18 | individuals | A website for a personal project | website for a personal project | website-for-a-personal-project |
 | 2026-11-19 | general | Your Google Business Profile and your website | google business profile and website | google-business-profile-and-website |
-| 2026-11-20 | trades | A project gallery for a builder’s website | builder website gallery | builder-website-gallery |
 
-## 21 November to 20 December 2026
+## 20 November to 25 December 2026
 
-Same file rules as the table above. Groups still change every day. Do not reuse a keyword from a published post or from either table.
+Same file rules as the table above. Groups still change every day. Do not reuse a keyword from a published post or from either table. The five posts from 20 to 24 November each have one primary keyword, and that keyword names one area.
+
+On the day you write the 20 November post (`rated-people-checkatrade-website`), open https://www.ratedpeople.com/help/tradesperson again. Only state what that page says that day. Do not rely on an earlier reading.
 
 | Date | Group | Title | Keyword | Slug |
 | --- | --- | --- | --- | --- |
-| 2026-11-21 | payment | How much deposit for a website | how much deposit for a website | how-much-deposit-for-a-website |
-| 2026-11-22 | hospitality | What to put on a takeaway website | what to put on a takeaway website | takeaway-website-pages |
-| 2026-11-23 | redesign | What to do when a website looks outdated | website looks outdated | website-looks-outdated |
-| 2026-11-24 | salons | What to put on a barber’s website | what to put on a barber website | barber-website-pages |
-| 2026-11-25 | scratch | What to send a web designer | what to send a web designer | what-to-send-a-web-designer |
-| 2026-11-26 | fitness | A class timetable on a gym website | gym class timetable website | gym-class-timetable-website |
-| 2026-11-27 | retail | Click and collect on a shop website | click and collect website | click-and-collect-website |
-| 2026-11-28 | mobile | A click to call button on a website | click to call website | click-to-call-website |
-| 2026-11-29 | consultants | What to put on an accountant’s website | what to put on an accountant website | accountant-website-pages |
-| 2026-11-30 | freelancers | What to put on a photographer’s website | what to put on a photographer website | photographer-website-pages |
-| 2026-12-01 | startups | A landing page for a new startup | startup landing page | startup-landing-page |
-| 2026-12-02 | individuals | A personal website or LinkedIn | personal website vs linkedin | personal-website-vs-linkedin |
-| 2026-12-03 | local | Finding a web designer in Derby | web designer Derby | web-designer-derby |
-| 2026-12-04 | general | A contact form for a small business website | small business contact form | small-business-contact-form |
-| 2026-12-05 | trades | What to put on a gardener’s website | what to put on a gardener website | gardener-website-pages |
-| 2026-12-06 | payment | VAT on a small business website | VAT on a website | vat-on-a-website |
-| 2026-12-07 | hospitality | What to put on a pub website | what to put on a pub website | pub-website-pages |
-| 2026-12-08 | redesign | Update a website or start again | update a website or start again | update-a-website-or-start-again |
-| 2026-12-09 | salons | A price list on a beauty salon website | beauty salon price list website | beauty-salon-price-list-website |
-| 2026-12-10 | scratch | Writing the words before the design | website copy for a small business | website-copy-for-a-small-business |
-| 2026-12-11 | fitness | What to put on a yoga studio website | yoga studio website | yoga-studio-website |
-| 2026-12-12 | retail | Opening hours on a shop website | shop opening hours website | shop-opening-hours-website |
-| 2026-12-13 | mobile | Website buttons that are too small on a phone | website buttons too small | website-buttons-too-small |
-| 2026-12-14 | consultants | What to put on a therapist’s website | what to put on a therapist website | therapist-website-pages |
-| 2026-12-15 | freelancers | What to put on a copywriter’s website | what to put on a copywriter website | copywriter-website-pages |
-| 2026-12-16 | startups | How to explain a new product on a website | explain a product on a website | explain-a-product-on-a-website |
-| 2026-12-17 | individuals | A simple website as an online CV | online cv website | online-cv-website |
-| 2026-12-18 | local | Finding a web designer in Leicester | web designer Leicester | web-designer-leicester |
-| 2026-12-19 | general | HTTPS for a small business website | https for a small business website | https-for-a-small-business-website |
-| 2026-12-20 | trades | What to put on a plasterer’s website | what to put on a plasterer website | plasterer-website-pages |
+| 2026-11-20 | trades | Rated People is now Checkatrade: does your trade still need its own website? | does a trade in Mansfield need a website | rated-people-checkatrade-website |
+| 2026-11-21 | local | Questions to ask a web designer in Mansfield or Nottingham before you pay a deposit | questions to ask a web designer in Mansfield | questions-to-ask-a-web-designer-mansfield |
+| 2026-11-22 | scratch | Wix or a custom website: what a Mansfield business gives up | Wix or a custom website in Mansfield | wix-or-custom-website-mansfield |
+| 2026-11-23 | payment | Pay monthly website vs paying once: the 3-year total | pay monthly website Mansfield | pay-monthly-website-mansfield |
+| 2026-11-24 | redesign | Changing web designer without losing your Google rankings | changing web designer in Mansfield | changing-web-designer-mansfield |
+| 2026-11-25 | trades | A project gallery for a builder’s website | builder website gallery | builder-website-gallery |
+| 2026-11-26 | payment | How much deposit for a website | how much deposit for a website | how-much-deposit-for-a-website |
+| 2026-11-27 | hospitality | What to put on a takeaway website | what to put on a takeaway website | takeaway-website-pages |
+| 2026-11-28 | redesign | What to do when a website looks outdated | website looks outdated | website-looks-outdated |
+| 2026-11-29 | salons | What to put on a barber’s website | what to put on a barber website | barber-website-pages |
+| 2026-11-30 | scratch | What to send a web designer | what to send a web designer | what-to-send-a-web-designer |
+| 2026-12-01 | fitness | A class timetable on a gym website | gym class timetable website | gym-class-timetable-website |
+| 2026-12-02 | retail | Click and collect on a shop website | click and collect website | click-and-collect-website |
+| 2026-12-03 | mobile | A click to call button on a website | click to call website | click-to-call-website |
+| 2026-12-04 | consultants | What to put on an accountant’s website | what to put on an accountant website | accountant-website-pages |
+| 2026-12-05 | freelancers | What to put on a photographer’s website | what to put on a photographer website | photographer-website-pages |
+| 2026-12-06 | startups | A landing page for a new startup | startup landing page | startup-landing-page |
+| 2026-12-07 | individuals | A personal website or LinkedIn | personal website vs linkedin | personal-website-vs-linkedin |
+| 2026-12-08 | local | Finding a web designer in Derby | web designer Derby | web-designer-derby |
+| 2026-12-09 | general | A contact form for a small business website | small business contact form | small-business-contact-form |
+| 2026-12-10 | trades | What to put on a gardener’s website | what to put on a gardener website | gardener-website-pages |
+| 2026-12-11 | payment | VAT on a small business website | VAT on a website | vat-on-a-website |
+| 2026-12-12 | hospitality | What to put on a pub website | what to put on a pub website | pub-website-pages |
+| 2026-12-13 | redesign | Update a website or start again | update a website or start again | update-a-website-or-start-again |
+| 2026-12-14 | salons | A price list on a beauty salon website | beauty salon price list website | beauty-salon-price-list-website |
+| 2026-12-15 | scratch | Writing the words before the design | website copy for a small business | website-copy-for-a-small-business |
+| 2026-12-16 | fitness | What to put on a yoga studio website | yoga studio website | yoga-studio-website |
+| 2026-12-17 | retail | Opening hours on a shop website | shop opening hours website | shop-opening-hours-website |
+| 2026-12-18 | mobile | Website buttons that are too small on a phone | website buttons too small | website-buttons-too-small |
+| 2026-12-19 | consultants | What to put on a therapist’s website | what to put on a therapist website | therapist-website-pages |
+| 2026-12-20 | freelancers | What to put on a copywriter’s website | what to put on a copywriter website | copywriter-website-pages |
+| 2026-12-21 | startups | How to explain a new product on a website | explain a product on a website | explain-a-product-on-a-website |
+| 2026-12-22 | individuals | A simple website as an online CV | online cv website | online-cv-website |
+| 2026-12-23 | local | Finding a web designer in Leicester | web designer Leicester | web-designer-leicester |
+| 2026-12-24 | general | HTTPS for a small business website | https for a small business website | https-for-a-small-business-website |
+| 2026-12-25 | trades | What to put on a plasterer’s website | what to put on a plasterer website | plasterer-website-pages |

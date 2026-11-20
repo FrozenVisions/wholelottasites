@@ -223,7 +223,7 @@ export const moreAudiences: TradePage[] = [
     slug: "individuals",
     name: "Individuals",
     title: "Personal Website | A Page of Your Own | WholeLottaSites",
-    description: "A personal website for an individual: who you are, what you do and how to contact you. Built from scratch for £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months.",
+    description: "A personal website: who you are, what you do and how to contact you. Built from scratch for £200 + VAT (£240 inc VAT), or £50 a month inc VAT for 12 months.",
     h1: "A personal website.",
     lead: "Not every site is for a limited company. A personal website is a page you control, usually so people who hear your name can see who you are.",
     intro: [

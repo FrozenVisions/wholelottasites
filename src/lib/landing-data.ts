@@ -182,7 +182,7 @@ const tradePages: TradePage[] = [
     slug: "cafes",
     name: "Cafés",
     title: "Café Website Design | Menus, Hours & Maps | WholeLottaSites",
-    description: "Café website design with a real-text menu, opening hours, allergen notes and a map. Built from scratch for £200 + VAT (£240 inc VAT). Full restaurants have a separate page.",
+    description: "Café website design with a real-text menu, opening hours, allergen notes and a map. Built from scratch for £200 + VAT (£240 inc VAT).",
     h1: "Café website design.",
     lead: "People want three things from a café website: what’s on the menu, when you’re open and where you are. Get those right on a phone and they’ll come through the door.",
     intro: [

@@ -614,6 +614,8 @@ export const builtSites: BuiltSite[] = [
     imgSmall: stickyServiceSmall,
     width: 1200,
     height: 750,
+    url: "https://sticky-listing-push.vercel.app",
+    linkLabel: "sticky-listing-push.vercel.app",
   },
   {
     id: "safeplate",

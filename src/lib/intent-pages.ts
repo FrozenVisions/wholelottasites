@@ -1,5 +1,5 @@
 import type { Faq } from "@/lib/landing-data";
-import { homepageDepositText, newWebsitePriceAnswer, newWebsitePricing } from "@/lib/site-data";
+import { homepageDepositText, leavingAndOwnershipAnswer, newWebsitePriceAnswer, newWebsitePricing } from "@/lib/site-data";
 
 export interface IntentSection {
   id: string;
@@ -119,6 +119,7 @@ export const intentPages: IntentPage[] = [
       ["Does paying monthly cost more than £200 + VAT?", `${newWebsitePricing.upfront} if you pay once. ${newWebsitePricing.oneOffCare} ${newWebsitePricing.monthlyPlain}. The monthly total is higher. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.notCredit}`],
       ["When do I pick a plan?", `When you decide to go ahead. You can pay £200 + VAT (£240 inc VAT) in one payment, or £50 a month inc VAT for 12 months. ${homepageDepositText} Before the deposit, the sample is a site already on the portfolio.`],
       ["Is monthly care required?", `${newWebsitePricing.oneOffCare} ${newWebsitePricing.monthlyCare} Care is not required once the site is yours.`],
+      ["What happens if I stop the monthly payments early?", leavingAndOwnershipAnswer],
     ],
   },
   {

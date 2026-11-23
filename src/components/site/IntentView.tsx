@@ -6,7 +6,7 @@ import { RichText } from "@/components/site/RichText";
 import { SiteLinks } from "@/components/site/SiteLinks";
 import { intentBySlug } from "@/lib/intent-pages";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
-import { seo } from "@/lib/site-data";
+import { leavingAndOwnershipParagraphs, seo } from "@/lib/site-data";
 
 export function intentHead(slug: string) {
   const page = intentBySlug(slug);
@@ -69,6 +69,16 @@ export function IntentView({ slug }: { slug: string }) {
       {page.showPlans && (
         <Section muted={page.showIncluded ? false : true}>
           <PaymentPlans />
+          {page.slug === "pay-monthly-website" && (
+            <aside className="mt-8 max-w-3xl rounded-lg border bg-card p-6 shadow-sm">
+              <h2 className="font-display text-xl font-semibold">Leaving and ownership</h2>
+              <div className="mt-4 space-y-3 text-muted-foreground">
+                {leavingAndOwnershipParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </aside>
+          )}
           <p className="mt-6 max-w-3xl text-muted-foreground">
             These are the same plans as on the <Link to="/pricing" hash="payment-plans" className="font-semibold text-primary underline-offset-4 hover:underline">pricing page</Link>.
           </p>

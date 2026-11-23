@@ -462,12 +462,22 @@ export const bundles = [
   },
 ] as const;
 
+/** Cancellation and ownership. Used on the pay-monthly page, its FAQ, and the site FAQ. */
+export const leavingAndOwnershipParagraphs = [
+  "There is no exit fee. You can cancel the monthly payments with 30 days’ notice.",
+  "The site stays on our hosting. After 12 payments, the site is yours.",
+  "If you stop early, you can either pay the remaining balance and take full ownership, or we take the site down and hand over your own text, photos and domain. The domain is always yours.",
+] as const;
+
+export const leavingAndOwnershipAnswer = leavingAndOwnershipParagraphs.join("\n\n");
+
 export const faqs = [
   ["What is the £50 + VAT website mini-fix?", `For a live site in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire or Northamptonshire, £50 + VAT (£60 inc VAT) is a short audit and one concrete fix. Examples are a broken form, a mobile layout problem, speed, an SSL or redirect mess, or a missing website link on a Google Business Profile. It is not a redesign and not a full rebuild. Bigger work is quoted separately: a rescue is usually around £150–£400, or a rebuild at ${newWebsitePricing.upfront}. It is not a promise of a Google position.`],
   ["Who owns the domain?", "You do. The domain is registered in your name. We cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. I’ll help you point it at the site. I don’t need to own it."],
   ["Is the domain included?", "Yes, we cover the first year of a standard low-cost domain. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. The domain is registered in your name."],
   ["Can I pay monthly?", `${newWebsitePricing.monthlyPlain}. ${payMonthlyCare} Or ${newWebsitePricing.upfront}. ${oneOffCare} ${newWebsitePricing.notCredit} ${newWebsitePricing.founding}`],
   ["Can I pay monthly for a new website?", `Yes. ${newWebsitePricing.monthlyPlain}. ${payMonthlyCare} Or ${newWebsitePricing.upfront}. ${oneOffCare} Monthly payments are taken automatically by card through Stripe. ${newWebsitePricing.notCredit}`],
+  ["What happens if I stop the monthly payments early?", leavingAndOwnershipAnswer],
   ["What does the founding website price include?", `A custom site built from scratch, with solid foundations: proper local SEO keywords, fast pages, a mobile-first layout, secure HTTPS, a title and description on every page, a contact form and your contact details, Stripe payment links if you want them, and help going live. ${newWebsitePricing.domain} ${newWebsitePricing.founding} ${foundingBonusesText}`],
   ["What are the founding client bonuses?", foundingBonusesText],
   ["Is hosting included?", `Yes, the first year of hosting is included with a new website. From year two you pay hosting, or monthly care (from ${pounds(newWebsiteOffer.careFromPounds)}/month).`],

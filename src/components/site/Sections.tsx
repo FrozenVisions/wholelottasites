@@ -484,7 +484,9 @@ export function FaqList() {
             {q}
             <ChevronDown className="size-5 shrink-0 text-primary transition-transform group-open:rotate-180" aria-hidden />
           </summary>
-          <p className="mt-3 text-muted-foreground">{a}</p>
+          {a.split("\n\n").map((paragraph) => (
+            <p key={paragraph} className="mt-3 text-muted-foreground">{paragraph}</p>
+          ))}
         </details>
       ))}
     </div>

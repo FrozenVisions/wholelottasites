@@ -71,6 +71,8 @@ Same file rules as the table above. Groups still change every day. Do not reuse 
 
 On the day you write the 20 November post (`rated-people-checkatrade-website`), open https://www.ratedpeople.com/help/tradesperson again. Only state what that page says that day. Do not rely on an earlier reading.
 
+**Published out of order.** On 22 November 2026 the post that went live was `website-for-a-gardener-or-landscaper` (keyword “website for a gardener or landscaper”), instead of the Wix row. The Wix row was published on 23 November 2026 as `content/blog/wix-or-custom-website-mansfield.md`. Leave the pay-monthly row (`pay-monthly-website-mansfield`) for a later date. Do not delete either row. The 10 December row `gardener-website-pages` is a different post and is still unpublished.
+
 | Date | Group | Title | Keyword | Slug |
 | --- | --- | --- | --- | --- |
 | 2026-11-20 | trades | Rated People is now Checkatrade: does your trade still need its own website? | does a trade in Mansfield need a website | rated-people-checkatrade-website |

@@ -84,6 +84,7 @@ export function SitesBuiltList() {
                 </p>
               </>
             ) : null}
+            {site.resultNote ? <p className="mt-4 text-sm text-foreground">{site.resultNote}</p> : null}
             {site.url && site.linkLabel ? (
               <a
                 href={site.url}

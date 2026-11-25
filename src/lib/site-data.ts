@@ -578,13 +578,19 @@ export type BuiltSite = {
   linkLabel?: string;
   /** Client’s own sentence. Shown as a link to the full review. */
   pullQuote?: string;
+  /**
+   * One verified Search Console line on the portfolio page.
+   * Impressions and clicks only. Never a ranking or a position.
+   */
+  resultNote?: string;
   /** Shown as a badge. The shop is not described as finished. */
   inProgress?: boolean;
 };
 
 /**
  * Sites shown on the portfolio. Summaries are the agreed wording.
- * A pull-quote, when present, is the client’s own words. No traffic, rankings or results are attached.
+ * A pull-quote, when present, is the client’s own words.
+ * A result note, when present, is a verified Search Console figure. Rankings are never attached.
  */
 export const builtSites: BuiltSite[] = [
   {
@@ -613,6 +619,8 @@ export const builtSites: BuiltSite[] = [
     height: 750,
     url: "https://mcdecoratingni.co.uk",
     linkLabel: "mcdecoratingni.co.uk",
+    resultNote:
+      "Showed up in Google searches 921 times in the last 3 months (Search Console, 23 August to 22 November 2026).",
   },
   {
     id: "the-sticky-service",
@@ -639,6 +647,8 @@ export const builtSites: BuiltSite[] = [
     height: 750,
     url: "https://safeplate.org.uk",
     linkLabel: "safeplate.org.uk",
+    resultNote:
+      "Showed up in Google searches 2,660 times in the last 3 months (Search Console, 23 August to 22 November 2026).",
   },
   {
     id: "whole-lotta-vinyl",
@@ -652,6 +662,8 @@ export const builtSites: BuiltSite[] = [
     height: 750,
     url: "https://wholelottavinyl.com",
     linkLabel: "wholelottavinyl.com",
+    resultNote:
+      "Showed up in Google searches 64,123 times in the last 3 months, and was clicked 1,302 times (Search Console, 23 August to 22 November 2026).",
   },
   {
     id: "vinyl-buyback",
@@ -665,6 +677,8 @@ export const builtSites: BuiltSite[] = [
     height: 1208,
     url: "https://vinylbuyback.co.uk",
     linkLabel: "vinylbuyback.co.uk",
+    resultNote:
+      "Showed up in Google searches 975 times in the last 3 months (Search Console, 23 August to 22 November 2026).",
   },
   {
     id: "wlv-outlet",

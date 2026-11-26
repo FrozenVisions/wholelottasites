@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { Section, MockupForm } from "@/components/site/Sections";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { CONTACT } from "@/config";
 import { seo } from "@/lib/site-data";
 import { breadcrumbJsonLd, jsonLd } from "@/lib/schema";
 
@@ -24,6 +25,7 @@ function Contact() {
       <p className="mt-6 max-w-3xl text-muted-foreground">
         For a new site, use the form. If you already have a live site in the East Midlands and want the £50 + VAT mini-fix, say so in the message and include the address.{" "}
         <Link to="/website-mini-fix" className="font-semibold text-primary hover:underline">What the £50 + VAT covers</Link>.
+        {" "}Or message on <a href={CONTACT.whatsappHref} className="font-semibold text-primary hover:underline">WhatsApp</a> ({CONTACT.phoneDisplay}).
       </p>
       <div className="mt-6">
         <MockupForm heading="h1" />

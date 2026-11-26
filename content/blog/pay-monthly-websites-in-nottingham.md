@@ -13,7 +13,7 @@ A pay monthly website is easy to misunderstand. Some offers are a cheap first mo
 
 Pay monthly is £50 a month including VAT for 12 months. Twelve payments are £600 including VAT. Each month is £41.67 plus VAT. Paying once is £200 + VAT, which is £240 including VAT. The monthly route costs more in total. That difference is the price of spreading it. It is not interest added on top of £240, and it is not a credit agreement.
 
-Those £50 payments buy the website. The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Paying once, care stays optional: 3 months free, then from £25 a month.
+Those £50 payments buy the website. The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. Paying once, care stays optional: 3 months free, then from £25 a month.
 
 The offer is for the first 20 clients. I am building up reviews, so those first 20 get founding pricing. In return I ask for an honest Google review and permission to show the finished site in the portfolio. I don’t publish how many places are left, and I don’t invent reviews to fill the gap. The page that sets this out is the [founding client offer](/founding-offer/). The [pay monthly website](/pay-monthly-website/) page uses the same figures.
 
@@ -43,7 +43,7 @@ Before a deposit, you look at sample sites. You pay the deposit to start. There 
 
 ## After the twelfth payment
 
-When the twelfth payment is made, the build payments stop and the site is yours. Essential care was included while those payments ran. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or take a full handover and leave. Essential keeps hosting and the domain paid and running, with updates, backups, small changes, fixes and a monthly check that the site, forms and contact links work. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. It is a choice. From year two you also pay the domain renewal, and hosting if you are not on care.
+When the twelfth payment is made, the build payments stop and the site is yours. Essential care was included while those payments ran. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or take a full handover and leave. Essential keeps hosting and the domain paid and running, with updates, backups, small changes, fixes and a monthly check that the site, forms and contact links work. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. It is a choice. From year two you also pay the domain renewal, and hosting if you are not on care.
 
 If you are comparing pay monthly websites in Nottingham, ask each person for the total, the name on the domain, and what year two costs. A low first month is not a price until those three answers are in writing. If a message you receive disagrees with the [pricing](/pricing/) page, use the page.
 

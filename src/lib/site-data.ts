@@ -100,8 +100,10 @@ export const careTiers = [
     pricePounds: 25,
     priceLabel: "£25",
     period: "per month",
+    annualPricePounds: 250,
+    annualPriceLabel: "£250",
     schemaDescription:
-      "Optional monthly Essential care. Hosting and domain renewal kept paid and running. Security and software updates, plus regular backups. Small text, photo and price changes, up to 30 minutes a month. Fixes if something on the site breaks. A monthly check that the site, forms and contact links work. Email support, normally answered within one working day. No blog posts.",
+      "Optional Essential care. £25 a month, or £250 a year if you pay for 10 months and get 12. Hosting and domain renewal kept paid and running. Security and software updates, plus regular backups. Small text, photo and price changes, up to 30 minutes a month. Fixes if something on the site breaks. A monthly check that the site, forms and contact links work. Email support, normally answered within one working day. Changes made within 3 working days. A short plain-English note on what was done. No blog posts.",
     points: [
       "Hosting and domain renewal kept paid and running",
       "Security and software updates, plus regular backups",
@@ -109,6 +111,8 @@ export const careTiers = [
       "Fixes if something on the site breaks",
       "A monthly check that the site, forms and contact links work",
       "Email support, normally answered within one working day",
+      "Changes made within 3 working days",
+      "A short plain-English note on what was done",
       "No blog posts",
     ],
   },
@@ -118,8 +122,10 @@ export const careTiers = [
     pricePounds: 50,
     priceLabel: "£50",
     period: "per month",
+    annualPricePounds: 500,
+    annualPriceLabel: "£500",
     schemaDescription:
-      "Optional monthly Growth care. Everything in Essential, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Blog posts help the site grow on Google over time. Nothing is guaranteed.",
+      "Optional Growth care. £50 a month, or £500 a year if you pay for 10 months and get 12. Everything in Essential, including changes within 3 working days and a short plain-English note on what was done, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Blog posts help the site grow on Google over time. Nothing is guaranteed.",
     points: [
       "Everything in Essential",
       "4 SEO blog posts a month, written around local search phrases for the business",
@@ -133,8 +139,10 @@ export const careTiers = [
     pricePounds: 75,
     priceLabel: "£75",
     period: "per month",
+    annualPricePounds: 750,
+    annualPriceLabel: "£750",
     schemaDescription:
-      "Optional monthly Pro care. Everything in Growth, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed.",
+      "Optional Pro care. £75 a month, or £750 a year if you pay for 10 months and get 12. Everything in Growth, including changes within 3 working days and a short plain-English note on what was done, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed.",
     points: [
       "Everything in Growth",
       "8 SEO blog posts a month, instead of 4",
@@ -158,11 +166,18 @@ const essentialCare = careTiers[0];
 const growthCare = careTiers[1];
 const proCare = careTiers[2];
 
-/** “Essential £25, Growth £50 or Pro £75 a month” */
-export const careTierPrices = `${essentialCare.name.replace(" care", "")} ${essentialCare.priceLabel}, ${growthCare.name.replace(" care", "")} ${growthCare.priceLabel} or ${proCare.name.replace(" care", "")} ${proCare.priceLabel} a month`;
+/** Monthly prices, plus the yearly option (pay 10 months, get 12). */
+export const careTierPrices = `${essentialCare.name.replace(" care", "")} ${essentialCare.priceLabel}, ${growthCare.name.replace(" care", "")} ${growthCare.priceLabel} or ${proCare.name.replace(" care", "")} ${proCare.priceLabel} a month, or ${essentialCare.annualPriceLabel}, ${growthCare.annualPriceLabel} or ${proCare.annualPriceLabel} a year (pay 10 months, get 12)`;
+
+/** Pay 10 months, get 12. Annual figures are care, not the website price. */
+export const careAnnualOption =
+  `Or pay for 10 months and get 12: Essential ${essentialCare.annualPriceLabel} a year, Growth ${growthCare.annualPriceLabel} a year or Pro ${proCare.annualPriceLabel} a year.`;
+
+export const careOnAnyPlanText =
+  "On any care plan, changes are made within 3 working days, and you get a short plain-English note on what was done.";
 
 export const careIncludedAnswer =
-  `Care is optional and monthly. Essential is ${essentialCare.priceLabel} a month: hosting and domain renewal kept paid and running, security and software updates plus regular backups, small text, photo and price changes up to 30 minutes a month, fixes if something on the site breaks, a monthly check that the site, forms and contact links work, and email support normally answered within one working day. No blog posts. Growth is ${growthCare.priceLabel} a month: everything in Essential, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Pro is ${proCare.priceLabel} a month: everything in Growth, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed.`;
+  `Care is optional. Essential is ${essentialCare.priceLabel} a month: hosting and domain renewal kept paid and running, security and software updates plus regular backups, small text, photo and price changes up to 30 minutes a month, fixes if something on the site breaks, a monthly check that the site, forms and contact links work, and email support normally answered within one working day. No blog posts. Growth is ${growthCare.priceLabel} a month: everything in Essential, plus 4 SEO blog posts a month written around local search phrases for the business, up to 1 hour of changes a month, and a monthly Google Business Profile post. Pro is ${proCare.priceLabel} a month: everything in Growth, but 8 SEO blog posts a month instead of 4. Blog posts help the site grow on Google over time. Nothing is guaranteed. ${careOnAnyPlanText} ${careAnnualOption}`;
 
 /** Deposit starts the homepage. The refund ends once that design is approved. Approved by Chris Faulkes, 19 Nov 2026. */
 export const homepageDeposit = {
@@ -419,7 +434,7 @@ export const offers = [
     id: "monthly-care",
     title: "Monthly website care",
     price: `from ${essentialCare.priceLabel}`,
-    priceNote: "per month. Optional.",
+    priceNote: `per month, or ${essentialCare.annualPriceLabel} a year. Optional.`,
     summary:
       `${careIncludedAnswer} ${payMonthlyCare} ${oneOffCare} A fix does not include care.`,
     points: [
@@ -488,7 +503,7 @@ export const faqs = [
   ["Is monthly care required?", `${oneOffCare} ${payMonthlyCare} Care is not required once the site is yours. A fix does not include it. Say when you want to stop and I’ll confirm how we end it.`],
   ["Can I take payments?", "Yes, via your own Stripe payment links. You set up the Stripe account and I’ll connect it to your site."],
   ["How long does a new site take?", `A founding client launches within ${newWebsiteOffer.launchDays} days of receiving the content. We tweak until you’re happy before launch.`],
-  ["Can I make edits later?", `Yes. Small text, photo and price changes can sit on optional monthly care: up to 30 minutes a month on Essential (${essentialCare.priceLabel}), or up to 1 hour a month on Growth (${growthCare.priceLabel}) and Pro (${proCare.priceLabel}). Or as a one-off if we’ve agreed it.`],
+  ["Can I make edits later?", `Yes. Small text, photo and price changes can sit on optional care: up to 30 minutes a month on Essential (${essentialCare.priceLabel}), or up to 1 hour a month on Growth (${growthCare.priceLabel}) and Pro (${proCare.priceLabel}). ${careOnAnyPlanText} ${careAnnualOption} Or as a one-off if we’ve agreed it.`],
   ["Do I get a free design before I pay?", `No. ${homepageDepositText} Before the deposit you can look at sample sites — live sites and example designs. A fix audit is different: if you already have a site, I’ll send screenshots and 3–5 issues at no charge, then a price.`],
   ["What is GEO on a WholeLottaSites website?", "Clear facts about your business on the site: name, services, area, and contact details, written so search engines and AI assistants can cite you. It is ordinary plain English and structured pages, not tricks."],
   ["Will this get me recommended by ChatGPT or Google?", "I do not promise that. No assistant and no search engine guarantees a mention. I make the site accurate and easy to quote. Whether a tool recommends you is up to that tool."],

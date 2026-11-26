@@ -15,6 +15,10 @@ const links = [
   { href: "/blog/what-a-small-business-website-needs", label: "What a small business website needs" },
   { href: "/blog", label: "Blog" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/start", label: "Start your site" },
+  { href: "/record-shops", label: "Websites for record shops" },
+  { href: "/case-studies", label: "Case studies" },
+  { href: "/website-checker", label: "Free website checker" },
 ];
 
 export function SiteLinks({ current }: { current?: string }) {

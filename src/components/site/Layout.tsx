@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config";
 import { posts } from "@/lib/blog";
@@ -11,6 +11,7 @@ import { newWebsitePricing } from "@/lib/site-data";
 export const navLinks = [
   { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
+  { to: "/record-shops", label: "Record shops" },
   { to: "/reviews", label: "Reviews" },
   { to: "/pricing", label: "Pricing" },
   { to: "/how-it-works", label: "How it works" },
@@ -115,7 +116,7 @@ export function Header() {
             )
           ))}
           <Button asChild variant="copper">
-            <Link to="/contact" hash="mockup-form">Ask about a new site</Link>
+            <Link to="/start">Start your site</Link>
           </Button>
         </nav>
         <button
@@ -152,7 +153,7 @@ export function Header() {
             ))}
           </ul>
           <Button asChild variant="copper" size="lg" className="mt-4 w-full">
-            <Link to="/contact" hash="mockup-form" onClick={() => setOpen(false)}>Ask about a new site</Link>
+            <Link to="/start" onClick={() => setOpen(false)}>Start your site</Link>
           </Button>
         </nav>
       )}
@@ -162,7 +163,7 @@ export function Header() {
 
 function isFormPage(pathname: string) {
   const path = pathname.replace(/\/$/, "") || "/";
-  return path === "/contact" || path === "/leave-a-review" || path === "/pay-what-you-want";
+  return path === "/contact" || path === "/leave-a-review" || path === "/pay-what-you-want" || path === "/start";
 }
 
 export function CtaBand() {
@@ -212,6 +213,10 @@ export function Footer() {
             <li><Link to="/websites-for" className="text-navy-foreground/85 hover:text-copper">Websites by type</Link></li>
             <li><Link to="/web-design-mansfield" className="text-navy-foreground/85 hover:text-copper">Web design Mansfield</Link></li>
             <li><Link to="/leave-a-review" className="text-navy-foreground/85 hover:text-copper">Leave a review</Link></li>
+            <li><Link to="/start" className="text-navy-foreground/85 hover:text-copper">Start your site</Link></li>
+            <li><Link to="/case-studies" className="text-navy-foreground/85 hover:text-copper">Case studies</Link></li>
+            <li><Link to="/website-checker" className="text-navy-foreground/85 hover:text-copper">Website checker</Link></li>
+            <li><Link to="/demos" className="text-navy-foreground/85 hover:text-copper">Example designs</Link></li>
           </ul>
         </nav>
         <nav aria-label="Advice">
@@ -235,6 +240,7 @@ export function Footer() {
           <p className="eyebrow text-copper">Get in touch</p>
           <p className="mt-4"><a href={`mailto:${CONTACT.email}`} className="hover:text-copper">{CONTACT.email}</a></p>
           <p className="mt-1"><a href={CONTACT.phoneHref} className="hover:text-copper">{CONTACT.phoneDisplay}</a></p>
+          <p className="mt-1"><a href={CONTACT.whatsappHref} className="hover:text-copper">WhatsApp</a></p>
         </div>
       </div>
       <div className="border-t border-navy-foreground/10">
@@ -260,5 +266,22 @@ export function StickyMobileCta() {
         </Button>
       </div>
     </div>
+  );
+}
+
+/** WhatsApp on small screens, sat above the sticky bar so the two don’t cover each other. */
+export function WhatsAppFloat() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const form = isFormPage(pathname);
+  return (
+    <a
+      href={CONTACT.whatsappHref}
+      className="fixed right-4 z-40 inline-flex items-center gap-2 rounded-full bg-copper px-4 py-3 text-sm font-semibold text-navy shadow-lg lg:hidden"
+      style={{ bottom: form ? "max(1rem, env(safe-area-inset-bottom))" : "calc(5.25rem + env(safe-area-inset-bottom))" }}
+      aria-label={`WhatsApp ${CONTACT.name} on ${CONTACT.phoneDisplay}`}
+    >
+      <MessageCircle className="size-5" aria-hidden />
+      WhatsApp
+    </a>
   );
 }

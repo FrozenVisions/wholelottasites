@@ -47,7 +47,7 @@ Monthly website care is optional. The tiers are on [pricing](/pricing/).
 
 If you are not on a care plan, blog posts can be quoted separately. The longer note is [what monthly website care actually includes](/blog/monthly-website-care/).
 
-A new small-business website is separate from care. The founding client offer, for the first 20 clients, is £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total). In return, an honest Google review and permission to show the site in the portfolio once it’s live. The £50 a month pays for the website and includes Essential care for those 12 months. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Paying once, care stays optional: 3 months free, then from £25 a month, or a full handover. That offer is on the [founding client offer](/founding-offer/) page.
+A new small-business website is separate from care. The founding client offer, for the first 20 clients, is £200 + VAT one-off (£240 inc VAT), or £50 a month inc VAT for 12 months (£600 total). In return, an honest Google review and permission to show the site in the portfolio once it’s live. The £50 a month pays for the website and includes Essential care for those 12 months. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. Paying once, care stays optional: 3 months free, then from £25 a month, or a full handover. That offer is on the [founding client offer](/founding-offer/) page.
 
 If the site is already live and one thing on it is wrong, the East Midlands [website mini-fix](/website-mini-fix/) is £50 + VAT (£60 inc VAT): a short audit and one concrete fix on a live site. It does not include a set of blog posts.
 
@@ -71,7 +71,7 @@ No. A thin post that never answers the question does not help. Repeating the sam
 Care is optional. Essential is £25 a month and has no blog posts. Growth is £50 a month: 4 SEO blog posts a month written around local search phrases for the business, plus a monthly Google Business Profile post. Pro is £75 a month: 8 SEO blog posts a month instead of 4. Posts can also be quoted separately.
 
 **Is the £50 a month website plan the same as care?**
-No. On the founding client offer, £50 a month inc VAT for 12 months (£600 total) pays for the website. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. The same site is £200 + VAT one-off (£240 inc VAT).
+No. On the founding client offer, £50 a month inc VAT for 12 months (£600 total) pays for the website. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. The same site is £200 + VAT one-off (£240 inc VAT).
 
 ## If you want the posts written
 

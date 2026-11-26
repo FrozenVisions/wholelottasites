@@ -13,6 +13,7 @@ export const CONTACT = {
   email: "chris@wholelottasites.co.uk",
   phoneDisplay: "07517 214483",
   phoneHref: "tel:+447517214483",
+  whatsappHref: "https://wa.me/447517214483",
   location: "Mansfield, Nottinghamshire",
 };
 

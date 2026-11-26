@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { BuyButtons, Heading, PageHero, Section, WhatsIncluded } from "@/components/site/Sections";
 import { LandingFaqs, faqJsonLd } from "@/components/site/Landing";
@@ -144,6 +144,10 @@ function FoundingOfferPage() {
         <div className="mt-8 flex flex-wrap gap-3">
           <BuyButtons />
         </div>
+        <p className="mt-4">
+          <Link to="/start" className="font-semibold text-primary hover:underline">Start your site</Link>
+          <span className="text-muted-foreground"> if you’d rather send a brief first. I’ll email the payment link.</span>
+        </p>
         <p className="mt-6 text-muted-foreground">
           Email <a className="font-semibold text-primary hover:underline" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
           {" · "}

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FORM_ENDPOINT, CONTACT } from "@/config";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { STRIPE_ONE_OFF_URL, STRIPE_PAY_MONTHLY_URL } from "@/config";
-import { problems, why, included, steps, stages, faqs, offers, bundles, proofSites, foundingBonuses, careTiers, careTierPrices, whyBlogPosts, newWebsiteOffer, newWebsitePricing, websitePaymentOptions, type EnquiryHash, type Project } from "@/lib/site-data";
+import { problems, why, included, steps, stages, faqs, offers, bundles, proofSites, foundingBonuses, careTiers, careTierPrices, careOnAnyPlanText, whyBlogPosts, newWebsiteOffer, newWebsitePricing, websitePaymentOptions, type EnquiryHash, type Project } from "@/lib/site-data";
 
 export function Section({ children, muted, className = "", id }: { children: ReactNode; muted?: boolean; className?: string; id?: string }) {
   return (
@@ -400,7 +400,7 @@ export function CareComparison() {
       <Heading
         eyebrow="Monthly care"
         title="What monthly care includes."
-        lead={`Care is optional and monthly, except where pay monthly includes it. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare} Blog posts on Growth and Pro help the site grow on Google over time. Nothing is guaranteed.`}
+        lead={`Care is optional, except where pay monthly includes it. ${careTierPrices}. ${careOnAnyPlanText} ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare} Blog posts on Growth and Pro help the site grow on Google over time. Nothing is guaranteed.`}
       />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {careTiers.map((tier) => (
@@ -408,6 +408,7 @@ export function CareComparison() {
             <h3 className="font-display text-2xl font-semibold">{tier.name}</h3>
             <p className="mt-3 font-display text-4xl font-bold leading-none">{tier.priceLabel}</p>
             <p className="mt-2 text-sm font-semibold text-primary">{tier.period}</p>
+            <p className="mt-1 text-sm text-muted-foreground">or {tier.annualPriceLabel} a year — pay 10 months, get 12</p>
             <ul className="mt-5 grid gap-2 text-sm text-muted-foreground">
               {tier.points.map((point) => (
                 <li key={point} className="flex gap-2">
@@ -531,7 +532,7 @@ const enquiryCopy: Record<EnquiryMode, { hash: EnquiryHash; label: string; eyebr
     label: "Monthly care",
     eyebrow: "Monthly care",
     title: "Ask about monthly care.",
-    lead: `Optional and monthly, ${careTierPrices}. Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare}`,
+    lead: `Optional. ${careTierPrices}. ${careOnAnyPlanText} Essential keeps hosting and the domain paid and running, with updates, backups, small changes and fixes. Growth and Pro add SEO blog posts. Blog posts help the site grow on Google over time. Nothing is guaranteed. ${newWebsitePricing.monthlyCare} ${newWebsitePricing.oneOffCare}`,
     subject: "Monthly website care enquiry – WholeLottaSites",
     button: "Ask about care",
     placeholder: "Which site should I look after, and what tends to need changing?",
@@ -678,6 +679,7 @@ export function MockupForm({ heading = "h2", lock }: {
         <div className="space-y-2">
           <p>Prefer email? <a className="font-semibold text-primary hover:underline" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
           <p>Or call: <a className="font-semibold text-primary hover:underline" href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a></p>
+          <p>Or WhatsApp: <a className="font-semibold text-primary hover:underline" href={CONTACT.whatsappHref}>WhatsApp {CONTACT.phoneDisplay}</a></p>
           <p className="text-muted-foreground">{CONTACT.name}, {CONTACT.role} · {CONTACT.location}</p>
         </div>
       </div>

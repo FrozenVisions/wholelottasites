@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
+import { caseStudyByBuiltId } from "@/lib/case-studies";
 import { builtSites, type BuiltSite } from "@/lib/site-data";
 
 function Shot({ site, sizes, className }: { site: BuiltSite; sizes: string; className: string }) {
@@ -57,7 +58,9 @@ export function SitesBuiltStrip() {
 export function SitesBuiltList() {
   return (
     <div className="grid gap-16">
-      {builtSites.map((site) => (
+      {builtSites.map((site) => {
+        const study = caseStudyByBuiltId(site.id);
+        return (
         <article key={site.id} id={site.id} className="grid scroll-mt-28 items-center gap-6 md:grid-cols-2 md:gap-10">
           <figure className="overflow-hidden rounded-lg border bg-card">
             <Shot
@@ -85,6 +88,13 @@ export function SitesBuiltList() {
               </>
             ) : null}
             {site.resultNote ? <p className="mt-4 text-sm text-foreground">{site.resultNote}</p> : null}
+            {study ? (
+              <p className="mt-4">
+                <Link to="/case-studies/$slug" params={{ slug: study.slug }} className="text-sm font-semibold text-primary hover:underline">
+                  Case study
+                </Link>
+              </p>
+            ) : null}
             {site.url && site.linkLabel ? (
               <a
                 href={site.url}
@@ -98,7 +108,8 @@ export function SitesBuiltList() {
             ) : null}
           </div>
         </article>
-      ))}
+        );
+      })}
     </div>
   );
 }

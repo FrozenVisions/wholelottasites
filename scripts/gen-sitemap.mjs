@@ -52,10 +52,17 @@ const walk = (dir) => readdirSync(dir).flatMap((name) => {
 const built = walk("dist/client")
   .filter((file) => file.endsWith("/index.html"))
   .map((file) => (file === "dist/client/index.html" ? "/" : file.slice("dist/client".length, -"/index.html".length)));
-// /not-found is the error page. /pay-what-you-want is shared on social only:
-// it is not in the nav, footer, or homepage, and no other public page is unlisted,
-// so it stays out of the sitemap.
-const ignore = new Set(["/not-found", "/pay-what-you-want"]);
+// /not-found is the error page. /pay-what-you-want is shared on social only.
+// Demo pages are noindex examples, so they stay out of the sitemap.
+// The /demos/ index is listed.
+const ignore = new Set([
+  "/not-found",
+  "/pay-what-you-want",
+  "/demos/electrician",
+  "/demos/roofer",
+  "/demos/cafe",
+  "/demos/record-shop",
+]);
 const listed = new Set(unique.map(([path]) => path));
 const extraBuilt = built.filter((path) => !ignore.has(path) && !listed.has(path));
 if (extraBuilt.length) {

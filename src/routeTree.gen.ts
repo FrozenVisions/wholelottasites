@@ -24,14 +24,21 @@ import { Route as PayMonthlyWebsiteRouteImport } from './routes/pay-monthly-webs
 import { Route as PayWhatYouWantRouteImport } from './routes/pay-what-you-want'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as RecordShopsRouteImport } from './routes/record-shops'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as StartRouteImport } from './routes/start'
 import { Route as WebDesignMansfieldRouteImport } from './routes/web-design-mansfield'
 import { Route as WebsiteBuiltFromScratchRouteImport } from './routes/website-built-from-scratch'
+import { Route as WebsiteCheckerRouteImport } from './routes/website-checker'
 import { Route as WebsiteMiniFixRouteImport } from './routes/website-mini-fix'
 import { Route as WebsiteRedesignRouteImport } from './routes/website-redesign'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
+import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies.$slug'
+import { Route as DemosIndexRouteImport } from './routes/demos.index'
+import { Route as DemosSlugRouteImport } from './routes/demos.$slug'
 import { Route as WebsitesForIndexRouteImport } from './routes/websites-for.index'
 import { Route as WebsitesForSlugRouteImport } from './routes/websites-for.$slug'
 
@@ -111,6 +118,11 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RecordShopsRoute = RecordShopsRouteImport.update({
+  id: '/record-shops',
+  path: '/record-shops',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
@@ -121,6 +133,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WebDesignMansfieldRoute = WebDesignMansfieldRouteImport.update({
   id: '/web-design-mansfield',
   path: '/web-design-mansfield',
@@ -129,6 +146,11 @@ const WebDesignMansfieldRoute = WebDesignMansfieldRouteImport.update({
 const WebsiteBuiltFromScratchRoute = WebsiteBuiltFromScratchRouteImport.update({
   id: '/website-built-from-scratch',
   path: '/website-built-from-scratch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteCheckerRoute = WebsiteCheckerRouteImport.update({
+  id: '/website-checker',
+  path: '/website-checker',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WebsiteMiniFixRoute = WebsiteMiniFixRouteImport.update({
@@ -149,6 +171,26 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog/$slug',
   path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/case-studies/',
+  path: '/case-studies/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesSlugRoute = CaseStudiesSlugRouteImport.update({
+  id: '/case-studies/$slug',
+  path: '/case-studies/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemosIndexRoute = DemosIndexRouteImport.update({
+  id: '/demos/',
+  path: '/demos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemosSlugRoute = DemosSlugRouteImport.update({
+  id: '/demos/$slug',
+  path: '/demos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WebsitesForIndexRoute = WebsitesForIndexRouteImport.update({
@@ -178,15 +220,22 @@ export interface FileRoutesByFullPath {
   '/pay-what-you-want': typeof PayWhatYouWantRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/record-shops': typeof RecordShopsRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
+  '/start': typeof StartRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
+  '/website-checker': typeof WebsiteCheckerRoute
   '/website-mini-fix': typeof WebsiteMiniFixRoute
   '/website-redesign': typeof WebsiteRedesignRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/demos/$slug': typeof DemosSlugRoute
   '/websites-for/$slug': typeof WebsitesForSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
+  '/demos/': typeof DemosIndexRoute
   '/websites-for/': typeof WebsitesForIndexRoute
 }
 export interface FileRoutesByTo {
@@ -205,15 +254,22 @@ export interface FileRoutesByTo {
   '/pay-what-you-want': typeof PayWhatYouWantRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/record-shops': typeof RecordShopsRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
+  '/start': typeof StartRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
+  '/website-checker': typeof WebsiteCheckerRoute
   '/website-mini-fix': typeof WebsiteMiniFixRoute
   '/website-redesign': typeof WebsiteRedesignRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/demos/$slug': typeof DemosSlugRoute
   '/websites-for/$slug': typeof WebsitesForSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/case-studies': typeof CaseStudiesIndexRoute
+  '/demos': typeof DemosIndexRoute
   '/websites-for': typeof WebsitesForIndexRoute
 }
 export interface FileRoutesById {
@@ -233,15 +289,22 @@ export interface FileRoutesById {
   '/pay-what-you-want': typeof PayWhatYouWantRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/record-shops': typeof RecordShopsRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
+  '/start': typeof StartRoute
   '/web-design-mansfield': typeof WebDesignMansfieldRoute
   '/website-built-from-scratch': typeof WebsiteBuiltFromScratchRoute
+  '/website-checker': typeof WebsiteCheckerRoute
   '/website-mini-fix': typeof WebsiteMiniFixRoute
   '/website-redesign': typeof WebsiteRedesignRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/demos/$slug': typeof DemosSlugRoute
   '/websites-for/$slug': typeof WebsitesForSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
+  '/demos/': typeof DemosIndexRoute
   '/websites-for/': typeof WebsitesForIndexRoute
 }
 export interface FileRouteTypes {
@@ -262,15 +325,22 @@ export interface FileRouteTypes {
     | '/pay-what-you-want'
     | '/portfolio'
     | '/pricing'
+    | '/record-shops'
     | '/reviews'
     | '/services'
+    | '/start'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
+    | '/website-checker'
     | '/website-mini-fix'
     | '/website-redesign'
     | '/blog/$slug'
+    | '/case-studies/$slug'
+    | '/demos/$slug'
     | '/websites-for/$slug'
     | '/blog/'
+    | '/case-studies/'
+    | '/demos/'
     | '/websites-for/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -289,15 +359,22 @@ export interface FileRouteTypes {
     | '/pay-what-you-want'
     | '/portfolio'
     | '/pricing'
+    | '/record-shops'
     | '/reviews'
     | '/services'
+    | '/start'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
+    | '/website-checker'
     | '/website-mini-fix'
     | '/website-redesign'
     | '/blog/$slug'
+    | '/case-studies/$slug'
+    | '/demos/$slug'
     | '/websites-for/$slug'
     | '/blog'
+    | '/case-studies'
+    | '/demos'
     | '/websites-for'
   id:
     | '__root__'
@@ -316,15 +393,22 @@ export interface FileRouteTypes {
     | '/pay-what-you-want'
     | '/portfolio'
     | '/pricing'
+    | '/record-shops'
     | '/reviews'
     | '/services'
+    | '/start'
     | '/web-design-mansfield'
     | '/website-built-from-scratch'
+    | '/website-checker'
     | '/website-mini-fix'
     | '/website-redesign'
     | '/blog/$slug'
+    | '/case-studies/$slug'
+    | '/demos/$slug'
     | '/websites-for/$slug'
     | '/blog/'
+    | '/case-studies/'
+    | '/demos/'
     | '/websites-for/'
   fileRoutesById: FileRoutesById
 }
@@ -344,15 +428,22 @@ export interface RootRouteChildren {
   PayWhatYouWantRoute: typeof PayWhatYouWantRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
+  RecordShopsRoute: typeof RecordShopsRoute
   ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
+  StartRoute: typeof StartRoute
   WebDesignMansfieldRoute: typeof WebDesignMansfieldRoute
   WebsiteBuiltFromScratchRoute: typeof WebsiteBuiltFromScratchRoute
+  WebsiteCheckerRoute: typeof WebsiteCheckerRoute
   WebsiteMiniFixRoute: typeof WebsiteMiniFixRoute
   WebsiteRedesignRoute: typeof WebsiteRedesignRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
+  DemosSlugRoute: typeof DemosSlugRoute
   WebsitesForSlugRoute: typeof WebsitesForSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
+  DemosIndexRoute: typeof DemosIndexRoute
   WebsitesForIndexRoute: typeof WebsitesForIndexRoute
 }
 
@@ -463,6 +554,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/record-shops': {
+      id: '/record-shops'
+      path: '/record-shops'
+      fullPath: '/record-shops'
+      preLoaderRoute: typeof RecordShopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reviews': {
       id: '/reviews'
       path: '/reviews'
@@ -477,6 +575,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/web-design-mansfield': {
       id: '/web-design-mansfield'
       path: '/web-design-mansfield'
@@ -489,6 +594,13 @@ declare module '@tanstack/react-router' {
       path: '/website-built-from-scratch'
       fullPath: '/website-built-from-scratch'
       preLoaderRoute: typeof WebsiteBuiltFromScratchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/website-checker': {
+      id: '/website-checker'
+      path: '/website-checker'
+      fullPath: '/website-checker'
+      preLoaderRoute: typeof WebsiteCheckerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/website-mini-fix': {
@@ -517,6 +629,34 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/case-studies'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/$slug': {
+      id: '/case-studies/$slug'
+      path: '/case-studies/$slug'
+      fullPath: '/case-studies/$slug'
+      preLoaderRoute: typeof CaseStudiesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demos/': {
+      id: '/demos/'
+      path: '/demos'
+      fullPath: '/demos/'
+      preLoaderRoute: typeof DemosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demos/$slug': {
+      id: '/demos/$slug'
+      path: '/demos/$slug'
+      fullPath: '/demos/$slug'
+      preLoaderRoute: typeof DemosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/websites-for/': {
@@ -552,15 +692,22 @@ const rootRouteChildren: RootRouteChildren = {
   PayWhatYouWantRoute: PayWhatYouWantRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
+  RecordShopsRoute: RecordShopsRoute,
   ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
+  StartRoute: StartRoute,
   WebDesignMansfieldRoute: WebDesignMansfieldRoute,
   WebsiteBuiltFromScratchRoute: WebsiteBuiltFromScratchRoute,
+  WebsiteCheckerRoute: WebsiteCheckerRoute,
   WebsiteMiniFixRoute: WebsiteMiniFixRoute,
   WebsiteRedesignRoute: WebsiteRedesignRoute,
   BlogSlugRoute: BlogSlugRoute,
+  CaseStudiesSlugRoute: CaseStudiesSlugRoute,
+  DemosSlugRoute: DemosSlugRoute,
   WebsitesForSlugRoute: WebsitesForSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
+  DemosIndexRoute: DemosIndexRoute,
   WebsitesForIndexRoute: WebsitesForIndexRoute,
 }
 export const routeTree = rootRouteImport

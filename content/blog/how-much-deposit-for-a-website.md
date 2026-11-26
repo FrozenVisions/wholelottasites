@@ -45,7 +45,7 @@ The founding client offer, for the first 20 clients, is on [pricing](/pricing/) 
 
 £200 + VAT one-off (£240 inc VAT) is the price of the website, not a deposit against a larger bill. Or pay £50 a month inc VAT for 12 months (£600 total, £41.67 + VAT a month). The monthly total is higher. The monthly price is not finance or credit. Monthly payments are taken automatically by card through Stripe.
 
-The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. On the one-off price, care stays optional: 3 months free, then from £25 a month, or a full handover. Growth includes 4 SEO blog posts a month. Pro includes 8. Blog posts help the site grow on Google over time. Nothing is guaranteed.
+The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. On the one-off price, care stays optional: 3 months free, then from £25 a month, or a full handover. Growth includes 4 SEO blog posts a month. Pro includes 8. Blog posts help the site grow on Google over time. Nothing is guaranteed.
 
 You still pay the deposit to start when you decide to go ahead. That amount is not printed as its own pound figure, so ask for it with the plan. The same figures are in [website payment plans](/blog/website-payment-plan/), [affordable website monthly payments](/blog/affordable-website-monthly-payments/) and on the [pay monthly website](/pay-monthly-website/) page.
 

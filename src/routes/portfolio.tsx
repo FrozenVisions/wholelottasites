@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Section, ProjectGrid } from "@/components/site/Sections";
 import { SitesBuiltList } from "@/components/site/SitesBuilt";
 import { builtSites, projects, seo, SITE_URL } from "@/lib/site-data";
@@ -37,10 +37,14 @@ function Portfolio() {
       <PageHero
         eyebrow="Portfolio"
         title="Sites we’ve built."
-        lead="Seven sites, shown as screenshots. The picture is what you can judge here. A text link is included where there is a live address. Example designs, which are not live sites, are further down."
+        lead="Seven sites, shown as screenshots. The picture is what you can judge here. A text link is included where there is a live address. Five of them have a short case study. Example designs, which are not live sites, are further down."
         crumbs={[{ name: "Home", href: "/" }, { name: "Portfolio" }]}
       />
       <Section className="!pt-4">
+        <p className="mb-10">
+          <Link to="/case-studies" className="font-semibold text-primary hover:underline">Read the case studies</Link>
+          {" "}for Whole Lotta Vinyl, SafePlate, MC Decorating, Vinyl Buyback and Pink Moon Records.
+        </p>
         <SitesBuiltList />
         <h2 className="mt-20 text-3xl md:text-4xl">Example designs.</h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">Screenshots of designs. These are not live sites, so there is no link to visit.</p>

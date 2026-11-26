@@ -56,7 +56,7 @@ The figures are the ones on [pricing](/pricing/). The [founding client offer](/f
 
 The first year of hosting is included, and so is the first year of a standard low-cost domain, registered in your name. Premium domains cost extra. From year two you pay the domain renewal and hosting, or monthly care. Local keywords for the trade and the towns are part of the build. They are not a ranking promise. A founding client launches within 7 days of receiving the content.
 
-Pay monthly includes 12 months of Essential care, normally £25 a month, while those payments run. After 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Paying once, care is free for 3 months, then optional from £25 a month. Google Business Profile setup is included. On its own it is £149, and optional management of the listing is £99–£150 a month. Larger builds are quoted from around £1,200. I can meet in Mansfield: [web design in Mansfield](/web-design-mansfield/).
+Pay monthly includes 12 months of Essential care, normally £25 a month, while those payments run. After 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. Paying once, care is free for 3 months, then optional from £25 a month. Google Business Profile setup is included. On its own it is £149, and optional management of the listing is £99–£150 a month. Larger builds are quoted from around £1,200. I can meet in Mansfield: [web design in Mansfield](/web-design-mansfield/).
 
 ## What I could not confirm
 

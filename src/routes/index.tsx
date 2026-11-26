@@ -54,6 +54,8 @@ function Home() {
               <Link to="/pricing" hash="offers" className="font-semibold text-copper underline-offset-4 hover:underline">See pricing</Link>
               {" · "}
               <Link to="/portfolio" className="font-semibold text-copper underline-offset-4 hover:underline">See my work</Link>
+              {" · "}
+              <Link to="/record-shops" className="font-semibold text-copper underline-offset-4 hover:underline">Record shops</Link>
             </p>
             <p className="mt-3 max-w-2xl text-sm text-navy-foreground/80">
               Site already live in the East Midlands, and only one thing is broken?{" "}
@@ -140,9 +142,17 @@ function Home() {
           />
         </Reveal>
         <SitesBuiltStrip />
-        <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
-          See the portfolio <ArrowRight className="size-4" aria-hidden />
-        </Link>
+        <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+          <Link to="/portfolio" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">
+            See the portfolio <ArrowRight className="size-4" aria-hidden />
+          </Link>
+          <Link to="/case-studies" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">
+            Case studies <ArrowRight className="size-4" aria-hidden />
+          </Link>
+          <Link to="/record-shops" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">
+            Websites for record shops <ArrowRight className="size-4" aria-hidden />
+          </Link>
+        </p>
       </Section>
 
       <Section id="reviews">
@@ -167,6 +177,12 @@ function Home() {
               </Link>
             </li>
           ))}
+          <li>
+            <Link to="/record-shops" className="block h-full rounded-lg border-t-4 border-copper bg-card p-6 shadow-sm hover:shadow-md">
+              <h3 className="font-display text-xl font-semibold">Websites for record shops</h3>
+              <p className="mt-2 text-sm text-muted-foreground">We built Whole Lotta Vinyl, our own shop. The same kind of site for other record shops.</p>
+            </Link>
+          </li>
           <li>
             <Link to="/web-design-mansfield" className="block h-full rounded-lg bg-navy p-6 text-navy-foreground shadow-sm">
               <h3 className="font-display text-xl font-semibold">Web designer in Mansfield</h3>

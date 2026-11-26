@@ -9,7 +9,7 @@ slug: website-payment-plan
 
 A website payment plan is a fixed price you can add up. It is not a subscription without a total, and it is not finance. I’m Chris Faulkes, a web designer in Mansfield. The plan on this site is the founding client offer for a new small-business website. Pay monthly is the main way to spread it.
 
-The amount taken each month is £50 including VAT, for 12 months. Twelve payments are £600 including VAT. VAT is already inside that £50, so you do not add it on again. The alternative is to pay once: £200 + VAT, which is £240 including VAT. The monthly total is higher because the price is spread over the year. There is no interest and no setup fee. It is not finance or credit. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave.
+The amount taken each month is £50 including VAT, for 12 months. Twelve payments are £600 including VAT. VAT is already inside that £50, so you do not add it on again. The alternative is to pay once: £200 + VAT, which is £240 including VAT. The monthly total is higher because the price is spread over the year. There is no interest and no setup fee. It is not finance or credit. Pay monthly includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave.
 
 It’s for the first 20 clients. I’m building up reviews, so those first 20 get this price, in return for an honest Google review and permission to show the site in the portfolio once it’s live. I don’t publish how many places are left. The figures are on [pricing](/pricing/), the [founding client offer](/founding-offer/) and the [pay monthly website](/pay-monthly-website/) page. If an email disagrees with the pricing page, use the page.
 
@@ -45,7 +45,7 @@ A founding client launches within 7 days of receiving the content.
 
 ## Care, with the monthly payments
 
-The £600 includes 12 months of Essential care, normally £25 a month, for as long as the monthly payments run. You do not pay Essential on top of the £50 during those 12 months. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Paying once, care stays optional: 3 months free, then from £25 a month, or a full handover.
+The £600 includes 12 months of Essential care, normally £25 a month, for as long as the monthly payments run. You do not pay Essential on top of the £50 during those 12 months. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. Paying once, care stays optional: 3 months free, then from £25 a month, or a full handover.
 
 Essential is £25 a month: hosting and domain renewal kept paid and running, security and software updates, regular backups, small changes up to 30 minutes, fixes, a monthly check that the site, forms and contact links work, and email support. Growth is £50 a month (4 SEO blog posts, up to 1 hour of changes, and a monthly Google Business Profile post). Pro is £75 a month (8 SEO blog posts). Blog posts help the site grow on Google over time. Nothing is guaranteed. You can take a full handover of a site I built, and skip care. Care is not a condition of paying for the build.
 

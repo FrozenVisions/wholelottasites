@@ -10,6 +10,8 @@ import landing from "./src/data/landing-slugs.json" with { type: "json" };
 import extra from "./src/data/extra-pages.json" with { type: "json" };
 
 const blogPosts = readdirSync("content/blog").filter((file) => file.endsWith(".md")).map((file) => `/blog/${file.replace(/\.md$/, "")}`);
+// Example designs are noindex, so they are built but left out of extra-pages.json and the sitemap.
+const demos = ["electrician", "roofer", "cafe", "record-shop"].map((slug) => `/demos/${slug}`);
 
 // BASE_PATH lets the same build run in a subfolder (e.g. /wholelottasites/ on github.io) or at the domain root ("/").
 export default defineConfig({
@@ -24,6 +26,7 @@ export default defineConfig({
         { path: "/how-it-works" }, { path: "/faq" }, { path: "/contact" }, { path: "/leave-a-review" }, { path: "/about" }, { path: "/not-found" },
         { path: "/pay-what-you-want" },
         { path: "/blog" }, ...blogPosts.map((path) => ({ path })),
+        ...demos.map((path) => ({ path })),
         ...extra.pages.map((path) => ({ path })),
         { path: landing.hub }, ...landing.locations.map((path) => ({ path })),
         ...landing.trades.map((s) => ({ path: `${landing.hub}/${s}` })),

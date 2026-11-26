@@ -12,7 +12,7 @@ import { type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import fraunces700 from "@fontsource/fraunces/files/fraunces-latin-700-normal.woff2?url";
 import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
-import { Header, Footer, CtaBand, StickyMobileCta } from "@/components/site/Layout";
+import { Header, Footer, CtaBand, StickyMobileCta, WhatsAppFloat } from "@/components/site/Layout";
 import { careTiers, foundingBonusesText, newWebsiteOffer, newWebsitePricing, payMonthlyCare, oneOffCare } from "@/lib/site-data";
 
 const websiteJsonLd = {
@@ -122,20 +122,36 @@ const businessJsonLd = {
       description: "One-off setup or fix. The client stays the Google owner. No ranking promise. Optional monthly management is £99–£150.",
       url: "https://wholelottasites.co.uk/google-business-profile/",
     },
-    ...careTiers.map((tier) => ({
-      "@type": "Offer",
-      name: tier.name,
-      price: String(tier.pricePounds),
-      priceCurrency: "GBP",
-      description: tier.schemaDescription,
-      url: "https://wholelottasites.co.uk/pricing/#monthly-care",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
+    ...careTiers.flatMap((tier) => [
+      {
+        "@type": "Offer",
+        name: tier.name,
         price: String(tier.pricePounds),
         priceCurrency: "GBP",
-        unitText: "MONTH",
+        description: tier.schemaDescription,
+        url: "https://wholelottasites.co.uk/pricing/#monthly-care",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: String(tier.pricePounds),
+          priceCurrency: "GBP",
+          unitText: "MONTH",
+        },
       },
-    })),
+      {
+        "@type": "Offer",
+        name: `${tier.name}, paid yearly`,
+        price: String(tier.annualPricePounds),
+        priceCurrency: "GBP",
+        description: `${tier.name}: pay for 10 months and get 12, at ${tier.annualPriceLabel} a year. ${tier.schemaDescription}`,
+        url: "https://wholelottasites.co.uk/pricing/#monthly-care",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: String(tier.annualPricePounds),
+          priceCurrency: "GBP",
+          unitText: "ANN",
+        },
+      },
+    ]),
   ],
 };
 
@@ -245,6 +261,7 @@ function RootComponent() {
       <CtaBand />
       <Footer />
       <StickyMobileCta />
+      <WhatsAppFloat />
     </>
   );
 }

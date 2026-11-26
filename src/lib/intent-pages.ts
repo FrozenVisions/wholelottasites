@@ -148,7 +148,7 @@ export const intentPages: IntentPage[] = [
         id: "update-my-old-website",
         heading: "Update my old website",
         paragraphs: [
-          "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (Essential £25, Growth £50 or Pro £75 a month), or as a one-off if we’ve agreed it.",
+          "“Update my old website” sometimes means a smaller job. A new phone number, a revised price list, a paragraph about a new service. That kind of edit can sit on optional monthly care (Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12)), or as a one-off if we’ve agreed it.",
           "If the site is already live and only one thing is wrong — a broken form, the mobile layout, speed, an SSL or redirect mess, or a missing website link on your Google Business Profile — that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/). It is a short audit and one fix. It is not a redesign.",
           "If the job is bigger than one fix, start with the [free fix audit](/contact/#fix-audit). I’ll look at the live site and tell you whether a repair will hold. A normal rescue is usually around £150–£400. A rebuild is the £200 + VAT (£240 inc VAT) small-business site. I’ll say which job it is before you pay.",
           "Send the address of the current site. If the old site is basically fine and you only wanted a second opinion, you don’t owe me anything.",
@@ -211,7 +211,7 @@ export const intentPages: IntentPage[] = [
         id: "not-a-tweak",
         heading: "When a tweak is enough",
         paragraphs: [
-          "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, Essential £25, Growth £50 or Pro £75 a month, once any build is paid for.",
+          "If I look after the site and one section has started to overflow, that’s a small fix, not a new project. It can sit on optional monthly care, Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), once any build is paid for.",
           "If the site is already live and the phone problem is one concrete layout fix, that can be the [East Midlands £50 + VAT website mini-fix](/website-mini-fix/): a short audit and that one fix, for businesses in Nottinghamshire, Derbyshire, Leicestershire, Lincolnshire and Northamptonshire. It is not a new site.",
           "If the whole site has to be replaced so it can be used on a phone, send the address for a [free fix audit](/contact/#fix-audit). I’ll say whether a repair will hold or whether you need the £200 + VAT (£240 inc VAT) rebuild. I won’t invoice £200 + VAT (£240 inc VAT) for a stylesheet tweak.",
         ],

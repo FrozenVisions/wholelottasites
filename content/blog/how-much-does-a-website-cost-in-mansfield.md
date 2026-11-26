@@ -11,7 +11,7 @@ People in Mansfield ask this because the quotes they have seen do not agree with
 
 ## The price on this site
 
-The founding client offer is £200 + VAT one-off, which is £240 including VAT. Or you can pay £50 a month including VAT for 12 months. That is £600 in total, and £41.67 + VAT a month. The monthly total is higher. It is not interest, not finance, and not a credit agreement. The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or leave. Paying once, care stays optional: 3 months free, then from £25 a month.
+The founding client offer is £200 + VAT one-off, which is £240 including VAT. Or you can pay £50 a month including VAT for 12 months. That is £600 in total, and £41.67 + VAT a month. The monthly total is higher. It is not interest, not finance, and not a credit agreement. The £600 includes 12 months of Essential care, normally £25 a month, for as long as those payments run. After the 12 months the site is yours. You can keep care at Essential £25, Growth £50 or Pro £75 a month, or £250, £500 or £750 a year (pay 10 months, get 12), or leave. Paying once, care stays optional: 3 months free, then from £25 a month.
 
 It is for the first 20 clients. I am building up reviews, so those first 20 get this price. In return I ask for an honest Google review, and permission to show the site in the portfolio once it is live. I do not write the review. I do not invent one. I also do not publish a counter of how many places are left.
 
@@ -35,7 +35,7 @@ If you already have a live site and only one thing is broken — a form, the mob
 
 A wider rescue, after a free audit, is usually around £150–£400. If patching is a false economy, the honest job is a rebuild at the founding price, not a mini-fix stretched until it pretends to be one.
 
-Google Business Profile setup on its own is £149. It is included with a founding-client website. You stay the Google owner. I don’t promise a position on Maps. Optional management after that is £99–£150 a month. Optional website care on the one-off price, after 3 months included, is from £25 a month (Essential £25, Growth £50 or Pro £75).
+Google Business Profile setup on its own is £149. It is included with a founding-client website. You stay the Google owner. I don’t promise a position on Maps. Optional management after that is £99–£150 a month. Optional website care on the one-off price, after 3 months included, is from £25 a month (Essential £25, Growth £50 or Pro £75, or £250, £500 or £750 a year (pay 10 months, get 12)).
 
 ## Pay monthly or pay once
 

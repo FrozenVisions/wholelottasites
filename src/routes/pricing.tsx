@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { JobWorth } from "@/components/site/JobWorth";
 import { MiniFixOffer } from "@/components/site/MiniFix";
 import { PageHero, Section, Heading, OfferCards, CareComparison, BundleStrip, DomainNote, PaymentPlans, WhatsIncluded, FoundingBanner, FoundingOfferPromo } from "@/components/site/Sections";
@@ -34,6 +34,10 @@ function Pricing() {
         <div className="mt-16">
           <MiniFixOffer />
         </div>
+        <p className="mt-8">
+          <Link to="/start" className="font-semibold text-primary hover:underline">Start your site</Link>
+          <span className="text-muted-foreground"> — send a short brief, and I’ll reply with a payment link.</span>
+        </p>
         <DomainNote />
         <PaymentPlans showPayMonthlyFirst />
         <JobWorth />

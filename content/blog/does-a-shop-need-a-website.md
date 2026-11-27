@@ -1,7 +1,7 @@
 ---
 title: Does a local shop need a website?
 seoTitle: Does a Local Shop Need a Website? | WholeLottaSites
-description: Does a shop need a website? Hours, what you sell and how to find the door, in text a customer can read on a phone. What to publish, and the £200 + VAT (£240 inc VAT) price.
+description: Does a shop need a website? Opening hours, what you sell and how to find you, readable on a phone. What to publish, and the £200 + VAT (£240 inc VAT) price.
 date: 2026-10-29
 keyword: does a shop need a website
 slug: does-a-shop-need-a-website

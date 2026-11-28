@@ -130,7 +130,7 @@ export const moreAudiences: TradePage[] = [
     slug: "consultants",
     name: "Consultants",
     title: "Website for Independent Consultants | WholeLottaSites",
-    description: "A consultant website that says who you help, how you work and how to book a conversation. Built from scratch for £200 + VAT (£240 inc VAT). No invented case-study figures.",
+    description: "A consultant website that says who you help, how you work and how to book a call. £200 + VAT (£240 inc VAT), with no invented case-study figures.",
     h1: "A consultant website.",
     lead: "People don’t hire a consultant from a slogan. They want to know who you help, what the work involves, and how to start.",
     intro: [
